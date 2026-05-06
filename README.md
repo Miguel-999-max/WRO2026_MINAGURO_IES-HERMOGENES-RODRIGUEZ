@@ -133,7 +133,7 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 | Electrolytic condenser 0,1 microfarad | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
 | Electrolytic condenser 0,33 microfarad | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
 | Circuit board | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
-| Differential QBX01 1:12 | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Differential QBX01 1:12 | 1 | <img src="Differential.avif" width="150" height="120"> | servo | servo |
 | Chasis in 3D | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
 | Adapter wheels in 3D | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
 | Adapter gear in 3D | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
