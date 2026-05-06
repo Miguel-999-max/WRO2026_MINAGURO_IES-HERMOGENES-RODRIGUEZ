@@ -111,15 +111,15 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 | HC-SR04 | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | <a href="https://es.aliexpress.com/item/1005010373195248.html?spm=a2g0o.productlist.main.1.4afa606fVeuEr0&algo_pvid=54f18ed3-18b2-4b6a-8dbc-cd5d3668bcef&algo_exp_id=54f18ed3-18b2-4b6a-8dbc-cd5d3668bcef-0&pdp_ext_f=%7B%22order%22%3A%2280%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%218.03%210.99%21%21%2162.67%217.74%21%40211b819117780681213312200e1d8a%2112000052180896573%21sea%21ES%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Aa4bac484%3Bm03_new_user%3A-29895%3BpisId%3A5000000203538426&curPageLogUid=QstesSY3YdXa&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005010373195248%7C_p_origin_prod%3A"> Ultrasonic sensor link</a> |
 | HC-SR04RC | 2 | <img src="HC-SR04RC.jpg" width="150" height="120"> | servo | servo |
 | HUSKYLENS | 1 | <img src="HUSKYLENS.webp" width="150" height="120"> | servo | servo |
-| Rocker Switch | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
-| Pull down button | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
-| Samsung battery 2600mAh | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
-| Servo MS18 | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
-| Lego wheels 30,4x14 | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
-| Lego wheels 13x24 | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
-| Servo arm | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Rocker Switch | 1 | <img src="Rocker Switch.avif" width="150" height="120"> | servo | servo |
+| Pull down button | 1 | <img src="Pull down button.jpg" width="150" height="120"> | servo | servo |
+| Samsung battery 2600mAh | 2 | <img src="Samsung battery 2600mAh.webp" width="150" height="120"> | servo | servo |
+| Servo MS18 | 1 | <img src="Servo MS18.jpg" width="150" height="120"> | servo | servo |
+| Lego wheels 30,4x14 | 2 | <img src="Lego wheels 30,4x14.webp" width="150" height="120"> | servo | servo |
+| Lego wheels 13x24 | 2 | <img src="Lego wheels 13x24.jpg" width="150" height="120"> | servo | servo |
+| Servo arm | 1 | <img src="Servo arm MS18.avif" width="150" height="120"> | servo | servo |
 | Gear teeth Lego 4285634 | 1 | <img src="Gear teeth Lego 4285634.jpg" width="150" height="120"> | servo | servo |
-| Lego structure piece 4495931 | 3 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Lego structure piece 4495931 | 3 | <img src="Lego structure piece 4495931.webp" width="150" height="120"> | servo | servo |
 | Arduino R4 MINIMA | 1 | <img src="Arduino R4 MINIMA.jpg" width="150" height="120"> | servo | servo |
 | Lego structure piece 4210686 | 2 | <img src="Lego structure piece 4210686.avif" width="150" height="120"> | servo | servo |
 | Lego piece 4514554 (3 modules) | 3 | <img src="Lego piece 4514554.webp" width="150" height="120"> | servo | servo |
@@ -129,7 +129,7 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 | Lego piece 4560175 | 1 | <img src="Lego piece 4560175.webp" width="150" height="120"> | servo | servo |
 | Lego piece 4107767 | 2 | <img src="Lego piece 4107767.webp" width="150" height="120"> | servo | servo |
 | Lego piece 4107085 | 2 | <img src="Lego piece.webp" width="150" height="120"> | servo | servo |
-| LM7805CT | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| LM7805CT | 2 | <img src="LM7805CT.webp" width="150" height="120"> | servo | servo |
 | Electrolytic condenser 0,1 microfarad | 1 | <img src="Electrolytic condenser 0,1 microfarad.webp" width="150" height="120"> | servo | servo |
 | Electrolytic condenser 0,33 microfarad | 1 | <img src="Electrolytic condenser 0,33 microfarad.webp" width="150" height="120"> | servo | servo |
 | Circuit board | 1 | <img src="Circuit board.webp" width="150" height="120"> | servo | servo |
