@@ -130,7 +130,7 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 | Lego piece 4107767 | 2 | <img src="Lego piece 4107767.webp" width="150" height="120"> | servo | servo |
 | Lego piece 4107085 | 2 | <img src="Lego piece.webp" width="150" height="120"> | servo | servo |
 | LM7805CT | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
-| Electrolytic condenser 0,1 microfarad | 1 | <img src="Electrolytic condenser 0,1 condenser microfarad.webp" width="150" height="120"> | servo | servo |
+| Electrolytic condenser 0,1 microfarad | 1 | <img src="Electrolytic condenser 0,1 microfarad.webp" width="150" height="120"> | servo | servo |
 | Electrolytic condenser 0,33 microfarad | 1 | <img src="Electrolytic condenser 0,33 microfarad.webp" width="150" height="120"> | servo | servo |
 | Circuit board | 1 | <img src="Circuit board.webp" width="150" height="120"> | servo | servo |
 | Differential QBX01 1:12 | 1 | <img src="Differential.avif" width="150" height="120"> | servo | servo |
