@@ -125,15 +125,15 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 | Lego piece 4514554 (3 modules) | 3 | <img src="Lego piece 4514554.webp" width="150" height="120"> | Connect the directional | servo |
 | Lego piece 4514553 (3 modules) | 4 | <img src="Lego piece 4514553.webp" width="150" height="120"> | Connect the directional structure and connect it with chassis | servo |
 | Lego piece 4211807 (2 modules) | 2 | <img src="Lego piece 4211807.webp" width="150" height="120"> | Connect the directional structure | servo |
-| Lego piece 4495931 (2 modules) | 1 | <img src="Lego piece 4495931.webp" width="150" height="120"> | servo | servo |
-| Lego piece 4560175 | 1 | <img src="Lego piece 4560175.webp" width="150" height="120"> | servo | servo |
-| Lego piece 4107767 | 2 | <img src="Lego piece 4107767.webp" width="150" height="120"> | servo | servo |
-| Lego piece 4107085 | 2 | <img src="Lego piece.webp" width="150" height="120"> | servo | servo |
-| LM7805CT | 2 | <img src="LM7805CT.webp" width="150" height="120"> | servo | servo |
-| Electrolytic condenser 0,1 microfarad | 1 | <img src="Electrolytic condenser 0,1 microfarad.webp" width="150" height="120"> | servo | servo |
-| Electrolytic condenser 0,33 microfarad | 1 | <img src="Electrolytic condenser 0,33 microfarad.webp" width="150" height="120"> | servo | servo |
-| Circuit board | 1 | <img src="Circuit board.webp" width="150" height="120"> | servo | servo |
-| Differential QBX01 1:12 | 1 | <img src="Differential.avif" width="150" height="120"> | servo | servo |
-| Chasis in 3D | 1 | <img src="Chasis.png" width="150" height="120"> | servo | servo |
-| Adapter wheels in 3D | 2 | <img src="Wheel adapter.png" width="150" height="120"> | servo | servo |
-| Adapter gear in 3D | 1 | <img src="Gear adapter.png" width="150" height="120"> | servo | servo |
+| Lego piece 4495931 (2 modules) | 1 | <img src="Lego piece 4495931.webp" width="150" height="120"> | Connect directional structure | servo |
+| Lego piece 4560175 | 1 | <img src="Lego piece 4560175.webp" width="150" height="120"> | Connect directional structure | servo |
+| Lego piece 4107767 | 2 | <img src="Lego piece 4107767.webp" width="150" height="120"> | Connect directional wheels with directional structure | servo |
+| Lego piece 4107085 | 2 | <img src="Lego piece.webp" width="150" height="120"> | Connect directional structure | servo |
+| LM7805CT | 2 | <img src="LM7805CT.webp" width="150" height="120"> | Supply energy to huskylens directly of the batteries | servo |
+| Electrolytic condenser 0,1 microfarad | 1 | <img src="Electrolytic condenser 0,1 microfarad.webp" width="150" height="120"> | (maker recommendation) | servo |
+| Electrolytic condenser 0,33 microfarad | 1 | <img src="Electrolytic condenser 0,33 microfarad.webp" width="150" height="120"> | (maker recommendation) | servo |
+| Circuit board | 1 | <img src="Circuit board.webp" width="150" height="120"> | Connect huskylens with the LM7805CT and then with batteries | servo |
+| Differential QBX01 1:12 | 1 | <img src="Differential.avif" width="150" height="120"> | It allows the drive wheels to rotate at different speeds on curves, preventing slippage | servo |
+| Chasis in 3D | 1 | <img src="Chasis.png" width="150" height="120"> | Skeleton of the robot | servo |
+| Adapter wheels in 3D | 2 | <img src="Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | servo |
+| Adapter gear in 3D | 1 | <img src="Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | servo |
