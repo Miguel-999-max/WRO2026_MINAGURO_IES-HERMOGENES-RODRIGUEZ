@@ -120,7 +120,7 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 | Servo arm | 1 | <img src="Servo arm MS18.avif" width="150" height="120"> | servo | servo |
 | Gear teeth Lego 4285634 | 1 | <img src="Gear teeth Lego 4285634.jpg" width="150" height="120"> | servo | servo |
 | Lego structure piece 4495931 | 3 | <img src="Lego structure piece 4495931.webp" width="150" height="120"> | servo | servo |
-| Arduino R4 MINIMA | 1 | <img src="Arduino R4 MINIMA.jpg" width="150" height="120"> | servo | servo |
+| Arduino R4 MINIMA | 1 | <img src="Arduino_R4 MINIMA.jpg" width="150" height="120"> | servo | servo |
 | Lego structure piece 4210686 | 2 | <img src="Lego structure piece 4210686.avif" width="150" height="120"> | servo | servo |
 | Lego piece 4514554 (3 modules) | 3 | <img src="Lego piece 4514554.webp" width="150" height="120"> | servo | servo |
 | Lego piece 4514553 (3 modules) | 4 | <img src="Lego piece 4514553.webp" width="150" height="120"> | servo | servo |
