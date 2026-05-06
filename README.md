@@ -105,4 +105,4 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 ###Components used
 
 | Component | Function | Image |
-| servo | steering | <img src="servocontinua.jpg" > |
+<br>| servo | steering | <img src="servocontinua.jpg"> |
