@@ -3,11 +3,11 @@ Hello, welcome to the GitHub repository of the MINAGURO team, which is competing
 <br> Guided by our passion for technology, we have created a vehicle that maybe doesn´t work as we would like to, but reflects all of our hard work and time spent on it.
 
 ## TABLE OF CONTENTS
-[Daily documentation](#·-Daily-documentation)
-<br>[The Team](#·-Daily-documentation)
-<br>[Our Robot](#·-Daily-documentation)
-<br>[Components used](#·-Daily-documentation)
-<br>[Software](#·-Daily-documentation)
+[Daily documentation](#Daily-documentation)
+<br>[The Team](#The-Team)
+<br>[Our Robot](#Our-Robot)
+<br>[Components used](#Components-used)
+<br>[Software](#Software)
 
 ### Daily documentation
 
@@ -94,3 +94,15 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 <br>· **30/04/26:** We no longer have time to move forward with the challenge, so we began preparing all the documentation.  
 
 <br>· **04/05/26:** We are still working on the documentation. 
+
+
+###The Team
+
+
+###Our Robot
+
+
+###Components used
+
+| Component | Function | Image |
+| servo | steering | <img src="servocontinua.jpg" > |
