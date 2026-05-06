@@ -115,7 +115,7 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 | Pull down button | 1 | <img src="Pull down button.jpg" width="150" height="120"> | servo | servo |
 | Samsung battery 2600mAh | 2 | <img src="Samsung battery 2600mAh.webp" width="150" height="120"> | servo | servo |
 | Servo MS18 | 1 | <img src="Servo MS18.jpg" width="150" height="120"> | servo | servo |
-| Lego wheels 30,4x14 | 2 | <img src="Lego wheels 30,4 x 14.webp" width="150" height="120"> | servo | servo |
+| Lego wheels 30,4x14 | 2 | <img src="Lego wheels 30.4 x 14.webp" width="150" height="120"> | servo | servo |
 | Lego wheels 13x24 | 2 | <img src="Lego wheels 13 x 24.jpg" width="150" height="120"> | servo | servo |
 | Servo arm | 1 | <img src="Servo arm MS18.avif" width="150" height="120"> | servo | servo |
 | Gear teeth Lego 4285634 | 1 | <img src="Gear teeth Lego 4285634.jpg" width="150" height="120"> | servo | servo |
