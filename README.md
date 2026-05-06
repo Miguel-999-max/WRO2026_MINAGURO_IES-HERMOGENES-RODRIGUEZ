@@ -120,7 +120,7 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 | Servo arm | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
 | Gear teeth Lego 4285634 | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
 | Lego structure piece 4495931 | 3 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
-| Arduino R4 MINIMA | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Arduino R4 MINIMA | 1 | <img src="Arduino R4 MINIMA.jpg" width="150" height="120"> | servo | servo |
 | Lego structure piece 4210686 | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
 | Lego piece 4514554 (3 modules) | 3 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
 | Lego piece 4514553 (3 modules) | 4 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
@@ -132,7 +132,7 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 | LM7805CT | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
 | Electrolytic condenser 0,1 microfarad | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
 | Electrolytic condenser 0,33 microfarad | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
-| Circuit board | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Circuit board | 1 | <img src="Circuit board.webp" width="150" height="120"> | servo | servo |
 | Differential QBX01 1:12 | 1 | <img src="Differential.avif" width="150" height="120"> | servo | servo |
 | Chasis in 3D | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
 | Adapter wheels in 3D | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
