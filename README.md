@@ -104,5 +104,36 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 
 ### Components used
 
-| Component | Function | Image |
-<br>| servo | steering | <img src="servocontinua.jpg"> |
+| Component | Quantity | Image | Function | Purchase link |
+| :---: | :---: | :---: | :---: | :---: |
+| SPT5632-360 | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| MS18 | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| HC-SR04 | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| HC-SR04RC | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| HUSKYLENS | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Rocker Switch | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Pull down button | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Samsung battery 2600mAh | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Servo MS18 | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Lego wheels 30,4x14 | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Lego wheels 13x24 | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Servo arm | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Gear teeth Lego 4285634 | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Lego structure piece 4495931 | 3 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Arduino R4 MINIMA | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Lego structure piece 4210686 | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Lego piece 4514554 (3 modules) | 3 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Lego piece 4514553 (3 modules) | 4 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Lego piece 4211807 (2 modules) | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Lego piece 4495931 (2 modules) | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Lego piece 4560175 | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Lego piece 4107767 | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Lego piece 4107085 | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| LM7805CT | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Electrolytic condenser 0,1 microfarad | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Electrolytic condenser 0,33 microfarad | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Circuit board | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Differential QBX01 1:12 | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Chasis in 3D | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Adapter wheels in 3D | 2 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
+| Adapter gear in 3D | 1 | <img src="BATERIAS_SAMSUNG.jpg" width="150" height="120"> | servo | servo |
