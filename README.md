@@ -138,3 +138,12 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 | Chasis in 3D | 1 | <img src="Chasis.png" width="150" height="120"> | Skeleton of the robot | Download the file below |
 | Adapter wheels in 3D | 2 | <img src="Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | Download the file below |
 | Adapter gear in 3D | 1 | <img src="Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | Download the file below |
+
+<script type="module" src="hhtps://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+<model-viewer
+  src="CHASSIS.stl"
+  alt="Chasis"
+  auto-rotate
+  camera-controls
+  style="width=100%; height: 400px;">
+</model-viewer>
