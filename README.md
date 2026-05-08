@@ -4,11 +4,11 @@ Hello, welcome to the GitHub repository of the MINAGURO team, which is competing
 <br> Guided by our passion for technology, we have created a vehicle that maybe doesn´t work as we would like to, but reflects all of our hard work and time spent on it.
   
 ## TABLE OF CONTENTS
-[Daily documentation](#daily-documentation)
-<br>[The Team](#the-team)
-<br>[Our Robot](#our-robot)
-<br>[Components used](#components-used)
-<br>[Software](#software)
+· [Daily documentation](#daily-documentation)
+<br>· [The Team](#the-team)
+<br>· [Our Robot](#our-robot)
+<br>· [Components used](#components-used)
+<br>· [Software](#software)
 
 ### Daily documentation
 
