@@ -102,6 +102,13 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 
 ### Our Robot
 
+Here are some pictures of our robot to help with it´s reproducibility:
+<br> <img src="ROBOT/20260508_104557.jpg" alt="Imagen1" width="250" height="290">    **Robot´s Front View**
+<br> <img src="ROBOT/20260508_104607.jpg" alt="Imagen2" width="250" height="290">    **Robot´s Upper View**
+<br> <img src="ROBOT/20260508_104626.jpg" alt="Imagen3" width="250" height="290">    **Robot´s Right View**
+<br> <img src="ROBOT/20260508_104641.jpg" alt="Imagen4" width="250" height="290">    **Robot´s Left View**
+<br> <img src="ROBOT/20260508_104702.jpg" alt="Imagen5" width="250" height="290">    **Robot´s Back View**
+<br> <img src="ROBOT/20260508_104720.jpg" alt="Imagen6" width="250" height="290">    **Robot´s Under View**
 
 ### Components used
 
@@ -141,3 +148,4 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 
 ### Software
 Here are some programms we used to calibrate sensors:
+
