@@ -165,6 +165,7 @@ Here are some pictures of our robot to help with it´s reproducibility:
 | Adapter gear in 3D | 1 | <img src="Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`WHEEL_ADAPTER.stl`](Documentos/WHEEL_ADAPTER.stl) |
 
 ### Software
-Here are some programms we used to calibrate sensors:
+Here are some programms we used to calibrate HCSR04 sensors and the steering servo:
 
 * **[Calibrate HCSR04 sensors](HCSR04_x4_display/HCSR04_x4_display.ino)**: Calibrate HCSR04 sensors
+* **[Calibrate steering servo](11_JOYSTICK_CON_2_SERVOS/11_JOYSTICK_CON_2_SERVOS.ino)**: Calibrate steering servo
