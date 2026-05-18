@@ -160,12 +160,13 @@ Here are some pictures of our robot to help with it´s reproducibility:
 | Electrolytic condenser 0,33 microfarad | 1 | <img src="Electrolytic condenser 0,33 microfarad.webp" width="150" height="120"> | (maker recommendation) | <a href="https://www.tme.eu/en/details/uvy2dr33med/tht-electrolytic-capacitors/nichicon/"> Electrolytic condenser link </a> |
 | Circuit board | 1 | <img src="Circuit board.webp" width="150" height="120"> | Connect huskylens with the LM7805CT and then with batteries | <a href="https://www.pccomponentes.com/goobay-regleta-para-conexion-de-cables-electricos-de-10a-10mm-blanco?campaigntype=eshopping&campaignchannel=shopping&gad_source=1&gad_campaignid=12885548290&gclid=EAIaIQobChMI__yQzemhlAMVr3JBAh075B8YEAQYBSABEgLyYvD_BwE"> Circuit board link </a> |
 | Differential QBX01 1:12 | 1 | <img src="Differential.avif" width="150" height="120"> | It allows the drive wheels to rotate at different speeds on curves, preventing slippage | <a href="https://es.aliexpress.com/item/1005005425198232.html?spm=a2g0o.productlist.main.1.5afe3DuB3DuBQD&algo_pvid=89b2de5b-abad-4232-8ccb-d5e73895d3df&algo_exp_id=89b2de5b-abad-4232-8ccb-d5e73895d3df-0&pdp_ext_f=%7B%22order%22%3A%22329%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%219.53%215.53%21%21%2174.34%2143.14%21%402103892f17779733213802821e83c8%2112000033106328679%21sea%21ES%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3A4f6c22e4%3Bm03_new_user%3A-29895%3BpisId%3A5000000205205646&curPageLogUid=a9DwnAg9v3GZ&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005005425198232%7C_p_origin_prod%3A"> Differential link </a> |
-| Chasis in 3D | 1 | <img src="Chasis.png" width="150" height="120"> | Skeleton of the robot | [`CHASSIS.stl`](Documentos/CHASSIS.stl) |
-| Adapter wheels in 3D | 2 | <img src="Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | [`GEAR_ADAPTER.stl`](Documentos/GEAR_ADAPTER.stl) |
-| Adapter gear in 3D | 1 | <img src="Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`WHEEL_ADAPTER.stl`](Documentos/WHEEL_ADAPTER.stl) |
+| Chasis in 3D | 1 | <img src="Chasis.png" width="150" height="120"> | Skeleton of the robot | [`CHASSIS.stl`](3D DESIGNS/CHASSIS.stl) |
+| Adapter wheels in 3D | 2 | <img src="Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | [`GEAR_ADAPTER.stl`](3D DESIGNS/GEAR_ADAPTER.stl) |
+| Adapter gear in 3D | 1 | <img src="Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`WHEEL_ADAPTER.stl`](3D DESIGNS/WHEEL_ADAPTER.stl) |
 
 ### Software
 Here are some programms we used to calibrate HCSR04 sensors and the steering servo:
 
-* **[Calibrate HCSR04 sensors](HCSR04_x4_display/HCSR04_x4_display.ino)**: Calibrate HCSR04 sensors
-* **[Calibrate steering servo](11_JOYSTICK_CON_2_SERVOS/11_JOYSTICK_CON_2_SERVOS.ino)**: Calibrate steering servo
+* **[Calibrate HCSR04 sensors](PROGRAMS/HCSR04_x4_display.ino)**: Calibrate HCSR04 sensors
+* **[Calibrate steering servo](PROGRAMS/11_JOYSTICK_CON_2_SERVOS.ino)**: Calibrate steering servo
+* **[Calibrate drive servo](PROGRAMS/11_POTENCIOMETRO_CON_1_SERVO.ino)**: Calibrate drive servo
