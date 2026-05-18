@@ -99,7 +99,7 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 
 ### The Team
 
-<br>. The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
+<br>The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
 
 <br> **Miguel**
 <br> **Age:** 17
