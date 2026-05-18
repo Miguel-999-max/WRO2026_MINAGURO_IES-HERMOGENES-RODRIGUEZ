@@ -1,4 +1,4 @@
-// Montaje 11: JOYSTICK CON 2 SERVOS
+//Program to calibrate the steering servo.
 
 #include <Servo.h>
 Servo SERVOx;
