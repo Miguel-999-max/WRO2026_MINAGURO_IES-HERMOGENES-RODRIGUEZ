@@ -1,4 +1,4 @@
-// POTENCIOMETRO CON 1 SERVO
+//Program to calibrate the drive servo
 
 #include <Servo.h>
 Servo SERVOx;
