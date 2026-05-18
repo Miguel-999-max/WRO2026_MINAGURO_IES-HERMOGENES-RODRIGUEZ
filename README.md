@@ -99,6 +99,24 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 
 ### The Team
 
+<br>. The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
+
+<br> **Miguel**
+<br> **Age:** 17
+<br> **Description:**
+
+<br> **Natalia**
+<br> **Age:** 16
+<br> **Description:**
+
+<br> **Rocío** 
+<br> **Age:** 16
+<br> **Description:** Hi! I'm Rocío from Spain and this is the first time in the WRO competition. Since I was a kid, I've loved solving puzzles and maths problems. I started to interest in robotics when I was at secondary school, when my teacher taught us how to program. I thougth that was really fun.
+
+<br> **Guillermo**
+<br> **Age:** 16
+<br> **Description:** Hi, I am Guillermo. I am from Ciudad Real, Spain, and I joined this project because I have always been really keen on I.T. and problem solving. Although this competition has been really challenging, the experience with all the team is worth it.
+
 
 ### Our Robot
 
