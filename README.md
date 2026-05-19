@@ -96,6 +96,8 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 
 <br>· **04/05/26:** We are still working on the documentation. 
 
+<br>· **19/05/26:** We are working on the final program and retouching the documentation.
+
 
 ### The Team
 
