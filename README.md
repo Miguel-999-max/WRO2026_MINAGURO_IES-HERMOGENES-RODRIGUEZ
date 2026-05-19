@@ -168,5 +168,5 @@ Here are some pictures of our robot to help with it´s reproducibility:
 Here are some programms we used to calibrate HCSR04 sensors and the steering servo:
 
 * **[Calibrate HCSR04 sensors](PROGRAMS/HCSR04_x4_display.ino)**: Calibrate HCSR04 sensors
-* **[Calibrate steering servo](PROGRAMS/11_JOYSTICK_CON_2_SERVOS.ino)**: Calibrate steering servo
+* **[Calibrate steering servo](11_JOYSTICK_CON_2_SERVOS.ino)**: Calibrate steering servo
 * **[Calibrate drive servo](PROGRAMS/11_POTENCIOMETRO_CON_1_SERVO.ino)**: Calibrate drive servo
