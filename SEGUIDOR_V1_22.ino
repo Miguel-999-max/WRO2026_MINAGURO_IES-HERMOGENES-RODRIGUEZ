@@ -1,7 +1,6 @@
 
 #include <HCSR04.h>
-HCSR04 hc(2, new int[4]{3, 4, 5, 7}, 4); //initialisation class HCSR04 (trig pin , echo pin, number of sensor)
-
+HCSR04 hc(2, new int[4]{3, 4, 5, 7}, 4); 
 #include <Servo.h>
 Servo servoTraccion;
 Servo servoDireccion;
