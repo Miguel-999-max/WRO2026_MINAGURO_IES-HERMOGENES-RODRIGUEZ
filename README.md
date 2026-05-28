@@ -179,4 +179,4 @@ Here is our final program:
 * **[Final program](PROGRAMS/SEGUIDOR_V1_22.ino)**: Final program
 
 ### Our YouTube Channel
-You can see how our robot works on our YouTube channel linked here: (<a href="https://www.youtube.com/@minagurowro2026"> YouTube Channel link </a>
+You can see how our robot works on our YouTube channel linked here: (<a href="https://www.youtube.com/@minagurowro2026">YouTube Channel link) </a>
