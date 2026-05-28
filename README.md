@@ -70,13 +70,13 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 -The wheels have a diameter of 43 mm and a circumference L = π × 43 = 135 mm  
 -The vehicle’s speed is V = 1.3333 × 0.135 = 0.18 m/s. We have verified this data with a stopwatch, and it is correct. 
 
-<br> <img src="OTHER/prototipo1.jpg" alt="prototipo1" width="400" height="370">
+<br> <img src="OTHER /prototipo1.jpg" alt="prototipo1" width="400" height="370">
 
 <br>· **13/04/26:** We wrote a program using the distance sensors to make the rear servo move when an object is detected. In doing so, we realized that the library we had always used for these sensors isn’t compatible with the Arduino R4 Mini board, so we looked for another one. The other library we found that was compatible required a common pin to connect all the “triggers” from all the ultrasonic sensors. To do this, we rewired the setup by soldering all the trigger wires from the three sensors together and connecting them to a single pin.
 
 <br>· **14/04/26:** We started creating a basic program to try to navigate around the inside of the parking garage. As we continued testing the programs, we noticed that the robot was moving slower than we’d like, so we decided to increase its speed using a LEGO gear system we have in class. When we incorporated it, we saw that it wasn’t working well because the robot was turning jerkily, so we had to reduce the speed a bit. We thought it was a software issue, so we’re trying to fix it. 
 
-<img src="sistema_engranajes.jpg" alt="OTHER/sistema de engranajes" width="600" height="550">
+<img src="OTHER /sistema_engranajes.jpg" alt="sistema de engranajes" width="600" height="550">
 
 <br>· **15/04/26:** We were unable to fix the error by modifying the code, so we decided to change the gear system, this time using only one gear; as a result, it now moves slower than before, but faster than it did at the start. We also added a servo to the HUSKYLENS, as we believe it’s a good idea to use one because we think it has a narrow field of view, and with the servo attached, we’ll be able to rotate the camera and widen the angle. As for the program, the robot manages to turn around, but it makes very sharp turns, and when it gets too close, it crashes into the wall; we’re going to try to fix that. 
 
