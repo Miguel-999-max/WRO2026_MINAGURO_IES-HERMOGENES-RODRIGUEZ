@@ -118,7 +118,7 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 <br> **Description:** Hi, I'm Miguel from Ciudad Real, Spain, and this is my first time participating in WRO Competition. I have always been into mechanics and robot building, so I didn't hesistate to take up this challenge. I am such a curious and competitive person, and I had put all my efforts in helping the team.
 
 <br> **Natalia**
-<br> **Age:** 16
+<br> **Age:** 17
 <br> **Description:** Hi, I am Natalia, also from Ciudad Real, Spain, and it is my first time participating, too. I am really good at programming, which I actually enjoy doing. I am hardworking and creative, and this competition, despite being really demanding, has helped me to enter the engineering world.
 
 <br> **Rocío** 
