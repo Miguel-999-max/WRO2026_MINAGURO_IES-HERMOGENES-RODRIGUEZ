@@ -9,6 +9,7 @@ Hello, welcome to the GitHub repository of the MINAGURO team, which is competing
 <br>· [Our Robot](#our-robot)
 <br>· [Components used](#components-used)
 <br>· [Software](#software)
+<br>· [Our YouTube Channel](#Our-YouTube-Channel)
 
 ### Daily documentation
 
