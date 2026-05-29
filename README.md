@@ -262,6 +262,17 @@ After confirming that this was the final base, we designed the chassis in 3D, pr
 
 The initial layout of all the components was sketched by hand to give us an idea (photos attached): 
 
+<p align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="IMG_3713.jpeg" width="400"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="IMG_3714.jpeg" width="400"/>
+    </td>
+  </tr>
+</table></p>
+
 An important consideration regarding the robot’s balance was to place the heaviest components (the Arduino board, the batteries, the 360-degree servo) in the center of the chassis, maintaining a low and centralized center of mass. The batteries that directly power the 360-degree servo (explained in detail below) are located in a separate structure, as this was a last-minute modification.
 
 ### The Team
