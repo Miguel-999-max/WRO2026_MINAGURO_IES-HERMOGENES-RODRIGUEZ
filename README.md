@@ -300,7 +300,7 @@ This means we need to be careful with the batteries for the 360° servo and the 
 
 Based on this estimate and the availability of batteries in our class, we chose the Samsung ICR18650-26FU model. The main features of this model are:
 
-<img src="COMPONENTS/BATERIAS_SAMSUNG.jpg" width="300">
+<p align="center"><img src="COMPONENTS/BATERIAS_SAMSUNG.jpg" width="300"></p>
 
 The batteries that power the board are placed in a dedicated space on the 3D-printed chassis. Initially, in the prototype with the foam board base, they were glued to the bottom of the base, as seen in the initial sketches of the component layout. Later, it was decided to create a custom-made 3D-printed space for them in that same location.
 
@@ -316,6 +316,20 @@ The batteries that power the board are placed in a dedicated space on the 3D-pri
 </table></p>
 
 The batteries that power the servo, being a last-minute modification, have been placed in a foam board structure on the upper rear of the robot. This also extends the parking length and allows us to exit the parking space in the obstacle course with more room to maneuver. 
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="batteries_structure1.jpeg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="batteries_structure2.jpeg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="batteries_structure3.jpeg" width="305"/>
+    </td>
+  </tr>
+</table>
 
 To power the HUSKYLENS module, an LM7805 regulator has been included to step down the voltage from the batteries from 8.4 V to 5 V. Electrolytic capacitors have also been included as recommended by the manufacturer. 
 
