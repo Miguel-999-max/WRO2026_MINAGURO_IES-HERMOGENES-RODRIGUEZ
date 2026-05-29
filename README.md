@@ -174,7 +174,7 @@ Here are some pictures of our robot to help with it´s reproducibility:
 | Chasis in 3D | 1 | <img src="COMPONENTS/Chasis.png" width="150" height="120"> | Skeleton of the robot | [`CHASSIS.stl`](3D_DESIGNS/CHASSIS.stl) |
 | Adapter wheels in 3D | 2 | <img src="COMPONENTS/Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | [`GEAR_ADAPTER.stl`](3D_DESIGNS/GEAR_ADAPTER.stl) |
 | Adapter gear in 3D | 1 | <img src="COMPONENTS/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`WHEEL_ADAPTER.stl`](Adaptador_rueda.stl) |
-| Flag | 1 | <img src="COMPONENTS/flag_image.jpg" width="150" height="120"> | Increase the size of the robot, without it getting in the way, in order to have a larger parking area | We made it in class using a kind of cardboard and a pencil |
+| Baterie support | 1 | | Is the support of the second baterie. | We made it in class using a kind of cardboard |
 
 ### Software
 Here are some programms we used to calibrate HCSR04 sensors and the steering servo:
