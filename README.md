@@ -245,13 +245,13 @@ The front is cut into a pointed shape to prevent it from coming into contact wit
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="steering_system.JPG" width="305"/>
+      <img src="prototype1.1.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="steering_system2.JPG" width="305"/>
+      <img src="prototype1.2.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="steering_system3.JPG" width="305"/>
+      <img src="prototype1.3.jpg" width="305"/>
     </td>
   </tr>
 </table>
