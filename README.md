@@ -186,7 +186,7 @@ The steering system used consists of:
       <img src="SERVO180_caract.jpg" width="350"/>
     </td>
     <td align="center" width="50%">
-      <img src="" width="350"/>
+      <img src="steering_system.JPG" width="350"/>
     </td>
   </tr>
 </table>
