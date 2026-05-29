@@ -109,10 +109,10 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 <br>· **27/05/26:** After testing the HUSKYLENS, we found that I2C communication causes fewer issues than using the serial port. We also discovered that the HUSKYLENS must be pointed downward because, when testing it with the program, we noticed it detects objects outside the field of view, which could make it difficult for us to complete the challenge. As for the servo that came with the HUSKYLENS, we disconnected it because it was interfering with the system. With this information, we decided to place the HUSKYLENS module in an elevated position so it can look forward, but only at the playing field. Additionally, we had a problem with the Arduino R4 Mini board; it broke and stopped working, so we decided to use the Arduino R4 board with Wi-Fi/Bluetooth that we had in class, but we decided not to use the Wi-Fi/Bluetooth mode since it violates the rules. 
 
 ### Mechanical Design
-<br>This section is dedicated to the robot’s mechanical components: the list of parts used in its construction and the 3D-printed parts we designed and printed.
+This section is dedicated to the robot’s mechanical components: the list of parts used in its construction and the 3D-printed parts we designed and printed.
 
 #### Parts List  
-<br>Here is a list of all the parts we used, including an image, their specific function in the robot, and a purchase link: 
+Here is a list of all the parts we used, including an image, their specific function in the robot, and a purchase link: 
 
 | Component | Quantity | Image | Function | Purchase link |
 | :---: | :---: | :---: | :---: | :---: |
@@ -172,7 +172,29 @@ Generally speaking, the robot has:
 * A HUSKYLENS module for detecting obstacles. 
 * A foam board frame for holding a couple of batteries. 
 * A switch to turn on the robot. 
-* A button to start the program. 
+* A button to start the program.
+
+##### Steering system 
+The steering system used consists of:  
+
+* A system made from LEGO bricks from our Technology class, because it’s easy to assemble and disassemble and can be put together fairly quickly in case modifications are needed, featuring two LEGO wheels that are smaller than the rear ones.  
+* An 180-degree servo, since it’s easy to program and a larger turning angle wasn’t necessary given the system we built.  
+* A servo arm with a string, to connect the LEGO steering system to the servo.
+
+If this steering turned too far in one direction, it would jam and could break. To prevent this, we adjusted the values using the steering servo calibration program so that this wouldn’t happen.  
+
+| Micro servo image | Technical features |
+| :---: | :---: |
+| | A: 32 mm 
+B: 23 mm 
+C: 28,5 mm 
+D: 12 mm 
+E: 32 mm 
+F: 19,5 mm 
+Speed: 0,1 sec 
+Torque: 2,5 kg-cm 
+Weight: 14,7 g 
+Voltage: 4,8-6 V |
 
 ### The Team
 <br>The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
