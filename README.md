@@ -356,7 +356,26 @@ The HC-SR04 sensors were chosen after considering three types of sensors: the HC
 
 We started by installing three sensors (two on the sides and one at the front), because we thought that would be enough to park and navigate turns without any problems. However, adding a fourth sensor—mounted on the lower rear of the robot—provided more accurate measurements that helped us overcome challenges (specifically the parking portion of the obstacle course) more easily. 
 
-
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="COMPONENTS/HC-SR04RC.jpg" width="500"/>
+    </td>
+    <td align="left" width="50%">
+      * Operating Voltage: 5V DC
+      * Quiescent Current: < 2mA
+      * Operating Current: 15mA
+      * Measuring Range: 2–450 cm
+      * Accuracy: ±3 mm
+      * Beam Angle: 15°
+      * Ultrasonic Frequency: 40 kHz
+      * Minimum TRIG trigger pulse duration (TTL level): 10 μs
+      * Output ECO pulse duration (TTL level): 100–25,000 μs
+      * Dimensions: 45 × 20 × 15 mm
+      * Minimum wait time between one measurement and the start of the next: 20 ms (50 ms recommended)
+    </td>
+  </tr>
+</table></div>
 
 The HUSKYLENS module identifies traffic light colors to navigate around them on the correct side. This module was new to us, so we had to meticulously study its features and how to program it. The most appropriate mode for this challenge is color detection. However, 70% of the time it confused the pink of the parking lot with the red of the traffic lights, which caused serious programming issues. 
 
