@@ -147,7 +147,7 @@ Here is a list of all the parts we used, including an image, their specific func
 #### 3D Designs
 These are the 3D designs we have created, which include: a custom-made chassis for all components, a gear to connect the differential to the 360-degree servo, a rear wheel adapter to connect the differential shaft to the wheels and a mount for the HUSKYLENS module:
 
-| Component | Quantity | Image | Function | Purchase link |
+| Component | Quantity | Image | Function | File link |
 | :---: | :---: | :---: | :---: | :---: |
 | Chasis in 3D | 1 | <img src="COMPONENTS/Chasis.png" width="150" height="120"> | Skeleton of the robot | [`CHASSIS.stl`](3D_DESIGNS/CHASSIS.stl) |
 | Adapter wheels in 3D | 2 | <img src="COMPONENTS/Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | [`GEAR_ADAPTER.stl`](3D_DESIGNS/GEAR_ADAPTER.stl) |
