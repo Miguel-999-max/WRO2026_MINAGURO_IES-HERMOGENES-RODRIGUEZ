@@ -292,7 +292,7 @@ The robot remained in that state for a time until we encountered several problem
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="support.jpg" width="400"/>
+      <img src="support.jpg" width="250"/>
     </td>
   </tr>
 </table></div>
@@ -302,10 +302,10 @@ Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was caus
 <div align="center"><table>
   <tr>
     <td align="center" width="49%">
-      <img src="camera support 1.jpeg" width="305"/>
+      <img src="camera support 1.jpeg" width="200"/>
     </td>
     <td align="center" width="49%">
-      <img src="camera support 2.jpeg" width="305"/>
+      <img src="camera support 2.jpeg" width="200"/>
     </td>
   </tr>
 </table></div>
