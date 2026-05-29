@@ -292,22 +292,23 @@ The robot remained in that state for a time until we encountered several problem
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="support.jpg" width="200"/>
+      <img src="support.jpg" width="400"/>
     </td>
+  </tr>
+</table></div>
 
 Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was causing problems, so we decided to remove it and build a 3D structure to hold it in place, allowing us to view objects and lines from a better angle without needing a servo. We also positioned the camera so that it was pointing slightly downwards, to avoid confusion with other objects and colours in the surroundings.
 
 <div align="center"><table>
   <tr>
-    <td align="center" width="50%">
-      <img src="camera support 1" width="200"/>
+    <td align="center" width="49%">
+      <img src="camera support 1.jpeg" width="305"/>
     </td>
-    <div align="center"><table>
-  <tr>
-    <td align="center" width="50%">
-      <img src="camera support 2" width="200"/>
+    <td align="center" width="49%">
+      <img src="camera support 2.jpeg" width="305"/>
     </td>
-
+  </tr>
+</table></div>
 
 ### 4. Power and Sensor Architecture 
 
