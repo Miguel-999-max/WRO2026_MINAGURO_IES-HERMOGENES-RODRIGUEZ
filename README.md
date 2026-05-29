@@ -186,7 +186,7 @@ If this steering turned too far in one direction, it would jam and could break. 
 <table>
   <tr>
     <td align="center" width="50%">
-      <b>Furitek Micro Komodo Motor</b><br>
+      <b>Micro servo 180</b><br>
       <img src="" width="350"/>
     </td>
     <td align="left" width="50%">
