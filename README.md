@@ -468,15 +468,12 @@ Here are some pictures of our robot to help with it´s reproducibility:
   <tr>
     <td align="center" width="33%">
       <img src="robot image 11.jpeg" width="305"/>
-     robot´s front view
     </td>
     <td align="center" width="33%">
       <img src="robot image 9.jpeg" width="305"/>
-     eobot´s back view
     </td>
     <td align="center" width="33%">
-      <img src="robot image 6.jpeg" width="305"/>
-     View from underneath the robot
+      <img src="robot image 12.jpeg" width="305"/>
     </td>
   </tr>
 </table></div>
