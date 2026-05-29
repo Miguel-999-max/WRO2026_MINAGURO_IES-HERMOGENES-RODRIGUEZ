@@ -6,13 +6,13 @@
  
   ## TABLE OF CONTENTS
 · [1. Daily documentation](#1.-daily-documentation)
-<br>· [Mechanical Design](#mechanical-design)
-<br>· [Mobility design](#mobility-design)
-<br>· [Power and Sensor Architecture](#power-and-sensor-architecture)
-<br>· [The Team](#the-team)
-<br>· [Our Robot](#our-robot)
-<br>· [Software](#software)
-<br>· [Our YouTube Channel](#Our-YouTube-Channel)
+<br>· [2. Mechanical Design](#2-mechanical-design)
+<br>· [3. Mobility design](#3.-mobility-design)
+<br>· [4. Power and Sensor Architecture](#4.-power-and-sensor-architecture)
+<br>· [5. The Team](#5.-the-team)
+<br>· [6. Our Robot](#6.-our-robot)
+<br>· [7. Software](#7.-software)
+<br>· [8. Our YouTube Channel](#8.-our-youtube-channel)
 
 ### 1. Daily documentation
 * **04/03/2026:** We began dividing up the work among the group, agreeing that Miguel and Rocío would handle the robot and the documentation, and Natalia and Guillermo would handle the programming. We also discussed the general features of the project. After watching videos of models from previous years and given that the robot’s maximum dimensions are 30x20 cm (which we felt was too large), we decided to try to make it as small as possible, since smaller robots tend to be more mobile and would also make it easier to avoid obstacles. Regarding the choice of the base board, we had four options: Raspberry Pi, Arduino R3, and Arduino R4 (with and without Bluetooth/Wi-Fi modules). Of these, we chose the Arduino R4 Minima (without Bluetooth/Wi-Fi) because it has a much faster protocol and more memory, and because the C++ used is a programming language we were already familiar with, which would make it easier for us to program; furthermore, it is compatible with the HUSKYLENS camera we already had and decided to use.  
@@ -121,10 +121,10 @@ Translated with DeepL.com (free version)
 
 * **27/05/26:** After testing the HUSKYLENS, we found that I2C communication causes fewer issues than using the serial port. We also discovered that the HUSKYLENS must be pointed downward because, when testing it with the program, we noticed it detects objects outside the field of view, which could make it difficult for us to complete the challenge. As for the servo that came with the HUSKYLENS, we disconnected it because it was interfering with the system. With this information, we decided to place the HUSKYLENS module in an elevated position so it can look forward, but only at the playing field. Additionally, we had a problem with the Arduino R4 Mini board; it broke and stopped working, so we decided to use the Arduino R4 board with Wi-Fi/Bluetooth that we had in class, but we decided not to use the Wi-Fi/Bluetooth mode since it violates the rules. 
 
-### Mechanical Design
+### 2. Mechanical Design
 This section is dedicated to the robot’s mechanical components: the list of parts used in its construction and the 3D-printed parts we designed and printed.
 
-#### Parts List  
+#### 2.1 Parts List  
 Here is a list of all the parts we used, including an image, their specific function in the robot, and a purchase link: 
 
 | Component | Quantity | Image | Function | Purchase link |
@@ -159,7 +159,7 @@ Here is a list of all the parts we used, including an image, their specific func
 | Battery support | 1 | <img src="support.jpg" width="150" height="120"> | Is the support of the second battery | We made it in class using a kind of cardboard and hot glue|
 | Power Expansion Board Module | 1 | <img src="power bank batteries.png" width="150" height="120">  | It's a style of power bank where we've used the same Samsung batteries | <a href="https://es.aliexpress.com/item/1005001829484812.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.3.3145BM7PBM7Pvs&gps-id=pcDetailTopMoreOtherSeller&scm=1007.40050.354490.0&scm_id=1007.40050.354490.0&scm-url=1007.40050.354490.0&pvid=aaef1a73-1862-4b0d-aa1e-1a9beffbe5b0&_t=gps-id%3ApcDetailTopMoreOtherSeller%2Cscm-url%3A1007.40050.354490.0%2Cpvid%3Aaaef1a73-1862-4b0d-aa1e-1a9beffbe5b0%2Ctpp_buckets%3A668%232846%238110%231995&pdp_ext_f=%7B%22order%22%3A%221076%22%2C%22eval%22%3A%221%22%2C%22sceneId%22%3A%2230050%22%2C%22fromPage%22%3A%22recommend%22%7D&pdp_npi=6%40dis%21EUR%212.06%212.06%21%21%212.34%212.34%21%402103909217800442825806414e0fc1%2112000017779552633%21rec%21ES%21135718878%21XZ%211%210%21n_tag%3A-29919%3Bd%3A2676a4e6%3Bm03_new_user%3A-29895&utparam-url=scene%3ApcDetailTopMoreOtherSeller%7Cquery_from%3A%7Cx_object_id%3A1005001829484812%7C_p_origin_prod%3A"> Power bank link </a> |
 
-#### 3D Designs
+#### 2.2 3D Designs
 These are the 3D designs we have created, which include: a custom-made chassis for all components, a gear to connect the differential to the 360-degree servo, a rear wheel adapter to connect the differential shaft to the wheels and a mount for the HUSKYLENS module:
 
 | Component | Quantity | Image | Function | File link |
@@ -168,7 +168,7 @@ These are the 3D designs we have created, which include: a custom-made chassis f
 | Adapter wheels in 3D | 2 | <img src="COMPONENTS/Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | [`GEAR_ADAPTER.stl`](3D_DESIGNS/GEAR_ADAPTER.stl) |
 | Adapter gear in 3D | 1 | <img src="COMPONENTS/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`WHEEL_ADAPTER.stl`](Adaptador_rueda.stl) |
 
-### Mobility design
+### 3. Mobility design
 This section includes the robot's torque and speed, the rationale behind its final configuration, as well as images of all its plans and the wiring diagram we created in TinkerCad using all the robot's components. 
 
 Generally speaking, the robot has:
@@ -187,7 +187,7 @@ Generally speaking, the robot has:
 * A switch to turn on the robot. 
 * A button to start the program.
 
-#### Steering system 
+#### 3.1 Steering system 
 The steering system used consists of:  
 
 * A system made from LEGO bricks from our Technology class, because it’s easy to assemble and disassemble and can be put together fairly quickly in case modifications are needed, featuring two LEGO wheels that are smaller than the rear ones.  
@@ -233,7 +233,7 @@ If this steering turned too far in one direction, it would jam and could break. 
   </tr>
 </table></div>
 
-#### Drive system
+#### 3.2 Drive system
 The motor system used consists of: 
 
 * A 360-degree continuous-rotation servo (model listed in the parts list). 
@@ -248,7 +248,7 @@ The mechanical differential was a bit stiff to turn when it arrived. To make it 
 
 The rear wheels are larger than the front wheels because the front wheels had to cover the height of the mechanical differential on their own; the front wheels already accounted for the height of the LEGO steering system.
 
-#### Chassis design
+#### 3.3 Chassis design
 
 The chassis has evolved based on the need to add or remove components, and depending on what was most practical for meeting the challenges. 
 
@@ -289,11 +289,11 @@ The initial layout of all the components was sketched by hand to give us an idea
 
 An important consideration regarding the robot’s balance was to place the heaviest components (the Arduino board, the batteries, the 360-degree servo) in the center of the chassis, maintaining a low and centralized center of mass. The batteries that directly power the 360-degree servo (explained in detail below) are located in a separate structure, as this was a last-minute modification.
 
-### Power and Sensor Architecture 
+### 4. Power and Sensor Architecture 
 
 This section covers the power supply, the wiring diagram created in TinkerCad, and everything related to the sensors. 
 
-#### Power Supply 
+#### 4.1 Power Supply 
 The robot uses four Samsung ICR18650-26FU batteries as its power source. Two batteries power the Arduino R4 board, and the other two directly power the 360-degree servo motor. This prevents interference with the servo, allowing the robot to move smoothly. 
 
 An energy estimate was calculated for all components to determine the appropriate batteries: 
@@ -347,10 +347,10 @@ The batteries that power the servo, being a last-minute modification, have been 
 
 To power the HUSKYLENS module, an LM7805 regulator has been included to step down the voltage from the batteries from 8.4 V to 5 V. Electrolytic capacitors have also been included as recommended by the manufacturer. 
 
-#### Wiring Scheme
+#### 4.2 Wiring Scheme
 The wiring diagram used for assembling the robot is shown in the image below. It was created in TinkerCad based on previous experience using this program. Some components were not available in TinkerCad, so similar ones that met the necessary connection requirements were used, and their names were noted on the final diagram to avoid confusion:
 
-#### Sensors 
+#### 4.3 Sensors 
 The robot receives data from three main components: the Arduino R4 Minima board, the HC-SR04 sensors, and the HUSKYLENS module.  
 
 The Arduino R4 Minima board was chosen because it has additional pins that other Arduino boards do not have, ensuring there are enough pins to connect all the components. However, after an accident in which this board stopped working, it was replaced with an Arduino R4 Wi-Fi/Bluetooth board because it has the same pins that we’ve been using from the start. The Wi-Fi and Bluetooth functions were not used to solve the challenges, as this violates the rules. This can be seen in the libraries downloaded from the final program. 
@@ -397,7 +397,7 @@ The HUSKYLENS module identifies traffic light colors to navigate around them on 
 
 One major issue it caused was that it sometimes interfered with other robot components. For example, while it was connected, the 360-degree servo wouldn’t rotate properly and would jam, but when it was disconnected, the servo rotated more smoothly.
 
-### The Team
+### 5. The Team
 The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
 
 <br> **Miguel**
@@ -417,7 +417,7 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
 <br> **Description:** Hi, I am Guillermo. I am from Ciudad Real, Spain, and I joined this project because I have always been really keen on I.T. and problem solving. Although this competition has been really challenging, the experience with all the team is worth it.
 
 
-### Our Robot
+### 6. Our Robot
 Here are some pictures of our robot to help with it´s reproducibility:
 <div align="center"><table>
   <tr>
@@ -489,7 +489,7 @@ Here are some pictures of our robot to help with it´s reproducibility:
 
 
 
-### Software
+### 7. Software
 Here are some programms we used to calibrate HCSR04 sensors and the steering servo:
 
 * **[Calibrate HCSR04 sensors](PROGRAMS/HCSR04_x4_display.ino)**: Calibrate HCSR04 sensors
@@ -499,5 +499,5 @@ Here are some programms we used to calibrate HCSR04 sensors and the steering ser
 Here is our final program:
 * **[Final program](PROGRAMS/SEGUIDOR_V1_22.ino)**: Final program
 
-### Our YouTube Channel
+### 8. Our YouTube Channel
 You can see how our robot works on our YouTube channel linked here: (<a href="https://www.youtube.com/@minagurowro2026">YouTube Channel link) </a>
