@@ -242,7 +242,7 @@ Initially, we used a sheet of foam board that was in the classroom, onto which w
 
 The front is cut into a pointed shape to prevent it from coming into contact with any of the interior partition walls or those of the parking garage during the obstacle phase. 
 
-<table>
+<div align="center"><table>
   <tr>
     <td align="center" width="33%">
       <img src="prototype1.1.jpg" width="305"/>
@@ -254,7 +254,7 @@ The front is cut into a pointed shape to prevent it from coming into contact wit
       <img src="prototype1.3.jpg" width="305"/>
     </td>
   </tr>
-</table>
+</table></div>
 
 After confirming that this was the final base, we designed the chassis in 3D, printed it, and transferred the components from one base to the other. Although we thought this change might cause problems once everything was already assembled, there were none. 
 
@@ -262,7 +262,7 @@ After confirming that this was the final base, we designed the chassis in 3D, pr
 
 The initial layout of all the components was sketched by hand to give us an idea (photos attached): 
 
-<p align="center"><table>
+<div align="center"><table>
   <tr>
     <td align="center" width="50%">
       <img src="IMG_3713.jpeg" width="400"/>
@@ -271,7 +271,7 @@ The initial layout of all the components was sketched by hand to give us an idea
       <img src="IMG_3714.jpeg" width="400"/>
     </td>
   </tr>
-</table></p>
+</table></div>
 
 An important consideration regarding the robot’s balance was to place the heaviest components (the Arduino board, the batteries, the 360-degree servo) in the center of the chassis, maintaining a low and centralized center of mass. The batteries that directly power the 360-degree servo (explained in detail below) are located in a separate structure, as this was a last-minute modification.
 
@@ -304,7 +304,7 @@ Based on this estimate and the availability of batteries in our class, we chose 
 
 The batteries that power the board are placed in a dedicated space on the 3D-printed chassis. Initially, in the prototype with the foam board base, they were glued to the bottom of the base, as seen in the initial sketches of the component layout. Later, it was decided to create a custom-made 3D-printed space for them in that same location.
 
-<p align="center"><table>
+<div align="center"><table>
   <tr>
     <td align="center" width="50%">
       <img src="prototype1.2.jpg" width="400"/>
@@ -313,11 +313,11 @@ The batteries that power the board are placed in a dedicated space on the 3D-pri
       <img src="batteries1.JPG" width="400"/>
     </td>
   </tr>
-</table></p>
+</table></div>
 
 The batteries that power the servo, being a last-minute modification, have been placed in a foam board structure on the upper rear of the robot. This also extends the parking length and allows us to exit the parking space in the obstacle course with more room to maneuver. 
 
-<table>
+<div align="center"><table>
   <tr>
     <td align="center" width="33%">
       <img src="batteries_structure1.jpeg" width="350"/>
@@ -329,7 +329,7 @@ The batteries that power the servo, being a last-minute modification, have been 
       <img src="batteries_structure3.JPG" width="350"/>
     </td>
   </tr>
-</table>
+</table></div>
 
 To power the HUSKYLENS module, an LM7805 regulator has been included to step down the voltage from the batteries from 8.4 V to 5 V. Electrolytic capacitors have also been included as recommended by the manufacturer. 
 
