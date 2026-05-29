@@ -302,7 +302,18 @@ Based on this estimate and the availability of batteries in our class, we chose 
 
 <img src="BATERIAS_SAMSUNG.jpg" width="300">
 
-The batteries that power the board are placed in a dedicated space on the 3D-printed chassis. Initially, in the prototype with the foam board base, they were glued to the bottom of the base, as seen in the initial sketches of the component layout. Later, it was decided to create a custom-made 3D-printed space for them in that same location. 
+The batteries that power the board are placed in a dedicated space on the 3D-printed chassis. Initially, in the prototype with the foam board base, they were glued to the bottom of the base, as seen in the initial sketches of the component layout. Later, it was decided to create a custom-made 3D-printed space for them in that same location.
+
+<p align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="prototype1.2.jpg" width="400"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="batteries1.JPG" width="400"/>
+    </td>
+  </tr>
+</table></p>
 
 The batteries that power the servo, being a last-minute modification, have been placed in a foam board structure on the upper rear of the robot. This also extends the parking length and allows us to exit the parking space in the obstacle course with more room to maneuver. 
 
