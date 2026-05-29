@@ -291,7 +291,22 @@ An energy estimate was calculated for all components to determine the appropriat
 * 360-degree continuous rotation servo: 700 mA 
 * Total: 1215 mA 
 
-Theoretically, this is the robot’s power consumption. However, after measuring the robot’s actual power consumption, it was 500 mA. Therefore, with two batteries (2600 mA), we have enough power for 5 hours. These were the initial calculations since we were only going to use two batteries.
+Theoretically, this is the robot’s power consumption. However, after measuring the robot’s actual power consumption, it was 500 mA. Therefore, with two batteries (2600 mA), we have enough power for 5 hours. These were the initial calculations since we were only going to use two batteries. Finally, after verifying that using two batteries connected directly to the 360-degree servo and the HUSKYLENS module works as intended, we will now connect four batteries (5200 mA), which theoretically gives us: 
+
+* Battery life for the 360° servo and the HUSKYLENS camera (8.4 V and 2600 mA): approximately 2.5 hours. 
+* Battery life for the Arduino board (4.2 V and 5200 mA): approximately 16 hours. 
+
+This means we need to be careful with the batteries for the 360° servo and the HUSKYLENS module because they may fail due to a lack of power. 
+
+Based on this estimate and the availability of batteries in our class, we chose the Samsung ICR18650-26FU model. The main features of this model are:
+
+<img src="BATERIAS_SAMSUNG.jpg" width="300">
+
+The batteries that power the board are placed in a dedicated space on the 3D-printed chassis. Initially, in the prototype with the foam board base, they were glued to the bottom of the base, as seen in the initial sketches of the component layout. Later, it was decided to create a custom-made 3D-printed space for them in that same location. 
+
+The batteries that power the servo, being a last-minute modification, have been placed in a foam board structure on the upper rear of the robot. This also extends the parking length and allows us to exit the parking space in the obstacle course with more room to maneuver. 
+
+To power the HUSKYLENS module, an LM7805 regulator has been included to step down the voltage from the batteries from 8.4 V to 5 V. Electrolytic capacitors have also been included as recommended by the manufacturer. 
 
 ### The Team
 The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
