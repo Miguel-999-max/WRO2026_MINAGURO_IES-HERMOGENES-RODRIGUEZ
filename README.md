@@ -147,32 +147,32 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 | Power Expansion Board Module | 1 | <img src="power bank batteries.png" width="150" height="120">  | It's a style of power bank where we've used the same Samsung batteries | <a href="https://es.aliexpress.com/item/1005001829484812.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.3.3145BM7PBM7Pvs&gps-id=pcDetailTopMoreOtherSeller&scm=1007.40050.354490.0&scm_id=1007.40050.354490.0&scm-url=1007.40050.354490.0&pvid=aaef1a73-1862-4b0d-aa1e-1a9beffbe5b0&_t=gps-id%3ApcDetailTopMoreOtherSeller%2Cscm-url%3A1007.40050.354490.0%2Cpvid%3Aaaef1a73-1862-4b0d-aa1e-1a9beffbe5b0%2Ctpp_buckets%3A668%232846%238110%231995&pdp_ext_f=%7B%22order%22%3A%221076%22%2C%22eval%22%3A%221%22%2C%22sceneId%22%3A%2230050%22%2C%22fromPage%22%3A%22recommend%22%7D&pdp_npi=6%40dis%21EUR%212.06%212.06%21%21%212.34%212.34%21%402103909217800442825806414e0fc1%2112000017779552633%21rec%21ES%21135718878%21XZ%211%210%21n_tag%3A-29919%3Bd%3A2676a4e6%3Bm03_new_user%3A-29895&utparam-url=scene%3ApcDetailTopMoreOtherSeller%7Cquery_from%3A%7Cx_object_id%3A1005001829484812%7C_p_origin_prod%3A"> Power bank link </a> |
 
 #### 3D Designs
-<br>These are the 3D designs we have created, which include: a custom-made chassis for all components, a gear to connect the differential to the 360-degree servo, a rear wheel adapter to connect the differential shaft to the wheels and a mount for the HUSKYLENS module:
+These are the 3D designs we have created, which include: a custom-made chassis for all components, a gear to connect the differential to the 360-degree servo, a rear wheel adapter to connect the differential shaft to the wheels and a mount for the HUSKYLENS module:
 
+| Component | Quantity | Image | Function | Purchase link |
+| :---: | :---: | :---: | :---: | :---: |
 | Chasis in 3D | 1 | <img src="COMPONENTS/Chasis.png" width="150" height="120"> | Skeleton of the robot | [`CHASSIS.stl`](3D_DESIGNS/CHASSIS.stl) |
 | Adapter wheels in 3D | 2 | <img src="COMPONENTS/Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | [`GEAR_ADAPTER.stl`](3D_DESIGNS/GEAR_ADAPTER.stl) |
 | Adapter gear in 3D | 1 | <img src="COMPONENTS/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`WHEEL_ADAPTER.stl`](Adaptador_rueda.stl) |
 
 ### Mobility design
-<br>This section includes the robot's torque and speed, the rationale behind its final configuration, as well as images of all its plans and the wiring diagram we created in TinkerCad using all the robot's components. 
+This section includes the robot's torque and speed, the rationale behind its final configuration, as well as images of all its plans and the wiring diagram we created in TinkerCad using all the robot's components. 
 
-<br>Generally speaking, the robot has:
+Generally speaking, the robot has:
 
-<br>· An Arduino R4 board (chosen based on previous experience programming it) 
-
-<br>· Four HC-SR04 sensors (one at the front, one at the rear, and two on the sides, one on each side): the front and side sensors are mounted on top of the chassis on a small piece of foam board to...; the rear sensor is mounted underneath the chassis due to space constraints at the rear top of the chassis. The triggers for the four sensors are soldered to the same pin to save pins on the Arduino board, in case more components need to be connected. 
-
-<br>· Four Samsung batteries... two of which power the Arduino board directly... 
-<br>· A 360-degree servo that functions as a servo motor. 
-<br>· A transmission system made with LEGO gears and one made with 3D-printed parts that runs from the servo motor to the mechanical differential. 
-<br>· A mechanical differential equipped with two adapters for 3D printers to ensure a better fit on the wheels. 
-<br>· Four LEGO wheels (two larger and two smaller: the specific models are listed in the parts list). 
-<br>· Un sistema de dirección de LEGO (piezas usadas en la lista de componentes). 
-<br>· An 180-degree servo to move the LEGO steering system via an arm attached to a string that runs to the steering system. 
-<br>· A HUSKYLENS module for detecting obstacles. 
-<br>· A foam board frame for holding a couple of batteries. 
-<br>· A switch to turn on the robot. 
-<br>· A button to start the program. 
+· An Arduino R4 board (chosen based on previous experience programming it) 
+· Four HC-SR04 sensors (one at the front, one at the rear, and two on the sides, one on each side): the front and side sensors are mounted on top of the chassis on a small piece of foam board to...; the rear sensor is mounted underneath the chassis due to space constraints at the rear top of the chassis. The triggers for the four sensors are soldered to the same pin to save pins on the Arduino board, in case more components need to be connected. 
+· Four Samsung batteries... two of which power the Arduino board directly... 
+· A 360-degree servo that functions as a servo motor. 
+· A transmission system made with LEGO gears and one made with 3D-printed parts that runs from the servo motor to the mechanical differential. 
+· A mechanical differential equipped with two adapters for 3D printers to ensure a better fit on the wheels. 
+· Four LEGO wheels (two larger and two smaller: the specific models are listed in the parts list). 
+· Un sistema de dirección de LEGO (piezas usadas en la lista de componentes). 
+· An 180-degree servo to move the LEGO steering system via an arm attached to a string that runs to the steering system. 
+· A HUSKYLENS module for detecting obstacles. 
+· A foam board frame for holding a couple of batteries. 
+· A switch to turn on the robot. 
+· A button to start the program. 
 
 
 
