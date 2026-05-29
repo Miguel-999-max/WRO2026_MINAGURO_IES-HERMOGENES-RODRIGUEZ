@@ -307,10 +307,10 @@ The batteries that power the board are placed in a dedicated space on the 3D-pri
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="prototype1.2.jpg" width="400"/>
+      <img src="prototype1.2.jpg" width="300" height="350/>
     </td>
     <td align="center" width="50%">
-      <img src="batteries1.JPG" width="400"/>
+      <img src="batteries1.JPG" width="400" height="350"/>
     </td>
   </tr>
 </table></div>
