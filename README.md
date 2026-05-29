@@ -344,7 +344,7 @@ The Arduino R4 Minima board was chosen because it has additional pins that other
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="COMPONENTS/HUSKYLENS.webp" width="500" height="400"/>
+      <img src="pinout-arduino-uno-r4-minima.webp" width="500" height="400"/>
     </td>
     <td align="center" width="50%">
       <img src="PLACA_caract.png" width="900" height="400"/>
