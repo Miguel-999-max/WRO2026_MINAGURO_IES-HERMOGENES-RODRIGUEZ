@@ -5,7 +5,7 @@
 <br> Guided by our passion for technology, we have created a vehicle that maybe doesn´t work as we would like to, but reflects all of our hard work and time spent on it.
  
   ## TABLE OF CONTENTS
-· [Daily documentation](#daily-documentation)
+· [1. Daily documentation](#1.-daily-documentation)
 <br>· [Mechanical Design](#mechanical-design)
 <br>· [Mobility design](#mobility-design)
 <br>· [Power and Sensor Architecture](#power-and-sensor-architecture)
@@ -14,7 +14,7 @@
 <br>· [Software](#software)
 <br>· [Our YouTube Channel](#Our-YouTube-Channel)
 
-### Daily documentation
+### 1. Daily documentation
 * **04/03/2026:** We began dividing up the work among the group, agreeing that Miguel and Rocío would handle the robot and the documentation, and Natalia and Guillermo would handle the programming. We also discussed the general features of the project. After watching videos of models from previous years and given that the robot’s maximum dimensions are 30x20 cm (which we felt was too large), we decided to try to make it as small as possible, since smaller robots tend to be more mobile and would also make it easier to avoid obstacles. Regarding the choice of the base board, we had four options: Raspberry Pi, Arduino R3, and Arduino R4 (with and without Bluetooth/Wi-Fi modules). Of these, we chose the Arduino R4 Minima (without Bluetooth/Wi-Fi) because it has a much faster protocol and more memory, and because the C++ used is a programming language we were already familiar with, which would make it easier for us to program; furthermore, it is compatible with the HUSKYLENS camera we already had and decided to use.  
 
 * **05/03/26:** We looked for components in our classroom that could be used to build the robot and researched strategies from previous years on GitHub. 
