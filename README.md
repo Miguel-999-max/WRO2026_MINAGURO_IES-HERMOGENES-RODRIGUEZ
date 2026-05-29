@@ -333,6 +333,35 @@ The batteries that power the servo, being a last-minute modification, have been 
 
 To power the HUSKYLENS module, an LM7805 regulator has been included to step down the voltage from the batteries from 8.4 V to 5 V. Electrolytic capacitors have also been included as recommended by the manufacturer. 
 
+#### Wiring Scheme
+The wiring diagram used for assembling the robot is shown in the image below. It was created in TinkerCad based on previous experience using this program. Some components were not available in TinkerCad, so similar ones that met the necessary connection requirements were used, and their names were noted on the final diagram to avoid confusion:
+
+#### Sensors 
+The robot receives data from three main components: the Arduino R4 Minima board, the HC-SR04 sensors, and the HUSKYLENS module.  
+
+The Arduino R4 Minima board was chosen because it has additional pins that other Arduino boards do not have, ensuring there are enough pins to connect all the components. However, after an accident in which this board stopped working, it was replaced with an Arduino R4 Wi-Fi/Bluetooth board because it has the same pins that we’ve been using from the start. The Wi-Fi and Bluetooth functions were not used to solve the challenges, as this violates the rules. This can be seen in the libraries downloaded from the final program. 
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="HUSKYLENS.webp" width="400"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="batteries1.JPG" width="400"/>
+    </td>
+  </tr>
+</table></div>
+
+The HC-SR04 sensors were chosen after considering three types of sensors: the HC-SR04, the CJVL53L0XV2 (which use lasers), and the TOF10120 (which also use lasers). Initially, the CJVL53L0XV2 was chosen, although it was later replaced due to programming issues. The HC-SR04, although less efficient, is easier to program, and we had used it before. 
+
+We started by installing three sensors (two on the sides and one at the front), because we thought that would be enough to park and navigate turns without any problems. However, adding a fourth sensor—mounted on the lower rear of the robot—provided more accurate measurements that helped us overcome challenges (specifically the parking portion of the obstacle course) more easily. 
+
+
+
+The HUSKYLENS module identifies traffic light colors to navigate around them on the correct side. This module was new to us, so we had to meticulously study its features and how to program it. The most appropriate mode for this challenge is color detection. However, 70% of the time it confused the pink of the parking lot with the red of the traffic lights, which caused serious programming issues. 
+
+One major issue it caused was that it sometimes interfered with other robot components. For example, while it was connected, the 360-degree servo wouldn’t rotate properly and would jam, but when it was disconnected, the servo rotated more smoothly.
+
 ### The Team
 The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
 
