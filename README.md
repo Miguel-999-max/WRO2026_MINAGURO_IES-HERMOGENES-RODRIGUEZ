@@ -412,12 +412,75 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
 
 ### Our Robot
 Here are some pictures of our robot to help with it´s reproducibility:
-<br> <img src="ROBOT/20260508_104557.jpg" alt="Imagen1" width="250" height="290">    **Robot´s Front View**
-<br> <img src="ROBOT/20260508_104607.jpg" alt="Imagen2" width="250" height="290">    **Robot´s Upper View**
-<br> <img src="ROBOT/20260508_104626.jpg" alt="Imagen3" width="250" height="290">    **Robot´s Right View**
-<br> <img src="ROBOT/20260508_104641.jpg" alt="Imagen4" width="250" height="290">    **Robot´s Left View**
-<br> <img src="ROBOT/20260508_104702.jpg" alt="Imagen5" width="250" height="290">    **Robot´s Back View**
-<br> <img src="ROBOT/20260508_104720.jpg" alt="Imagen6" width="250" height="290">    **Robot´s Under View**
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="robot image 1.jpeg" width="305"/>
+     robot´s front view
+    </td>
+    <td align="center" width="33%">
+      <img src="robot image 3.jpeg" width="305"/>
+     eobot´s back view
+    </td>
+    <td align="center" width="33%">
+      <img src="robot image 6.jpeg" width="305"/>
+     View from underneath the robot
+    </td>
+  </tr>
+</table></div>
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="robot image 2.jpeg" width="305"/>
+     Robot’s right side view
+    </td>
+    <td align="center" width="33%">
+      <img src="robot image 5.jpeg" width="305"/>
+     View of the robot's layout
+    </td>
+    <td align="center" width="33%">
+      <img src="robot image 4.jpeg" width="305"/>
+     Robot’s left side view
+    </td>
+  </tr>
+</table></div>
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <b>Other robot´s views</b><br>
+    </td>
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="robot image 7.jpeg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="robot image 10.jpeg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="robot image 8.jpeg" width="305"/>
+    </td>
+  </tr>
+</table></div>
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="robot image 11.jpeg" width="305"/>
+     robot´s front view
+    </td>
+    <td align="center" width="33%">
+      <img src="robot image 9.jpeg" width="305"/>
+     eobot´s back view
+    </td>
+    <td align="center" width="33%">
+      <img src="robot image 6.jpeg" width="305"/>
+     View from underneath the robot
+    </td>
+  </tr>
+</table></div>
+
 
 ### Components used
 
