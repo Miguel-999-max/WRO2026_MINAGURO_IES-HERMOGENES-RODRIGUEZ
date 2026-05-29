@@ -183,18 +183,28 @@ The steering system used consists of:
 
 If this steering turned too far in one direction, it would jam and could break. To prevent this, we adjusted the values using the steering servo calibration program so that this wouldn’t happen.  
 
-| Micro servo image | Technical features |
-| :---: | :---: |
-| | A: 32 mm 
-B: 23 mm 
-C: 28,5 mm 
-D: 12 mm 
-E: 32 mm 
-F: 19,5 mm 
-Speed: 0,1 sec 
-Torque: 2,5 kg-cm 
-Weight: 14,7 g 
-Voltage: 4,8-6 V |
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <b>Furitek Micro Komodo Motor</b><br>
+      <img src="" width="350"/>
+    </td>
+    <td align="left" width="50%">
+      <ul>
+        <li>A:32mm</li>
+        <li>B:23mm</li>
+        <li>C:28,5mm</li>
+        <li>D:12mm</li>
+        <li>E:32mm</li>
+        <li>F:19mm</li>
+        <li>Speed:0,1sec</li>
+        <li>Torque:2,5kg-cm</li>
+        <li>Weight:14,7g</li>
+        <li>Voltage:4,8-6V</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ### The Team
 <br>The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
