@@ -320,13 +320,13 @@ The batteries that power the servo, being a last-minute modification, have been 
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="batteries_structure1.jpeg" width="305"/>
+      <img src="batteries_structure1.jpeg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="batteries_structure2.jpeg" width="305"/>
+      <img src="batteries_structure2.jpeg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="batteries_structure3.jpeg" width="305"/>
+      <img src="batteries_structure3.JPG" width="350"/>
     </td>
   </tr>
 </table>
