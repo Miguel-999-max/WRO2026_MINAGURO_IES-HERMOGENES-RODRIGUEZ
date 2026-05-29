@@ -242,6 +242,20 @@ Initially, we used a sheet of foam board that was in the classroom, onto which w
 
 The front is cut into a pointed shape to prevent it from coming into contact with any of the interior partition walls or those of the parking garage during the obstacle phase. 
 
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="steering_system.JPG" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="steering_system2.JPG" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="steering_system3.JPG" width="305"/>
+    </td>
+  </tr>
+</table>
+
 After confirming that this was the final base, we designed the chassis in 3D, printed it, and transferred the components from one base to the other. Although we thought this change might cause problems once everything was already assembled, there were none. 
 
 The initial layout of all the components was sketched by hand to give us an idea (photos attached): 
