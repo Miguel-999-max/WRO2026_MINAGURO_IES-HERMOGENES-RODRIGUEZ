@@ -196,7 +196,7 @@ The steering system used consists of:
 
 If this steering turned too far in one direction, it would jam and could break. To prevent this, we adjusted the values using the steering servo calibration program so that this wouldn’t happen.  
 
-<table>
+<div align="center"><table>
   <tr>
     <td align="center" width="50%">
       <b>Micro servo 180</b><br>
@@ -217,7 +217,7 @@ If this steering turned too far in one direction, it would jam and could break. 
       </ul>
     </td>
   </tr>
-</table>
+</table></div>
 
 #### Drive system
 The motor system used consists of: 
