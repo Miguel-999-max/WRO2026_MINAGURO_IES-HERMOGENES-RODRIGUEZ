@@ -117,8 +117,6 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
   * Obstacle Challenge: we start from the parking spot, unpark, drive around while avoiding traffic lights, count lines to stop, find the parking spot, and park. All of this is done primarily using HUSKYLENS. 
 Once we’ve clarified all this, we get to work. Since the open challenge was almost complete, we redesigned the part about pulling out of the parking spot (which works for us); so all that would be left is counting the turns and parking, but since we don’t have time, we decided to prioritize solving the obstacle challenge. 
 
-Translated with DeepL.com (free version)
-
 * **27/05/26:** After testing the HUSKYLENS, we found that I2C communication causes fewer issues than using the serial port. We also discovered that the HUSKYLENS must be pointed downward because, when testing it with the program, we noticed it detects objects outside the field of view, which could make it difficult for us to complete the challenge. As for the servo that came with the HUSKYLENS, we disconnected it because it was interfering with the system. With this information, we decided to place the HUSKYLENS module in an elevated position so it can look forward, but only at the playing field. Additionally, we had a problem with the Arduino R4 Mini board; it broke and stopped working, so we decided to use the Arduino R4 board with Wi-Fi/Bluetooth that we had in class, but we decided not to use the Wi-Fi/Bluetooth mode since it violates the rules. 
 
 ### 2. Mechanical Design
