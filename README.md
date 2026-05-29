@@ -288,10 +288,11 @@ The initial layout of all the components was sketched by hand to give us an idea
 An important consideration regarding the robot’s balance was to place the heaviest components (the Arduino board, the batteries, the 360-degree servo) in the center of the chassis, maintaining a low and centralized center of mass. The batteries that directly power the 360-degree servo (explained in detail below) are located in a separate structure, as this was a last-minute modification.
 
 The robot remained in that state for a time until we encountered several problems and some broken circuit boards, which forced us to build a mount for a second battery, as recommended in the instructions.
+
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="support.jpg" width="400"/>
+      <img src="support.jpg" width="200"/>
     </td>
 
 Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was causing problems, so we decided to remove it and build a 3D structure to hold it in place, allowing us to view objects and lines from a better angle without needing a servo. We also positioned the camera so that it was pointing slightly downwards, to avoid confusion with other objects and colours in the surroundings.
@@ -299,7 +300,12 @@ Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was caus
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="support.jpg" width="400"/>
+      <img src="camera support 1" width="200"/>
+    </td>
+    <div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="camera support 2" width="200"/>
     </td>
 
 
