@@ -300,7 +300,7 @@ This means we need to be careful with the batteries for the 360° servo and the 
 
 Based on this estimate and the availability of batteries in our class, we chose the Samsung ICR18650-26FU model. The main features of this model are:
 
-<img src="BATERIAS_SAMSUNG.jpg" width="300">
+<img src="COMPONENTS/BATERIAS_SAMSUNG.jpg" width="300">
 
 The batteries that power the board are placed in a dedicated space on the 3D-printed chassis. Initially, in the prototype with the foam board base, they were glued to the bottom of the base, as seen in the initial sketches of the component layout. Later, it was decided to create a custom-made 3D-printed space for them in that same location.
 
