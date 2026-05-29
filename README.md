@@ -362,17 +362,19 @@ We started by installing three sensors (two on the sides and one at the front), 
       <img src="COMPONENTS/HC-SR04RC.jpg" width="500"/>
     </td>
     <td align="left" width="50%">
-      * Operating Voltage: 5V DC
-      * Quiescent Current: < 2mA
-      * Operating Current: 15mA
-      * Measuring Range: 2–450 cm
-      * Accuracy: ±3 mm
-      * Beam Angle: 15°
-      * Ultrasonic Frequency: 40 kHz
-      * Minimum TRIG trigger pulse duration (TTL level): 10 μs
-      * Output ECO pulse duration (TTL level): 100–25,000 μs
-      * Dimensions: 45 × 20 × 15 mm
-      * Minimum wait time between one measurement and the start of the next: 20 ms (50 ms recommended)
+     <ul>
+        <li>Operating Voltage: 5V DC</li>
+        <li>Quiescent Current: < 2mA</li>
+        <li>Operating Current: 15mA</li>
+        <li>Measuring Range: 2–450 cm</li>
+        <li>Accuracy: ±3 mm</li>
+        <li>Beam Angle: 15°</li>
+        <li>Ultrasonic Frequency: 40 kHz</li>
+        <li>Minimum TRIG trigger pulse duration (TTL level): 10 μs</li>
+        <li>Output ECO pulse duration (TTL level): 100–25,000 μs</li>
+        <li>Dimensions: 45 × 20 × 15 mm</li>
+        <li>Minimum wait time between one measurement and the start of the next: 20 ms (50 ms recommended)</li>
+      </ul>
     </td>
   </tr>
 </table></div>
