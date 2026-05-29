@@ -275,6 +275,24 @@ The initial layout of all the components was sketched by hand to give us an idea
 
 An important consideration regarding the robot’s balance was to place the heaviest components (the Arduino board, the batteries, the 360-degree servo) in the center of the chassis, maintaining a low and centralized center of mass. The batteries that directly power the 360-degree servo (explained in detail below) are located in a separate structure, as this was a last-minute modification.
 
+### Power and Sensor Architecture 
+
+This section covers the power supply, the wiring diagram created in TinkerCad, and everything related to the sensors. 
+
+#### Power Supply 
+The robot uses four Samsung ICR18650-26FU batteries as its power source. Two batteries power the Arduino R4 board, and the other two directly power the 360-degree servo motor. This prevents interference with the servo, allowing the robot to move smoothly. 
+
+An energy estimate was calculated for all components to determine the appropriate batteries: 
+
+* HUSKYLENS module: 230–420 mA. 
+* Arduino R4 Minima board: 100 mA. 
+* HC-SR04 sensors: 15 mA 
+* 180-degree microservo: 200 mA 
+* 360-degree continuous rotation servo: 700 mA 
+* Total: 1215 mA 
+
+Theoretically, this is the robot’s power consumption. However, after measuring the robot’s actual power consumption, it was 500 mA. Therefore, with two batteries (2600 mA), we have enough power for 5 hours. These were the initial calculations since we were only going to use two batteries.
+
 ### The Team
 The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
 
