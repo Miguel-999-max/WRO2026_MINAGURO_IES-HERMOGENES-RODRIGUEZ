@@ -185,7 +185,7 @@ If this steering turned too far in one direction, it would jam and could break. 
   <tr>
     <td align="center" width="50%">
       <b>Micro servo 180</b><br>
-      <img src="SERVO_caract.jpg" width="350"/>
+      <img src="SERVO180_caract.jpg" width="350"/>
     </td>
     <td align="left" width="50%">
       <ul>
