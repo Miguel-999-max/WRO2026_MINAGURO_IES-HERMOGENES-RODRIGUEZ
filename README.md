@@ -108,39 +108,13 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 
 <br>· **27/05/26:** After testing the HUSKYLENS, we found that I2C communication causes fewer issues than using the serial port. We also discovered that the HUSKYLENS must be pointed downward because, when testing it with the program, we noticed it detects objects outside the field of view, which could make it difficult for us to complete the challenge. As for the servo that came with the HUSKYLENS, we disconnected it because it was interfering with the system. With this information, we decided to place the HUSKYLENS module in an elevated position so it can look forward, but only at the playing field. Additionally, we had a problem with the Arduino R4 Mini board; it broke and stopped working, so we decided to use the Arduino R4 board with Wi-Fi/Bluetooth that we had in class, but we decided not to use the Wi-Fi/Bluetooth mode since it violates the rules. 
 
+### Mechanical Design
 
-### The Team
+<br>This section is dedicated to the robot’s mechanical components: the list of parts used in its construction and the 3D-printed parts we designed and printed.
 
-<br>The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
+## Parts List  
 
-<br> **Miguel**
-<br> **Age:** 17
-<br> **Description:** Hi, I'm Miguel from Ciudad Real, Spain, and this is my first time participating in WRO Competition. I have always been into mechanics and robot building, so I didn't hesistate to take up this challenge. I am such a curious and competitive person, and I had put all my efforts in helping the team.
-
-<br> **Natalia**
-<br> **Age:** 17
-<br> **Description:** Hi, I am Natalia, also from Ciudad Real, Spain, and it is my first time participating, too. I am really good at programming, which I actually enjoy doing. I am hardworking and creative, and this competition, despite being really demanding, has helped me to enter the engineering world.
-
-<br> **Rocío** 
-<br> **Age:** 16
-<br> **Description:** Hi! I'm Rocío from Spain and this is the first time in the WRO competition. Since I was a kid, I've loved solving puzzles and maths problems. I started to interest in robotics when I was at secondary school, when my teacher taught us how to program. I thougth that was really fun.
-
-<br> **Guillermo**
-<br> **Age:** 16
-<br> **Description:** Hi, I am Guillermo. I am from Ciudad Real, Spain, and I joined this project because I have always been really keen on I.T. and problem solving. Although this competition has been really challenging, the experience with all the team is worth it.
-
-
-### Our Robot
-
-Here are some pictures of our robot to help with it´s reproducibility:
-<br> <img src="ROBOT/20260508_104557.jpg" alt="Imagen1" width="250" height="290">    **Robot´s Front View**
-<br> <img src="ROBOT/20260508_104607.jpg" alt="Imagen2" width="250" height="290">    **Robot´s Upper View**
-<br> <img src="ROBOT/20260508_104626.jpg" alt="Imagen3" width="250" height="290">    **Robot´s Right View**
-<br> <img src="ROBOT/20260508_104641.jpg" alt="Imagen4" width="250" height="290">    **Robot´s Left View**
-<br> <img src="ROBOT/20260508_104702.jpg" alt="Imagen5" width="250" height="290">    **Robot´s Back View**
-<br> <img src="ROBOT/20260508_104720.jpg" alt="Imagen6" width="250" height="290">    **Robot´s Under View**
-
-### Components used
+<br>Here is a list of all the parts we used, including an image, their specific function in the robot, and a purchase link: 
 
 | Component | Quantity | Image | Function | Purchase link |
 | :---: | :---: | :---: | :---: | :---: |
@@ -176,6 +150,42 @@ Here are some pictures of our robot to help with it´s reproducibility:
 | Adapter gear in 3D | 1 | <img src="COMPONENTS/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`WHEEL_ADAPTER.stl`](Adaptador_rueda.stl) |
 | Baterie support | 1 | <img src="support.jpg" width="150" height="120"> | Is the support of the second batterie | We made it in class using a kind of cardboard and hot glue gun |
 | Power Expansion Board Module | 1 | <img src="power bank batteries.png" width="150" height="120">  | It's a style of power bank where we've used the same Samsung batteries | <a href="https://es.aliexpress.com/item/1005001829484812.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.3.3145BM7PBM7Pvs&gps-id=pcDetailTopMoreOtherSeller&scm=1007.40050.354490.0&scm_id=1007.40050.354490.0&scm-url=1007.40050.354490.0&pvid=aaef1a73-1862-4b0d-aa1e-1a9beffbe5b0&_t=gps-id%3ApcDetailTopMoreOtherSeller%2Cscm-url%3A1007.40050.354490.0%2Cpvid%3Aaaef1a73-1862-4b0d-aa1e-1a9beffbe5b0%2Ctpp_buckets%3A668%232846%238110%231995&pdp_ext_f=%7B%22order%22%3A%221076%22%2C%22eval%22%3A%221%22%2C%22sceneId%22%3A%2230050%22%2C%22fromPage%22%3A%22recommend%22%7D&pdp_npi=6%40dis%21EUR%212.06%212.06%21%21%212.34%212.34%21%402103909217800442825806414e0fc1%2112000017779552633%21rec%21ES%21135718878%21XZ%211%210%21n_tag%3A-29919%3Bd%3A2676a4e6%3Bm03_new_user%3A-29895&utparam-url=scene%3ApcDetailTopMoreOtherSeller%7Cquery_from%3A%7Cx_object_id%3A1005001829484812%7C_p_origin_prod%3A"> Power bank link </a> |
+
+
+### The Team
+
+<br>The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
+
+<br> **Miguel**
+<br> **Age:** 17
+<br> **Description:** Hi, I'm Miguel from Ciudad Real, Spain, and this is my first time participating in WRO Competition. I have always been into mechanics and robot building, so I didn't hesistate to take up this challenge. I am such a curious and competitive person, and I had put all my efforts in helping the team.
+
+<br> **Natalia**
+<br> **Age:** 17
+<br> **Description:** Hi, I am Natalia, also from Ciudad Real, Spain, and it is my first time participating, too. I am really good at programming, which I actually enjoy doing. I am hardworking and creative, and this competition, despite being really demanding, has helped me to enter the engineering world.
+
+<br> **Rocío** 
+<br> **Age:** 16
+<br> **Description:** Hi! I'm Rocío from Spain and this is the first time in the WRO competition. Since I was a kid, I've loved solving puzzles and maths problems. I started to interest in robotics when I was at secondary school, when my teacher taught us how to program. I thougth that was really fun.
+
+<br> **Guillermo**
+<br> **Age:** 16
+<br> **Description:** Hi, I am Guillermo. I am from Ciudad Real, Spain, and I joined this project because I have always been really keen on I.T. and problem solving. Although this competition has been really challenging, the experience with all the team is worth it.
+
+
+### Our Robot
+
+Here are some pictures of our robot to help with it´s reproducibility:
+<br> <img src="ROBOT/20260508_104557.jpg" alt="Imagen1" width="250" height="290">    **Robot´s Front View**
+<br> <img src="ROBOT/20260508_104607.jpg" alt="Imagen2" width="250" height="290">    **Robot´s Upper View**
+<br> <img src="ROBOT/20260508_104626.jpg" alt="Imagen3" width="250" height="290">    **Robot´s Right View**
+<br> <img src="ROBOT/20260508_104641.jpg" alt="Imagen4" width="250" height="290">    **Robot´s Left View**
+<br> <img src="ROBOT/20260508_104702.jpg" alt="Imagen5" width="250" height="290">    **Robot´s Back View**
+<br> <img src="ROBOT/20260508_104720.jpg" alt="Imagen6" width="250" height="290">    **Robot´s Under View**
+
+### Components used
+
+
 
 ### Software
 Here are some programms we used to calibrate HCSR04 sensors and the steering servo:
