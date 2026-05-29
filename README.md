@@ -258,7 +258,7 @@ The front is cut into a pointed shape to prevent it from coming into contact wit
 
 After confirming that this was the final base, we designed the chassis in 3D, printed it, and transferred the components from one base to the other. Although we thought this change might cause problems once everything was already assembled, there were none. 
 
-<a href="3D_DESIGNS/CHASSIS.stl"><img src="COMPONENTS/Chasis.png" width="700">
+<a href="3D_DESIGNS/CHASSIS.stl"><img src="COMPONENTS/Chasis.png" width="700"></a>
 
 The initial layout of all the components was sketched by hand to give us an idea (photos attached): 
 
