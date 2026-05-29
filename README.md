@@ -1,5 +1,5 @@
 
-# WRO Future Engineers - MINAGURO
+# WRO Future Engineers - MINAGURO <img src="MINAGURO logo.png" width="200" height="200">
 <div align="justify">Hello, welcome to the GitHub repository of the MINAGURO team, which is competing in the World Robot Olympiad 2026 in the category of Future Engineers. Our team is made up of four Spanish students who built this robot on their school breaks with the aim of learning as much as possible.
 <br> Guided by our passion for technology, we have created a vehicle that maybe doesn´t work as we would like to, but reflects all of our hard work and time spent on it.
   
