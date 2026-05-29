@@ -6,9 +6,11 @@
  
   ## TABLE OF CONTENTS
 · [Daily documentation](#daily-documentation)
+<br>· [Mechanical Design](#mechanical-design)
+<br>· [Mobility design](#mobility-design)
+<br>· [Power and Sensor Architecture](#power-and-sensor-architecture)
 <br>· [The Team](#the-team)
 <br>· [Our Robot](#our-robot)
-<br>· [Components used](#components-used)
 <br>· [Software](#software)
 <br>· [Our YouTube Channel](#Our-YouTube-Channel)
 
@@ -484,7 +486,6 @@ Here are some pictures of our robot to help with it´s reproducibility:
 </table></div>
 
 
-### Components used
 
 
 
