@@ -160,21 +160,19 @@ This section includes the robot's torque and speed, the rationale behind its fin
 
 Generally speaking, the robot has:
 
-· An Arduino R4 board (chosen based on previous experience programming it) 
-· Four HC-SR04 sensors (one at the front, one at the rear, and two on the sides, one on each side): the front and side sensors are mounted on top of the chassis on a small piece of foam board to...; the rear sensor is mounted underneath the chassis due to space constraints at the rear top of the chassis. The triggers for the four sensors are soldered to the same pin to save pins on the Arduino board, in case more components need to be connected. 
-· Four Samsung batteries... two of which power the Arduino board directly... 
-· A 360-degree servo that functions as a servo motor. 
-· A transmission system made with LEGO gears and one made with 3D-printed parts that runs from the servo motor to the mechanical differential. 
-· A mechanical differential equipped with two adapters for 3D printers to ensure a better fit on the wheels. 
-· Four LEGO wheels (two larger and two smaller: the specific models are listed in the parts list). 
-· Un sistema de dirección de LEGO (piezas usadas en la lista de componentes). 
-· An 180-degree servo to move the LEGO steering system via an arm attached to a string that runs to the steering system. 
-· A HUSKYLENS module for detecting obstacles. 
-· A foam board frame for holding a couple of batteries. 
-· A switch to turn on the robot. 
-· A button to start the program. 
-
-
+* An Arduino R4 board (chosen based on previous experience programming it) 
+* Four HC-SR04 sensors (one at the front, one at the rear, and two on the sides, one on each side): the front and side sensors are mounted on top of the chassis on a small piece of foam board to...; the rear sensor is mounted underneath the chassis due to space constraints at the rear top of the chassis. The triggers for the four sensors are soldered to the same pin to save pins on the Arduino board, in case more components need to be connected. 
+* Four Samsung batteries... two of which power the Arduino board directly... 
+* A 360-degree servo that functions as a servo motor. 
+* A transmission system made with LEGO gears and one made with 3D-printed parts that runs from the servo motor to the mechanical differential. 
+* A mechanical differential equipped with two adapters for 3D printers to ensure a better fit on the wheels. 
+* Four LEGO wheels (two larger and two smaller: the specific models are listed in the parts list). 
+* Un sistema de dirección de LEGO (piezas usadas en la lista de componentes). 
+* An 180-degree servo to move the LEGO steering system via an arm attached to a string that runs to the steering system. 
+* A HUSKYLENS module for detecting obstacles. 
+* A foam board frame for holding a couple of batteries. 
+* A switch to turn on the robot. 
+* A button to start the program. 
 
 ### The Team
 <br>The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
