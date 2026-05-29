@@ -181,12 +181,15 @@ The steering system used consists of:
 
 <table>
   <tr>
-    <td align="center" width="50%">
+    <td align="center" width="33%">
       <b>Micro servo 180</b><br>
-      <img src="SERVO180_caract.jpg" width="350"/>
+      <img src="steering_system.JPG" width="300"/>
     </td>
-    <td align="center" width="50%">
-      <img src="steering_system.JPG" width="350"/>
+    <td align="center" width="33%">
+      <img src="steering_system2.JPG" width="300"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="steering_system3.JPG" width="300"/>
     </td>
   </tr>
 </table>
