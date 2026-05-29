@@ -182,18 +182,16 @@ The steering system used consists of:
 <table>
   <tr>
     <td align="center" width="33%">
-      <b>Micro servo 180</b><br>
-      <img src="steering_system.JPG" width="300"/>
+      <img src="steering_system.JPG" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="steering_system2.JPG" width="300"/>
+      <img src="steering_system2.JPG" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="steering_system3.JPG" width="300"/>
+      <img src="steering_system3.JPG" width="305"/>
     </td>
   </tr>
 </table>
-<img src:
 
 If this steering turned too far in one direction, it would jam and could break. To prevent this, we adjusted the values using the steering servo calibration program so that this wouldn’t happen.  
 
