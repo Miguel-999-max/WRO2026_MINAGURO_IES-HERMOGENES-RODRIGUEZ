@@ -423,6 +423,8 @@ The HUSKYLENS module identifies traffic light colors to navigate around them on 
 One major issue it caused was that it sometimes interfered with other robot components. For example, while it was connected, the 360-degree servo wouldn’t rotate properly and would jam, but when it was disconnected, the servo rotated more smoothly.
 
 ### 5. Strategy
+Before focusing on each of the two types of challenges individually, we distinguish between them as follows: since the obstacle challenge allows us to choose between starting from the parking area specified in the free challenge or from the magenta parking lot, we choose to start from the magenta parking lot so that the starting area is different for each challenge, making it easier to tell them apart. Therefore, we start by checking the front distance; and, depending on whether it is greater or less than 40 cm, we know whether we are in the free challenge or the obstacle challenge, respectively. Once we know this, we proceed to analyze each challenge separately. 
+
 #### 5.3 Open challenge
 <div align="center"><table>
   <tr>
@@ -437,6 +439,15 @@ One major issue it caused was that it sometimes interfered with other robot comp
   </tr>
 </table></div>
 
+For this setup, we’ve decided to rely primarily on ultrasonic sensors, though we also use the HUSKYLENS machine vision camera. 
+We start by exiting the parking area, then reverse to check which direction we’re facing (clockwise or counterclockwise). Then: 
+
+* If the distance on the right is shorter than the distance on the left, we’re facing counterclockwise. Once we know this, we move forward to the center of the field and begin circling. We chose to go through the center of the field for two reasons: first, since we have to cover less distance, it would take us less time to complete the laps; second, we believe that, by using distance sensors, this option would be easier to program and cause fewer measurement issues. 
+* If the distance to the right is greater than the distance to the left, we would be moving clockwise. Once we know this, we move to the center of the field and begin circling. We chose to go through the center of the field for the reasons explained in the previous paragraph. 
+
+While this is running, we use HUSKYLENS to count the red lines on the field floor; this way, we can determine the number of laps the robot has completed and make it stop after completing the required three laps. 
+We have not yet developed a specific strategy for parking in the parking zone due to lack of time; however, we continue to working on that.
+
 #### 5.4 Obstacle challenge
 <div align="center"><table>
   <tr>
@@ -450,6 +461,18 @@ One major issue it caused was that it sometimes interfered with other robot comp
     </td>
   </tr>
 </table></div>
+
+For this setup, we’ve decided to use HUSKYLENS for the most part, though we also use ultrasonic sensors. 
+We start by exiting the parking lot, first checking the side distances to determine which of the two scenarios applies: 
+
+* If the distance on the right is greater than on the left, we are moving clockwise. Once we know this, we reverse until we are 4 cm from the rear wall to give us more space to exit. Next, we exit the parking lot at just the right angle so that HUSKYLENS can see the first block we might encounter if it were there, and we begin the turn while avoiding obstacles. To do this, we use HUSKYLENS’s object recognition, since when we tested color recognition, it frequently confused the red of the traffic signs with the orange of the lines; once we’ve recognized the object, we approach it and switch the camera mode to color recognition to determine if it’s red or green and turn toward the corresponding side. Once we’ve avoided it, we use the HUSKYLENS and its servo motor to look for another obstacle, and so on.  
+* If the distance on the right is shorter than on the left, we’re moving counterclockwise. Once we know this, we back up until we’re 4 cm from the back wall to give ourselves more room to exit. Next, we leave the parking lot at just the right angle so that HUSKYLENS can see the first obstacle we might encounter if it’s there, and we begin the turn while avoiding obstacles. The strategy followed is the same as that described in the previous paragraph.  
+
+While this is being executed, we plan to use HUSKYLENS to count the blue lines on the field floor; this way, we can determine how many laps the robot has completed around the field and have it stop after completing the required three laps. However, we have not yet developed this idea due to a lack of time and the robot’s efficiency in completing the laps.  
+Regarding the latter, we have a parking strategy in which we would use HUSKYLENS to detect the pink color of the parking lot once the laps have been completed and then park; this is an idea we haven’t fully developed yet, since we would first need to count the laps.  
+
+Similarly, we continue to work on resolving and developing these issues. 
+
 
 ### 6. The Team
 The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
