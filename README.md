@@ -569,12 +569,12 @@ Here are some pictures of our robot to help with it´s reproducibility:
 ### 8. Software
 Here are some programms we used to calibrate HCSR04 sensors and the steering servo:
 
-* **[Calibrate HCSR04 sensors](PROGRAMS/HCSR04_x4_display.ino)**: Calibrate HCSR04 sensors
-* **[Calibrate steering servo](11_JOYSTICK_CON_2_SERVOS.ino)**: Calibrate steering servo
-* **[Calibrate drive servo](PROGRAMS/11_POTENCIOMETRO_CON_1_SERVO.ino)**: Calibrate drive servo </div>
+* **[Calibrate HCSR04 sensors](PROGRAMS/HCSR04_x4_display.ino)**
+* **[Calibrate steering servo](11_JOYSTICK_CON_2_SERVOS.ino)**
+* **[Calibrate drive servo](PROGRAMS/11_POTENCIOMETRO_CON_1_SERVO.ino)** </div>
 
 Here is our final program:
-* **[Final program](SEGUIDOR_V2.05.ino)**: Final program
+* **[Final program](SEGUIDOR_V2.05.ino)**
 
 ### 9. Our YouTube Channel
 You can see how our robot works on our YouTube channel linked here: (<a href="https://www.youtube.com/@minagurowro2026">YouTube Channel link) </a>
