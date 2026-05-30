@@ -425,7 +425,7 @@ One major issue it caused was that it sometimes interfered with other robot comp
 ### 5. Strategy
 Before focusing on each of the two types of challenges individually, we distinguish between them as follows: since the obstacle challenge allows us to choose between starting from the parking area specified in the free challenge or from the magenta parking lot, we choose to start from the magenta parking lot so that the starting area is different for each challenge, making it easier to tell them apart. Therefore, we start by checking the front distance; and, depending on whether it is greater or less than 40 cm, we know whether we are in the free challenge or the obstacle challenge, respectively. Once we know this, we proceed to analyze each challenge separately. 
 
-#### 5.3 Open challenge
+#### 5.1 Open challenge
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
@@ -448,7 +448,7 @@ We start by exiting the parking area, then reverse to check which direction weâ€
 While this is running, we use HUSKYLENS to count the red lines on the field floor; this way, we can determine the number of laps the robot has completed and make it stop after completing the required three laps. 
 We have not yet developed a specific strategy for parking in the parking zone due to lack of time; however, we continue to working on that.
 
-#### 5.4 Obstacle challenge
+#### 5.2 Obstacle challenge
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
