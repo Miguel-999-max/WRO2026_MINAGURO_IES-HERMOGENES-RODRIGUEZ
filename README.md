@@ -9,10 +9,11 @@
 * [2. Mechanical Design](#2-mechanical-design)
 * [3. Mobility design](#3-mobility-design)
 * [4. Power and Sensor Architecture](#4-power-and-sensor-architecture)
-* [5. The Team](#5-the-team)
-* [6. Our Robot](#6-our-robot)
-* [7. Software](#7-software)
-* [8. Our YouTube Channel](#8-our-youtube-channel)
+* [5. Strategy](#5-strategy)
+* [6. The Team](#6-the-team)
+* [7. Our Robot](#7-our-robot)
+* [8. Software](#8-software)
+* [9. Our YouTube Channel](#9-our-youtube-channel)
 
 ### 1. Daily documentation
 * **04/03/2026:** We began dividing up the work among the group, agreeing that Miguel and Rocío would handle the robot and the documentation, and Natalia and Guillermo would handle the programming. We also discussed the general features of the project. After watching videos of models from previous years and given that the robot’s maximum dimensions are 30x20 cm (which we felt was too large), we decided to try to make it as small as possible, since smaller robots tend to be more mobile and would also make it easier to avoid obstacles. Regarding the choice of the base board, we had four options: Raspberry Pi, Arduino R3, and Arduino R4 (with and without Bluetooth/Wi-Fi modules). Of these, we chose the Arduino R4 Minima (without Bluetooth/Wi-Fi) because it has a much faster protocol and more memory, and because the C++ used is a programming language we were already familiar with, which would make it easier for us to program; furthermore, it is compatible with the HUSKYLENS camera we already had and decided to use.  
@@ -421,7 +422,10 @@ The HUSKYLENS module identifies traffic light colors to navigate around them on 
 
 One major issue it caused was that it sometimes interfered with other robot components. For example, while it was connected, the 360-degree servo wouldn’t rotate properly and would jam, but when it was disconnected, the servo rotated more smoothly.
 
-### 5. The Team
+### 5. Strategy
+<img src="IMG_6645.heic">
+
+### 6. The Team
 The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
 
 <br> **Miguel**
@@ -441,7 +445,7 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
 <br> **Description:** Hi, I am Guillermo. I am from Ciudad Real, Spain, and I joined this project because I have always been really keen on I.T. and problem solving. Although this competition has been really challenging, the experience with all the team is worth it.
 
 
-### 6. Our Robot
+### 7. Our Robot
 Here are some pictures of our robot to help with it´s reproducibility:
 <div align="center"><table>
   <tr>
@@ -513,7 +517,7 @@ Here are some pictures of our robot to help with it´s reproducibility:
 
 
 
-### 7. Software
+### 8. Software
 Here are some programms we used to calibrate HCSR04 sensors and the steering servo:
 
 * **[Calibrate HCSR04 sensors](PROGRAMS/HCSR04_x4_display.ino)**: Calibrate HCSR04 sensors
@@ -523,5 +527,5 @@ Here are some programms we used to calibrate HCSR04 sensors and the steering ser
 Here is our final program:
 * **[Final program](PROGRAMS/SEGUIDOR_V1_22.ino)**: Final program
 
-### 8. Our YouTube Channel
+### 9. Our YouTube Channel
 You can see how our robot works on our YouTube channel linked here: (<a href="https://www.youtube.com/@minagurowro2026">YouTube Channel link) </a>
