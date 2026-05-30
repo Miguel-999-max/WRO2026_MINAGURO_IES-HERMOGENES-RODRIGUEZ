@@ -551,7 +551,7 @@ Here are some programms we used to calibrate HCSR04 sensors and the steering ser
 * **[Calibrate drive servo](PROGRAMS/11_POTENCIOMETRO_CON_1_SERVO.ino)**: Calibrate drive servo </div>
 
 Here is our final program:
-* **[Final program](SEGUIDOR_V2_2.05.ino)**: Final program
+* **[Final program](SEGUIDOR_V2.05.ino)**: Final program
 
 ### 9. Our YouTube Channel
 You can see how our robot works on our YouTube channel linked here: (<a href="https://www.youtube.com/@minagurowro2026">YouTube Channel link) </a>
