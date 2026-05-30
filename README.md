@@ -71,13 +71,13 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="prototype1.1.jpg" width="305"/>
+      <img src="OTHER /prototype1.1.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="prototype1.2.jpg" width="305"/>
+      <img src="OTHER /prototype1.2.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="prototype1.3.jpg" width="305"/>
+      <img src="OTHER /prototype1.3.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
@@ -154,7 +154,7 @@ Here is a list of all the parts we used, including an image, their specific func
 | Electrolytic condenser 0,33 microfarad | 1 | <img src="COMPONENTS/Electrolytic condenser 0,33 microfarad.webp" width="150" height="120"> | (maker recommendation) | <a href="https://www.tme.eu/en/details/uvy2dr33med/tht-electrolytic-capacitors/nichicon/"> Electrolytic condenser link </a> |
 | Circuit board | 1 | <img src="COMPONENTS/Circuit board.webp" width="150" height="120"> | Connect huskylens with the LM7805CT and then with batteries | <a href="https://www.pccomponentes.com/goobay-regleta-para-conexion-de-cables-electricos-de-10a-10mm-blanco?campaigntype=eshopping&campaignchannel=shopping&gad_source=1&gad_campaignid=12885548290&gclid=EAIaIQobChMI__yQzemhlAMVr3JBAh075B8YEAQYBSABEgLyYvD_BwE"> Circuit board link </a> |
 | Differential QBX01 1:12 | 1 | <img src="COMPONENTS/Differential.avif" width="150" height="120"> | It allows the drive wheels to rotate at different speeds on curves, preventing slippage | <a href="https://es.aliexpress.com/item/1005005425198232.html?spm=a2g0o.productlist.main.1.5afe3DuB3DuBQD&algo_pvid=89b2de5b-abad-4232-8ccb-d5e73895d3df&algo_exp_id=89b2de5b-abad-4232-8ccb-d5e73895d3df0&pdp_ext_f=%7B%22order%22%3A%22329%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%219.53%215.53%21%21%2174.34%2143.14%21%402103892f17779733213802821e83c8%2112000033106328679%21sea%21ES%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3A4f6c22e4%3Bm03_new_user%3A-29895%3BpisId%3A5000000205205646&curPageLogUid=a9DwnAg9v3GZ&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005005425198232%7C_p_origin_prod%3A"> Differential link </a> |
-| Battery support | 1 | <img src="support.jpg" width="150" height="120"> | Is the support of the second battery | We made it in class using a kind of cardboard and hot glue|
+| Battery support | 1 | <img src="COMPONENTS/support.jpg" width="150" height="120"> | Is the support of the second battery | We made it in class using a kind of cardboard and hot glue|
 | Power Expansion Board Module | 1 | <img src="power bank batteries.png" width="150" height="120">  | It's a style of power bank where we've used the same Samsung batteries | <a href="https://es.aliexpress.com/item/1005001829484812.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.3.3145BM7PBM7Pvs&gps-id=pcDetailTopMoreOtherSeller&scm=1007.40050.354490.0&scm_id=1007.40050.354490.0&scm-url=1007.40050.354490.0&pvid=aaef1a73-1862-4b0d-aa1e-1a9beffbe5b0&_t=gps-id%3ApcDetailTopMoreOtherSeller%2Cscm-url%3A1007.40050.354490.0%2Cpvid%3Aaaef1a73-1862-4b0d-aa1e-1a9beffbe5b0%2Ctpp_buckets%3A668%232846%238110%231995&pdp_ext_f=%7B%22order%22%3A%221076%22%2C%22eval%22%3A%221%22%2C%22sceneId%22%3A%2230050%22%2C%22fromPage%22%3A%22recommend%22%7D&pdp_npi=6%40dis%21EUR%212.06%212.06%21%21%212.34%212.34%21%402103909217800442825806414e0fc1%2112000017779552633%21rec%21ES%21135718878%21XZ%211%210%21n_tag%3A-29919%3Bd%3A2676a4e6%3Bm03_new_user%3A-29895&utparam-url=scene%3ApcDetailTopMoreOtherSeller%7Cquery_from%3A%7Cx_object_id%3A1005001829484812%7C_p_origin_prod%3A"> Power bank link </a> |
 
 #### 2.2 3D Designs
@@ -165,7 +165,7 @@ These are the 3D designs we have created, which include: a custom-made chassis f
 | Chasis in 3D | 1 | <img src="COMPONENTS/Chasis.png" width="150" height="120"> | Skeleton of the robot | [`CHASSIS.stl`](3D_DESIGNS/CHASSIS.stl) |
 | Adapter wheels in 3D | 2 | <img src="COMPONENTS/Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | [`GEAR_ADAPTER.stl`](3D_DESIGNS/GEAR_ADAPTER.stl) |
 | Adapter gear in 3D | 1 | <img src="COMPONENTS/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`WHEEL_ADAPTER.stl`](Adaptador_rueda.stl) |
-| HUSKYLENS support in 3D | 1 | <img src="HUSKYLENS support.png" width="150" height="120"> | Hold the camera high with the servo |  [`HUSKYLENS_SUPPORT.stl`](3D_DESIGNS/HUSKYLENS_SUPPORT.stl) |
+| HUSKYLENS support in 3D | 1 | <img src="COMPONENTS/HUSKYLENS support.png" width="150" height="120"> | Hold the camera high with the servo |  [`HUSKYLENS_SUPPORT.stl`](3D_DESIGNS/HUSKYLENS_SUPPORT.stl) |
 
 ### 3. Mobility design
 This section includes the robot's torque and speed, the rationale behind its final configuration, as well as images of all its plans and the wiring diagram we created in TinkerCad using all the robot's components. 
@@ -196,13 +196,13 @@ The steering system used consists of:
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="steering_system.JPG" width="305"/>
+      <img src="OTHER /steering_system.JPG" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="steering_system2.JPG" width="305"/>
+      <img src="OTHER /steering_system2.JPG" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="steering_system3.JPG" width="305"/>
+      <img src="OTHER /steering_system3.JPG" width="305"/>
     </td>
   </tr>
 </table>
@@ -258,13 +258,13 @@ The front is cut into a pointed shape to prevent it from coming into contact wit
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="prototype1.1.jpg" width="305"/>
+      <img src="OTHER /prototype1.1.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="prototype1.2.jpg" width="305"/>
+      <img src="OTHER /prototype1.2.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="prototype1.3.jpg" width="305"/>
+      <img src="OTHER /prototype1.3.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
@@ -293,7 +293,7 @@ The robot remained in that state for a time until we encountered several problem
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="support.jpg" width="250"/>
+      <img src="COMPONENTS/support.jpg" width="250"/>
     </td>
   </tr>
 </table></div>
@@ -343,7 +343,7 @@ The batteries that power the board are placed in a dedicated space on the 3D-pri
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="prototype1.2.jpg" width="300" height="350/>
+      <img src="OTHER /prototype1.2.jpg" width="300" height="350/>
     </td>
     <td align="center" width="50%">
       <img src="OTHER /batteries1.JPG" width="400" height="350"/>
@@ -446,15 +446,15 @@ Here are some pictures of our robot to help with it´s reproducibility:
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="robot image 1.jpeg" width="305"/>
+      <img src="ROBOT/robot image 1.jpeg" width="305"/>
      robot´s front view
     </td>
     <td align="center" width="33%">
-      <img src="robot image 3.jpeg" width="305"/>
+      <img src="ROBOT/robot image 3.jpeg" width="305"/>
      robot´s back view
     </td>
     <td align="center" width="33%">
-      <img src="robot image 6.jpeg" width="305"/>
+      <img src="ROBOT/robot image 6.jpeg" width="305"/>
      View from underneath the robot
     </td>
   </tr>
@@ -463,15 +463,15 @@ Here are some pictures of our robot to help with it´s reproducibility:
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="robot image 2.jpeg" width="305"/>
+      <img src="ROBOT/robot image 2.jpeg" width="305"/>
      Robot’s right side view
     </td>
     <td align="center" width="33%">
-      <img src="robot image 5.jpeg" width="305"/>
+      <img src="ROBOT/robot image 5.jpeg" width="305"/>
      View of the robot's layout
     </td>
     <td align="center" width="33%">
-      <img src="robot image 4.jpeg" width="305"/>
+      <img src="ROBOT/robot image 4.jpeg" width="305"/>
      Robot’s left side view
     </td>
   </tr>
@@ -485,26 +485,26 @@ Here are some pictures of our robot to help with it´s reproducibility:
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="robot image 7.jpeg" width="305"/>
+      <img src="ROBOT/robot image 7.jpeg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="robot image 10.jpeg" width="305"/>
+      <img src="ROBOT/robot image 10.jpeg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="robot image 8.jpeg" width="305"/>
+      <img src="ROBOT/robot image 8.jpeg" width="305"/>
     </td>
   </tr>
 </table></div>
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="robot image 11.jpeg" width="305"/>
+      <img src="ROBOT/robot image 11.jpeg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="robot image 9.jpeg" width="305"/>
+      <img src="ROBOT/robot image 9.jpeg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="robot image 12.jpeg" width="305"/>
+      <img src="ROBOT/robot image 12.jpeg" width="305"/>
     </td>
   </tr>
 </table></div>
