@@ -377,7 +377,7 @@ The wiring diagram used for assembling the robot is shown in the image below. It
 #### 4.3 Sensors 
 The robot receives data from three main components: the Arduino R4 Minima board, the HC-SR04 sensors, and the HUSKYLENS module.  
 
-The Arduino R4 Minima board was chosen because it has additional pins that other Arduino boards do not have, ensuring there are enough pins to connect all the components. However, after an accident in which this board stopped working, it was replaced with an Arduino R4 Wi-Fi/Bluetooth board because it has the same pins that we’ve been using from the start. The Wi-Fi and Bluetooth functions were not used to solve the challenges, as this violates the rules. This can be seen in the libraries downloaded from the final program. 
+The Arduino R4 Minima board was chosen because it has additional pins that other Arduino boards do not have, ensuring there are enough pins to connect all the components. However, after an accident in which this board stopped working, we considered replacing it with an Arduino R4 Wi-Fi board we had in class, without using the Wi-Fi and Bluetooth functions, since that would violate the rules. In the end, we used another Arduino UNO R4 Minima board and attached a shield to it so we could access all the pins we had before. 
 
 <div align="center"><table>
   <tr>
