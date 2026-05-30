@@ -427,7 +427,7 @@ One major issue it caused was that it sometimes interfered with other robot comp
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="IMG_6645_20260530_205731.jpeg"/>
+      <img src="IMG_6645_20260530_212546.jpeg"/>
      clock-wise mode
     </td>
     <td align="center" width="50%">
@@ -445,7 +445,7 @@ One major issue it caused was that it sometimes interfered with other robot comp
      clock-wise mode
     </td>
     <td align="center" width="50%">
-      <img src="IMG_6645_20260530_205822.jpeg"/>
+      <img src="IMG_6645_20260530_212532.jpeg"/>
      counter clock-wise mode
     </td>
   </tr>
