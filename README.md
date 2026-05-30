@@ -1,6 +1,6 @@
 
 # WRO Future Engineers - MINAGURO
-<p align="center"><img src="MINAGURO logo.png" width="300" height="300"></p>
+<p align="center"><img src="OTHER /MINAGURO logo.png" width="300" height="300"></p>
 <div align="justify">Hello, welcome to the GitHub repository of the MINAGURO team, which is competing in the World Robot Olympiad 2026 in the category of Future Engineers. Our team is made up of four Spanish students who built this robot on their school breaks with the aim of learning as much as possible.
 <br> Guided by our passion for technology, we have created a vehicle that maybe doesn´t work as we would like to, but reflects all of our hard work and time spent on it.
  
@@ -165,7 +165,7 @@ These are the 3D designs we have created, which include: a custom-made chassis f
 | Chasis in 3D | 1 | <img src="COMPONENTS/Chasis.png" width="150" height="120"> | Skeleton of the robot | [`CHASSIS.stl`](3D_DESIGNS/CHASSIS.stl) |
 | Adapter wheels in 3D | 2 | <img src="COMPONENTS/Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | [`GEAR_ADAPTER.stl`](3D_DESIGNS/GEAR_ADAPTER.stl) |
 | Adapter gear in 3D | 1 | <img src="COMPONENTS/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`WHEEL_ADAPTER.stl`](Adaptador_rueda.stl) |
-| HUSKYLENS support in 3D | 1 | <img src="HUSKYLENS support.png" width="150" height="120"> | Hold the camera high with the servo |  [`HUSKYLENS_SUPPORT.stl`](HUSKYLENS_SUPPORT.stl) |
+| HUSKYLENS support in 3D | 1 | <img src="HUSKYLENS support.png" width="150" height="120"> | Hold the camera high with the servo |  [`HUSKYLENS_SUPPORT.stl`](3D_DESIGNS/HUSKYLENS_SUPPORT.stl) |
 
 ### 3. Mobility design
 This section includes the robot's torque and speed, the rationale behind its final configuration, as well as images of all its plans and the wiring diagram we created in TinkerCad using all the robot's components. 
@@ -213,7 +213,7 @@ If this steering turned too far in one direction, it would jam and could break. 
   <tr>
     <td align="center" width="50%">
       <b>Micro servo 180</b><br>
-      <img src="SERVO180_caract.jpg" width="350"/>
+      <img src="OTHER /SERVO180_caract.jpg" width="350"/>
     </td>
     <td align="left" width="50%">
       <ul>
@@ -303,10 +303,10 @@ Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was caus
 <div align="center"><table>
   <tr>
     <td align="center" width="49%">
-      <img src="camera support 1.jpeg" width="200"/>
+      <img src="OTHER /camera support 1.jpeg" width="200"/>
     </td>
     <td align="center" width="49%">
-      <img src="camera support 2.jpeg" width="200"/>
+      <img src="OTHER /camera support 2.jpeg" width="200"/>
     </td>
   </tr>
 </table></div>
@@ -346,7 +346,7 @@ The batteries that power the board are placed in a dedicated space on the 3D-pri
       <img src="prototype1.2.jpg" width="300" height="350/>
     </td>
     <td align="center" width="50%">
-      <img src="batteries1.JPG" width="400" height="350"/>
+      <img src="OTHER /batteries1.JPG" width="400" height="350"/>
     </td>
   </tr>
 </table></div>
@@ -356,13 +356,13 @@ The batteries that power the servo, being a last-minute modification, have been 
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="batteries_structure1.jpeg" width="350"/>
+      <img src="OTHER /batteries_structure1.jpeg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="batteries_structure2.jpeg" width="350"/>
+      <img src="OTHER /batteries_structure2.jpeg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="batteries_structure3.JPG" width="350"/>
+      <img src="OTHER /batteries_structure3.JPG" width="350"/>
     </td>
   </tr>
 </table></div>
@@ -372,7 +372,7 @@ To power the HUSKYLENS module, an LM7805 regulator has been included to step dow
 #### 4.2 Wiring Scheme
 The wiring diagram used for assembling the robot is shown in the image below. It was created in TinkerCad based on previous experience using this program. Some components were not available in TinkerCad, so similar ones that met the necessary connection requirements were used, and their names were noted on the final diagram to avoid confusion:
 
-<img src="electric_scheme.jpg">
+<img src="WIRING SCHEMES/electric_scheme.jpg">
 
 #### 4.3 Sensors 
 The robot receives data from three main components: the Arduino R4 Minima board, the HC-SR04 sensors, and the HUSKYLENS module.  
@@ -382,10 +382,10 @@ The Arduino R4 Minima board was chosen because it has additional pins that other
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="pinout-arduino-uno-r4-minima.webp" width="500" height="400"/>
+      <img src="OTHER /pinout-arduino-uno-r4-minima.webp" width="500" height="400"/>
     </td>
     <td align="center" width="50%">
-      <img src="PLACA_caract.png" width="900" height="400"/>
+      <img src="OTHER /PLACA_caract.png" width="900" height="400"/>
     </td>
   </tr>
 </table></div>
