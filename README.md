@@ -356,7 +356,7 @@ The batteries that power the servo, being a last-minute modification, have been 
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="OTHER /batteries_structure1.jpeg" width="350"/>
+      <img src="batteries_structure1.jpeg" width="350"/>
     </td>
     <td align="center" width="33%">
       <img src="OTHER /batteries_structure2.jpeg" width="350"/>
@@ -382,7 +382,7 @@ The Arduino R4 Minima board was chosen because it has additional pins that other
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="WIRING_SCHEMES/pinout-arduino-uno-r4-minima.webp" width="500" height="400"/>
+      <img src="pinout-arduino-uno-r4-minima.webp" width="500" height="400"/>
     </td>
     <td align="center" width="50%">
       <img src="OTHER /PLACA_caract.png" width="900" height="400"/>
