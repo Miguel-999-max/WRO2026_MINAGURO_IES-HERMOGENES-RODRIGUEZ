@@ -423,7 +423,33 @@ The HUSKYLENS module identifies traffic light colors to navigate around them on 
 One major issue it caused was that it sometimes interfered with other robot components. For example, while it was connected, the 360-degree servo wouldn’t rotate properly and would jam, but when it was disconnected, the servo rotated more smoothly.
 
 ### 5. Strategy
-<img src="IMG_6645.heic">
+#### 5.3 Open challenge
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="IMG_6645_20260530_205731.jpeg"/>
+     clock-wise mode
+    </td>
+    <td align="center" width="50%">
+      <img src="IMG_6645_20260530_205755.jpeg"/>
+     counter clock-wise mode
+    </td>
+  </tr>
+</table></div>
+
+#### 5.4 Obstacle challenge
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="IMG_6645.jpeg"/>
+     clock-wise mode
+    </td>
+    <td align="center" width="50%">
+      <img src="IMG_6645_20260530_205822.jpeg"/>
+     counter clock-wise mode
+    </td>
+  </tr>
+</table></div>
 
 ### 6. The Team
 The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
