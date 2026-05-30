@@ -372,6 +372,8 @@ To power the HUSKYLENS module, an LM7805 regulator has been included to step dow
 #### 4.2 Wiring Scheme
 The wiring diagram used for assembling the robot is shown in the image below. It was created in TinkerCad based on previous experience using this program. Some components were not available in TinkerCad, so similar ones that met the necessary connection requirements were used, and their names were noted on the final diagram to avoid confusion:
 
+<img src="electric_scheme.jpg">
+
 #### 4.3 Sensors 
 The robot receives data from three main components: the Arduino R4 Minima board, the HC-SR04 sensors, and the HUSKYLENS module.  
 
