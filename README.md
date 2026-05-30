@@ -165,7 +165,7 @@ These are the 3D designs we have created, which include: a custom-made chassis f
 | Chasis in 3D | 1 | <img src="COMPONENTS/Chasis.png" width="150" height="120"> | Skeleton of the robot | [`CHASSIS.stl`](3D_DESIGNS/CHASSIS.stl) |
 | Adapter wheels in 3D | 2 | <img src="COMPONENTS/Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | [`GEAR_ADAPTER.stl`](3D_DESIGNS/GEAR_ADAPTER.stl) |
 | Adapter gear in 3D | 1 | <img src="COMPONENTS/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`WHEEL_ADAPTER.stl`](Adaptador_rueda.stl) |
-| HSKYLENS support in 3D | 1 | <img src="HUSKYLENS support.png" width="150" height="120"> | Hold the camera high with the servo |  |
+| HUSKYLENS support in 3D | 1 | <img src="HUSKYLENS support.png" width="150" height="120"> | Hold the camera high with the servo |  |
 
 ### 3. Mobility design
 This section includes the robot's torque and speed, the rationale behind its final configuration, as well as images of all its plans and the wiring diagram we created in TinkerCad using all the robot's components. 
@@ -449,7 +449,7 @@ Here are some pictures of our robot to help with it´s reproducibility:
     </td>
     <td align="center" width="33%">
       <img src="robot image 3.jpeg" width="305"/>
-     eobot´s back view
+     robot´s back view
     </td>
     <td align="center" width="33%">
       <img src="robot image 6.jpeg" width="305"/>
