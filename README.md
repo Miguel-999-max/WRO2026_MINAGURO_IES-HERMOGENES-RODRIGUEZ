@@ -583,7 +583,9 @@ Here are some programms we used to calibrate HCSR04 sensors and the steering ser
 
 Here is our final program:
 * **[Final program](SEGUIDOR_V2.05.ino)**
-Here is a flowchart that will help you understand how our programme works.
+
+Here is a flowchart that will help you understand how our final program works.
+
 <img src="Flowchart.png">
 
 ### 9. Our YouTube Channel
