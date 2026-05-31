@@ -240,7 +240,15 @@ The motor system used consists of:
 * A gear system to transmit motion from the servo motor to the mechanical differential, consisting of a 40-tooth LEGO gear and a 13-tooth gear made with a 3D printer. The gear ratio is 12:30. 
 * A mechanical differential. The differential was purchased from AliExpress based on an idea from a previous project in our Technology classroom. 
 * Two 3D-printed adapters that connect the differential shafts to the LEGO wheels. 
-* Two LEGO wheels larger than those in the steering system. 
+* Two LEGO wheels larger than those in the steering system.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="ROBOT/robot image 9.jpeg" width="250"/>
+    </td>
+  </tr>
+</table></div>
 
 The first 360-degree continuous rotation servo we installed caused smoothness issues when the robot moved, leading us to believe the problems were software-related; however, when it was replaced with another one we had in our classroom, the issues did not recur. 
 
