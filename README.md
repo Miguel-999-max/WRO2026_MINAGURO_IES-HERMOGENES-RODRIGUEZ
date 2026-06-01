@@ -532,7 +532,7 @@ Here are some pictures of our robot to help with it´s reproducibility:
      Robot’s right side view
     </td>
     <td align="center" width="33%">
-      <img src="ROBOT/robot image 5.jpeg" width="305"/>
+      <img src="ROBOT/robot image 6.jpeg" width="305"/>
      View of the robot's layout
     </td>
     <td align="center" width="33%">
@@ -553,7 +553,7 @@ Here are some pictures of our robot to help with it´s reproducibility:
       <img src="robot image v2.6.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="robot image v2.10.jpg" width="305"/>
+      <img src="robot image v2.8.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
       <img src="robot image v2.9.jpg" width="305"/>
