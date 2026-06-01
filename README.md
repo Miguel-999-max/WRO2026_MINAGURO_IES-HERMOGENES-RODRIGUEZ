@@ -511,15 +511,15 @@ Here are some pictures of our robot to help with it´s reproducibility:
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="ROBOT/robot image 1.jpeg" width="305"/>
+      <img src="robot image v2.1.jpg" width="305"/>
      robot´s front view
     </td>
     <td align="center" width="33%">
-      <img src="ROBOT/robot image 3.jpeg" width="305"/>
+      <img src="robot image v2.3.jpg" width="305"/>
      robot´s back view
     </td>
     <td align="center" width="33%">
-      <img src="ROBOT/robot image 6.jpeg" width="305"/>
+      <img src="robot image v2.5.jpg" width="305"/>
      View from underneath the robot
     </td>
   </tr>
@@ -528,7 +528,7 @@ Here are some pictures of our robot to help with it´s reproducibility:
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="ROBOT/robot image 2.jpeg" width="305"/>
+      <img src="robot image v2.4.jpg" width="305"/>
      Robot’s right side view
     </td>
     <td align="center" width="33%">
@@ -536,7 +536,7 @@ Here are some pictures of our robot to help with it´s reproducibility:
      View of the robot's layout
     </td>
     <td align="center" width="33%">
-      <img src="ROBOT/robot image 4.jpeg" width="305"/>
+      <img src="robot image v2.2.jpg" width="305"/>
      Robot’s left side view
     </td>
   </tr>
@@ -550,26 +550,26 @@ Here are some pictures of our robot to help with it´s reproducibility:
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="ROBOT/robot image 7.jpeg" width="305"/>
+      <img src="robot image v2.6.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="ROBOT/robot image 10.jpeg" width="305"/>
+      <img src="robot image v2.10.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="ROBOT/robot image 8.jpeg" width="305"/>
+      <img src="robot image v2.9.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="ROBOT/robot image 11.jpeg" width="305"/>
+      <img src="robot image v2.11.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="ROBOT/robot image 9.jpeg" width="305"/>
+      <img src="robot image v2.13.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="ROBOT/robot image 12.jpeg" width="305"/>
+      <img src="robot image v2.12.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
