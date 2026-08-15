@@ -127,6 +127,8 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 
 * **14/06/26:** In the end, they approved any changes we wanted to make. The main changes were: replacing the ultrasonic sensors with laser sensors, and incorporating a microcontroller and possibly a microprocessor with fewer limitations than the Arduino R4 MINIMA, such as the Arduino Q or the Raspberry Pi Pico 2.
 
+* **15/06/26:** We realised that the chassis plate – the one that holds all the sensors and servos in place – was bent, so we decided to redesign it and make it thicker to support the weight and prevent the same thing from happening again in the future.
+
 ### 2. Mechanical Design
 This section is dedicated to the robot’s mechanical components: the list of parts used in its construction and the 3D-printed parts we designed and printed.
 
