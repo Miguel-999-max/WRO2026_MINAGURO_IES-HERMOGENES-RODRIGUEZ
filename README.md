@@ -4,18 +4,23 @@
 <div align="justify">Hello, welcome to the GitHub repository of the MINAGURO team, which is competing in the World Robot Olympiad 2026 in the category of Future Engineers. Our team is made up of four Spanish students who built this robot on their school breaks with the aim of learning as much as possible.
 <br> Guided by our passion for technology, we have created a vehicle that maybe doesn´t work as we would like to, but reflects all of our hard work and time spent on it.
  
-  ## TABLE OF CONTENTS
-* [1. Daily documentation](#1-daily-documentation)
-* [2. Mechanical Design](#2-mechanical-design)
-* [3. Mobility design](#3-mobility-design)
-* [4. Power and Sensor Architecture](#4-power-and-sensor-architecture)
-* [5. Strategy](#5-strategy)
-* [6. The Team](#6-the-team)
-* [7. Our Robot](#7-our-robot)
-* [8. Software](#8-software)
-* [9. Our YouTube Channel](#9-our-youtube-channel)
+  ## 📁 TABLE OF CONTENTS
+* [1. 📝 Daily documentation](#1--daily-documentation)
+* [2. 🛠️ Mechanical Design](#seccion-mecanica)
+* [3. 🪛 Mobility design](#3--mobility-design)
+* [4. ⚡Power and Sensor Architecture](#4--power-and-sensor-architecture)
+* [5. 🧠 Strategy](#5--strategy)
+* [6. 👥 The Team ](#6--the-team)
+* [7. 🤖 Our Robot](#7--our-robot)
+* [8. 💻 Software](#8--software)
 
-### 1. Daily documentation
+### 1. 📝 Daily documentation
+Here you can find the detailed progress of the MINAGURO team during the tournament:
+
+<details>
+<summary><b>🔍 March 2026</b></summary>
+<br>
+ 
 * **04/03/2026:** We began dividing up the work among the group, agreeing that Miguel and Rocío would handle the robot and the documentation, and Natalia and Guillermo would handle the programming. We also discussed the general features of the project. After watching videos of models from previous years and given that the robot’s maximum dimensions are 30x20 cm (which we felt was too large), we decided to try to make it as small as possible, since smaller robots tend to be more mobile and would also make it easier to avoid obstacles. Regarding the choice of the base board, we had four options: Raspberry Pi, Arduino R3, and Arduino R4 (with and without Bluetooth/Wi-Fi modules). Of these, we chose the Arduino R4 Minima (without Bluetooth/Wi-Fi) because it has a much faster protocol and more memory, and because the C++ used is a programming language we were already familiar with, which would make it easier for us to program; furthermore, it is compatible with the HUSKYLENS camera we already had and decided to use.  
 
 * **05/03/26:** We looked for components in our classroom that could be used to build the robot and researched strategies from previous years on GitHub. 
@@ -56,8 +61,14 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 
 * **26/03/26:** We continued working on the 3D designs and created a program that moves a servo when HUSKYLENS detects an object in the center of the camera’s field of view; we did this simply to test whether we can use the camera to determine the object’s position in addition to detecting its color. 
 
-* **27/03/26:** We finished the 3D designs and sent them to print on the school’s 3D printer. Additionally, after creating the previous program, we decided it might be a good idea to use coordinates instead of the object’s approximate position; therefore, we wrote a program that displays the center coordinates on the serial monitor. 
+* **27/03/26:** We finished the 3D designs and sent them to print on the school’s 3D printer. Additionally, after creating the previous program, we decided it might be a good idea to use coordinates instead of the object’s approximate position; therefore, we wrote a program that displays the center coordinates on the serial monitor.
 
+</details> 
+
+<details>
+<summary><b>🛠️ April 2026</b></summary>
+<br>
+ 
 * **08/04/26:** We drew a diagram of how we want to assemble our robot and how we’re going to arrange all the components. We placed the HUSKYLENS at the front to detect colors, positioned a distance sensor on each side so we can measure using any of the four depending on what’s most useful, and placed the batteries under a platform with the wheels (and their respective servomotors), since this saves space and allows us to arrange the board and components more neatly above that platform. On the other hand, we considered different material options for the base, such as wood, plastic (3D printer), and a sheet of foam board we found in class. In the end, we decided that the foam board was the best option, since wood was very difficult for us to work with and would take more time, and 3D printing would also require a significant time investment (which would reduce our ability to test the program) and require us to have a clear understanding of all the component positions (something we weren’t 100% sure of yet). Even so, we decided this would be a temporary solution, and once we had everything figured out, we would make a 3D-printed base. 
 
 * **09/04/26:** Using a clamp meter, we measured how much power our robot would consume to determine whether we could use the battery module we had chosen. We found that the HUSKYLENS camera uses between 230 and 420 mA, the Arduino R4 board consumes 100 mA, the HC-SR04 consumes 15 mA, the microservo consumes 200 mA, and the RC servo consumes 700 mA. Therefore, our robot would consume a total of 1215 mA, which would give us just over two hours of runtime. Theoretically, that would be the robot’s total power consumption, but in reality, we measured that the robot consumes 500 mA, so those batteries, which have a capacity of 2600 mAh, should power the robot for more than 5 hours. Meanwhile, we began preparing the wiring for the distance sensors and the servo motors. However, we noticed that the Huskylens module sometimes reboots. We think this is because the Arduino board isn’t able to provide enough power, and we can’t connect it directly to the batteries since the module doesn’t support 8.4 V. While searching for information, we found a type of regulator called the LM7805 that steps down the voltage to 5 V. We’ve decided to use it to power the Huskylens module.  
@@ -107,7 +118,13 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 
 * **27/04/26:** We installed the new magnetometer on the robot using a foam board rod to prevent interference issues and added an LCD display so we could view its readings without having to connect to the computer; once this was done, we began testing. The first few tests went well, but after about 10, it stopped working; we also tried the other one that came with the purchase, and the problem was the same as with the first one. We agreed to try one last time, so we ordered one final magnetometer.  
 
-* **30/04/26:** We no longer have time to move forward with the challenge, so we began preparing all the documentation.  
+* **30/04/26:** We no longer have time to move forward with the challenge, so we began preparing all the documentation.
+
+</details> 
+
+<details>
+<summary><b>🏆 May 2026</b></summary>
+<br>
 
 * **04/05/26:** We are still working on the documentation. 
 
@@ -123,13 +140,22 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
   
 * **29/05/26:** We started the day by setting up the new Arduino R4 Mini we bought the day before yesterday, just in case it broke again, and carried on with the obstacle course challenge. We’ve made good progress today as we came to school for a couple of hours this afternoon. As for the obstacle course programme, we’ve managed to get it to go round the right or left depending on the colour of the object. We’ve also decided we should fit a micro-servo to the camera so it can search for objects after passing those it has already seen; we’ve cut out the 3D structure we made for it to fit the servo and ensure it remains at the same height. Due to a lack of time and the number of exams we have, we haven’t had time to continue working on or test the robot much on the circuit; furthermore, we won’t be able to incorporate the latest modification (the servo on the HUSKYLENS support) into GitHub for the reasons mentioned above.
 
+</details> 
+
+<details>
+<summary><b>🔩 June 2026</b></summary>
+<br>
+
+
 * **08/06/26:** After winning the regional round and becoming champions of Castilla-La Mancha, we considered a number of changes and modifications that would help us improve the robot’s performance and our performance in the challenges.
 
 * **14/06/26:** In the end, they approved any changes we wanted to make. The main changes were: replacing the ultrasonic sensors with laser sensors, and incorporating a microcontroller and possibly a microprocessor with fewer limitations than the Arduino R4 MINIMA, such as the Arduino Q or the Raspberry Pi Pico 2.
 
 * **15/06/26:** We realised that the chassis plate – the one that holds all the sensors and servos in place – was bent, so we decided to redesign it and make it thicker to support the weight and prevent the same thing from happening again in the future.
 
-### 2. Mechanical Design
+</details> 
+
+### <span id="seccion-mecanica"></span>2. 🛠️ Mechanical Design
 This section is dedicated to the robot’s mechanical components: the list of parts used in its construction and the 3D-printed parts we designed and printed.
 
 #### 2.1 Components List  
@@ -195,7 +221,7 @@ Here is a also a list of all components we used to use before our modifications;
 | Battery support | 1 | <img src="COMPONENTS/support.jpg" width="150" height="120"> | Is the support of the second battery | We made it in class using a kind of cardboard and hot glue|
 | Chasis in 3D | 1 | <img src="COMPONENTS/Chasis.png" width="150" height="120"> | Skeleton of the robot | [`CHASSIS.stl`](CHASSIS.stl) |
 
-### 3. Mobility design
+### 3. 🪛 Mobility design
 This section includes the robot's torque and speed, the rationale behind its final configuration, as well as images of all its plans and the wiring diagram we created in TinkerCad using all the robot's components. 
 
 Generally speaking, the robot has:
@@ -347,7 +373,7 @@ Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was caus
   </tr>
 </table></div>
 
-### 4. Power and Sensor Architecture 
+### 4. ⚡ Power and Sensor Architecture 
 
 This section covers the power supply, the wiring diagram created in TinkerCad, and everything related to the sensors. 
 
@@ -457,7 +483,7 @@ The HUSKYLENS module identifies traffic light colors to navigate around them on 
 
 One major issue it caused was that it sometimes interfered with other robot components. For example, while it was connected, the 360-degree servo wouldn’t rotate properly and would jam, but when it was disconnected, the servo rotated more smoothly.
 
-### 5. Strategy
+### 5. 🧠 Strategy
 Before focusing on each of the two types of challenges individually, we distinguish between them as follows: since the obstacle challenge allows us to choose between starting from the parking area specified in the free challenge or from the magenta parking lot, we choose to start from the magenta parking lot so that the starting area is different for each challenge, making it easier to tell them apart. Therefore, we start by checking the front distance; and, depending on whether it is greater or less than 40 cm, we know whether we are in the free challenge or the obstacle challenge, respectively. Once we know this, we proceed to analyze each challenge separately. 
 
 #### 5.1 Open challenge
@@ -509,7 +535,7 @@ Regarding the latter, we have a parking strategy in which we would use HUSKYLENS
 Similarly, we continue to work on resolving and developing these issues. 
 
 
-### 6. The Team
+### 6. 👥 The Team
 The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
 
 <br> **Miguel**
@@ -529,7 +555,7 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
 <br> **Description:** Hi, I am Guillermo. I am from Ciudad Real, Spain, and I joined this project because I have always been really keen on I.T. and problem solving. Although this competition has been really challenging, the experience with all the team is worth it.
 
 
-### 7. Our Robot
+### 7. 🤖 Our Robot
 Here are some pictures of our robot to help with it´s reproducibility:
 <div align="center"><table>
   <tr>
@@ -601,7 +627,7 @@ Here are some pictures of our robot to help with it´s reproducibility:
 
 
 
-### 8. Software
+### 8. 💻 Software
 Here are some programms we used to calibrate HCSR04 sensors and the steering servo:
 
 * **[Calibrate HCSR04 sensors](PROGRAMS/HCSR04_x4_display.ino)**
@@ -615,5 +641,3 @@ Here is a flowchart that will help you understand how our final program works.
 
 <img src="Flowchart.png">
 
-### 9. Our YouTube Channel
-You can see how our robot works on our YouTube channel linked here: (<a href="https://www.youtube.com/@minagurowro2026">YouTube Channel link) </a>
