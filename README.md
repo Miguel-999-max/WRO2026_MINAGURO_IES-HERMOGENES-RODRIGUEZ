@@ -720,8 +720,8 @@ Here you can find almost all programs used in the development of our robot; incl
  
 These are all programs we used to calibrate and test functions:
 
-* [00_12C_SCAN.ino](PROGRAMS/Old_programs/Test_programs1/00_12C_SCAN.ino) ➜
-* [01-MAGNETOMETRO.ino](PROGRAMS/Old_programs/Test_programs1/01-MAGNETOMETRO.ino) ➜
+* [00_12C_SCAN.ino](PROGRAMS/Old_programs/Test_programs1/00_12C_SCAN.ino) ➜ to check the 12C addresses
+* [01-MAGNETOMETRO.ino](PROGRAMS/Old_programs/Test_programs1/01-MAGNETOMETRO.ino) ➜ 
 * [03_EJEMPLO_TOFx2.ino](PROGRAMS/Old_programs/Test_programs1/03_EJEMPLO_TOFx2.ino) ➜
 * [11_JOYSTICK_CON_2_SERVOS.ino](PROGRAMS/Old_programs/Test_programs1/11_JOYSTICK_CON_2_SERVOS.ino) ➜
 * [11_POTENCIOMETRO_CON_1_SERVO.ino](PROGRAMS/Old_programs/Test_programs1/11_POTENCIOMETRO_CON_1_SERVO.ino) ➜
