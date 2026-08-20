@@ -495,13 +495,71 @@ The TOF400F sensors were chosen to replace the TFmini-S sensor, since the budget
 
 However, there was a major problem when trying to incorporate the second TOF400F sensor, since the initial strategy was to use only one TOF400F sensor and one TFmini-S sensor. The problem was that, since the UART ports were already fully occupied, it had to be connected to an I2C port. Its performance on this port was significantly worse, so whenever possible, we used the TFmini-S sensor, which is much more reliable.
 
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="COMPONENTS/TOF400F.jpg" width="500" height="400"/>
+    </td>
+   <td align="left" width="50%">
+    <ul>
+        <li>Internal Core Chip: Based on the STMicroelectronics VL53L1X Time-of-Flight laser sensor.</li>
+        <li>Useful Measurement Range: 4 cm – 400 cm (4 meters)</li>
+        <li>Dead Zone (Maximum Proximity): 0 to 4 cm</li>
+        <li>Supply Voltage: Supports 3.3V and 5V DC</li>
+        <li>Current Consumption: ~20 mA in standby / ~40 mA maximum during laser emission</li>
+        <li>Emitter Technology: 940 nm invisible infrared VCSEL laser</li>
+        <li>Receiver Array: SPAD array</li>
+        <li>Field of View (FoV): 27°</li>
+        <li>Refresh Rate: Up to 50 Hz</li>
+        <li>Ambient Light Immunity: Very high</li>
+      </ul>
+    </td>
+  </tr>
+</table></div>
+
 The HUSKYLENS module identifies traffic light colors to navigate around them on the correct side. This module was new to us, so we had to meticulously study its features and how to program it. The most appropriate mode for this challenge is color detection. However, 70% of the time it confused the pink of the parking lot with the red of the traffic lights, which caused serious programming issues. 
 
 One major issue it caused was that it sometimes interfered with other robot components. For example, while it was connected, the 360-degree servo wouldn’t rotate properly and would jam, but when it was disconnected, the servo rotated more smoothly.
 
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="WIRING_SCHEMES/pico-2-w-pinout.webp" width="500" height="400"/>
+    </td>
+   <td align="left" width="50%">
+    <ul>
+        <li>Dimensions: 21 mm x 51 mm</li> 
+        <li>CPU: Dual-core Cortex-M33 or RISC-V Hazard3 processors at 150 MHz</li>            <li>Memory: 520 KB of on-chip SRAM</li> 
+        <li>Flash: 4 MB of on-chip QSPI flash memory</li> 
+        <li>Interface: 26 multipurpose GPIO pins (5V-tolerant), including 4 that can be used for ADC</li> 
+        <li>Peripherals: 2 × UART, 2 × SPI controllers, 2 × I2C controllers, 16 × PWM channels, 1 × USB 1.1 and PHY controller, with support for host and device modes, 12 × PIO state machines</li> 
+        <li>Power supply: 1.8–5.5 V DC</li>
+      </ul>
+    </td>
+  </tr>
+</table></div>
+
 The TCS34725 RGB sensor was chosen after encountering problems with the previous strategy, which involved the HUSKYLENS detecting lines on the playing field and counting them; when it reached a certain value, the robot would stop a few seconds later in the correct quadrant. However, combining line counting with traffic light detection led to problems that prevented proper performance in the obstacle challenge.
 
 The sensor is located on the lower front of the robot, although at one point it was mounted on the rear to detect a line at the start of the free challenge and thus determine the direction of the challenge. It is surrounded by a layer of black EVA foam to prevent interference from ambient light and ensure the sensor reads the light it reflects.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="WIRING_SCHEMES/pico-2-w-pinout.webp" width="500" height="400"/>
+    </td>
+   <td align="left" width="50%">
+    <ul>
+        <li>Dimensions: 21 mm x 51 mm</li> 
+        <li>CPU: Dual-core Cortex-M33 or RISC-V Hazard3 processors at 150 MHz</li>            <li>Memory: 520 KB of on-chip SRAM</li> 
+        <li>Flash: 4 MB of on-chip QSPI flash memory</li> 
+        <li>Interface: 26 multipurpose GPIO pins (5V-tolerant), including 4 that can be used for ADC</li> 
+        <li>Peripherals: 2 × UART, 2 × SPI controllers, 2 × I2C controllers, 16 × PWM channels, 1 × USB 1.1 and PHY controller, with support for host and device modes, 12 × PIO state machines</li> 
+        <li>Power supply: 1.8–5.5 V DC</li>
+      </ul>
+    </td>
+  </tr>
+</table></div>
 
 ### 5. 🧠 Strategy
 Before focusing on each of the two types of challenges individually, we distinguish between them as follows: since the obstacle challenge allows us to choose between starting from the parking area specified in the free challenge or from the magenta parking lot, we choose to start from the magenta parking lot so that the starting area is different for each challenge, making it easier to tell them apart. Therefore, we start by checking the front distance; and, depending on whether it is greater or less than 40 cm, we know whether we are in the open challenge or the obstacle challenge, respectively. Once we know this, we proceed to analyze each challenge separately. 
