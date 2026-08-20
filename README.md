@@ -524,7 +524,7 @@ One major issue it caused was that it sometimes interfered with other robot comp
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="WIRING_SCHEMES/pico-2-w-pinout.webp" width="500" height="400"/>
+      <img src="COMPONENTS/HUSKYLENS.webp" width="500" height="400"/>
     </td>
    <td align="left" width="50%">
     <ul>
@@ -546,7 +546,7 @@ The sensor is located on the lower front of the robot, although at one point it 
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="WIRING_SCHEMES/pico-2-w-pinout.webp" width="500" height="400"/>
+      <img src="COMPONENTS/RGB sensor.jpg" width="500" height="400"/>
     </td>
    <td align="left" width="50%">
     <ul>
