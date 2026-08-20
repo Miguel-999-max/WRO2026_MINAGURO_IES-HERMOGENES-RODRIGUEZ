@@ -641,9 +641,118 @@ Here you can find almost all programs used in the development of our robot; incl
  
 These are all programs we used to calibrate our old sensors:
 
-* [Calibrate HCSR04 sensors](PROGRAMS/HCSR04_x4_display.ino)
-* [Calibrate steering servo](PROGRAMS/11_JOYSTICK_CON_2_SERVOS.ino)
-* [Calibrate drive servo](PROGRAMS/POTENCIOMETRO_CON_1_SERVO.ino)
+* <ins>Calibrate HCSR04 sensors</ins>
+```cpp
+
+//Program to calibrate HCSR04 sensors.
+#include <HCSR04.h>
+
+HCSR04 hc(2, new int[4]{3, 4, 5, 7}, 4); //initialisation class HCSR04 (trig pin , echo pin, number of sensor)
+int lectura=0;
+int distDE, distFR, distIZ, distTR;
+
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x27,20,4);
+
+void setup()
+{ 
+  lcd.init(); //inicializa el display
+  lcd.backlight(); //Activa la retroiluminación
+  lcd.clear();
+ 
+ }
+
+void loop()
+{
+  lcd.clear();
+  
+  lcd.setCursor(0, 0);// coloca el cursor en la columna 0, linea 0
+  lcd.print("Dist Dcha= ");
+  lectura=(int)hc.dist(0);
+  if (lectura < 2 || lectura > 300) {
+  distDE = distDE; }
+  else{distDE=lectura;}
+  lcd.print(distDE);
+  delay(60);
+
+  lcd.setCursor(0, 1);// coloca el cursor en la columna 0, linea 0
+  lcd.print("Dist Fron= ");
+  lectura=(int)hc.dist(1);
+  if (lectura < 2 || lectura > 300) {
+  distFR = distFR; }
+  else{distFR=lectura;}
+  lcd.print(distFR);
+  delay(60);
+
+  lcd.setCursor(0, 2);// coloca el cursor en la columna 0, linea 0
+  lcd.print("Dist Izda= ");
+  lectura=(int)hc.dist(2);
+  if (lectura < 2 || lectura > 300) {
+  distIZ = distIZ; }
+  else{distIZ=lectura;}
+  lcd.print(distIZ);
+  delay(60);
+
+  lcd.setCursor(0, 3);// coloca el cursor en la columna 0, linea 0
+  lcd.print("Dist Tras= ");
+  lectura=(int)hc.dist(3);
+  if (lectura < 2 || lectura > 300) {
+  distTR = distTR; }
+  else{distTR=lectura;}
+  lcd.print(distTR);
+  delay(60);
+
+delay(400);
+}
+
+```
+
+* <ins>Calibrate drive servo</ins>
+
+```cpp
+
+//Program to calibrate the drive servo
+
+#include <Servo.h>
+Servo SERVOx;
+
+int JOYx = A0;   //LECTURA:   0--508-1023
+
+int Sx=0;
+
+
+void setup() {
+
+SERVOx.attach(9);  // vincula el servo al pin digital 6
+
+
+Serial.begin(9600);
+
+  }
+
+void loop(){
+  JOYx = analogRead(A0);
+  
+Sx = map(JOYx, 0, 1023, 55, 125); //map(value, fromLow, fromHigh, toLow, toHigh) 360º 60(dcha)-120(izda)
+
+
+SERVOx.write(Sx);
+
+
+Serial.print("JOYx=");
+Serial.print(JOYx);
+
+
+Serial.print("  Sx= ");
+Serial.println(Sx);
+
+delay(100);
+}
+
+```
+
+* <ins>Calibrate steering servo</ins>
+
 </details>
 
 <details>
