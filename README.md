@@ -528,12 +528,14 @@ One major issue it caused was that it sometimes interfered with other robot comp
     </td>
    <td align="left" width="50%">
     <ul>
-        <li>Dimensions: 21 mm x 51 mm</li> 
-        <li>CPU: Dual-core Cortex-M33 or RISC-V Hazard3 processors at 150 MHz</li>            <li>Memory: 520 KB of on-chip SRAM</li> 
-        <li>Flash: 4 MB of on-chip QSPI flash memory</li> 
-        <li>Interface: 26 multipurpose GPIO pins (5V-tolerant), including 4 that can be used for ADC</li> 
-        <li>Peripherals: 2 × UART, 2 × SPI controllers, 2 × I2C controllers, 16 × PWM channels, 1 × USB 1.1 and PHY controller, with support for host and device modes, 12 × PIO state machines</li> 
-        <li>Power supply: 1.8–5.5 V DC</li>
+        <li>Core Processor Chip: Dual-core RISC-V processor</li>
+        <li>Integrated Image Sensor: Omnivision OV2640 2.0-megapixel camera</li>
+        <li>Built-in Display: 2.0-inch IPS LCD display with a resolution of 320x240 pixels.</li>
+        <li>Supply Voltage: 3.3V to 5.0V DC.</li>
+        <li>Current Consumption: ~320 mA at 3.3V / ~230 mA at 5.0V</li>
+        <li>Frame Rate: Up to 30 frames per second</li>
+        <li>Illumination: Features 2 built-in front LEDs</li>
+        <li>Physical Dimensions: 52 mm × 44.5 mm (2.05“ × 1.75”).</li>
       </ul>
     </td>
   </tr>
@@ -550,12 +552,14 @@ The sensor is located on the lower front of the robot, although at one point it 
     </td>
    <td align="left" width="50%">
     <ul>
-        <li>Dimensions: 21 mm x 51 mm</li> 
-        <li>CPU: Dual-core Cortex-M33 or RISC-V Hazard3 processors at 150 MHz</li>            <li>Memory: 520 KB of on-chip SRAM</li> 
-        <li>Flash: 4 MB of on-chip QSPI flash memory</li> 
-        <li>Interface: 26 multipurpose GPIO pins (5V-tolerant), including 4 that can be used for ADC</li> 
-        <li>Peripherals: 2 × UART, 2 × SPI controllers, 2 × I2C controllers, 16 × PWM channels, 1 × USB 1.1 and PHY controller, with support for host and device modes, 12 × PIO state machines</li> 
-        <li>Power supply: 1.8–5.5 V DC</li>
+       <li>Detection Channels (RGBC): 4 independent channels: Red, Green, Blue, and Clear</li>
+       <li>Resolution per Channel: 16-bit precision per channel</li>
+       <li>Integrated Physical Filter: Features an infrared (IR) blocking filter positioned directly over the photodiodes</li>
+       <li>Dynamic Range: Extreme, with a ratio of 3,800,000:1</li>
+       <li>Recommended Measurement Distance: between 3 mm and 10 mm</li>
+       <li>Supply Voltage: Supports 3.3V and 5V DC</li>
+       <li>Current Consumption: ~2.5 uA in deep sleep mode / up to 20 mA when operating with LEDs on</li>
+       <li>Illumination: 1 or more high-brightness white LEDs</li>
       </ul>
     </td>
   </tr>
