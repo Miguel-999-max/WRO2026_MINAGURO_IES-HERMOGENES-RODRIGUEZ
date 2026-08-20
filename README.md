@@ -464,21 +464,21 @@ The sensor was also mounted on the HUSKYLENS servo because, initially, we weren�
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="COMPONENTS/HC-SR04RC.jpg" width="500"/>
+      <img src="COMPONENTS/TFmini-S.png" width="500"/>
     </td>
     <td align="left" width="50%">
      <ul>
-        <li>Operating Voltage: 5V DC</li>
-        <li>Quiescent Current: < 2mA</li>
-        <li>Operating Current: 15mA</li>
-        <li>Measuring Range: 2–450 cm</li>
-        <li>Accuracy: ±3 mm</li>
-        <li>Beam Angle: 15°</li>
-        <li>Ultrasonic Frequency: 40 kHz</li>
-        <li>Minimum TRIG trigger pulse duration (TTL level): 10 μs</li>
-        <li>Output ECO pulse duration (TTL level): 100–25,000 μs</li>
-        <li>Dimensions: 45 × 20 × 15 mm</li>
-        <li>Minimum wait time between one measurement and the start of the next: 20 ms (50 ms recommended)</li>
+        <li>Measurement principle: Time of flight (ToF) using a single-channel LiDAR sensor.</li>
+        <li>Detection range: 0.1 meters to 12 meters</li>
+        <li>Blind spot: 10 cm</li>
+        <li>Sampling frequency: Adjustable between 1 Hz and 1,000 Hz (100 Hz by default)</li>
+        <li>Accuracy: ±6 cm (from 0.1 to 6 m) / ±1% (from 6 to 12 m).</li>
+        <li>Field of view (FoV): 2 degrees.</li>
+        <li>Light source: 850 nm infrared VCSEL emitter (Eye Safety Class 1).</li>
+        <li>Supply voltage: 5 V DC (±0.1 V)</li>
+        <li>Current consumption: Average ≤140 mA (peaks of 200 mA)</li>
+        <li>Dimensions and weight: 42 mm × 15 mm × 16 mm / 5 grams</li>
+        <li>Ambient light immunity: Up to 70 Klux</li>
       </ul>
     </td>
   </tr>
