@@ -440,9 +440,11 @@ The wiring diagram used for assembling the robot is shown in the image below. It
 <img src="wiring diagram final version.jpg">
 
 #### 4.3 Sensors 
-The robot receives data from three main components: the Arduino R4 Minima board, the HC-SR04 sensors, and the HUSKYLENS module.  
+The robot receives data from five main components: the Raspberry Pi Pico 2 board, the TFmini-S distance sensor, the TOF400F distance sensors, the HUSKYLENS module, and the TCS34725 RGB sensor.
 
-The Arduino R4 Minima board was chosen because it has additional pins that other Arduino boards do not have, ensuring there are enough pins to connect all the components. However, after an accident in which this board stopped working, we considered replacing it with an Arduino R4 Wi-Fi board we had in class, without using the Wi-Fi and Bluetooth functions, since that would violate the rules. In the end, we used another Arduino UNO R4 Minima board and attached a shield to it so we could access all the pins we had before. 
+The Raspberry Pi Pico 2 board was chosen after the regional competition. Initially, we used an Arduino R4 Minima board, but it was clear that a more powerful microcontroller was needed to handle such a large amount of data. There were other options, but they presented serious programming challenges. By using this board, the entire program was written in Python, which presented difficulties compared to the code from the regional competition, which was in C++.
+
+This board is mounted on a KS3017 display to allow for convenient connection of the cables from the other components; otherwise, the cables for all components would have to be soldered.
 
 <div align="center"><table>
   <tr>
@@ -455,9 +457,9 @@ The Arduino R4 Minima board was chosen because it has additional pins that other
   </tr>
 </table></div>
 
-The HC-SR04 sensors were chosen after considering three types of sensors: the HC-SR04, the CJVL53L0XV2 (which use lasers), and the TOF10120 (which also use lasers). Initially, the CJVL53L0XV2 was chosen, although it was later replaced due to programming issues. The HC-SR04, although less efficient, is easier to program, and we had used it before. 
+The TFmini-S sensor was chosen from among other options from the same manufacturer (as explained in greater detail in the project log); ultimately, this sensor has a detection range that is more than sufficient for the challenge, low power consumption, excellent accuracy, and a reasonable price. The other options were either too expensive or not up to par. Furthermore, during the regional phase, we had used HC-SR04 ultrasonic sensors, which worked at the time, but for this national phase we needed more accurate and reliable sensors, so we looked for laser sensors.
 
-We started by installing three sensors (two on the sides and one at the front), because we thought that would be enough to park and navigate turns without any problems. However, adding a fourth sensor—mounted on the lower rear of the robot—provided more accurate measurements that helped us overcome challenges (specifically the parking portion of the obstacle course) more easily. 
+The sensor was also mounted on the HUSKYLENS servo because, initially, we weren’t going to use two TOF400F sensors—one, along with this one, would be sufficient. Therefore, it needed to be able to rotate to take measurements on both the left side and the front, given its reliability in doing so.
 
 <div align="center"><table>
   <tr>
@@ -482,9 +484,17 @@ We started by installing three sensors (two on the sides and one at the front), 
   </tr>
 </table></div>
 
+The TOF400F sensors were chosen to replace the TFmini-S sensor, since the budget for two TFmini-S sensors was too high. After researching several options—and having previously evaluated the use of these TOF400F sensors in other versions of the robot—we decided to go with them. The measurements are also reliable, and the range is sufficient for the challenge.
+
+However, there was a major problem when trying to incorporate the second TOF400F sensor, since the initial strategy was to use only one TOF400F sensor and one TFmini-S sensor. The problem was that, since the UART ports were already fully occupied, it had to be connected to an I2C port. Its performance on this port was significantly worse, so whenever possible, we used the TFmini-S sensor, which is much more reliable.
+
 The HUSKYLENS module identifies traffic light colors to navigate around them on the correct side. This module was new to us, so we had to meticulously study its features and how to program it. The most appropriate mode for this challenge is color detection. However, 70% of the time it confused the pink of the parking lot with the red of the traffic lights, which caused serious programming issues. 
 
 One major issue it caused was that it sometimes interfered with other robot components. For example, while it was connected, the 360-degree servo wouldn’t rotate properly and would jam, but when it was disconnected, the servo rotated more smoothly.
+
+The TCS34725 RGB sensor was chosen after encountering problems with the previous strategy, which involved the HUSKYLENS detecting lines on the playing field and counting them; when it reached a certain value, the robot would stop a few seconds later in the correct quadrant. However, combining line counting with traffic light detection led to problems that prevented proper performance in the obstacle challenge.
+
+The sensor is located on the lower front of the robot, although at one point it was mounted on the rear to detect a line at the start of the free challenge and thus determine the direction of the challenge. It is surrounded by a layer of black EVA foam to prevent interference from ambient light and ensure the sensor reads the light it reflects.
 
 ### 5. 🧠 Strategy
 Before focusing on each of the two types of challenges individually, we distinguish between them as follows: since the obstacle challenge allows us to choose between starting from the parking area specified in the free challenge or from the magenta parking lot, we choose to start from the magenta parking lot so that the starting area is different for each challenge, making it easier to tell them apart. Therefore, we start by checking the front distance; and, depending on whether it is greater or less than 40 cm, we know whether we are in the open challenge or the obstacle challenge, respectively. Once we know this, we proceed to analyze each challenge separately. 
