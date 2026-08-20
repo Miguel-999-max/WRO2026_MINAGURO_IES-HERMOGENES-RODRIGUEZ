@@ -449,10 +449,17 @@ This board is mounted on a KS3017 display to allow for convenient connection of 
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="WIRING_SCHEMES/pinout-arduino-uno-r4-minima.webp" width="500" height="400"/>
+      <img src="WIRING_SCHEMES/pico-2-w-pinout.webp" width="500" height="400"/>
     </td>
-    <td align="center" width="50%">
-      <img src="OTHER /PLACA_caract.png" width="900" height="400"/>
+   <td align="left" width="50%">
+    <ul>
+        <li>Dimensions: 21 mm x 51 mm</li> 
+        <li>CPU: Dual-core Cortex-M33 or RISC-V Hazard3 processors at 150 MHz</li>            <li>Memory: 520 KB of on-chip SRAM</li> 
+        <li>Flash: 4 MB of on-chip QSPI flash memory</li> 
+        <li>Interface: 26 multipurpose GPIO pins (5V-tolerant), including 4 that can be used for ADC</li> 
+        <li>Peripherals: 2 × UART, 2 × SPI controllers, 2 × I2C controllers, 16 × PWM channels, 1 × USB 1.1 and PHY controller, with support for host and device modes, 12 × PIO state machines</li> 
+        <li>Power supply: 1.8–5.5 V DC</li>
+      </ul>
     </td>
   </tr>
 </table></div>
