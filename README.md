@@ -386,23 +386,15 @@ The robot runs on four Samsung ICR18650-26FU batteries. Two of the batteries dir
 An energy calculation was performed, taking all components into account, to help select the batteries:
 
 * HUSKYLENS module: 230–420 mA.
-
 * Raspberry Pi Pico 2 board: 40 mA
-
 * TOF400F: 40 mA
-
 * TFmini-S: 140 mA
-
 * L3GD20 gyroscope: 6 mA
-
 * 180 microservo: 200 mA
-
 * 360° continuous rotation servo: 700 mA
-
 * Total: approximately 1,550 mA
 
 * Battery life for the traction servo and the HUSKYLENS camera (8.4 V and 2,600 mA): approximately 2,5 hours.
-
 * Battery life for the Raspberry Pi Pico 2 board, TFmini-S sensor, and mini servos (4.2 V and 5,200 mA): approximately 12 hours.
 
 This means we need to be careful with the batteries for the 360° servo and the HUSKYLENS module, as they may fail due to a lack of power.
