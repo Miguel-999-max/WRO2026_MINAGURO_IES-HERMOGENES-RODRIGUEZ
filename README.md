@@ -1322,6 +1322,22 @@ Here is a flowchart that will help you understand how our final program works.
 <details>
 <summary><b>🔙 Previous versions</b></summary>
 <br>
+ 
+* [SEGUIDOR_V1.00.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.00.ino)
+* [SEGUIDOR_V1.01.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.01.ino)
+* [SEGUIDOR_V1.02.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.02.ino)
+* [SEGUIDOR_V1.03.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.03.ino)
+* [SEGUIDOR_V1.04.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.04.ino)
+* [SEGUIDOR_V1.10.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.10.ino)
+* [SEGUIDOR_V1.11.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.11.ino)
+* [SEGUIDOR_V1.12.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.12.ino)
+* [SEGUIDOR_V1.20.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.20.ino)
+* [SEGUIDOR_V1.21.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.21.ino)
+* [SEGUIDOR_V1.22.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.22.ino)
+* [SEGUIDOR_V2.01.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V2.01.ino)
+* [SEGUIDOR_V2.02.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V2.02.ino)
+* [SEGUIDOR_V2.03.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V2.03.ino)
+* [SEGUIDOR_V2.04.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V2.04.ino)
 
 </details>
 
