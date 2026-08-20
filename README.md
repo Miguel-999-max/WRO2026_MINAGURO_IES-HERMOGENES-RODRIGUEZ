@@ -487,7 +487,7 @@ The HUSKYLENS module identifies traffic light colors to navigate around them on 
 One major issue it caused was that it sometimes interfered with other robot components. For example, while it was connected, the 360-degree servo wouldn’t rotate properly and would jam, but when it was disconnected, the servo rotated more smoothly.
 
 ### 5. 🧠 Strategy
-Before focusing on each of the two types of challenges individually, we distinguish between them as follows: since the obstacle challenge allows us to choose between starting from the parking area specified in the free challenge or from the magenta parking lot, we choose to start from the magenta parking lot so that the starting area is different for each challenge, making it easier to tell them apart. Therefore, we start by checking the front distance; and, depending on whether it is greater or less than 40 cm, we know whether we are in the free challenge or the obstacle challenge, respectively. Once we know this, we proceed to analyze each challenge separately. 
+Before focusing on each of the two types of challenges individually, we distinguish between them as follows: since the obstacle challenge allows us to choose between starting from the parking area specified in the free challenge or from the magenta parking lot, we choose to start from the magenta parking lot so that the starting area is different for each challenge, making it easier to tell them apart. Therefore, we start by checking the front distance; and, depending on whether it is greater or less than 40 cm, we know whether we are in the open challenge or the obstacle challenge, respectively. Once we know this, we proceed to analyze each challenge separately. 
 
 #### 5.1 Open challenge
 <div align="center"><table>
@@ -631,16 +631,79 @@ Here are some pictures of our robot to help with it´s reproducibility:
 
 
 ### 8. 💻 Software
-Here are some programms we used to calibrate HCSR04 sensors and the steering servo:
+Here you can find almost all programs used in the development of our robot; including flowcharts, test programs and each version of the final program we have made.
 
-* **[Calibrate HCSR04 sensors](PROGRAMS/HCSR04_x4_display.ino)**
-* **[Calibrate steering servo](11_JOYSTICK_CON_2_SERVOS.ino)**
-* **[Calibrate drive servo](PROGRAMS/11_POTENCIOMETRO_CON_1_SERVO.ino)** </div>
+#### 8.1 Old programs
 
-Here is our final program:
-* **[Final program](SEGUIDOR_V2.05.ino)**
+<details>
+<summary><b>📋 Test programs</b></summary>
+<br>
+ 
+These are all programs we used to calibrate our old sensors:
 
+* [Calibrate HCSR04 sensors](PROGRAMS/HCSR04_x4_display.ino)
+* [Calibrate steering servo](PROGRAMS/11_JOYSTICK_CON_2_SERVOS.ino)
+* [Calibrate drive servo](PROGRAMS/POTENCIOMETRO_CON_1_SERVO.ino)
+</details>
+
+<details>
+<summary><b>💻 Final program</b></summary>
+<br>
+ 
+This is our old final program, which allowed us to reach the national WRO final:
+
+* [Final program](SEGUIDOR_V2.05.ino)
+</details>
+
+<details>
+<summary><b>🔄 Flowchart</b></summary>
+<br>
+ 
 Here is a flowchart that will help you understand how our final program works.
 
 <img src="Flowchart.png">
+</details>
+
+<details>
+<summary><b>🔙 Previous versions</b></summary>
+<br>
+
+</details>
+
+#### 8.2 Current programs
+
+<details>
+<summary><b>📋 Test programs</b></summary>
+<br>
+ 
+These are all programs we used to calibrate our old sensors:
+
+* [Calibrate steering servo](PROGRAMS/11_JOYSTICK_CON_2_SERVOS.ino)
+* [Calibrate drive servo](PROGRAMS/POTENCIOMETRO_CON_1_SERVO.ino)
+</details>
+
+<details>
+<summary><b>💻 Final program</b></summary>
+<br>
+ 
+This is our old final program, which allowed us to reach the national WRO final:
+
+
+</details>
+
+<details>
+<summary><b>🔄 Flowchart</b></summary>
+<br>
+ 
+Here is a flowchart that will help you understand how our final program works.
+
+
+</details>
+
+<details>
+<summary><b>🔙 Previous versions</b></summary>
+<br>
+
+</details>
+
 
