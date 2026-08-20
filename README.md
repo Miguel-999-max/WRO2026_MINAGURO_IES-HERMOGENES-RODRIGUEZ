@@ -381,29 +381,37 @@ Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was caus
 This section covers the power supply, the wiring diagram created in TinkerCad, and everything related to the sensors. 
 
 #### 4.1 Power Supply 
-The robot uses four Samsung ICR18650-26FU batteries as its power source. Two batteries power the Arduino R4 board, and the other two directly power the 360-degree servo motor. This prevents interference with the servo, allowing the robot to move smoothly. 
+The robot runs on four Samsung ICR18650-26FU batteries. Two of the batteries directly power the two mini-servos (the one on the HUSKYLENS module and the steering servo), the TF-Mini S sensor, and the Raspberry Pi Pico 2 board, while the other two power the drive servo and the HUSKYLENS.
 
-An energy estimate was calculated for all components to determine the appropriate batteries: 
+An energy calculation was performed, taking all components into account, to help select the batteries:
 
-* HUSKYLENS module: 230–420 mA. 
-* Arduino R4 Minima board: 100 mA. 
-* HC-SR04 sensors: 15 mA 
-* 180-degree microservo: 200 mA 
-* 360-degree continuous rotation servo: 700 mA 
-* Total: 1215 mA 
+HUSKYLENS module: 230–420 mA.
 
-Theoretically, this is the robot’s power consumption. However, after measuring the robot’s actual power consumption, it was 500 mA. Therefore, with two batteries (2600 mA), we have enough power for 5 hours. These were the initial calculations since we were only going to use two batteries. Finally, after verifying that using two batteries connected directly to the 360-degree servo and the HUSKYLENS module works as intended, we will now connect four batteries (5200 mA), which theoretically gives us: 
+Raspberry Pi Pico 2 board: 40 mA
 
-* Battery life for the 360° servo and the HUSKYLENS camera (8.4 V and 2600 mA): approximately 2.5 hours. 
-* Battery life for the Arduino board (4.2 V and 5200 mA): approximately 16 hours. 
+TOF400F: 40 mA
 
-This means we need to be careful with the batteries for the 360° servo and the HUSKYLENS module because they may fail due to a lack of power. 
+TFmini-S: 140 mA
 
-Based on this estimate and the availability of batteries in our class, we chose the Samsung ICR18650-26FU model. The main features of this model are:
+L3GD20 gyroscope: 6 mA
+
+180 microservo: 200 mA
+
+360° continuous rotation servo: 700 mA
+
+Total: approximately 1,550 mA
+
+Battery life for the traction servo and the HUSKYLENS camera (8.4 V and 2,600 mA): approximately two and a half hours.
+
+Battery life for the Raspberry Pi Pico 2 board, TFmini-S sensor, and mini servos (4.2 V and 5,200 mA): approximately 12 hours.
+
+This means we need to be careful with the batteries for the 360° servo and the HUSKYLENS module, as they may fail due to a lack of power.
+
+Given this budget and the availability of batteries in our category, we chose the Samsung ICR18650-26FU model. The main features of this model are:
 
 <p align="center"><img src="COMPONENTS/BATERIAS_SAMSUNG.jpg" width="300"></p>
 
-The batteries that power the board are placed in a dedicated space on the 3D-printed chassis. Initially, in the prototype with the foam board base, they were glued to the bottom of the base, as seen in the initial sketches of the component layout. Later, it was decided to create a custom-made 3D-printed space for them in that same location.
+The batteries that power the HUSKYLENS and the drive servo are housed in a battery expansion module on the bottom of the chassis. This way, you simply remove them and insert new ones when the battery runs out. Previously, they were placed in a dedicated space inside the 3D-printed chassis. Initially, in the prototype with a foam board base, they were glued to the bottom of the base, as can be seen in the initial sketches of the component layout. Later, it was decided to create a custom 3D-printed compartment for them in that same location.
 
 <div align="center"><table>
   <tr>
@@ -416,7 +424,7 @@ The batteries that power the board are placed in a dedicated space on the 3D-pri
   </tr>
 </table></div>
 
-The batteries that power the servo, being a last-minute modification, have been placed in a foam board structure on the upper rear of the robot. This also extends the parking length and allows us to exit the parking space in the obstacle course with more room to maneuver. 
+As a last-minute modification, the batteries that power the Raspberry Pi Pico 2 board, the two microservos, and the TFmini-S sensor have been mounted on a 3D-printed structure at the top rear of the robot, inside a battery expansion module; this way, if some batteries run out, there’s no need to waste time disassembling the entire circuit to replace them—you simply remove them from there and swap them out. Additionally, this structure also expands the parking space, giving us more room to maneuver during the obstacle course. Initially, this structure was made of foam board, but it was eventually modified to use a more durable material.
 
 <div align="center"><table>
   <tr>
