@@ -729,7 +729,7 @@ These are all programs we used to calibrate and test functions:
 * [HCSR04_x1.ino](PROGRAMS/Old_programs/Test_programs1/HCSR04_x1.ino) ➜ to test the operation of the HCSR04
 * [HCSR04_x4.ino](PROGRAMS/Old_programs/Test_programs1/HCSR04_x4.ino) ➜ to test the operation of four HCSR04 at the same time
 * [HCSR04_x4_display.ino](PROGRAMS/Old_programs/Test_programs1/HCSR04_x4_display.ino) ➜ to test the operation of four HCSR04 at the same time while the text is being printed on a display
-* [HUSKYLENS_I2C.ino](PROGRAMS/Old_programs/Test_programs1/HUSKYLENS_I2C.ino) ➜
+* [HUSKYLENS_I2C.ino](PROGRAMS/Old_programs/Test_programs1/HUSKYLENS_I2C.ino) ➜ an example of a HUSKYLENS connected by I2C library 
 * [HUSKYLENS_OBJECT_TRACKING.ino](PROGRAMS/Old_programs/Test_programs1/HUSKYLENS_OBJECT_TRACKING.ino) ➜ to test the OBJECT TRACKING mode of the HUSKYLENS
 * [JOYSTICK_CON_2_SERVOS_prototipo.ino](PROGRAMS/Old_programs/Test_programs1/JOYSTICK_CON_2_SERVOS_prototipo.ino) ➜
 
