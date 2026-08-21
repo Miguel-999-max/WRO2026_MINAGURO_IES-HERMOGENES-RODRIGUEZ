@@ -723,7 +723,7 @@ These are all programs we used to calibrate and test functions:
 * [00_12C_SCAN.ino](PROGRAMS/Old_programs/Test_programs1/00_12C_SCAN.ino) ➜ to check the 12C addresses
 * [01-MAGNETOMETRO.ino](PROGRAMS/Old_programs/Test_programs1/01-MAGNETOMETRO.ino) ➜ to check the compass bearing of the magnetometer (which we did not use at the end)
 * [03_EJEMPLO_TOFx2.ino](PROGRAMS/Old_programs/Test_programs1/03_EJEMPLO_TOFx2.ino) ➜ to test the operation of two TOF400F at the same time
-* [11_JOYSTICK_CON_2_SERVOS.ino](PROGRAMS/Old_programs/Test_programs1/11_JOYSTICK_CON_2_SERVOS.ino) ➜
+* [11_JOYSTICK_CON_2_SERVOS.ino](PROGRAMS/Old_programs/Test_programs1/11_JOYSTICK_CON_2_SERVOS.ino) ➜ to calibrate the steering servo
 * [11_POTENCIOMETRO_CON_1_SERVO.ino](PROGRAMS/Old_programs/Test_programs1/11_POTENCIOMETRO_CON_1_SERVO.ino) ➜ to calibrate the drive servo
 * [CALIBRAR_MAGNETOMETRO.ino](PROGRAMS/Old_programs/Test_programs1/CALIBRAR_MAGNETOMETRO.ino) ➜ to test the magnetometer's gyroscope
 * [HCSR04_x1.ino](PROGRAMS/Old_programs/Test_programs1/HCSR04_x1.ino) ➜ to test the operation of the HCSR04
@@ -731,7 +731,6 @@ These are all programs we used to calibrate and test functions:
 * [HCSR04_x4_display.ino](PROGRAMS/Old_programs/Test_programs1/HCSR04_x4_display.ino) ➜ to test the operation of four HCSR04 at the same time while the text is being printed on a display
 * [HUSKYLENS_I2C.ino](PROGRAMS/Old_programs/Test_programs1/HUSKYLENS_I2C.ino) ➜ an example of a HUSKYLENS connected by I2C library 
 * [HUSKYLENS_OBJECT_TRACKING.ino](PROGRAMS/Old_programs/Test_programs1/HUSKYLENS_OBJECT_TRACKING.ino) ➜ to test the OBJECT TRACKING mode of the HUSKYLENS
-* [JOYSTICK_CON_2_SERVOS_prototipo.ino](PROGRAMS/Old_programs/Test_programs1/JOYSTICK_CON_2_SERVOS_prototipo.ino) ➜
 
 
 </details>
