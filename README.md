@@ -720,17 +720,17 @@ Here you can find almost all programs used in the development of our robot; incl
  
 These are all programs we used to calibrate and test functions:
 
-* [00_12C_SCAN.ino](PROGRAMS/Old_programs/Test_programs1/00_12C_SCAN.ino) ➜ to check the 12C addresses
-* [01-MAGNETOMETRO.ino](PROGRAMS/Old_programs/Test_programs1/01-MAGNETOMETRO.ino) ➜ to check the compass bearing of the magnetometer (which we did not use at the end)
-* [03_EJEMPLO_TOFx2.ino](PROGRAMS/Old_programs/Test_programs1/03_EJEMPLO_TOFx2.ino) ➜ to test the operation of two TOF400F at the same time
-* [11_JOYSTICK_CON_2_SERVOS.ino](PROGRAMS/Old_programs/Test_programs1/11_JOYSTICK_CON_2_SERVOS.ino) ➜ to calibrate the steering servo
-* [11_POTENCIOMETRO_CON_1_SERVO.ino](PROGRAMS/Old_programs/Test_programs1/11_POTENCIOMETRO_CON_1_SERVO.ino) ➜ to calibrate the drive servo
-* [CALIBRAR_MAGNETOMETRO.ino](PROGRAMS/Old_programs/Test_programs1/CALIBRAR_MAGNETOMETRO.ino) ➜ to test the magnetometer's gyroscope
-* [HCSR04_x1.ino](PROGRAMS/Old_programs/Test_programs1/HCSR04_x1.ino) ➜ to test the operation of the HCSR04
-* [HCSR04_x4.ino](PROGRAMS/Old_programs/Test_programs1/HCSR04_x4.ino) ➜ to test the operation of four HCSR04 at the same time
-* [HCSR04_x4_display.ino](PROGRAMS/Old_programs/Test_programs1/HCSR04_x4_display.ino) ➜ to test the operation of four HCSR04 at the same time while the text is being printed on a display
-* [HUSKYLENS_I2C.ino](PROGRAMS/Old_programs/Test_programs1/HUSKYLENS_I2C.ino) ➜ an example of a HUSKYLENS connected by I2C library 
-* [HUSKYLENS_OBJECT_TRACKING.ino](PROGRAMS/Old_programs/Test_programs1/HUSKYLENS_OBJECT_TRACKING.ino) ➜ to test the OBJECT TRACKING mode of the HUSKYLENS
+* [00_12C_SCAN.ino](src/Old_programs/Test_programs1/00_12C_SCAN.ino) ➜ to check the 12C addresses
+* [01-MAGNETOMETRO.ino](src/Old_programs/Test_programs1/01-MAGNETOMETRO.ino) ➜ to check the compass bearing of the magnetometer (which we did not use at the end)
+* [03_EJEMPLO_TOFx2.ino](src/Old_programs/Test_programs1/03_EJEMPLO_TOFx2.ino) ➜ to test the operation of two TOF400F at the same time
+* [11_JOYSTICK_CON_2_SERVOS.ino](src/Old_programs/Test_programs1/11_JOYSTICK_CON_2_SERVOS.ino) ➜ to calibrate the steering servo
+* [11_POTENCIOMETRO_CON_1_SERVO.ino](src/Old_programs/Test_programs1/11_POTENCIOMETRO_CON_1_SERVO.ino) ➜ to calibrate the drive servo
+* [CALIBRAR_MAGNETOMETRO.ino](src/Old_programs/Test_programs1/CALIBRAR_MAGNETOMETRO.ino) ➜ to test the magnetometer's gyroscope
+* [HCSR04_x1.ino](src/Old_programs/Test_programs1/HCSR04_x1.ino) ➜ to test the operation of the HCSR04
+* [HCSR04_x4.ino](src/Old_programs/Test_programs1/HCSR04_x4.ino) ➜ to test the operation of four HCSR04 at the same time
+* [HCSR04_x4_display.ino](src/Old_programs/Test_programs1/HCSR04_x4_display.ino) ➜ to test the operation of four HCSR04 at the same time while the text is being printed on a display
+* [HUSKYLENS_I2C.ino](src/Old_programs/Test_programs1/HUSKYLENS_I2C.ino) ➜ an example of a HUSKYLENS connected by I2C library 
+* [HUSKYLENS_OBJECT_TRACKING.ino](src/Old_programs/Test_programs1/HUSKYLENS_OBJECT_TRACKING.ino) ➜ to test the OBJECT TRACKING mode of the HUSKYLENS
 
 
 </details>
@@ -1224,21 +1224,21 @@ Here is a flowchart that will help you understand how our final program works.
 <summary><b>🔙 Previous versions</b></summary>
 <br>
  
-* [SEGUIDOR_V1.00.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.00.ino)
-* [SEGUIDOR_V1.01.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.01.ino)
-* [SEGUIDOR_V1.02.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.02.ino)
-* [SEGUIDOR_V1.03.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.03.ino)
-* [SEGUIDOR_V1.04.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.04.ino)
-* [SEGUIDOR_V1.10.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.10.ino)
-* [SEGUIDOR_V1.11.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.11.ino)
-* [SEGUIDOR_V1.12.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.12.ino)
-* [SEGUIDOR_V1.20.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.20.ino)
-* [SEGUIDOR_V1.21.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.21.ino)
-* [SEGUIDOR_V1.22.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V1.22.ino)
-* [SEGUIDOR_V2.01.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V2.01.ino)
-* [SEGUIDOR_V2.02.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V2.02.ino)
-* [SEGUIDOR_V2.03.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V2.03.ino)
-* [SEGUIDOR_V2.04.ino](/PROGRAMS/Old_programs/Program_versions1/SEGUIDOR_V2.04.ino)
+* [SEGUIDOR_V1.00.ino](/src/Old_programs/Program_versions1/SEGUIDOR_V1.00.ino)
+* [SEGUIDOR_V1.01.ino](/src/Old_programs/Program_versions1/SEGUIDOR_V1.01.ino)
+* [SEGUIDOR_V1.02.ino](/src/Old_programs/Program_versions1/SEGUIDOR_V1.02.ino)
+* [SEGUIDOR_V1.03.ino](/src/Old_programs/Program_versions1/SEGUIDOR_V1.03.ino)
+* [SEGUIDOR_V1.04.ino](/src/Old_programs/Program_versions1/SEGUIDOR_V1.04.ino)
+* [SEGUIDOR_V1.10.ino](/src/Old_programs/Program_versions1/SEGUIDOR_V1.10.ino)
+* [SEGUIDOR_V1.11.ino](/src/Old_programs/Program_versions1/SEGUIDOR_V1.11.ino)
+* [SEGUIDOR_V1.12.ino](/src/Old_programs/Program_versions1/SEGUIDOR_V1.12.ino)
+* [SEGUIDOR_V1.20.ino](/src/Old_programs/Program_versions1/SEGUIDOR_V1.20.ino)
+* [SEGUIDOR_V1.21.ino](/src/Old_programs/Program_versions1/SEGUIDOR_V1.21.ino)
+* [SEGUIDOR_V1.22.ino](/src/Old_programs/Program_versions1/SEGUIDOR_V1.22.ino)
+* [SEGUIDOR_V2.01.ino](/src/Old_programs/Program_versions1/SEGUIDOR_V2.01.ino)
+* [SEGUIDOR_V2.02.ino](/src/Old_programs/Program_versions1/SEGUIDOR_V2.02.ino)
+* [SEGUIDOR_V2.03.ino](/src/Old_programs/Program_versions1/SEGUIDOR_V2.03.ino)
+* [SEGUIDOR_V2.04.ino](/src/Old_programs/Program_versions1/SEGUIDOR_V2.04.ino)
 
 </details>
 
