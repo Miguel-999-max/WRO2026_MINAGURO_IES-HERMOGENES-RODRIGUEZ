@@ -471,7 +471,7 @@ The sensor was also mounted on the HUSKYLENS servo because, initially, we werenâ
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="COMPONENTS/TFmini-S.png" width="500"/>
+      <img src="other/components/TFmini-S.png" width="500"/>
     </td>
     <td align="left" width="50%">
      <ul>
@@ -498,7 +498,7 @@ However, there was a major problem when trying to incorporate the second TOF400F
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="COMPONENTS/TOF400F.jpg" width="500" height="400"/>
+      <img src="other/components/TOF400F.jpg" width="500" height="400"/>
     </td>
    <td align="left" width="50%">
     <ul>
@@ -524,7 +524,7 @@ One major issue it caused was that it sometimes interfered with other robot comp
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="COMPONENTS/HUSKYLENS.webp" width="500" height="400"/>
+      <img src="other/components/HUSKYLENS.webp" width="500" height="400"/>
     </td>
    <td align="left" width="50%">
     <ul>
@@ -548,7 +548,7 @@ The sensor is located on the lower front of the robot, although at one point it 
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="COMPONENTS/RGB sensor.jpg" width="500" height="400"/>
+      <img src="other/components/RGB sensor.jpg" width="500" height="400"/>
     </td>
    <td align="left" width="50%">
     <ul>
