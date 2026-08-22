@@ -253,13 +253,13 @@ The steering system used consists of:
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="other/steering_system.JPG" width="305"/>
+      <img src="other/steering/steering_system.JPG" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/steering_system2.JPG" width="305"/>
+      <img src="other/steering/steering_system2.JPG" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/steering_system3.JPG" width="305"/>
+      <img src="other/steering/steering_system3.JPG" width="305"/>
     </td>
   </tr>
 </table>
@@ -270,7 +270,7 @@ If this steering turned too far in one direction, it would jam and could break. 
   <tr>
     <td align="center" width="50%">
       <b>Micro servo 180</b><br>
-      <img src="other/SERVO180_caract.jpg" width="350"/>
+      <img src="other/steering/SERVO180_caract.jpg" width="350"/>
     </td>
     <td align="left" width="50%">
       <ul>
@@ -338,19 +338,6 @@ After confirming that this was the final base, we designed the chassis in 3D, pr
 
 <p align="center"><a src="3D_DESIGNS/CHASSIS.stl"><img src="COMPONENTS/Chasis.png" width="500"></a></p>
 
-The initial layout of all the components was sketched by hand to give us an idea (photos attached): 
-
-<div align="center"><table>
-  <tr>
-    <td align="center" width="50%">
-      <img src="IMG_3713.jpeg" width="400"/>
-    </td>
-    <td align="center" width="50%">
-      <img src="IMG_3714.jpeg" width="400"/>
-    </td>
-  </tr>
-</table></div>
-
 An important consideration regarding the robot’s balance was to place the heaviest components (the Arduino board, the batteries, the 360-degree servo) in the center of the chassis, maintaining a low and centralized center of mass. The batteries that directly power the 360-degree servo (explained in detail below) are located in a separate structure, as this was a last-minute modification.
 
 The robot remained in that state for a time until we encountered several problems and some broken circuit boards, which forced us to build a mount for a second battery, as recommended in the instructions.
@@ -358,7 +345,7 @@ The robot remained in that state for a time until we encountered several problem
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="COMPONENTS/support.jpg" width="250"/>
+      <img src="other/components/support.jpg" width="250"/>
     </td>
   </tr>
 </table></div>
@@ -368,10 +355,10 @@ Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was caus
 <div align="center"><table>
   <tr>
     <td align="center" width="49%">
-      <img src="other/camera support 1.jpeg" width="200"/>
+      <img src="other/steering/camera support 1.jpeg" width="200"/>
     </td>
     <td align="center" width="49%">
-      <img src="other/camera support 2.jpeg" width="200"/>
+      <img src="other/steering/camera support 2.jpeg" width="200"/>
     </td>
   </tr>
 </table></div>
@@ -401,7 +388,7 @@ This means we need to be careful with the batteries for the 360° servo and the 
 
 Given this budget and the availability of batteries in our category, we chose the Samsung ICR18650-26FU model. The main features of this model are:
 
-<p align="center"><img src="COMPONENTS/BATERIAS_SAMSUNG.jpg" width="300"></p>
+<p align="center"><img src="other/components/BATERIAS_SAMSUNG.jpg" width="300"></p>
 
 The batteries that power the HUSKYLENS and the drive servo are housed in a battery expansion module on the bottom of the chassis. This way, you simply remove them and insert new ones when the battery runs out. Previously, they were placed in a dedicated space inside the 3D-printed chassis. Initially, in the prototype with a foam board base, they were glued to the bottom of the base, as can be seen in the initial sketches of the component layout. Later, it was decided to create a custom 3D-printed compartment for them in that same location.
 
@@ -411,7 +398,7 @@ The batteries that power the HUSKYLENS and the drive servo are housed in a batte
       <img src="other/prototype1.2.jpg" width="300" height="350/>
     </td>
     <td align="center" width="50%">
-      <img src="other/batteries1.JPG" width="400" height="350"/>
+      <img src="other/batteries/batteries1.JPG" width="400" height="350"/>
     </td>
   </tr>
 </table></div>
@@ -421,13 +408,13 @@ As a last-minute modification, the batteries that power the Raspberry Pi Pico 2 
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="batteries_structure1.jpeg" width="350"/>
+      <img src="other/batteries/batteries_structure1.jpeg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/batteries_structure2.jpeg" width="350"/>
+      <img src="other/batteries/batteries_structure2.jpeg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/batteries_structure3.JPG" width="350"/>
+      <img src="other/batteries/batteries_structure3.JPG" width="350"/>
     </td>
   </tr>
 </table></div>
@@ -437,7 +424,7 @@ To power the HUSKYLENS module, an LM7805 regulator has been included to step dow
 #### 4.2 Wiring Scheme
 The wiring diagram used for assembling the robot is shown in the image below. It was created in TinkerCad based on previous experience using this program. Some components were not available in TinkerCad, so similar ones that met the necessary connection requirements were used, and their names were noted on the final diagram to avoid confusion:
 
-<img src="wiring diagram final version.jpg">
+<img src="schemes/wiring diagram final version.jpg">
 
 #### 4.3 Sensors 
 The robot receives data from five main components: the Raspberry Pi Pico 2 board, the TFmini-S distance sensor, the TOF400F distance sensors, the HUSKYLENS module, and the TCS34725 RGB sensor.
@@ -449,7 +436,7 @@ This board is mounted on a KS3017 display to allow for convenient connection of 
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="WIRING_SCHEMES/pico-2-w-pinout.webp" width="500" height="400"/>
+      <img src="schemes/pico-2-w-pinout.webp" width="500" height="400"/>
     </td>
    <td align="left" width="50%">
     <ul>
