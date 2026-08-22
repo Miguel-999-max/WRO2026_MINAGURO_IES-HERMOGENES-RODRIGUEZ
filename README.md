@@ -229,19 +229,18 @@ This section includes the robot's torque and speed, the rationale behind its fin
 
 Generally speaking, the robot has:
 
-* An Arduino R4 board (chosen based on previous experience programming it) 
-* Four HC-SR04 sensors (one at the front, one at the rear, and two on the sides, one on each side): the front and side sensors are mounted on top of the chassis on a small piece of foam board to...; the rear sensor is mounted underneath the chassis due to space constraints at the rear top of the chassis. The triggers for the four sensors are soldered to the same pin to save pins on the Arduino board, in case more components need to be connected. 
-* Four Samsung batteries... two of which power the Arduino board directly... 
-* A 360-degree servo that functions as a servo motor. 
-* A transmission system made with LEGO gears and one made with 3D-printed parts that runs from the servo motor to the mechanical differential. 
-* A mechanical differential equipped with two adapters for 3D printers to ensure a better fit on the wheels. 
-* Four LEGO wheels (two larger and two smaller: the specific models are listed in the parts list). 
-* Un sistema de dirección de LEGO (piezas usadas en la lista de componentes). 
-* An 180-degree servo to move the LEGO steering system via an arm attached to a string that runs to the steering system. 
-* A HUSKYLENS module for detecting obstacles. 
-* A foam board frame for holding a couple of batteries. 
-* A switch to turn on the robot. 
-* A button to start the program.
+* Microcontroller: Raspberry Pi Pico 2 board on a KS3017 shield.
+* Motor system: SPT5632-360 servo.
+* Drivetrain: mechanical differential, gear system, differential-to-wheel adapters, and four LEGO wheels, two of which are larger than the others.
+* Steering system: LEGO brick system, 180-degree micro servo, and a servo arm with a string to connect the micro servo to the steering system.
+* Camera: HUSKYLENS module.
+* Distance sensors: one TFmini-S sensor, two TOF400F sensors.
+* Gyroscope: L3GD20 gyroscope.
+* Color sensors: TCS34725 RGB sensor.
+* Power supply: four Samsung ICR18650-26FU batteries, arranged in pairs across two battery expansion modules.
+* Other components: a pushbutton to start the robot, a switch to turn on the batteries, a micro servo to rotate the HUSKYLENS and the TFmini-S sensor, red and green LEDs to provide hardware feedback on the program, and a heat sink.
+
+All of the components mentioned above are explained in greater detail below.
 
 #### 3.1 Steering system 
 The steering system used consists of:  
@@ -380,6 +379,8 @@ An energy calculation was performed, taking all components into account, to help
 * 180 microservo: 200 mA
 * 360° continuous rotation servo: 700 mA
 * Total: approximately 1,550 mA
+
+Based on this data, the approximate theoretical battery life would be:
 
 * Battery life for the traction servo and the HUSKYLENS camera (8.4 V and 2,600 mA): approximately 2,5 hours.
 * Battery life for the Raspberry Pi Pico 2 board, TFmini-S sensor, and mini servos (4.2 V and 5,200 mA): approximately 12 hours.
