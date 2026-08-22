@@ -353,30 +353,13 @@ After confirming that this was the final base, we designed the chassis in 3D, pr
 
 <p align="center"><a src="models/CHASSIS.stl"><img src="models/Chasis.png" width="500"></a></p>
 
-An important consideration regarding the robot’s balance was to place the heaviest components (the Arduino board, the batteries, the 360-degree servo) in the center of the chassis, maintaining a low and centralized center of mass. The batteries that directly power the 360-degree servo (explained in detail below) are located in a separate structure, as this was a last-minute modification.
+An important consideration regarding the robot’s balance was to place the heaviest components (the Arduino board, the batteries, and the 360° servo) in the center of the chassis, ensuring a low and centralized center of mass. The batteries that directly power the 360° servo (explained in detail later) are housed in a separate structure, as this was a last-minute modification.
 
-The robot remained in that state for a time until we encountered several problems and some broken circuit boards, which forced us to build a mount for a second battery, as recommended in the instructions.
+Finally, after the regional competition, the chassis had bent under the weight of the components, so we designed a new one with minor modifications—thicker so it could easily support them over time.
 
-<div align="center"><table>
-  <tr>
-    <td align="center" width="50%">
-      <img src="other/components/support.jpg" width="250"/>
-    </td>
-  </tr>
-</table></div>
+The chassis was always designed to provide a stable and reliable foundation on which to mount the components, avoid unnecessary wiring, provide specific spaces for certain components, save space, and keep the robot compact throughout its journey through the challenges.
 
-Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was causing problems, so we decided to remove it and build a 3D structure to hold it in place, allowing us to view objects and lines from a better angle without needing a servo. We also positioned the camera so that it was pointing slightly downwards, to avoid confusion with other objects and colours in the surroundings.
-
-<div align="center"><table>
-  <tr>
-    <td align="center" width="49%">
-      <img src="other/steering/camera support 1.jpeg" width="200"/>
-    </td>
-    <td align="center" width="49%">
-      <img src="other/steering/camera support 2.jpeg" width="200"/>
-    </td>
-  </tr>
-</table></div>
+The robot remained in this configuration for a while until we encountered several issues and broken circuit boards, which forced us to build a mount for a second battery as recommended in the instructions. Initially, it was made of foam board since it was a last-minute modification, but it was later 3D-designed to ensure a more durable and reliable material over time.
 
 #### 3.5 Reasoning Behind the Sensor Layout
 
