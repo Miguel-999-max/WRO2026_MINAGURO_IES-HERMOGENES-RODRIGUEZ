@@ -86,13 +86,13 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="other /prototype1.1.jpg" width="305"/>
+      <img src="other/prototype1.1.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other /prototype1.2.jpg" width="305"/>
+      <img src="other/prototype1.2.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other /prototype1.3.jpg" width="305"/>
+      <img src="other/prototype1.3.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
@@ -253,13 +253,13 @@ The steering system used consists of:
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="other /steering_system.JPG" width="305"/>
+      <img src="other/steering_system.JPG" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other /steering_system2.JPG" width="305"/>
+      <img src="other/steering_system2.JPG" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other /steering_system3.JPG" width="305"/>
+      <img src="other/steering_system3.JPG" width="305"/>
     </td>
   </tr>
 </table>
@@ -270,7 +270,7 @@ If this steering turned too far in one direction, it would jam and could break. 
   <tr>
     <td align="center" width="50%">
       <b>Micro servo 180</b><br>
-      <img src="other /SERVO180_caract.jpg" width="350"/>
+      <img src="other/SERVO180_caract.jpg" width="350"/>
     </td>
     <td align="left" width="50%">
       <ul>
@@ -323,13 +323,13 @@ The front is cut into a pointed shape to prevent it from coming into contact wit
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="other /prototype1.1.jpg" width="305"/>
+      <img src="other/prototype1.1.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other /prototype1.2.jpg" width="305"/>
+      <img src="other/prototype1.2.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other /prototype1.3.jpg" width="305"/>
+      <img src="other/prototype1.3.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
@@ -368,10 +368,10 @@ Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was caus
 <div align="center"><table>
   <tr>
     <td align="center" width="49%">
-      <img src="other /camera support 1.jpeg" width="200"/>
+      <img src="other/camera support 1.jpeg" width="200"/>
     </td>
     <td align="center" width="49%">
-      <img src="other /camera support 2.jpeg" width="200"/>
+      <img src="other/camera support 2.jpeg" width="200"/>
     </td>
   </tr>
 </table></div>
@@ -408,10 +408,10 @@ The batteries that power the HUSKYLENS and the drive servo are housed in a batte
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="other /prototype1.2.jpg" width="300" height="350/>
+      <img src="other/prototype1.2.jpg" width="300" height="350/>
     </td>
     <td align="center" width="50%">
-      <img src="other /batteries1.JPG" width="400" height="350"/>
+      <img src="other/batteries1.JPG" width="400" height="350"/>
     </td>
   </tr>
 </table></div>
@@ -424,10 +424,10 @@ As a last-minute modification, the batteries that power the Raspberry Pi Pico 2 
       <img src="batteries_structure1.jpeg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="other /batteries_structure2.jpeg" width="350"/>
+      <img src="other/batteries_structure2.jpeg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="other /batteries_structure3.JPG" width="350"/>
+      <img src="other/batteries_structure3.JPG" width="350"/>
     </td>
   </tr>
 </table></div>
