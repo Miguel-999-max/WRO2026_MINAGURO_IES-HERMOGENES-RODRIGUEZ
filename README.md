@@ -378,6 +378,18 @@ Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was caus
   </tr>
 </table></div>
 
+#### 3.5 Reasoning Behind the Sensor Layout
+
+The HUSKYLENS camera has been mounted on a 180 servo at the front of the robot so that it can easily detect obstacles. If it were fixed in place and unable to move, there would be blind spots that would prevent it from detecting traffic lights. The camera is used for position and color detection; this gives the software time to decide whether to approach, identify the color, and pass the obstacle on the correct side.
+
+The TFmini-S sensor is also mounted on the micro servo to facilitate performance in the free challenge. Since the TOF400F sensor sometimes malfunctions, it is more reliable to take measurements with the TFmini-S on the left side. This way, because it can rotate, the sensor can measure during the initial scan and measure the distance to the interior wall in the free challenge. Additionally, this helps us avoid blind spots in certain situations.
+
+The TOF400F sensors are mounted on both sides of the robot to measure the distance to the inner wall during the free challenge. As you’ll see later in the section on sensors, the left sensor sometimes causes problems because it’s connected to the I2C port. For this reason, whenever possible, the TFmini-S sensor is used for measurements on the left side. The right sensor is also used to determine the direction of travel in the obstacle challenge.
+
+The TCS34725 RGB sensor is mounted on the lower front of the robot to count the blue lines in both challenges. Initially, it was mounted on the rear to determine the direction of travel in the free challenge, but the strategy changed, and this sensor is now used solely to detect and count lines. It is also surrounded by a layer of black EVA foam to prevent measurement errors caused by ambient light.
+
+The L3GD20 gyroscope is mounted on a cylindrical rod at the top center of the robot. The robot navigates along the course established by this gyroscope in the obstacle challenge when it does not detect traffic lights. It is positioned here to avoid interference with other components, primarily the drive motor and the HUSKYLENS module.
+
 ### 4. ⚡ Power and Sensor Architecture 
 
 This section covers the power supply, the wiring diagram created in TinkerCad, and everything related to the sensors. 
