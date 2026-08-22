@@ -289,29 +289,45 @@ If this steering turned too far in one direction, it would jam and could break. 
 </table></div>
 
 #### 3.2 Drive system
-The motor system used consists of: 
-
-* A 360-degree continuous-rotation servo (model listed in the parts list). 
-* A gear system to transmit motion from the servo motor to the mechanical differential, consisting of a 40-tooth LEGO gear and a 13-tooth gear made with a 3D printer. The gear ratio is 12:30. 
-* A mechanical differential. The differential was purchased from AliExpress based on an idea from a previous project in our Technology classroom. 
-* Two 3D-printed adapters that connect the differential shafts to the LEGO wheels. 
-* Two LEGO wheels larger than those in the steering system.
+We used an SPT5632-360 servo motor because we already had experience programming it, and it has enough power to achieve the torque and speed required for both challenges.
 
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="v-photos/robot image 9.jpeg" width="250"/>
+      <img src="other/components/SPT5632-360.png" width="250"/>
+    </td>
+    <td align="left" width="50%">
+     <ul> 
+      <li>Type: 360° continuous rotation digital servo</li>
+      <li>Voltage: 4.8–8.4 V</li>
+      <li>Speed: 56–88 rpm</li>
+      <li>Rated current: 1.5 A</li>
+      <li>Maximum current: 2.5 A</li>
+      <li>Gears: Metal</li>
+      <li>Motor: Coreless</li>
+      <li>Weight: ≈58 g</li>
+      <li>Dimensions: 40.5 × 20 × 37.5 mm</li>
+     </ul>
     </td>
   </tr>
 </table></div>
 
-The first 360-degree continuous rotation servo we installed caused smoothness issues when the robot moved, leading us to believe the problems were software-related; however, when it was replaced with another one we had in our classroom, the issues did not recur. 
+The first 360-degree continuous-rotation servo we installed caused problems with smooth motion when the robot moved, which led us to believe the issues were software-related; however, when it was replaced with another one we had in class, the problems did not recur.
 
-The mechanical differential was a bit stiff to turn when it arrived. To make it turn more smoothly, we lubricated it with oil and turned it using a drill. 
+#### 3.3 Drivetrain
 
-The rear wheels are larger than the front wheels because the front wheels had to cover the height of the mechanical differential on their own; the front wheels already accounted for the height of the LEGO steering system.
+The drivetrain consists of:
 
-#### 3.3 Chassis design
+* A gear system designed to transmit motion from the servomotor to the mechanical differential, consisting of a 40-tooth LEGO gear and a 13-tooth gear produced via 3D printing. The gear ratio is 12/30.
+* A mechanical differential. The differential was purchased from AliExpress, inspired by an old project we did in our technology classroom.
+* Two adapters made with a 3D printer that connect the differential shafts to the LEGO wheels.
+* Two LEGO wheels that are larger than those in the steering system.
+
+The mechanical differential was somewhat stiff when turning. To make it turn more smoothly, we lubricated it with oil and turned it using a drill.
+
+The rear wheels are larger than the front ones because they had to account for the height of the mechanical differential on their own; the front wheels, on the other hand, had to account for the height of the LEGO steering system.
+
+#### 3.4 Chassis design
 
 The chassis has evolved based on the need to add or remove components, and depending on what was most practical for meeting the challenges. 
 
