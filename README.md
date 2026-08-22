@@ -572,11 +572,11 @@ Before focusing on each of the two types of challenges individually, we distingu
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="IMG_6645_20260530_212546.jpeg"/>
+      <img src="other/strategy/IMG_6645_20260530_212546.jpeg"/>
      clock-wise mode
     </td>
     <td align="center" width="50%">
-      <img src="IMG_6645_20260530_205755.jpeg"/>
+      <img src="other/strategy/IMG_6645_20260530_205755.jpeg"/>
      counter clock-wise mode
     </td>
   </tr>
@@ -595,11 +595,11 @@ We have not yet developed a specific strategy for parking in the parking zone du
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="IMG_6645.jpeg"/>
+      <img src="other/strategy/IMG_6645.jpeg"/>
      clock-wise mode
     </td>
     <td align="center" width="50%">
-      <img src="IMG_6645_20260530_212532.jpeg"/>
+      <img src="other/strategy/IMG_6645_20260530_212532.jpeg"/>
      counter clock-wise mode
     </td>
   </tr>
