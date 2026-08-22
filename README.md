@@ -294,7 +294,7 @@ We used an SPT5632-360 servo motor because we already had experience programming
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="other/components/SPT5632-360.png" width="250"/>
+      <img src="other/components/SPT5632-360.jpg" width="250"/>
     </td>
     <td align="left" width="50%">
      <ul> 
