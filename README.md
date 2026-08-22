@@ -1,6 +1,6 @@
 
 # WRO Future Engineers - MINAGURO
-<p align="center"><img src="OTHER /MINAGURO logo.png" width="300" height="300"></p>
+<p align="center"><img src="other /MINAGURO logo.png" width="300" height="300"></p>
 
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/@minagurowro2026)
 
@@ -86,13 +86,13 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="OTHER /prototype1.1.jpg" width="305"/>
+      <img src="other /prototype1.1.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="OTHER /prototype1.2.jpg" width="305"/>
+      <img src="other /prototype1.2.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="OTHER /prototype1.3.jpg" width="305"/>
+      <img src="other /prototype1.3.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
@@ -205,10 +205,10 @@ These are the 3D designs we have created, which include: a custom-made chassis f
 
 | Component | Quantity | Image | Function | File link |
 | :---: | :---: | :---: | :---: | :---: |
-| Chasis in 3D | 1 | <img src="3D_DESIGNS/CHASIS_modificado_2.jpg" width="150" height="120"> | Skeleton of the robot | [`📥Download`](CHASIS_modificado_2.stl) |
-| Battery support 1 | 2 | <img src="3D_DESIGNS/soportebateria1.jpg" width="150" height="120"> | Support batteries | [`📥Download`](soportebateria1.stl) |
-| Battery support 2 | 1 | <img src="3D_DESIGNS/soportebateria2.jpg" width="150" height="120"> | Support batteries | [`📥Download`](soportebateria2.stl) |
-| Switch support | 1 | <img src="3D_DESIGNS/SOPORTE_INTERRUPTOR.jpg" width="150" height="120"> | Support the switch | [`📥Download`](SOPORTE_INTERRUPTOR.stl) |
+| Chasis in 3D | 1 | <img src="models/CHASIS_modificado_2.jpg" width="150" height="120"> | Skeleton of the robot | [`📥Download`](CHASIS_modificado_2.stl) |
+| Battery support 1 | 2 | <img src="models/soportebateria1.jpg" width="150" height="120"> | Support batteries | [`📥Download`](soportebateria1.stl) |
+| Battery support 2 | 1 | <img src="models/soportebateria2.jpg" width="150" height="120"> | Support batteries | [`📥Download`](soportebateria2.stl) |
+| Switch support | 1 | <img src="models/SOPORTE_INTERRUPTOR.jpg" width="150" height="120"> | Support the switch | [`📥Download`](SOPORTE_INTERRUPTOR.stl) |
 | Adapter wheels in 3D | 2 | <img src="COMPONENTS/Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | [`📥Download`](WHEEL_ADAPTER.stl) |
 | Adapter gear in 3D | 1 | <img src="COMPONENTS/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`📥Download`](GEAR_ADAPTER.stl) |
 
@@ -253,13 +253,13 @@ The steering system used consists of:
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="OTHER /steering_system.JPG" width="305"/>
+      <img src="other /steering_system.JPG" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="OTHER /steering_system2.JPG" width="305"/>
+      <img src="other /steering_system2.JPG" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="OTHER /steering_system3.JPG" width="305"/>
+      <img src="other /steering_system3.JPG" width="305"/>
     </td>
   </tr>
 </table>
@@ -270,7 +270,7 @@ If this steering turned too far in one direction, it would jam and could break. 
   <tr>
     <td align="center" width="50%">
       <b>Micro servo 180</b><br>
-      <img src="OTHER /SERVO180_caract.jpg" width="350"/>
+      <img src="other /SERVO180_caract.jpg" width="350"/>
     </td>
     <td align="left" width="50%">
       <ul>
@@ -301,7 +301,7 @@ The motor system used consists of:
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="ROBOT/robot image 9.jpeg" width="250"/>
+      <img src="v-photos/robot image 9.jpeg" width="250"/>
     </td>
   </tr>
 </table></div>
@@ -323,13 +323,13 @@ The front is cut into a pointed shape to prevent it from coming into contact wit
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="OTHER /prototype1.1.jpg" width="305"/>
+      <img src="other /prototype1.1.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="OTHER /prototype1.2.jpg" width="305"/>
+      <img src="other /prototype1.2.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="OTHER /prototype1.3.jpg" width="305"/>
+      <img src="other /prototype1.3.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
@@ -368,10 +368,10 @@ Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was caus
 <div align="center"><table>
   <tr>
     <td align="center" width="49%">
-      <img src="OTHER /camera support 1.jpeg" width="200"/>
+      <img src="other /camera support 1.jpeg" width="200"/>
     </td>
     <td align="center" width="49%">
-      <img src="OTHER /camera support 2.jpeg" width="200"/>
+      <img src="other /camera support 2.jpeg" width="200"/>
     </td>
   </tr>
 </table></div>
@@ -408,10 +408,10 @@ The batteries that power the HUSKYLENS and the drive servo are housed in a batte
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="OTHER /prototype1.2.jpg" width="300" height="350/>
+      <img src="other /prototype1.2.jpg" width="300" height="350/>
     </td>
     <td align="center" width="50%">
-      <img src="OTHER /batteries1.JPG" width="400" height="350"/>
+      <img src="other /batteries1.JPG" width="400" height="350"/>
     </td>
   </tr>
 </table></div>
@@ -424,10 +424,10 @@ As a last-minute modification, the batteries that power the Raspberry Pi Pico 2 
       <img src="batteries_structure1.jpeg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="OTHER /batteries_structure2.jpeg" width="350"/>
+      <img src="other /batteries_structure2.jpeg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="OTHER /batteries_structure3.JPG" width="350"/>
+      <img src="other /batteries_structure3.JPG" width="350"/>
     </td>
   </tr>
 </table></div>
@@ -650,7 +650,7 @@ Here are some pictures of our robot to help with it´s reproducibility:
      robot´s back view
     </td>
     <td align="center" width="33%">
-      <img src="ROBOT/robot image 6.jpeg" width="305"/>
+      <img src="v-photos/robot image 6.jpeg" width="305"/>
      View from underneath the robot
     </td>
   </tr>
@@ -1250,8 +1250,6 @@ Here is a flowchart that will help you understand how our final program works.
  
 These are all programs we used to calibrate our old sensors:
 
-* [Calibrate steering servo](PROGRAMS/11_JOYSTICK_CON_2_SERVOS.ino)
-* [Calibrate drive servo](PROGRAMS/POTENCIOMETRO_CON_1_SERVO.ino)
 </details>
 
 <details>
