@@ -711,13 +711,13 @@ Here are some pictures of our robot to help with it´s reproducibility:
 ### 8. 💻 Software
 Here you can find almost all programs used in the development of our robot; including flowcharts, test programs and each version of the final program we have made.
 
-#### 8.1 Old programs
+#### 8.1 Old programs (Arduino - C++)
 
 <details>
 <summary><b>📋 Test programs</b></summary>
 <br>
  
-These are all programs we used to calibrate and test functions:
+These are all programs we used to calibrate sensor and conduct functional tests:
 
 * [00_I2C_SCAN.ino](src/Old_programs/Test_programs1/00_I2C_SCAN.ino) ➜ to check the 12C addresses
 * [01-MAGNETOMETRO.ino](src/Old_programs/Test_programs1/01-MAGNETOMETRO.ino) ➜ to check the compass bearing of the magnetometer (which we did not use at the end)
@@ -1214,7 +1214,7 @@ void loop() {
 <summary><b>🔄 Flowchart</b></summary>
 <br>
  
-Here is a flowchart that will help you understand how our final program works.
+Here is a flowchart that will help you understand how our final program works:
 
 <img src="Flowchart.png">
 </details>
@@ -1222,6 +1222,8 @@ Here is a flowchart that will help you understand how our final program works.
 <details>
 <summary><b>🔙 Previous versions</b></summary>
 <br>
+
+Here are all versions we did to make our final program:
  
 * [SEGUIDOR_V1.00.ino](/src/Old_programs/Program_versions1/SEGUIDOR_V1.00.ino)
 * [SEGUIDOR_V1.01.ino](/src/Old_programs/Program_versions1/SEGUIDOR_V1.01.ino)
@@ -1241,14 +1243,26 @@ Here is a flowchart that will help you understand how our final program works.
 
 </details>
 
-#### 8.2 Current programs
+#### 8.2 Current programs (Raspberry - python)
 
 <details>
 <summary><b>📋 Test programs</b></summary>
 <br>
  
-These are all programs we used to calibrate our old sensors:
+These are all programs we used to calibrate sensors and conduct functional tests:
 
+* [01.Blink_led.txt](/src/Current_programs/Test_programs2/01.Blink_led.txt) ➜
+* [02.Botón+led.txt](/src/Current_programs/Test_programs2/02.Botón-+-led.txt) ➜
+* [03.Contador con TCST5000.txt](/src/Current_programs/Test_programs2/03.Contador-con-TCST5000.txt) ➜
+* [04.Control de servo con potenciómetro.txt](/src/Current_programs/Test_programs2/04.Control-de-servo-con-potenciómetro.txt) ➜
+* [05.Medir distancia con TOF 400F.txt](/src/Current_programs/Test_programs2/05.Medir-distancia-con-TOF-400F.txt) ➜
+* [06.Medir distancia con TFmini-S usand.txt](/src/Current_programs/Test_programs2/06.Medir-distancia-con-TFmini-S-usand.txt) ➜
+* [07.Leer color con TCS34725.txt](/src/Current_programs/Test_programs2/07.Leer-color-con-TCS34725.txt) ➜
+* [08.Contador con TCS34725.txt](/src/Current_programs/Test_programs2/08.Contador-con-TCS34725.txt) ➜
+* [09.Leer escala de grises con TCRT500.txt](/src/Current_programs/Test_programs2/09.Leer-escala-de-grises-con-TCRT500.txt) ➜
+* [10.Conexion inicial con Husky1.txt](/src/Current_programs/Test_programs2/10.Conexion-inicial-con-Husky1.txt) ➜
+* [11.Color Recognition con HUSKY.txt](/src/Current_programs/Test_programs2/11.Color-Recognition-con-HUSKY.txt) ➜
+  
 </details>
 
 <details>
