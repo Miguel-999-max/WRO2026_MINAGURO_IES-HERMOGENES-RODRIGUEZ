@@ -420,10 +420,10 @@ As a last-minute modification, the batteries that power the Raspberry Pi Pico 2 
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="other/batteries/batteries_structure1.jpeg" width="350"/>
+      <img src="other/batteries/batteries_structure2.jpeg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/batteries/batteries_structure2.jpeg" width="350"/>
+      <img src="other/batteries/batteries1.JPG" width="350"/>
     </td>
     <td align="center" width="33%">
       <img src="other/batteries/batteries_structure3.JPG" width="350"/>
