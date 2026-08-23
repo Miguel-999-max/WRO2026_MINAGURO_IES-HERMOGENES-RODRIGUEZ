@@ -1,0 +1,29 @@
+from machine import Pin, I2C
+import time
+
+# Inicialización limpia en tus pines GPIO 18 y 19
+i2c = I2C(1, sda=Pin(18), scl=Pin(19), freq=100000) # Forzamos velocidad estándar I2C
+
+# Busca el número que te dio el escaneo anterior (50 o 80)
+DIRECCION = 50 
+
+print("--- Iniciando saludo manual a Huskylens ---")
+
+# Enviamos el comando de Knock oficial con el Checksum calculado de forma estricta
+# 0x55 0xAA (Cabecera) | 0x11 (Dirección) | 0x00 (Data len) | 0x2C (Cmd Knock) | 0x3C (Checksum)
+paquete_knock = b'\x55\xAA\x11\x00\x2C\x3C'
+
+i2c.writeto(DIRECCION, paquete_knock)
+time.sleep_ms(100) # Damos tiempo extra para que la cámara despierte
+
+# Leemos la respuesta de la cámara
+respuesta = i2c.readfrom(DIRECCION, 6)
+
+print(f"Respuesta cruda de la cámara: {list(respuesta)}")
+
+if len(respuesta) >= 5 and respuesta[4] == 0x2E: # 0x2E es COMMAND_RETURN_OK
+    print("¡ÉXITO: La Huskylens ha respondido correctamente al saludo!")
+else:
+    print("La cámara respondió, pero el código de saludo no es el esperado.")
+
+

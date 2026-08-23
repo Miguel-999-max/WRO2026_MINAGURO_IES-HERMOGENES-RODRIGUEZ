@@ -1,0 +1,40 @@
+#Control de servo con potenciómetro.
+
+from machine import Pin, ADC, PWM
+import time
+
+# 1. Configuración del Potenciómetro en el GPIO 28 (ADC canal 2)
+potenciometro = ADC(Pin(28))
+
+# 2. Configuración del Servo en el GPIO 10 usando PWM
+servo = PWM(Pin(10))
+servo.freq(50) # Los servos estándar funcionan estrictamente a 50Hz
+
+# Función matemática idéntica al "map" de Arduino
+def mapear(valor, desde_min, desde_max, hacia_min, hacia_max):
+    return int((valor - desde_min) * (hacia_max - hacia_min) / (desde_max - desde_min) + hacia_min)
+
+print("--- Control de Servo con Potenciómetro Iniciado ---")
+
+while True:
+    # Leer el potenciómetro (Rango nativo de la Pico 2: 0 a 65535)
+    lectura_pot = potenciometro.read_u16()
+    
+    # Mapeamos la lectura para el Monitor Serie (0 a 1023 como en tu Arduino)
+    joy_x = mapear(lectura_pot, 0, 65535, 0, 1023)
+    
+    # Mapeamos la lectura directamente a los valores de PWM que entiende el servo (0° a 180°)
+    # 1638 equivale a 0.5ms (0 grados) y 8192 equivale a 2.5ms (180 grados)
+    pulso_servo = mapear(lectura_pot, 0, 65535, 1638, 8192)
+    
+    # Mapeamos también a grados puros solo para mostrarlo de forma bonita en la terminal
+    grados = mapear(lectura_pot, 0, 65535, 0, 180)
+    
+    # Enviamos la señal PWM al servo para que se mueva
+    servo.duty_u16(pulso_servo)
+    
+    # Imprimir en la terminal simulando tu Serial.print de Arduino
+    print(f"JOYx={joy_x}   Grados={grados}º   PWM={pulso_servo}")
+    
+    # Pausa de 100 milisegundos idéntica a tu delay(100)
+    time.sleep_ms(100)

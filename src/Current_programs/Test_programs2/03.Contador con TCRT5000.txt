@@ -1,0 +1,38 @@
+#Contador con TCRT5000 salida digital
+from machine import Pin
+import time
+
+# Configuramos el GPIO 14 como entrada digital
+sensor_vueltas = Pin(14, Pin.IN)
+
+# Usamos el LED integrado (GPIO 25) para ver visualmente el parpadeo de la marca
+led_pico = Pin(25, Pin.OUT)
+
+contador_marcas = 0
+estado_anterior = sensor_vueltas.value()
+
+print("--- Calibración del TCRT5000 Iniciada ---")
+print("Pasa el sensor sobre las marcas transversales del suelo...")
+
+while True:
+    # Leemos el estado actual del sensor (0 o 1)
+    estado_actual = sensor_vueltas.value()
+    
+    # Reflejamos el estado en el LED de la placa
+    # Dependiendo de tu módulo, se encenderá en el blanco o en el negro
+    led_pico.value(estado_actual)
+    
+    # Detectamos el cambio de estado (Flanco de subida o bajada)
+    # Esto evita que cuente infinitas vueltas mientras se quede quieto sobre la marca
+    if estado_actual != estado_anterior:
+        # Si cambia a 1 (o a 0, según la lógica del módulo), contamos una marca
+        # Ajusta este valor (1 o 0) según si tu módulo se activa en alto o en bajo
+        if estado_actual == 1: 
+            contador_marcas += 1
+            print(f"¡Marca detectada! Total acumulado: {contador_marcas}")
+            
+        # Actualizamos el estado anterior para la siguiente lectura
+        estado_anterior = estado_actual
+        
+    # Pequeña pausa de 10 milisegundos para evitar rebotes falsos de lectura
+    time.sleep_ms(10)

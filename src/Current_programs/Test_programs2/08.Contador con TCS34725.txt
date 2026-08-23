@@ -1,0 +1,58 @@
+#Contador con TCS34725 para detectar líneas de colores en el suelo (naranja y azul)
+from machine import I2C, Pin
+from tcs34725 import TCS34725
+
+# Inicializar I2C0 en la Pico 2 (SDA=GP16, SCL=GP17)
+i2c = I2C(0, sda=Pin(16), scl=Pin(17))
+
+# LED integrado para confirmación visual instantánea
+led_pico = Pin(25, Pin.OUT)
+
+print("Inicializando sensor de color...")
+try:
+    sensor = TCS34725(i2c)
+    print("¡Sensor TCS34725 listo para contar líneas!")
+except Exception as e:
+    print("Error de hardware:", e)
+    sensor = None
+
+# --- VARIABLES DE CONTROL DEL ALGORITMO ---
+contador_vueltas = 0
+sobre_linea = False  # Estado que evita que cuente infinitas veces mientras pisa la línea
+
+# TODO: Ajusta estos umbrales cuando hagas las pruebas en el suelo real del circuito.
+# Por ejemplo, si al pisar la línea naranja el Rojo supera los 5000, pon el umbral en 4500.
+UMBRAL_ROJO_NARANJA = 3000  # Valor a partir del cual consideramos que es naranja
+UMBRAL_AZUL = 3000          # Valor a partir del cual consideramos que es azul
+
+while sensor is not None:
+    # Obtenemos los valores con tu librería corregida
+    rojo, verde, azul, claro = sensor.read_rgbc()
+    
+    # DETECCIÓN DE LÍNEA (Lógica de umbrales)
+    # Evaluamos si el color actual corresponde a una de tus líneas del suelo
+    es_linea_naranja = (rojo > UMBRAL_ROJO_NARANJA) and (rojo > azul * 1.5)
+    es_linea_azul = (azul > UMBRAL_AZUL) and (azul > rojo * 1.5)
+    
+    # Si detecta cualquiera de los dos colores objetivos:
+    if es_linea_naranja or es_linea_azul:
+        led_pico.value(1) # Encendemos el LED de la placa: ¡Estamos pisando la línea!
+        
+        # Si en la lectura anterior estábamos en suelo blanco (False), significa que acabamos de ENTRAR a la línea
+        if not sobre_linea:
+            contador_vueltas += 1
+            tipo_linea = "NARANJA" if es_linea_naranja else "AZUL"
+            print(f"¡Línea {tipo_linea} Detectada! -> Total marcas: {contador_vueltas}")
+            sobre_linea = True # Bloqueamos el contador hasta que salga de la línea
+            
+    else:
+        # Si no se cumplen los umbrales, asumimos que volvió al suelo normal (Blanco)
+        led_pico.value(0)
+        sobre_linea = False # Liberamos el bloqueo para la siguiente línea
+        
+    # Imprimir traza de calibración rápida en la misma línea para monitorizar en tiempo real
+    # Esto te ayudará a ver qué valores poner en los UMBRALES de arriba
+    print(f"R:{rojo} G:{verde} B:{azul} | Sobre línea: {sobre_linea} | Total: {contador_vueltas}", end="\r")
+    
+    # 20ms es una velocidad de muestreo excelente para no perder marcas si el robot va rápido
+    time.sleep_ms(20)
