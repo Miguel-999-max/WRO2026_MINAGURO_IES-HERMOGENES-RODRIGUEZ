@@ -639,7 +639,11 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
 ### 7. 🤖 Our Robot
 
 #### 7.1 Old Robot (Arduino)
-Here are some pictures of our old robot to help with it´s reproducibility:
+
+<details>
+<summary><b>Here are some pictures of our old robot to help with it´s reproducibility:</b></summary>
+<br>
+
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
@@ -705,10 +709,17 @@ Here are some pictures of our old robot to help with it´s reproducibility:
     </td>
   </tr>
 </table></div>
+</details>
 
+ 
 #### 7.2 Current Robot (Raspberry)
-Here are some pictures of our current robot to help with it´s reproducibility:
 
+<details>
+<summary><b>Here are some pictures of our current robot to help with it´s reproducibility:</b></summary>
+<br>
+
+ 
+</details>
 
 ### 8. 💻 Software
 Here you can find almost all programs used in the development of our robot; including flowcharts, test programs and each version of the final program we have made.
