@@ -1253,10 +1253,10 @@ These are all programs we used to calibrate sensors and conduct functional tests
 
 * [01.Blink_led.txt](/src/Current_programs/Test_programs2/01.Blink_led.txt) ➜
 * [02.Botón+led.txt](/src/Current_programs/Test_programs2/02.Botón%20+%20led.txt) ➜
-* [03.Contador con TCST5000.txt](/src/Current_programs/Test_programs2/03.Contador%20con%20TCST5000.txt) ➜
+* [03.Contador con TCRT5000.txt](/src/Current_programs/Test_programs2/03.Contador%20con%20TCRT5000.txt) ➜
 * [04.Control de servo con potenciómetro.txt](/src/Current_programs/Test_programs2/04.Control%20de%20servo%20con%20potenciómetro.txt) ➜
 * [05.Medir distancia con TOF 400F.txt](/src/Current_programs/Test_programs2/05.Medir%20distancia%20con%20TOF%20400F.txt) ➜
-* [06.Medir distancia con TFmini-S usand.txt](/src/Current_programs/Test_programs2/06.Medir%20distancia%20con%20TFmini-S%20usand.txt) ➜
+* [06.Medir distancia con TFmini-s usand.txt](/src/Current_programs/Test_programs2/06.Medir%20distancia%20con%20TFmini-s%20usand.txt) ➜
 * [07.Leer color con TCS34725.txt](/src/Current_programs/Test_programs2/07.Leer%20color%20con%20TCS34725.txt) ➜
 * [08.Contador con TCS34725.txt](/src/Current_programs/Test_programs2/08.Contador%20con%20TCS34725.txt) ➜
 * [09.Leer escala de grises con TCRT500.txt](/src/Current_programs/Test_programs2/09.Leer%20escala%20de%20grises%20con%20TCRT500.txt) ➜
