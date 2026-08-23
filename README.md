@@ -1264,18 +1264,18 @@ Here are all versions we did to make our final program:
  
 These are all programs we used to calibrate sensors and conduct functional tests:
 
-* [01.Blink_led.txt](/src/Current_programs/Test_programs2/01.Blink_led.txt) ➜
-* [02.Botón+led.txt](/src/Current_programs/Test_programs2/02.Botón%20+%20led.txt) ➜
-* [03.Contador con TCRT5000.txt](/src/Current_programs/Test_programs2/03.Contador%20con%20TCRT5000.txt) ➜
-* [04.Control de servo con potenciómetro.txt](/src/Current_programs/Test_programs2/04.Control%20de%20servo%20con%20potenciómetro.txt) ➜
-* [05.Medir distancia con TOF 400F.txt](/src/Current_programs/Test_programs2/05.Medir%20distancia%20con%20TOF%20400F.txt) ➜
-* [06.Medir distancia con TFmini-s usand.txt](/src/Current_programs/Test_programs2/06.Medir%20distancia%20con%20TFmini-s%20usand.txt) ➜
-* [07.Leer color con TCS34725.txt](/src/Current_programs/Test_programs2/07.Leer%20color%20con%20TCS34725.txt) ➜
-* [08.Contador con TCS34725.txt](/src/Current_programs/Test_programs2/08.Contador%20con%20TCS34725.txt) ➜
-* [09.Leer escala de grises con TCRT500.txt](/src/Current_programs/Test_programs2/09.Leer%20escala%20de%20grises%20con%20TCRT500.txt) ➜
-* [10.Conexion inicial con Husky1.txt](/src/Current_programs/Test_programs2/10.Conexion%20inicial%20con%20Husky1.txt) ➜
-* [11.Color Recognition con HUSKY.txt](/src/Current_programs/Test_programs2/11.Color%20Recognition%20con%20HUSKY.txt) ➜
-  
+* [01.Blink_led.txt](/src/Current_programs/Test_programs2/01.Blink_led.txt) ➜ to make an external LED connected to a Raspberry Pi Pico board blink using the MicroPython programming language
+* [02.Botón+led.txt](/src/Current_programs/Test_programs2/02.Botón%20+%20led.txt) ➜ to turn on an external LED only when you hold down a pushbutton
+* [03.Contador con TCRT5000.txt](/src/Current_programs/Test_programs2/03.Contador%20con%20TCRT5000.txt) ➜ to count the lines on the floor using a TCRT5000 infrared optical sensor
+* [04.Control de servo con potenciómetro.txt](/src/Current_programs/Test_programs2/04.Control%20de%20servo%20con%20potenciómetro.txt) ➜ to calibrate the steering servo
+* [05.Medir distancia con TOF 400F.txt](/src/Current_programs/Test_programs2/05.Medir%20distancia%20con%20TOF%20400F.txt) ➜ to test the TOF400F laser sensor
+* [06.Medir distancia con TFmini-s usand.txt](/src/Current_programs/Test_programs2/06.Medir%20distancia%20con%20TFmini-s%20usand.txt) ➜ to test the TFmini-S laser sensor
+* [07.Leer color con TCS34725.txt](/src/Current_programs/Test_programs2/07.Leer%20color%20con%20TCS34725.txt) ➜ to read color values from the TCS34725 sensor using I2C
+* [08.Contador con TCS34725.txt](/src/Current_programs/Test_programs2/08.Contador%20con%20TCS34725.txt) ➜ to count the lines on the floor using the TCS34725 digital color sensor
+* [09.Leer escala de grises con TCRT500.txt](/src/Current_programs/Test_programs2/09.Leer%20escala%20de%20grises%20con%20TCRT500.txt) ➜ to verify the accuracy of the TCRT5000 sensor's grayscale reading by using it to distinguish colors (Conclusion: it is not reliable)
+* [10.Conexion inicial con Husky1.txt](/src/Current_programs/Test_programs2/10.Conexion%20inicial%20con%20Husky1.txt) ➜ to verify the connection between the Raspberry Pi and HUSKLENS using the I2C communication protocol
+* [11.Color Recognition con HUSKY.txt](/src/Current_programs/Test_programs2/11.Color%20Recognition%20con%20HUSKY.txt) ➜ to turn on two LEDs based on HuskyLens's visual object recognition
+   
 </details>
 
 <details>
