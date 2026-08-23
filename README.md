@@ -1252,7 +1252,7 @@ Here are all versions we did to make our final program:
 These are all programs we used to calibrate sensors and conduct functional tests:
 
 * [01.Blink_led.txt](/src/Current_programs/Test_programs2/01.Blink_led.txt) ➜
-* [02.Botón+led.txt](/src/Current_programs/Test_programs2/02.Botón-+-led.txt) ➜
+* [02.Botón+led.txt](/src/Current_programs/Test_programs2/02.Botón%20+%20led.txt) ➜
 * [03.Contador con TCST5000.txt](/src/Current_programs/Test_programs2/03.Contador-con-TCST5000.txt) ➜
 * [04.Control de servo con potenciómetro.txt](/src/Current_programs/Test_programs2/04.Control-de-servo-con-potenciómetro.txt) ➜
 * [05.Medir distancia con TOF 400F.txt](/src/Current_programs/Test_programs2/05.Medir-distancia-con-TOF-400F.txt) ➜
