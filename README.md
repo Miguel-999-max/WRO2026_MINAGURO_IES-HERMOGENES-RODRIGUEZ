@@ -1229,7 +1229,7 @@ void loop() {
  
 Here is a flowchart that will help you understand how our final program works:
 
-<img src="Flowchart.png">
+<img src="src/Old_programs/Flowchart1.png">
 </details>
 
 <details>
@@ -1293,12 +1293,20 @@ This is our old final program, which allowed us to reach the national WRO final:
  
 Here is a flowchart that will help you understand how our final program works.
 
+<img src="src/Current_programs/Flowchart2.png">
 
 </details>
 
 <details>
 <summary><b>🔙 Previous versions</b></summary>
 <br>
+
+* [ANDORRA_V1](/src/Current_programs/Program_versions2/ANDORRA_V1)
+* [ANDORRA_V2](/src/Current_programs/Program_versions2/ANDORRA_V2)
+* [ANDORRA_V3](/src/Current_programs/Program_versions2/ANDORRA_V3)
+* [ANDORRA_V4](/src/Current_programs/Program_versions2/ANDORRA_V4)
+* [ANDORRA_V5](/src/Current_programs/Program_versions2/ANDORRA_V5)
+* [ANDORRA_V6](/src/Current_programs/Program_versions2/ANDORRA_V6)
 
 </details>
 
