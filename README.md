@@ -86,13 +86,13 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="other/prototype1.1.jpg" width="305"/>
+      <img src="v-photos/Old_photos/prototype1.1.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/prototype1.2.jpg" width="305"/>
+      <img src="v-photos/Old_photos/prototype1.2.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/prototype1.3.jpg" width="305"/>
+      <img src="v-photos/Old_photos/prototype1.3.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
@@ -338,13 +338,13 @@ The front is cut into a pointed shape to prevent it from coming into contact wit
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="other/prototype1.1.jpg" width="305"/>
+      <img src="v-photos/Old_photos/prototype1.1.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/prototype1.2.jpg" width="305"/>
+      <img src="v-photos/Old_photos/prototype1.2.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/prototype1.3.jpg" width="305"/>
+      <img src="v-photos/Old_photos/prototype1.3.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
@@ -407,7 +407,7 @@ The batteries that power the HUSKYLENS and the drive servo are housed in a batte
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="other/prototype1.2.jpg" width="300" height="350/>
+      <img src="v-photos/Old_photos/prototype1.2.jpg" width="300" height="350/>
     </td>
     <td align="center" width="50%">
       <img src="other/batteries/batteries1.JPG" width="400" height="350"/>
@@ -637,19 +637,21 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
 
 
 ### 7. 🤖 Our Robot
-Here are some pictures of our robot to help with it´s reproducibility:
+
+#### 7.1 Old Robot (Arduino)
+Here are some pictures of our old robot to help with it´s reproducibility:
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="robot image v2.1.jpg" width="305"/>
+      <img src="v-photos/Old_photos/robot image v2.1.jpg" width="305"/>
      robot´s front view
     </td>
     <td align="center" width="33%">
-      <img src="robot image v2.3.jpg" width="305"/>
+      <img src="v-photos/Old_photos/robot image v2.3.jpg" width="305"/>
      robot´s back view
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/robot image 6.jpeg" width="305"/>
+      <img src="v-photos/Old_photos/robot image 6.jpeg" width="305"/>
      View from underneath the robot
     </td>
   </tr>
@@ -658,15 +660,15 @@ Here are some pictures of our robot to help with it´s reproducibility:
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="robot image v2.4.jpg" width="305"/>
+      <img src="v-photos/Old_photos/robot image v2.4.jpg" width="305"/>
      Robot’s right side view
     </td>
     <td align="center" width="33%">
-      <img src="robot image v2.5.jpg" width="305"/>
+      <img src="v-photos/Old_photos/robot image v2.5.jpg" width="305"/>
      View of the robot's layout
     </td>
     <td align="center" width="33%">
-      <img src="robot image v2.2.jpg" width="305"/>
+      <img src="v-photos/Old_photos/robot image v2.2.jpg" width="305"/>
      Robot’s left side view
     </td>
   </tr>
@@ -680,32 +682,32 @@ Here are some pictures of our robot to help with it´s reproducibility:
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="robot image v2.6.jpg" width="305"/>
+      <img src="v-photos/Old_photos/robot image v2.6.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="robot image v2.8.jpg" width="305"/>
+      <img src="v-photos/Old_photos/robot image v2.8.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="robot image v2.9.jpg" width="305"/>
+      <img src="v-photos/Old_photos/robot image v2.9.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="robot image v2.11.jpg" width="305"/>
+      <img src="v-photos/Old_photos/robot image v2.11.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="robot image v2.13.jpg" width="305"/>
+      <img src="v-photos/Old_photos/robot image v2.13.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="robot image v2.12.jpg" width="305"/>
+      <img src="v-photos/Old_photos/robot image v2.12.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
 
-
-
+#### 7.2 Current Robot (Raspberry)
+Here are some pictures of our current robot to help with it´s reproducibility:
 
 
 ### 8. 💻 Software
