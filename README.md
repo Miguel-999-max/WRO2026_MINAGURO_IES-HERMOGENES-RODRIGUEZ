@@ -69,7 +69,7 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 </details> 
 
 <details>
-<summary><b>🛠️ April 2026</b></summary>
+<summary><b>🔧 April 2026</b></summary>
 <br>
  
 * **08/04/26:** We drew a diagram of how we want to assemble our robot and how we’re going to arrange all the components. We placed the HUSKYLENS at the front to detect colors, positioned a distance sensor on each side so we can measure using any of the four depending on what’s most useful, and placed the batteries under a platform with the wheels (and their respective servomotors), since this saves space and allows us to arrange the board and components more neatly above that platform. On the other hand, we considered different material options for the base, such as wood, plastic (3D printer), and a sheet of foam board we found in class. In the end, we decided that the foam board was the best option, since wood was very difficult for us to work with and would take more time, and 3D printing would also require a significant time investment (which would reduce our ability to test the program) and require us to have a clear understanding of all the component positions (something we weren’t 100% sure of yet). Even so, we decided this would be a temporary solution, and once we had everything figured out, we would make a 3D-printed base. 
@@ -146,9 +146,41 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 </details> 
 
 <details>
-<summary><b>🔩 June 2026</b></summary>
+<summary><b>💡 June 2026</b></summary>
 <br>
 
+* **02/06/26:** Regional competition day. We also asked the organizers if we could make a series of changes we’d come up with, since we felt that the current hardware wasn’t up to the task. The Arduino R4 MINIMA has limited programming language capabilities and overall capacity, which prevent us from properly developing the project; and the HC-SR04 and HC-SR04RC ultrasonic sensors give false readings when they aren’t measuring on a flat surface (they don’t allow us to measure at an angle). For this reason, we considered using, on the one hand, an Arduino Q or Raspberry Pi Pico 2 to replace the Arduino R4 MINIMA; and, on the other hand, laser sensors instead of the HC-SR04 and HC-SR04RC. They told us to draft an email to the WRO.
+
+* **08/06/26:** We drafted and sent the email explaining the situation and the changes we want to make. 
+
+* **11/06/26:** We received a reply; they’ll accept any changes we make. We looked into it and bought everything we need so it will arrive as soon as possible. 
+
+* **15/06/26:** The 3D-designed chassis plate has bent under the weight of all the robot’s components. After evaluating possible modifications to the robot, the final decision was to redesign the plate in 3D to make it thicker so that it can adequately support the weight over time. 
+
+* **16/06/26:** We’ve focused on one of the main modifications we’re going to make to the robot: replacing the ultrasonic sensors with laser sensors. Additionally, since we’ve been given the freedom to make as many modifications as we want, we came up with the idea of implementing a LiDAR for a new strategy in which the robot navigates by scanning with the LiDAR. With these two criteria in mind, we evaluated three options: 
+  * TFmini-S.
+  * TF Luna.
+  * TFmini Plus. 
+After evaluating all the options, we decided on the TFmini-S. The TF Luna isn’t powerful enough for this task; it has a shorter range and lower frequency, even though it’s cheaper and uses less power, and the TFmini Plus was too expensive, weighed too much, and consumed more power. 
+
+* **17/06/26:** Today we focused on another major modification to the robot: replacing the ARDUINO R4 Minima board with a more powerful one, due to the limitations of the original board. Our two best options are the Arduino Q board and the Raspberry Pi Pico 2. The Arduino Q’s specifications are far superior to those of the Raspberry Pi Pico 2 (more power, built-in microprocessor and microcontroller, more RAM…), so we’re going to choose that one. 
+
+* **18/06/26:** Since the idea of adding a battery holder to power various components—and thus prevent interference between them—yielded excellent results, we designed the holder using 3D printing because it is more durable than foam board. We also added stickers from the project’s various sponsors. 
+
+* **23/06/26:** The distance sensors have arrived. We ran tests using a simple program to calibrate the measurements. We saved the data for the programming phase. 
+
+* **24/06/26:** The Arduino Q board has arrived. When we tested it, we discovered that we’re going to face significant challenges when it comes to programming, since the microprocessor and the microcontroller—both integrated onto the same board—are programmed separately. Therefore, we’ll need to write two separate programs. After weighing the pros and cons of this approach, we’ve decided there isn’t enough time for that and that we’ll try the board we evaluated earlier, the Raspberry Pi Pico 2.
+ 
+* **25/06/26:** The final decision regarding the board and its programming has been the Raspberry Pi Pico 2. We will program it in Visual Studio Code, a programming environment we are familiar with from various projects throughout the school year. To do this, we need to learn the Python language, but we believe we have time for that. 
+
+* **26/06/26:** Since we don’t have the Raspberry Pi Pico 2 yet, we’ve assembled all the components on the new 3D base. In the meantime, we’re continuing to study Python so we’ll be ready when it’s time to program. 
+
+* **29/06/26:** We’ve established a new strategy to tackle the challenge based on our experience in the regional competition:
+  * First: The robot begins in a loop where the lights are flashing until the push button is pressed. When the button is pressed, the robot sweeps forward. If it doesn’t detect anything at a certain distance (we’ll figure that out later), the robot determines it’s in the free challenge; if it detects an obstacle at that distance, then it determines it’s in the obstacle challenge. 
+  * Free Challenge: The robot moves backward until it detects the wall with the rear sensor. If this takes too long, it might be a good idea to add a color sensor to detect the line; this way, it could also determine whether the direction is clockwise or counterclockwise. Once it knows the direction and has detected the wall, it approaches the interior partition and circles it while maintaining a certain distance from the partition’s walls. At the same time, it counts the lines using the HUSKYLENS (it would be even easier with the color sensor). When the counter reaches a specific value, the robot stops in the quadrant from which it started.  
+  * Obstacle Challenge: The robot exits the parking garage using the following maneuver: it moves backward to a certain distance from one of the garage walls, then turns completely to one side to exit. From there, whenever the HUSKYLENS detects an obstacle, it approaches it: if the obstacle is green, it goes around it on the left; if it’s red, on the right. The HUSKYLENS also continues counting the lines to stop the robot in the corresponding quadrant. 
+
+* **30/06/26:** We’ve finally decided to incorporate a TCS34725 color sensor. We’ve used this sensor before in high school, which is why we chose it. We plan to wrap it in a layer of EVA foam to prevent confusion caused by light reflection and thus obtain more accurate readings. We’ll use this sensor to count the lines in both challenges.
 
 </details> 
 
@@ -157,14 +189,47 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 <summary><b>🔩 July 2026</b></summary>
 <br>
 
+* **02/07/26:** The Raspberry Pi Pico 2 arrived today. First, we installed the firmware so we could upload code from VS Code. Since this is a different board from the one we’ve been using, we’re going to start with the basics: getting the robot to follow the wall, measuring distances with the sensors... 
+
+* **23/07/26:** Today we started with the basics: getting to know the board and seeing how it responds. The main problem is that we’re moving more slowly because we have to program in Python. 
+
+* **24/07/26:** Today we continued conducting basic tests that will help us when we create our versions of the final program. After that, we made significant progress: we got the robot to follow the wall by controlling the distance between the robot and the wall at a constant speed. In other words, we’ve almost completed the obstacle-free challenge; we still need to figure out how to track the number of laps we complete and how to start from the starting zone. We’ve also noticed the difference between the ultrasonic sensors we had before and the laser sensors we have now; the laser sensors are much more precise, and they can also measure at an angle, unlike the ultrasonic ones. 
+
+* **28/07/26:** We decided to finish the first test first (the challenge with no obstacles or parking). Once we made that decision, we continued thinking about how to count the laps we complete without using the HUSKYLENS, since counting the lines wasn’t very accurate. By late afternoon, we decided that a color sensor would be the best solution—one that detects the lines as the robot passes over them and distinguishes them by color. That way, the robot can keep track of how many laps it has completed and stop at the correct spot. We searched various online stores for color sensors that would meet our needs and have placed an order. In the meantime, we’re considering different strategies so that, from the starting point, the robot knows which direction to go and how to approach the wall in order to follow it and complete the three laps. Previously, we would back up until the side sensor could no longer detect the wall before the robot began to turn; this time, the robot will move backward, and depending on the color of the line it sees first, it will approach the wall in one way or another, depending on which direction it needs to turn. 
+
+* **29/07/26:** The color sensor arrived today, and we ran some tests with it. To start with, we calibrated it, and now when it passes over the orange and blue lines, it tells us what color each one is. However, once we incorporated the color sensor into the program, we noticed that it doesn’t always detect them correctly or sometimes gets the colors mixed up. 
+
+* **30/07/26:** As soon as we arrived at school, we picked up where we left off yesterday; we reviewed the part of the algorithm involving the color sensor and made some modifications to refine it. We ended the afternoon with our first perfect run—the robot is now able to complete three laps and stop in the correct zone regardless of the direction it takes (clockwise or counterclockwise). 
+
+* **31/07/26:** Starting today, we’ll begin the second challenge (the obstacle challenge). We believe that this time we can do it right thanks to the hardware improvements with the light and laser sensors. Today, we only managed to get the robot to recognize that it’s in the obstacle challenge by measuring with the distance sensor and to exit the parking lot while orienting itself in the best way possible so it can easily see the obstacles.
 
 </details>
 
 
 <details>
-<summary><b>🔩 August 2026</b></summary>
+<summary><b>⏳ August 2026</b></summary>
 <br>
 
+* **03/08/26:** We tested the program we hadn't tested the day before and realized that the right TOF400F can't detect the interior wall because it's so far away. After thinking about how we could solve this, we concluded that the best approach would be to use both TOF400F sensors (since we have one on each side) to navigate down the center of the hallway. Once we tested this, the same problem arose, so the only viable solution we found was the following: search for and avoid obstacles one by one, using the TF-mini-S to determine which one is closest in case the HUSKYLENS detects more than one, and aligning the chassis with the camera to center the obstacle. To do this, we decided to perform 90° scans with the front servo (HUSKYLENS + TF-mini-S), slowing down the robot’s speed to facilitate data collection. In addition, we took the opportunity to change our initial strategy for determining the orientation of the challenge; this time, we used the TOF400F sensors instead of the TF-mini-S, as we believe this will save us some time. 
+Since we had slowed down the robot, we retested the free challenge to verify that there were no changes in its performance. During testing, we realized that the line counting was failing again, so we decided to use RGB values instead of brightness levels to identify the lines. This solved the problem. 
+Before finishing, we decided to break down main.py into subprograms; since the program was too long and made it difficult to read, this way we can find what we're looking for more easily. 
+
+* **04/08/26:** Today we started testing both challenges to get a clear idea of how we’re doing. During these tests, the robot had several issues recognizing which challenge it was on, and we believe the TF-mini-S is providing erroneous readings, so we decided to implement redundant checks using the side-mounted TOF400F sensors. This allowed us to resolve the issue, so we’re continuing with the open challenge. We’ve devised the following strategy, taking into account the three possible scenarios that could arise once the robot exits the parking lot:
+  * 1. The robot does not see any obstacles; in this case, it should perform a 90° scan. If it sees nothing, it should perform an 180° scan (to expand the field of view), and if it still sees nothing, it should head toward where the TF-mini-S has detected a greater distance, thereby attempting to find the aisle.
+  * 2. The robot detects an obstacle; in this case, the robot should move toward it until it is 12 cm away (which we have estimated to be sufficient for a successful dodge) and then dodge it on the correct side, using the corresponding side sensor to verify that the maneuver was performed correctly.
+  * 3. The robot detects two obstacles; in this final case, we calculate the area of both objects (using the x and y data provided by HUSKYLENS), and once we know which one is closer, we implement the strategy from the previous case. In addition, if the robot detects another obstacle while avoiding one, we believe it should head directly toward it. We write the code. 
+
+* **05/08/26:** We tested yesterday’s code, analyzing it step by step. Clearly, it isn’t working well for us—since it targets the first block it sees, it performs very abrupt scans until it dodges it, when it should lock onto the block and move toward it without scanning. We managed to fix this, which is a big improvement; however, we’re still running into problems. We decided to continue tomorrow. 
+
+* **06/08/26:** The problem we identified yesterday is this: when the block is very close, the robot doesn’t have time to dodge it and ends up bumping into it. After brainstorming, we concluded that if we keep the block centered with HUSKYLENS at all times, we could track its location during the dodge and check the distance to it to avoid getting too close (if the distance is too low, the robot should move away); once it has dodged the block, the front servo would return to its forward position to continue with the challenge. We also decided to increase the distance at which the robot begins to avoid the block from 12 to 15 cm to allow for more room to maneuver. After making several changes to the program, it works better but not as well as we’d like; still, we decided to leave it as is for now. On another note, we’ve started researching the magnetometer (which we had previously purchased for the provincial and regional rounds but ultimately didn’t use), since we believe it could be quite useful for navigation purposes. 
+
+* **11/08/26:** Since we were considering the idea of using the magnetometer, we realized we could use it for both the obstacle challenge and the free challenge. So, we started brainstorming ideas and decided to use it to align the robot with the direction of the street it was on. We would do this when the robot detected an orange line using the color sensor. When that happened, it would indicate that the robot had turned onto the next street and would therefore need to follow the new direction of that street. After testing it in both directions, we saw that everything was working correctly and decided to focus on the obstacle challenge. 
+
+* **12/08/26:** We looked into the possibility of replacing the Husky Lens camera with one that had a wider field of view, but when we tried it, we realized it had too wide a field of view—it could see most of the objects in the classroom, but they appeared distorted, and the obstacles on the track looked too small. Therefore, we decided to keep the Husky Lens camera, even though it had a narrower field of view. 
+
+* **13/08/26:** We tried completing the obstacle challenge without using the magnetometer, since we noticed it gives errors when we’re in a classroom with metal objects nearby. When trying to avoid three blocks, it successfully navigated the first two, but failed to clear the last one. We think this was because, after avoiding the second block, it ended up facing the outer wall, and when it finally turned, the camera didn’t detect the object and it drove right past it. Because of this, we’re going to try using the magnetometer again. 
+
+* **14/08/26:** Today we revisited the idea of using the magnetometer in the obstacle course test and decided to have it scan the direction of each lane on the circuit at the start of the challenge. That way, if—while dodging an obstacle—it doesn’t find another one to avoid, as happened the previous day, it will align itself with the lane it’s in to continue searching for obstacles, just as we did in the free challenge.
 
 </details>
 
