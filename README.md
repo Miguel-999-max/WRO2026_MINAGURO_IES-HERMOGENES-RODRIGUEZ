@@ -452,7 +452,95 @@ The L3GD20 gyroscope is mounted on a cylindrical rod at the top center of the ro
 
 This section covers the power supply, the wiring diagram created in TinkerCad, and everything related to the sensors. 
 
-#### 4.1 Power Supply 
+<details>
+<summary><b>4.1 Old Power and Sensor Architecture</b></summary>
+<br>
+
+#### Power Supply 
+The robot uses four Samsung ICR18650-26FU batteries as its power source. Two batteries power the Arduino R4 board, and the other two directly power the 360-degree servo motor. This prevents interference with the servo, allowing the robot to move smoothly.  
+
+An energy estimate was calculated for all components to determine the appropriate batteries:  
+
+* HUSKYLENS module: 230–420 mA.  
+* Arduino R4 Minima board: 100 mA.  
+* HC-SR04 sensors: 15 mA  
+* 180-degree microservo: 200 mA  
+* 360-degree continuous rotation servo: 700 mA  
+* Total: 1215 mA 
+
+Theoretically, this is the robot’s power consumption. However, after measuring the robot’s actual power consumption, it was 500 mA. Therefore, with two batteries (2600 mA), we have enough power for 5 hours. These were the initial calculations since we were only going to use two batteries. Finally, after verifying that using two batteries connected directly to the 360-degree servo and the HUSKYLENS module works as intended, we will now connect four batteries (5200 mA), which theoretically gives us:  
+
+* Battery life for the 360° servo and the HUSKYLENS camera (8.4 V and 2600 mA): approximately 2.5 hours.  
+* Battery life for the Arduino board (4.2 V and 5200 mA): approximately 16 hours. 
+
+This means we need to be careful with the batteries for the 360° servo and the HUSKYLENS module because they may fail due to a lack of power.  
+
+Based on this estimate and the availability of batteries in our class, we chose the Samsung ICR18650-26FU model. The main features of this model are: 
+
+The batteries that power the board are placed in a dedicated space on the 3D-printed chassis. Initially, in the prototype with the foam board base, they were glued to the bottom of the base, as seen in the initial sketches of the component layout. Later, it was decided to create a custom-made 3D-printed space for them in that same location. 
+
+The batteries that power the servo, being a last-minute modification, have been placed in a foam board structure on the upper rear of the robot. This also extends the parking length and allows us to exit the parking space in the obstacle course with more room to maneuver.  
+
+To power the HUSKYLENS module, an LM7805 regulator has been included to step down the voltage from the batteries from 8.4 V to 5 V. Electrolytic capacitors have also been included as recommended by the manufacturer. 
+
+#### Wiring Scheme
+The wiring diagram used for assembling the robot is shown in the image below. It was created in TinkerCad based on previous experience using this program. Some components were not available in TinkerCad, so similar ones that met the necessary connection requirements were used, and their names were noted on the final diagram to avoid confusion:
+
+<img src="schemes/wiring diagram final version.jpg">
+
+The robot receives data from three main components: the Arduino R4 Minima board, the HC-SR04 sensors, and the HUSKYLENS module.  
+
+The Arduino R4 Minima board was chosen because it has additional pins that other Arduino boards do not have, ensuring there are enough pins to connect all the components. However, after an accident in which this board stopped working, we considered replacing it with an Arduino R4 Wi-Fi board we had in class, without using the Wi-Fi and Bluetooth functions, since that would violate the rules. In the end, we used another Arduino UNO R4 Minima board and attached a shield to it so we could access all the pins we had before.  
+
+<div align="center"><table>
+ <tr>
+  <td align="center" width="50%">
+   <img src="
+ </td>
+ <td align="center" width="50%">
+ <img src=
+ </td>  
+ </tr>
+</table></div>
+
+The HC-SR04 sensors were chosen after considering three types of sensors: the HC-SR04, the CJVL53L0XV2 (which use lasers), and the TOF10120 (which also use lasers). Initially, the CJVL53L0XV2 was chosen, although it was later replaced due to programming issues. The HC-SR04, although less efficient, is easier to program, and we had used it before.  
+
+We started by installing three sensors (two on the sides and one at the front), because we thought that would be enough to park and navigate turns without any problems. However, adding a fourth sensor—mounted on the lower rear of the robot—provided more accurate measurements that helped us overcome challenges (specifically the parking portion of the obstacle course) more easily.  
+
+<div align="center"><table>
+  <tr>
+   <td align="center" width="50%">
+    <img src="other/components/HC-SR04RC.jpg" width="500"/>
+   </td>
+   <td align="left" width="50%">
+    <ul>
+<li>Operating Voltage: 5V DC </li>
+<li>Quiescent Current: < 2mA </li>
+<li>Operating Current: 15mA </li>
+<li>Measuring Range: 2–450 cm </li>
+<li>Accuracy: ±3 mm </li>
+<li>Beam Angle: 15° </li>
+<li>Ultrasonic Frequency: 40 kHz </li>
+<li>Minimum TRIG trigger pulse duration (TTL level): 10 μs </li>
+<li>Output ECO pulse duration (TTL level): 100–25,000 μs </li>
+<li>Dimensions: 45 × 20 × 15 mm </li>
+<li>Minimum wait time between one measurement and the start of the next: 20 ms (50 ms recommended) </li>
+</ul>
+</td>
+</tr>
+</table></div>
+
+The HUSKYLENS module identifies traffic light colors to navigate around them on the correct side. This module was new to us, so we had to meticulously study its features and how to program it. The most appropriate mode for this challenge is color detection. However, 70% of the time it confused the pink of the parking lot with the red of the traffic lights, which caused serious programming issues.  
+
+One major issue it caused was that it sometimes interfered with other robot components. For example, while it was connected, the 360-degree servo wouldn’t rotate properly and would jam, but when it was disconnected, the servo rotated more smoothly
+
+</details>
+
+<details>
+<summary><b>4.2 Current Power and Sensor Architecture</b></summary>
+<br>
+
+#### Power Supply 
 The robot runs on four Samsung ICR18650-26FU batteries. Two of the batteries directly power the two mini-servos (the one on the HUSKYLENS module and the steering servo), the TF-Mini S sensor, and the Raspberry Pi Pico 2 board, while the other two power the drive servo and the HUSKYLENS.
 
 An energy calculation was performed, taking all components into account, to help select the batteries:
@@ -508,12 +596,12 @@ As a last-minute modification, the batteries that power the Raspberry Pi Pico 2 
 
 To power the HUSKYLENS module, an LM7805 regulator has been included to step down the voltage from the batteries from 8.4 V to 5 V. Electrolytic capacitors have also been included as recommended by the manufacturer. 
 
-#### 4.2 Wiring Scheme
+#### Wiring Scheme
 The wiring diagram used for assembling the robot is shown in the image below. It was created in TinkerCad based on previous experience using this program. Some components were not available in TinkerCad, so similar ones that met the necessary connection requirements were used, and their names were noted on the final diagram to avoid confusion:
 
 <img src="schemes/wiring diagram final version.jpg">
 
-#### 4.3 Sensors 
+#### Sensors 
 The robot receives data from five main components: the Raspberry Pi Pico 2 board, the TFmini-S distance sensor, the TOF400F distance sensors, the HUSKYLENS module, and the TCS34725 RGB sensor.
 
 The Raspberry Pi Pico 2 board was chosen after the regional competition. Initially, we used an Arduino R4 Minima board, but it was clear that a more powerful microcontroller was needed to handle such a large amount of data. There were other options, but they presented serious programming challenges. By using this board, the entire program was written in Python, which presented difficulties compared to the code from the regional competition, which was in C++.
@@ -638,6 +726,7 @@ The sensor is located on the lower front of the robot, although at one point it 
     </td>
   </tr>
 </table></div>
+</details>
 
 ### 5. 🧠 Strategy
 Before focusing on each of the two types of challenges individually, we distinguish between them as follows: since the obstacle challenge allows us to choose between starting from the parking area specified in the free challenge or from the magenta parking lot, we choose to start from the magenta parking lot so that the starting area is different for each challenge, making it easier to tell them apart. Therefore, we start by checking the front distance; and, depending on whether it is greater or less than 40 cm, we know whether we are in the open challenge or the obstacle challenge, respectively. Once we know this, we proceed to analyze each challenge separately. 
