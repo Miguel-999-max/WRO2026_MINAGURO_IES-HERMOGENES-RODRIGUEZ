@@ -1465,12 +1465,6 @@ Here is a flowchart that will help you understand how our final program works.
 <summary><b>🔙 Previous versions</b></summary>
 <br>
 
-* [ANDORRA_V1](/src/Current_programs/Program_versions2/ANDORRA_V1)
-* [ANDORRA_V2](/src/Current_programs/Program_versions2/ANDORRA_V2)
-* [ANDORRA_V3](/src/Current_programs/Program_versions2/ANDORRA_V3)
-* [ANDORRA_V4](/src/Current_programs/Program_versions2/ANDORRA_V4)
-* [ANDORRA_V5](/src/Current_programs/Program_versions2/ANDORRA_V5)
-* [ANDORRA_V6](/src/Current_programs/Program_versions2/ANDORRA_V6)
 
 </details>
 
