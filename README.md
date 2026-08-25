@@ -911,7 +911,7 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
      View of the robot's layout
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Old_photos/v_izq.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_izq.jpg" width="305"/>
      Robot’s left side view
     </td>
   </tr>
@@ -941,7 +941,7 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
       <img src="v-photos/Current_photos/v_der.3.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_magne.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_magne.2.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
       <img src="v-photos/Current_photos/v_izq.3.jpg" width="305"/>
