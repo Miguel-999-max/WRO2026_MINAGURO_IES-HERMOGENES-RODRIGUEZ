@@ -77,7 +77,7 @@ With all this in mind, we decided to try the CJVL53L0XV2 laser sensors, as they 
 * **09/04/26:** Using a clamp meter, we measured how much power our robot would consume to determine whether we could use the battery module we had chosen. We found that the HUSKYLENS camera uses between 230 and 420 mA, the Arduino R4 board consumes 100 mA, the HC-SR04 consumes 15 mA, the microservo consumes 200 mA, and the RC servo consumes 700 mA. Therefore, our robot would consume a total of 1215 mA, which would give us just over two hours of runtime. Theoretically, that would be the robot’s total power consumption, but in reality, we measured that the robot consumes 500 mA, so those batteries, which have a capacity of 2600 mAh, should power the robot for more than 5 hours. Meanwhile, we began preparing the wiring for the distance sensors and the servo motors. However, we noticed that the Huskylens module sometimes reboots. We think this is because the Arduino board isn’t able to provide enough power, and we can’t connect it directly to the batteries since the module doesn’t support 8.4 V. While searching for information, we found a type of regulator called the LM7805 that steps down the voltage to 5 V. We’ve decided to use it to power the Huskylens module.  
 
 * **10/04/26:** We assembled the robot on the temporary base, trying to pack all the components as tightly as possible. We used hot glue because we had it in the classroom; it bonds strongly to the components we’re using, allows us to attach and detach components easily, and doesn’t damage them. During assembly, we had to cut a hole in the board to mount the 180° servo so it would align with the height of the wheels. Once the entire robot is assembled, we create a program to control it with a joystick and check the maximum and minimum values for each servo. The data we have for the servo are: 
-  * Voltage: 4.8–8.4 V / Imax = 1.2 A / Maximum torque: 14 kg·cm / N = 65 rpm  
+  * Voltage: 4.8–8.4 V / Imax = 1.2 A / Maximum torque: 14 kg·cm / N = 72 rpm  
   * For the transmission, we have tested various LEGO gears. The differential has a 12/30 reduction ratio, meaning it reduces the speed by a factor of 2.5. Therefore, we need to multiply the speed between the servo and the differential. Through testing, we found that with a 40-tooth gear on the servo and a 13-tooth gear on the differential input, the vehicle achieves an appropriate speed—neither too fast nor too slow.  
   * Wheel speed calculation: V = 65 × (40/13) × (12/30) = 80 rpm = 1.333 rev/s  
   * The wheels have a diameter of 43 mm and a circumference L = π × 43 = 135 mm  
@@ -729,9 +729,24 @@ The sensor is located on the lower front of the robot, although at one point it 
 </details>
 
 ### 5. 🧠 Strategy
+
+Here you can find the strategy we have followed to complete both challenges; but, fisrt of all, here´s an explanation of what the challenges are about (according to WRO rules):
+
+#### Open challenge
+The WRO 2026 Future Engineers Open Challenge involves an autonomous vehicle completing three laps around a circuit in the shortest time possible, while navigating around interior walls that change position randomly before each lap, forcing the robot to sense its surroundings and navigate in real time without preprogrammed routes.
+
+
+#### Obstacle challenge
+The WRO 2026 Future Engineers Obstacle Challenge consists of the autonomous vehicle completing three laps of a circuit with a random direction of travel (clockwise or counterclockwise), avoiding red traffic poles on the right and green ones on the left that are randomly placed on the track, with the optional possibility of starting and finishing within a designated area (parking zone) that is physically set up on the track.
+
+
+<details>
+<summary><b>5.1 Old strategy </b></summary>
+<br
+ 
 Before focusing on each of the two types of challenges individually, we distinguish between them as follows: since the obstacle challenge allows us to choose between starting from the parking area specified in the free challenge or from the magenta parking lot, we choose to start from the magenta parking lot so that the starting area is different for each challenge, making it easier to tell them apart. Therefore, we start by checking the front distance; and, depending on whether it is greater or less than 40 cm, we know whether we are in the open challenge or the obstacle challenge, respectively. Once we know this, we proceed to analyze each challenge separately. 
 
-#### 5.1 Open challenge
+#### Open challenge
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
@@ -754,7 +769,7 @@ We start by exiting the parking area, then reverse to check which direction we�
 While this is running, we use HUSKYLENS to count the red lines on the field floor; this way, we can determine the number of laps the robot has completed and make it stop after completing the required three laps. 
 We have not yet developed a specific strategy for parking in the parking zone due to lack of time; however, we continue to working on that.
 
-#### 5.2 Obstacle challenge
+#### Obstacle challenge
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
@@ -778,6 +793,12 @@ While this is being executed, we plan to use HUSKYLENS to count the blue lines o
 Regarding the latter, we have a parking strategy in which we would use HUSKYLENS to detect the pink color of the parking lot once the laps have been completed and then park; this is an idea we haven’t fully developed yet, since we would first need to count the laps.  
 
 Similarly, we continue to work on resolving and developing these issues. 
+
+</details>
+
+<details>
+<summary><b>5.2 Current strategy </b></summary>
+<br>
 
 
 ### 6. 👥 The Team
