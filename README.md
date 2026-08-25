@@ -280,12 +280,12 @@ These are the 3D designs we have created, which include: a custom-made chassis f
 
 | Component | Quantity | Image | Function | File link |
 | :---: | :---: | :---: | :---: | :---: |
-| Chasis in 3D | 1 | <img src="models/CHASIS_modificado_2.jpg" width="150" height="120"> | Skeleton of the robot | [`📥Download`](CHASIS_modificado_2.stl) |
-| Battery support 1 | 2 | <img src="models/soportebateria1.jpg" width="150" height="120"> | Support batteries | [`📥Download`](soportebateria1.stl) |
-| Battery support 2 | 1 | <img src="models/soportebateria2.jpg" width="150" height="120"> | Support batteries | [`📥Download`](soportebateria2.stl) |
-| Switch support | 1 | <img src="models/SOPORTE_INTERRUPTOR.jpg" width="150" height="120"> | Support the switch | [`📥Download`](SOPORTE_INTERRUPTOR.stl) |
-| Adapter wheels in 3D | 2 | <img src="models/Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | [`📥Download`](WHEEL_ADAPTER.stl) |
-| Adapter gear in 3D | 1 | <img src="models/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`📥Download`](GEAR_ADAPTER.stl) |
+| Chasis in 3D | 1 | <img src="models/CHASIS_modificado_2.jpg" width="150" height="120"> | Skeleton of the robot | [`📥Download`](models/CHASIS_modificado_2.stl) |
+| Battery support 1 | 2 | <img src="models/soportebateria1.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/soportebateria1.stl) |
+| Battery support 2 | 1 | <img src="models/soportebateria2.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/soportebateria2.stl) |
+| Switch support | 1 | <img src="models/SOPORTE_INTERRUPTOR.jpg" width="150" height="120"> | Support the switch | [`📥Download`](models/SOPORTE_INTERRUPTOR.stl) |
+| Adapter wheels in 3D | 2 | <img src="models/Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | [`📥Download`](models/WHEEL_ADAPTER.stl) |
+| Adapter gear in 3D | 1 | <img src="models/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`📥Download`](models/GEAR_ADAPTER.stl) |
 
 #### 2.3 Old Components
 Here is a also a list of all components we used to use before our modifications; including an image, their specific function in the robot, and a purchase link: 
@@ -297,7 +297,7 @@ Here is a also a list of all components we used to use before our modifications;
 | Arduino R4 MINIMA | 1 | <img src="other/components/Arduino_R4 MINIMA.jpg" width="150" height="120"> | Robot controller | <a href="https://www.amazon.es/Arduino-UNO-Minima-ABX00080-Connector/dp/B0C78K4CD4"> 🛒 Shop</a> |
 | Quick-connect panel | 1 | <img src="other/components/quick-connect panel.png" width="150" height="120"> | It allows us to connect all the sensors and servos to the Arduino thanks to all the pins it has |  <a href="https://es.aliexpress.com/item/1005007370390696.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.5.3aeeiEwBiEwBEt&gps-id=pcDetailTopMoreOtherSeller&scm=1007.40050.354490.0&scm_id=1007.40050.354490.0&scm-url=1007.40050.354490.0&pvid=2b62d9e5-7337-4ba4-acd3-0fd85cbfbf2c&_t=gps-id%3ApcDetailTopMoreOtherSeller%2Cscm-url%3A1007.40050.354490.0%2Cpvid%3A2b62d9e5-7337-4ba4-acd3-0fd85cbfbf2c%2Ctpp_buckets%3A668%232846%238110%231995&pdp_ext_f=%7B%22order%22%3A%2231%22%2C%22eval%22%3A%221%22%2C%22sceneId%22%3A%2230050%22%2C%22fromPage%22%3A%22recommend%22%7D&pdp_npi=6%40dis%21EUR%212.59%212.23%21%21%212.95%212.54%21%400b8848bf17800920928475623e10c9%2112000056842030655%21rec%21ES%21135718878%21XZ%211%210%21n_tag%3A-29919%3Bd%3A2676a4e6%3Bm03_new_user%3A-29895&utparam-url=scene%3ApcDetailTopMoreOtherSeller%7Cquery_from%3A%7Cx_object_id%3A1005007370390696%7C_p_origin_prod%3A)"> 🛒 Shop</a> |
 | Battery support | 1 | <img src="other/components/support.jpg" width="150" height="120"> | Is the support of the second battery | We made it in class using a kind of cardboard and hot glue|
-| Chasis in 3D | 1 | <img src="models/Chasis.png" width="150" height="120"> | Skeleton of the robot | [`📥Download`](CHASSIS.stl) |
+| Chasis in 3D | 1 | <img src="models/Chasis.png" width="150" height="120"> | Skeleton of the robot | [`📥Download`](models/CHASSIS.stl) |
 
 ### 3. 🪛 Mobility design
 This section includes the robot's torque and speed, the rationale behind its final configuration, as well as images of all its plans and the wiring diagram we created in TinkerCad using all the robot's components. 
