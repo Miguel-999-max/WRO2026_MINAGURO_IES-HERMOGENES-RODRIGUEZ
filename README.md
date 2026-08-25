@@ -886,15 +886,15 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/robot image v_front.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_front.jpg" width="305"/>
      robot´s front view
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/robot image v_tras.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_tras.jpg" width="305"/>
      robot´s back view
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/robot image v_arriba.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_arriba.jpg" width="305"/>
      View from underneath the robot
     </td>
   </tr>
@@ -903,15 +903,15 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/robot image v_der.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_der.jpg" width="305"/>
      Robot’s right side view
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/robot image v_abajo.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_abajo.jpg" width="305"/>
      View of the robot's layout
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Old_photos/robot image v_izq.jpg" width="305"/>
+      <img src="v-photos/Old_photos/v_izq.jpg" width="305"/>
      Robot’s left side view
     </td>
   </tr>
@@ -925,26 +925,26 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/robot image v_izq.2.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_izq.2.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/robot image v_bat_abajo.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_bat_abajo.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/robot image v_der.2.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_der.2.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/robot image v_der.3.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_der.3.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/robot image v_magne.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_magne.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/robot image v_izq.3.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_izq.3.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
