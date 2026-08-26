@@ -299,6 +299,150 @@ Here is a also a list of all components we used to use before our modifications;
 | Battery support | 1 | <img src="other/components/support.jpg" width="150" height="120"> | Is the support of the second battery | We made it in class using a kind of cardboard and hot glue|
 | Chasis in 3D | 1 | <img src="models/Chasis.png" width="150" height="120"> | Skeleton of the robot | [`📥Download`](models/CHASSIS.stl) |
 
+### 3. Mobility design
+This section includes the robot's torque and speed, the rationale behind its final configuration, as well as images of all its plans and the wiring diagram we created in TinkerCad using all the robot's components. 
+
+Generally speaking, the robot has:
+
+* An Arduino R4 board (chosen based on previous experience programming it) 
+* Four HC-SR04 sensors (one at the front, one at the rear, and two on the sides, one on each side): the front and side sensors are mounted on top of the chassis on a small piece of foam board to...; the rear sensor is mounted underneath the chassis due to space constraints at the rear top of the chassis. The triggers for the four sensors are soldered to the same pin to save pins on the Arduino board, in case more components need to be connected. 
+* Four Samsung batteries... two of which power the Arduino board directly... 
+* A 360-degree servo that functions as a servo motor. 
+* A transmission system made with LEGO gears and one made with 3D-printed parts that runs from the servo motor to the mechanical differential. 
+* A mechanical differential equipped with two adapters for 3D printers to ensure a better fit on the wheels. 
+* Four LEGO wheels (two larger and two smaller: the specific models are listed in the parts list). 
+* Un sistema de dirección de LEGO (piezas usadas en la lista de componentes). 
+* An 180-degree servo to move the LEGO steering system via an arm attached to a string that runs to the steering system. 
+* A HUSKYLENS module for detecting obstacles. 
+* A foam board frame for holding a couple of batteries. 
+* A switch to turn on the robot. 
+* A button to start the program.
+
+#### 3.1 Steering system 
+The steering system used consists of:  
+
+* A system made from LEGO bricks from our Technology class, because it’s easy to assemble and disassemble and can be put together fairly quickly in case modifications are needed, featuring two LEGO wheels that are smaller than the rear ones.  
+* An 180-degree servo, since it’s easy to program and a larger turning angle wasn’t necessary given the system we built.  
+* A servo arm with a string, to connect the LEGO steering system to the servo.
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="other/steering/steering_system.JPG" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="other/steering/steering_system2.JPG" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="other/steering/steering_system3.JPG" width="305"/>
+    </td>
+  </tr>
+</table>
+
+If this steering turned too far in one direction, it would jam and could break. To prevent this, we adjusted the values using the steering servo calibration program so that this wouldn’t happen.  
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <b>Micro servo 180</b><br>
+      <img src="other/steering/SERVO180_caract.jpg" width="50%"/>
+    </td>
+    <td align="left" width="50%">
+      <ul>
+        <li>A:32mm</li>
+        <li>B:23mm</li>
+        <li>C:28,5mm</li>
+        <li>D:12mm</li>
+        <li>E:32mm</li>
+        <li>F:19mm</li>
+        <li>Speed:0,1sec</li>
+        <li>Torque:2,5kg-cm</li>
+        <li>Weight:14,7g</li>
+        <li>Voltage:4,8-6V</li>
+      </ul>
+    </td>
+  </tr>
+</table></div>
+
+#### 3.2 Drive system
+The motor system used consists of: 
+
+* A 360-degree continuous-rotation servo (model listed in the parts list). 
+* A gear system to transmit motion from the servo motor to the mechanical differential, consisting of a 40-tooth LEGO gear and a 13-tooth gear made with a 3D printer. The gear ratio is 12:30. 
+* A mechanical differential. The differential was purchased from AliExpress based on an idea from a previous project in our Technology classroom. 
+* Two 3D-printed adapters that connect the differential shafts to the LEGO wheels. 
+* Two LEGO wheels larger than those in the steering system. 
+
+The first 360-degree continuous rotation servo we installed caused smoothness issues when the robot moved, leading us to believe the problems were software-related; however, when it was replaced with another one we had in our classroom, the issues did not recur. 
+
+The mechanical differential was a bit stiff to turn when it arrived. To make it turn more smoothly, we lubricated it with oil and turned it using a drill. 
+
+The rear wheels are larger than the front wheels because the front wheels had to cover the height of the mechanical differential on their own; the front wheels already accounted for the height of the LEGO steering system.
+
+#### 3.3 Chassis design
+
+The chassis has evolved based on the need to add or remove components, and depending on what was most practical for meeting the challenges. 
+
+Initially, we used a sheet of foam board that was in the classroom, onto which we gradually added all the components. To attach the components, we used hot glue (because it has good adhesive properties, allows us to make modifications easily, and doesn’t damage the components). In fact, the first prototype was tested with a foam board base. 
+
+The front is cut into a pointed shape to prevent it from coming into contact with any of the interior partition walls or those of the parking garage during the obstacle phase. 
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/prototype1.1.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/prototype1.2.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="OTHER /prototype1.3.jpg" width="305"/>
+    </td>
+  </tr>
+</table></div>
+
+After confirming that this was the final base, we designed the chassis in 3D, printed it, and transferred the components from one base to the other. Although we thought this change might cause problems once everything was already assembled, there were none. 
+
+<p align="center"><a src="3D_DESIGNS/CHASSIS.stl"><img src="COMPONENTS/Chasis.png" width="500"></a></p>
+
+The initial layout of all the components was sketched by hand to give us an idea (photos attached): 
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="IMG_3713.jpeg" width="400"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="IMG_3714.jpeg" width="400"/>
+    </td>
+  </tr>
+</table></div>
+
+An important consideration regarding the robot’s balance was to place the heaviest components (the Arduino board, the batteries, the 360-degree servo) in the center of the chassis, maintaining a low and centralized center of mass. The batteries that directly power the 360-degree servo (explained in detail below) are located in a separate structure, as this was a last-minute modification.
+
+The robot remained in that state for a time until we encountered several problems and some broken circuit boards, which forced us to build a mount for a second battery, as recommended in the instructions.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="COMPONENTS/support.jpg" width="250"/>
+    </td>
+  </tr>
+</table></div>
+
+Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was causing problems, so we decided to remove it and build a 3D structure to hold it in place, allowing us to view objects and lines from a better angle without needing a servo. We also positioned the camera so that it was pointing slightly downwards, to avoid confusion with other objects and colours in the surroundings.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="49%">
+      <img src="OTHER /camera support 1.jpeg" width="200"/>
+    </td>
+    <td align="center" width="49%">
+      <img src="OTHER /camera support 2.jpeg" width="200"/>
+    </td>
+  </tr>
+</table></div>
+
 ### 3. 🪛 Mobility design
 This section includes the robot's torque and speed, the rationale behind its final configuration, as well as images of all its plans and the wiring diagram we created in TinkerCad using all the robot's components. 
 
