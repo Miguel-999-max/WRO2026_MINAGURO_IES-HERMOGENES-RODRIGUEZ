@@ -403,7 +403,7 @@ The front is cut into a pointed shape to prevent it from coming into contact wit
 
 After confirming that this was the final base, we designed the chassis in 3D, printed it, and transferred the components from one base to the other. Although we thought this change might cause problems once everything was already assembled, there were none. 
 
-<p align="center"><a src="3D_DESIGNS/CHASSIS.stl"><img src="COMPONENTS/Chasis.png" width="100%"></a></p>
+<p align="center"><a src="models/CHASSIS.stl"><img src="models/Chasis.png"></a></p>
 
 An important consideration regarding the robot’s balance was to place the heaviest components (the Arduino board, the batteries, the 360-degree servo) in the center of the chassis, maintaining a low and centralized center of mass. The batteries that directly power the 360-degree servo (explained in detail below) are located in a separate structure, as this was a last-minute modification.
 
@@ -412,7 +412,7 @@ The robot remained in that state for a time until we encountered several problem
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="other/components/support.jpg"/>
+      <img src="other/components/support.jpg" width="33%"/>
     </td>
   </tr>
 </table></div>
