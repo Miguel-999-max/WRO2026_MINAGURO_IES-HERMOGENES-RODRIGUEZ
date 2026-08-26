@@ -687,7 +687,7 @@ Given this budget and the availability of batteries in our category, we chose th
   <tr>
     <td align="center" width="50%">
       <b>Micro servo 180</b><br>
-      <img src="other/components/BATERIAS_SAMSUNG.jpg"/>
+      <img src="other/components/Samsung battery 2600mAh.webp"/>
     </td>
     <td align="left" width="50%">
       <ul>
