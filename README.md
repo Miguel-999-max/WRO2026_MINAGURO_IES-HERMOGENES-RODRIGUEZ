@@ -683,7 +683,25 @@ This means we need to be careful with the batteries for the 360° servo and the 
 
 Given this budget and the availability of batteries in our category, we chose the Samsung ICR18650-26FU model. The main features of this model are:
 
-<p align="center"><img src="other/components/BATERIAS_SAMSUNG.jpg" width="300"></p>
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <b>Micro servo 180</b><br>
+      <img src="other/components/BATERIAS_SAMSUNG.jpg"/>
+    </td>
+    <td align="left" width="50%">
+      <ul>
+        <li>Brand: Samsung</li>
+        <li>Model: ICR 18650-26FU</li>
+        <li>Capacity: Nominal capacity: 2600 mAh</li>
+        <li>Voltage: 3.7 V nominal</li>
+        <li>Charging: 4.2 V maximum, 1300 mA standard, 2600 mA maximum</li>
+        <li>Discharge: Cut-off at 2.75 V, standard 520 mA, maximum 5200 mA</li>
+        <li>Description: Pink cell casing, white insulating ring, 18650 format</li>
+      </ul>
+    </td>
+  </tr>
+</table></div>
 
 The batteries that power the HUSKYLENS and the drive servo are housed in a battery expansion module on the bottom of the chassis. This way, you simply remove them and insert new ones when the battery runs out. Previously, they were placed in a dedicated space inside the 3D-printed chassis. Initially, in the prototype with a foam board base, they were glued to the bottom of the base, as can be seen in the initial sketches of the component layout. Later, it was decided to create a custom 3D-printed compartment for them in that same location.
 
