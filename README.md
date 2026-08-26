@@ -327,13 +327,13 @@ The steering system used consists of:
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="other/steering/steering_system.JPG" width="305"/>
+      <img src="other/Current_photos/v_direc_s.luz.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/steering/steering_system2.JPG" width="305"/>
+      <img src="other/Current_photos/v_direc.izq.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/steering/steering_system3.JPG" width="305"/>
+      <img src="other/Current_photos/steering_system3.JPG" width="305"/>
     </td>
   </tr>
 </table>
