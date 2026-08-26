@@ -526,11 +526,11 @@ In addition, we have recalculated the maximum speed, the revolutions per minute 
 
 <table>
   <tr>
-    <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_direc_s.luz.jpg" width="305"/>
+    <td align="center" width="50%">
+      <img src="other/Calculations.jpg" width="305"/>
     </td>
-    <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_direc.izq.jpg" width="305"/>
+    <td align="center" width="50%">
+      <img src="other/Calculations2.jpg" width="305"/>
     </td> 
   </tr>
 </table>
