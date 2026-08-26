@@ -390,33 +390,20 @@ The front is cut into a pointed shape to prevent it from coming into contact wit
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="v-photos/Old_photos/prototype1.1.jpg" width="305"/>
+      <img src="v-photos/Old_photos/prototype1.1.jpg" width="33%"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Old_photos/prototype1.2.jpg" width="305"/>
+      <img src="v-photos/Old_photos/prototype1.2.jpg" width="33%"/>
     </td>
     <td align="center" width="33%">
-      <img src="OTHER /prototype1.3.jpg" width="305"/>
+      <img src="v-photos/Old_photos/prototype1.3.jpg" width="33%"/>
     </td>
   </tr>
 </table></div>
 
 After confirming that this was the final base, we designed the chassis in 3D, printed it, and transferred the components from one base to the other. Although we thought this change might cause problems once everything was already assembled, there were none. 
 
-<p align="center"><a src="3D_DESIGNS/CHASSIS.stl"><img src="COMPONENTS/Chasis.png" width="500"></a></p>
-
-The initial layout of all the components was sketched by hand to give us an idea (photos attached): 
-
-<div align="center"><table>
-  <tr>
-    <td align="center" width="50%">
-      <img src="IMG_3713.jpeg" width="400"/>
-    </td>
-    <td align="center" width="50%">
-      <img src="IMG_3714.jpeg" width="400"/>
-    </td>
-  </tr>
-</table></div>
+<p align="center"><a src="3D_DESIGNS/CHASSIS.stl"><img src="COMPONENTS/Chasis.png" width="100%"></a></p>
 
 An important consideration regarding the robot’s balance was to place the heaviest components (the Arduino board, the batteries, the 360-degree servo) in the center of the chassis, maintaining a low and centralized center of mass. The batteries that directly power the 360-degree servo (explained in detail below) are located in a separate structure, as this was a last-minute modification.
 
@@ -425,23 +412,12 @@ The robot remained in that state for a time until we encountered several problem
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="COMPONENTS/support.jpg" width="250"/>
+      <img src="other/components/support.jpg" width="250"/>
     </td>
   </tr>
 </table></div>
 
 Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was causing problems, so we decided to remove it and build a 3D structure to hold it in place, allowing us to view objects and lines from a better angle without needing a servo. We also positioned the camera so that it was pointing slightly downwards, to avoid confusion with other objects and colours in the surroundings.
-
-<div align="center"><table>
-  <tr>
-    <td align="center" width="49%">
-      <img src="OTHER /camera support 1.jpeg" width="200"/>
-    </td>
-    <td align="center" width="49%">
-      <img src="OTHER /camera support 2.jpeg" width="200"/>
-    </td>
-  </tr>
-</table></div>
 
 ### 3. 🪛 Mobility design
 This section includes the robot's torque and speed, the rationale behind its final configuration, as well as images of all its plans and the wiring diagram we created in TinkerCad using all the robot's components. 
