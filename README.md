@@ -411,7 +411,7 @@ The robot remained in that state for a time until we encountered several problem
 
 <div align="center"><table>
   <tr>
-    <td align="center" width="50%">
+    <td align="center" width="33%">
       <img src="other/components/support.jpg" width="33%"/>
     </td>
   </tr>
