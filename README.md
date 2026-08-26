@@ -895,7 +895,7 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
     </td>
   </tr>
 </table></div>
-
+  </details>
  
 #### 7.2 Current Robot (Raspberry)
 
@@ -971,8 +971,6 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
 </table></div>
 </details>
 
- 
-</details>
 
 ### 8. 💻 Software
 Here you can find almost all programs used in the development of our robot; including flowcharts, test programs and each version of the final program we have made.
