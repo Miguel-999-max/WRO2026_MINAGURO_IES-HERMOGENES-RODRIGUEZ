@@ -522,6 +522,19 @@ The mechanical differential was somewhat stiff when turning. To make it turn mor
 
 The rear wheels are larger than the front ones because they had to account for the height of the mechanical differential on their own; the front wheels, on the other hand, had to account for the height of the LEGO steering system.
 
+In addition, we have recalculated the maximum speed, the revolutions per minute of the different axles, and the force in Newtons.
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_direc_s.luz.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_direc.izq.jpg" width="305"/>
+    </td> 
+  </tr>
+</table>
+
 #### 3.4 Chassis design
 
 The chassis has evolved based on the need to add or remove components, and depending on what was most practical for meeting the challenges. 
