@@ -719,7 +719,7 @@ To power the HUSKYLENS module, an LM7805 regulator has been included to step dow
 #### Wiring Scheme
 The wiring diagram used for assembling the robot is shown in the image below. It was created in TinkerCad based on previous experience using this program. Some components were not available in TinkerCad, so similar ones that met the necessary connection requirements were used, and their names were noted on the final diagram to avoid confusion:
 
-<img src="schemes/wiring diagram final version.jpg">
+<img src="schemes/wiring_scheme_andorra.png">
 
 #### Sensors 
 The robot receives data from five main components: the Raspberry Pi Pico 2 board, the TFmini-S distance sensor, the TOF400F distance sensors, the HUSKYLENS module, and the TCS34725 RGB sensor.
