@@ -345,7 +345,7 @@ If this steering turned too far in one direction, it would jam and could break. 
   <tr>
     <td align="center" width="50%">
       <b>Micro servo 180</b><br>
-      <img src="other/steering/SERVO180_caract.jpg" width="50%"/>
+      <img src="other/steering/SERVO180_caract.jpg"/>
     </td>
     <td align="left" width="50%">
       <ul>
@@ -390,13 +390,13 @@ The front is cut into a pointed shape to prevent it from coming into contact wit
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="v-photos/Old_photos/prototype1.1.jpg" width="33%"/>
+      <img src="v-photos/Old_photos/prototype1.1.jpg"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Old_photos/prototype1.2.jpg" width="33%"/>
+      <img src="v-photos/Old_photos/prototype1.2.jpg"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Old_photos/prototype1.3.jpg" width="33%"/>
+      <img src="v-photos/Old_photos/prototype1.3.jpg"/>
     </td>
   </tr>
 </table></div>
@@ -412,7 +412,7 @@ The robot remained in that state for a time until we encountered several problem
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="other/components/support.jpg" width="250"/>
+      <img src="other/components/support.jpg"/>
     </td>
   </tr>
 </table></div>
