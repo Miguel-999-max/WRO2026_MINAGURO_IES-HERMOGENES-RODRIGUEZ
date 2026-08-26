@@ -333,7 +333,7 @@ The steering system used consists of:
       <img src="v-photos/Current_photos/v_direc.izq.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/direc.der.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_direc.der.jpg" width="305"/>
     </td>
   </tr>
 </table>
