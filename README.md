@@ -950,6 +950,15 @@ Similarly, we continue to work on resolving and developing these issues.
 <summary><b>5.2 Current strategy </b></summary>
 <br>
 
+#### Open challenge
+
+For this challenge, we used laser distance sensors (TF-mini-S and TOF400F) and the TCS34725 RGB sensor. We start by moving forward while measuring to the sides as follows: the right ToF400F to measure to the right and the TF-mini-S to measure to the left (since the left ToF400F is connected via I2C, the data read speed is slower; therefore, we decided to use the TF-mini-S instead). We do this until one of the two distances is much greater than the other (100 cm). At that point, we distinguish between two cases:
+* The distance on the right is greater than the distance on the left; we are in clockwise mode. It performs the approach maneuver toward the center wall for the specific duration required in this case (taking into account the data readout speed of the ToF400F, since this requires modifying the maneuver) and begins to circle.
+  
+* The distance on the left is greater than on the right; we do not find this in counterclockwise mode. It performs the maneuver to approach the center wall for the specific duration required in this case (taking into account the data read speed of the TF-mini-S, since this requires modifying the maneuver) and begins to circle.
+
+We decided to drive around the center since that was our initial strategy when we built the previous robot, and we decided to stick with it because it seemed like the best approach in terms of both time and complexity. As it drives around, it counts the blue lines on the floor using the TCS34725 RGB sensor, since it detects them better than the orange ones. Once it has counted 12 lines, it moves forward for a few seconds and stops, positioning itself right in the parking zone.
+
 </details>
 
 ### 6. 👥 The Team
