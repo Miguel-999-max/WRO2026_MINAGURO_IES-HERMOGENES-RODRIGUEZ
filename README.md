@@ -800,6 +800,7 @@ Similarly, we continue to work on resolving and developing these issues.
 <summary><b>5.2 Current strategy </b></summary>
 <br>
 
+</details>
 
 ### 6. 👥 The Team
 The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
@@ -894,7 +895,6 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
     </td>
   </tr>
 </table></div>
-</details>
 
  
 #### 7.2 Current Robot (Raspberry)
