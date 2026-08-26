@@ -739,6 +739,19 @@ The WRO 2026 Future Engineers Open Challenge involves an autonomous vehicle comp
 #### Obstacle challenge
 The WRO 2026 Future Engineers Obstacle Challenge consists of the autonomous vehicle completing three laps of a circuit with a random direction of travel (clockwise or counterclockwise), avoiding red traffic poles on the right and green ones on the left that are randomly placed on the track, with the optional possibility of starting and finishing within a designated area (parking zone) that is physically set up on the track.
 
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="other/strategy/ObstacleChallenge.jpg"/>
+     obstacles example
+    </td>
+    <td align="center" width="50%">
+      <img src="other/strategy/aparcamiento.jfif"/>
+     parking-slot
+    </td>
+  </tr>
+</table></div>
+
 
 <details>
 <summary><b>5.1 Old strategy </b></summary>
