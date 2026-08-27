@@ -603,13 +603,13 @@ Finally, after the regional competition, the chassis had bent under the weight o
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v-der.2.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_der.2.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v-front.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_front.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v-izq.2.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_izq.2.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
