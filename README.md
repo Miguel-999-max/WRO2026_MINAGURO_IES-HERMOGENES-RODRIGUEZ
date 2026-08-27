@@ -6,6 +6,29 @@
 
 <div align="justify">Hello, welcome to the GitHub repository of the <strong>MINAGURO team</strong>, which is competing in the <strong>World Robot Olympiad 2026 Future Engineers</strong> category. Our team is made up of four Spanish students who built this robot on their school breaks with the aim of learning as much as possible.
 <br> Guided by our passion for technology, we have created a vehicle that maybe doesn´t work as we would like to, but reflects all of our hard work and time spent on it.
+
+## 🤝 Sponsors & Patrocinadores
+
+We would like to thank our sponsors for making this project possible:
+
+<div align="center">
+  <table border="0">
+    <tr>
+      <td align="center" width="300">
+        <a href="https://enlace-del-sponsor-1.com">
+          <img src="https://ruta-de-la-imagen-1.png" width="200" alt="Logo Sponsor 1" /><br />
+          <b>Nombre del Sponsor 1</b>
+        </a>
+      </td>
+      <td align="center" width="300">
+        <a href="https://enlace-del-sponsor-2.com">
+          <img src="https://ruta-de-la-imagen-2.png" width="200" alt="Logo Sponsor 2" /><br />
+          <b>Nombre del Sponsor 2</b>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
  
   ## 📁 TABLE OF CONTENTS
 * [1. 📝 Daily documentation](#1--daily-documentation)
