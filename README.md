@@ -231,6 +231,8 @@ Before finishing, we decided to break down main.py into subprograms; since the p
 
 * **14/08/26:** Today we revisited the idea of using the magnetometer in the obstacle course test and decided to have it scan the direction of each lane on the circuit at the start of the challenge. That way, if—while dodging an obstacle—it doesn’t find another one to avoid, as happened the previous day, it will align itself with the lane it’s in to continue searching for obstacles, just as we did in the free challenge.
 
+<img src="other/strategy/strategies.jpeg">
+
 </details>
 
 ### <span id="seccion-mecanica"></span>2. 🛠️ Mechanical Design
