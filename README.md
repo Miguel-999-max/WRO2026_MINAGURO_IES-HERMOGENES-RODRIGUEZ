@@ -876,7 +876,36 @@ The sensor is located on the lower front of the robot, although at one point it 
     </td>
   </tr>
 </table></div>
+
+The L3GD20 gyroscope was chosen to help the robot navigate around obstacles. When the camera detects an obstacle, the robot moves toward it and goes around it on the appropriate side; however, when the robot does not detect any obstacles, it follows the course set by the gyroscope until it encounters another obstacle. For this reason, every time the robot changes fields, the gyroscope must be calibrated using a test program that involves rotating the robot.
+
+The gyroscope is mounted on a tube at the top of the robot so that it does not interfere with any of the other components; among these, the HUSKYLENS module and the drive servo pose the greatest risk of interference. By positioning it this way, the risk of interference is significantly reduced.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="other/components/SC21034-40.jpg" width="500" height="400"/>
+    </td>
+   <td align="left" width="50%">
+    <ul>
+        <li>Type: 3-axis MEMS gyroscope</li>
+        <li>Axes: X, Y, and Z</li>
+        <li>Measurement range: ±250, ±500, and ±2000 °/s</li>
+        <li>Interface: I²C / SPI</li>
+        <li>Supply voltage: 2.4–3.6 V</li>
+        <li>Current consumption: approx. 6.1 mA during operation</li>
+        <li>Resolution: 16 bits</li>
+        <li>Output frequency: up to 760 Hz</li>
+        <li>Sensing: angular velocity on all three axes</li>
+        <li>Operating temperature: −40 to +85 °C</li>
+        <li>Applications: orientation, motion, and rotation sensing, as well as stabilization.</li>
+      </ul>
+    </td>
+  </tr>
+</table></div>
+
 </details>
+
 
 ### 5. 🧠 Strategy
 
