@@ -22,7 +22,7 @@ We would like to thank our sponsors for making this project possible:
       </td>
       <td align="center" width="300">
         <a href="https://ies-hermogenesrodriguez.centros.castillalamancha.es/">
-          <img src="other/Sponsors/ies Hermogenes.png" width="200"  /><br />
+          <img src="other/Sponsors/ies_Hermogenes.png" width="200"  /><br />
           <b>IES Hermógenes Rodríguez</b>
         </a>
       </td>
