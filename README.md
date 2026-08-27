@@ -771,31 +771,31 @@ The batteries that power the HUSKYLENS and the drive servo are housed in a batte
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="v-photos/Old_photos/prototype1.2.jpg" width="300" height="350/>
+      <img src="v-photos/Old_photos/prototype1.2.jpg" width="400" height="350/>
     </td>
     <td align="center" width="50%">
-      <img src="other/batteries/batteries1.JPG" width="400" height="350"/>
+      <img src="v-photos/Current_photos/v_der.2.jpg" width="400" height="350"/>
     </td>
   </tr>
 </table></div>
 
 As a last-minute modification, the batteries that power the Raspberry Pi Pico 2 board, the two microservos, and the TFmini-S sensor have been mounted on a 3D-printed structure at the top rear of the robot, inside a battery expansion module; this way, if some batteries run out, there’s no need to waste time disassembling the entire circuit to replace them—you simply remove them from there and swap them out. Additionally, this structure also expands the parking space, giving us more room to maneuver during the obstacle course. Initially, this structure was made of foam board, but it was eventually modified to use a more durable material.
 
+To power the HUSKYLENS module, an LM7805 regulator has been included to step down the voltage from the batteries from 8.4 V to 5 V. Electrolytic capacitors have also been included as recommended by the manufacturer. 
+
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="other/batteries/batteries_structure2.jpeg" width="350"/>
+      <img src="v-photos/Current_photos/v_der.3.jpg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/batteries/batteries1.JPG" width="350"/>
+      <img src="v-photos/Current_photos/v_lm78.jpg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/batteries/batteries_structure3.JPG" width="350"/>
+      <img src="v-photos/Current_photos/v_tras.jpg" width="350"/>
     </td>
   </tr>
 </table></div>
-
-To power the HUSKYLENS module, an LM7805 regulator has been included to step down the voltage from the batteries from 8.4 V to 5 V. Electrolytic capacitors have also been included as recommended by the manufacturer. 
 
 #### Wiring Scheme
 The wiring diagram was created in Cirkit Designer. In previous versions, it was created in TinkerCad, but the components we used weren’t available there, and since Cirkit Designer allows you to design custom components, we created it there instead. Here is the final result:
