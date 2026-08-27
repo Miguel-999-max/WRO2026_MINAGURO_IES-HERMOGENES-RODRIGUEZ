@@ -494,7 +494,7 @@ We used an SPT5632-360 servo motor because we already had experience programming
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="other/components/SPT5632-360.jpg" width="500" height="400"/>
+      <img src="other/components/SPT5632-360.jpg" width="100%"/>
     </td>
     <td align="left" width="50%">
      <ul> 
@@ -582,11 +582,39 @@ After confirming that this was the final base, we designed the chassis in 3D, pr
 
 An important consideration regarding the robot’s balance was to place the heaviest components (the Arduino board, the batteries, and the 360° servo) in the center of the chassis, ensuring a low and centralized center of mass. The batteries that directly power the 360° servo (explained in detail later) are housed in a separate structure, as this was a last-minute modification.
 
+The robot remained in this configuration for a while until we encountered several issues and broken circuit boards, which forced us to build a mount for a second battery as recommended in the instructions. Initially, it was made of foam board since it was a last-minute modification, but it was later 3D-designed to ensure a more durable and reliable material over time.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.9.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.3.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.11.jpg" width="305"/>
+    </td>
+  </tr>
+</table></div>
+
 Finally, after the regional competition, the chassis had bent under the weight of the components, so we designed a new one with minor modifications—thicker so it could easily support them over time.
 
-The chassis was always designed to provide a stable and reliable foundation on which to mount the components, avoid unnecessary wiring, provide specific spaces for certain components, save space, and keep the robot compact throughout its journey through the challenges.
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v-der.2.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v-front.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v-izq.2.jpg" width="305"/>
+    </td>
+  </tr>
+</table></div>
 
-The robot remained in this configuration for a while until we encountered several issues and broken circuit boards, which forced us to build a mount for a second battery as recommended in the instructions. Initially, it was made of foam board since it was a last-minute modification, but it was later 3D-designed to ensure a more durable and reliable material over time.
+The chassis was always designed to provide a stable and reliable foundation on which to mount the components, avoid unnecessary wiring, provide specific spaces for certain components, save space, and keep the robot compact throughout its journey through the challenges.
 
 #### Reasoning Behind the Sensor Layout
 
