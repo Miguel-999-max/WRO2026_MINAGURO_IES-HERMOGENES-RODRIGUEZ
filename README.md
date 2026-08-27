@@ -1225,8 +1225,9 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
     </td>
   </tr>
 </table></div>
-</details>
 
+https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
+</details>
 
 ### 8. 💻 Software
 Here you can find almost all programs used in the development of our robot; including flowcharts, test programs and each version of the final program we have made.
