@@ -884,7 +884,7 @@ The gyroscope is mounted on a tube at the top of the robot so that it does not i
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="other/components/SC21034-40.jpg" width="500" height="400"/>
+      <img src="other/components/10DOF IMU sensor.jpg" width="500" height="400"/>
     </td>
    <td align="left" width="50%">
     <ul>
