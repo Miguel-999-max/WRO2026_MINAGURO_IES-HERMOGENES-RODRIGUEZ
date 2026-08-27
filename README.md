@@ -806,7 +806,7 @@ The wiring diagram was created in Cirkit Designer. In previous versions, it was 
 <img src="schemes/wiring_scheme_andorra.png">
 
 #### Sensors 
-The robot receives data from five main components: the Raspberry Pi Pico 2 board, the TFmini-S distance sensor, the TOF400F distance sensors, the HUSKYLENS module, and the TCS34725 RGB sensor.
+The robot receives data from six main components: the Raspberry Pi Pico 2 board, the TFmini-S distance sensor, the TOF400F distance sensors, the HUSKYLENS module, the TCS34725 RGB sensor, and the L3GD20 gyroscope.
 
 The Raspberry Pi Pico 2 board was chosen after the regional competition. Initially, we used an Arduino R4 Minima board, but it was clear that a more powerful microcontroller was needed to handle such a large amount of data. There were other options, but they presented serious programming challenges. By using this board, the entire program was written in Python, which presented difficulties compared to the code from the regional competition, which was in C++.
 
