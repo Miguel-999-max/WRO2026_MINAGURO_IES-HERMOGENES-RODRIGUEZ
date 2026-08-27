@@ -299,9 +299,12 @@ Here is a also a list of all components we used to use before our modifications;
 | Battery support | 1 | <img src="other/components/support.jpg" width="150" height="120"> | Is the support of the second battery | We made it in class using a kind of cardboard and hot glue|
 | Chasis in 3D | 1 | <img src="models/Chasis.png" width="150" height="120"> | Skeleton of the robot | [`📥Download`](models/CHASSIS.stl) |
 
-### 3. Mobility design
+### 3. 🪛 Mobility design
 This section includes the robot's torque and speed, the rationale behind its final configuration, as well as images of all its plans and the wiring diagram we created in TinkerCad using all the robot's components. 
 
+<details>
+<summary><b>3.1 Old Mobility design</b></summary>
+ 
 Generally speaking, the robot has:
 
 * An Arduino R4 board (chosen based on previous experience programming it) 
@@ -318,7 +321,7 @@ Generally speaking, the robot has:
 * A switch to turn on the robot. 
 * A button to start the program.
 
-#### 3.1 Steering system 
+#### Steering system 
 The steering system used consists of:  
 
 * A system made from LEGO bricks from our Technology class, because it’s easy to assemble and disassemble and can be put together fairly quickly in case modifications are needed, featuring two LEGO wheels that are smaller than the rear ones.  
@@ -364,7 +367,7 @@ If this steering turned too far in one direction, it would jam and could break. 
   </tr>
 </table></div>
 
-#### 3.2 Drive system
+#### Drive system
 The motor system used consists of: 
 
 * A 360-degree continuous-rotation servo (model listed in the parts list). 
@@ -379,7 +382,7 @@ The mechanical differential was a bit stiff to turn when it arrived. To make it 
 
 The rear wheels are larger than the front wheels because the front wheels had to cover the height of the mechanical differential on their own; the front wheels already accounted for the height of the LEGO steering system.
 
-#### 3.3 Chassis design
+#### Chassis design
 
 The chassis has evolved based on the need to add or remove components, and depending on what was most practical for meeting the challenges. 
 
@@ -419,8 +422,10 @@ The robot remained in that state for a time until we encountered several problem
 
 Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was causing problems, so we decided to remove it and build a 3D structure to hold it in place, allowing us to view objects and lines from a better angle without needing a servo. We also positioned the camera so that it was pointing slightly downwards, to avoid confusion with other objects and colours in the surroundings.
 
-### 3. 🪛 Mobility design
-This section includes the robot's torque and speed, the rationale behind its final configuration, as well as images of all its plans and the wiring diagram we created in TinkerCad using all the robot's components. 
+</details>
+
+<details>
+<summary><b>3.2 Current Mobility design</b></summary>
 
 Generally speaking, the robot has:
 
@@ -437,7 +442,7 @@ Generally speaking, the robot has:
 
 All of the components mentioned above are explained in greater detail below.
 
-#### 3.1 Steering system 
+#### Steering system 
 The steering system used consists of:  
 
 * A system made from LEGO bricks from our Technology class, because it’s easy to assemble and disassemble and can be put together fairly quickly in case modifications are needed, featuring two LEGO wheels that are smaller than the rear ones.  
@@ -483,7 +488,7 @@ If this steering turned too far in one direction, it would jam and could break. 
   </tr>
 </table></div>
 
-#### 3.2 Drive system
+#### Drive system
 We used an SPT5632-360 servo motor because we already had experience programming it, and it has enough power to achieve the torque and speed required for both challenges.
 
 <div align="center"><table>
@@ -509,7 +514,7 @@ We used an SPT5632-360 servo motor because we already had experience programming
 
 The first 360-degree continuous-rotation servo we installed caused problems with smooth motion when the robot moved, which led us to believe the issues were software-related; however, when it was replaced with another one we had in class, the problems did not recur.
 
-#### 3.3 Drivetrain
+#### Drivetrain
 
 The drivetrain consists of:
 
@@ -535,7 +540,7 @@ In addition, we have recalculated the maximum speed, the revolutions per minute 
   </tr>
 </table>
 
-#### 3.4 Chassis design
+#### Chassis design
 
 The chassis has evolved based on the need to add or remove components, and depending on what was most practical for meeting the challenges. 
 
@@ -569,7 +574,7 @@ The chassis was always designed to provide a stable and reliable foundation on w
 
 The robot remained in this configuration for a while until we encountered several issues and broken circuit boards, which forced us to build a mount for a second battery as recommended in the instructions. Initially, it was made of foam board since it was a last-minute modification, but it was later 3D-designed to ensure a more durable and reliable material over time.
 
-#### 3.5 Reasoning Behind the Sensor Layout
+#### Reasoning Behind the Sensor Layout
 
 The HUSKYLENS camera has been mounted on a 180 servo at the front of the robot so that it can easily detect obstacles. If it were fixed in place and unable to move, there would be blind spots that would prevent it from detecting traffic lights. The camera is used for position and color detection; this gives the software time to decide whether to approach, identify the color, and pass the obstacle on the correct side.
 
@@ -580,6 +585,8 @@ The TOF400F sensors are mounted on both sides of the robot to measure the distan
 The TCS34725 RGB sensor is mounted on the lower front of the robot to count the blue lines in both challenges. Initially, it was mounted on the rear to determine the direction of travel in the free challenge, but the strategy changed, and this sensor is now used solely to detect and count lines. It is also surrounded by a layer of black EVA foam to prevent measurement errors caused by ambient light.
 
 The L3GD20 gyroscope is mounted on a cylindrical rod at the top center of the robot. The robot navigates along the course established by this gyroscope in the obstacle challenge when it does not detect traffic lights. It is positioned here to avoid interference with other components, primarily the drive motor and the HUSKYLENS module.
+
+</details>
 
 ### 4. ⚡ Power and Sensor Architecture 
 
