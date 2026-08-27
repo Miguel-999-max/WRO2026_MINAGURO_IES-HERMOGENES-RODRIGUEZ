@@ -770,12 +770,15 @@ The batteries that power the HUSKYLENS and the drive servo are housed in a batte
 
 <div align="center"><table>
   <tr>
-    <td align="center" width="50%">
+    <td align="center" width="33%">
       <img src="v-photos/Old_photos/prototype1.2.jpg" width="305"/>
     </td>
-    <td align="center" width="50%">
-      <img src="v-photos/Current_photos/v_der.2.jpg" width="305"/>
-    </td>
+    <td align="center" width="33%">
+       <img src="v-photos/Old_photos/robot image v2.14.jpg" width="305"/>
+     </td>
+     <td align="center" width="33%">
+       <img src="v-photos/Current_photos/v_der.2.jpg" width="305"/>
+     </td>
   </tr>
 </table></div>
 
