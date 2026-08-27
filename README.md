@@ -469,7 +469,7 @@ If this steering turned too far in one direction, it would jam and could break. 
   <tr>
     <td align="center" width="50%">
       <b>Micro servo 180</b><br>
-      <img src="other/steering/SERVO180_caract.jpg" width="350"/>
+      <img src="other/steering/SERVO180_caract.jpg" width="500" height="400"/>
     </td>
     <td align="left" width="50%">
       <ul>
@@ -494,7 +494,7 @@ We used an SPT5632-360 servo motor because we already had experience programming
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="other/components/SPT5632-360.jpg" width="250"/>
+      <img src="other/components/SPT5632-360.jpg" width="500" height="400"/>
     </td>
     <td align="left" width="50%">
      <ul> 
@@ -522,6 +522,20 @@ The drivetrain consists of:
 * A mechanical differential. The differential was purchased from AliExpress, inspired by an old project we did in our technology classroom.
 * Two adapters made with a 3D printer that connect the differential shafts to the LEGO wheels.
 * Two LEGO wheels that are larger than those in the steering system.
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_bat_abajo.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_abajo.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_der.jpg" width="305"/>
+    </td>
+  </tr>
+</table>
 
 The mechanical differential was somewhat stiff when turning. To make it turn more smoothly, we lubricated it with oil and turned it using a drill.
 
