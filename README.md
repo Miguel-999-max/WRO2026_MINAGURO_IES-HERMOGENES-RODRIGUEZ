@@ -300,10 +300,11 @@ Here is a also a list of all components we used to use before our modifications;
 | Chasis in 3D | 1 | <img src="models/Chasis.png" width="150" height="120"> | Skeleton of the robot | [`📥Download`](models/CHASSIS.stl) |
 
 ### 3. 🪛 Mobility design
-This section includes the robot's torque and speed, the rationale behind its final configuration, as well as images of all its plans and the wiring diagram we created in TinkerCad using all the robot's components. 
+This section includes an overview of the robot's components, speed and torque calculations, the steering, motor, and transmission systems, and the reasoning behind the sensor placement.
 
 <details>
 <summary><b>3.1 Old Mobility design</b></summary>
+<br>
  
 Generally speaking, the robot has:
 
@@ -426,6 +427,7 @@ Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was caus
 
 <details>
 <summary><b>3.2 Current Mobility design</b></summary>
+<br>
 
 Generally speaking, the robot has:
 
@@ -632,7 +634,7 @@ The L3GD20 gyroscope is mounted on a cylindrical rod at the top center of the ro
 
 ### 4. ⚡ Power and Sensor Architecture 
 
-This section covers the power supply, the wiring diagram created in TinkerCad, and everything related to the sensors. 
+This section includes the robot's power supply, the wiring diagram created in Cirkit Designer, and everything related to the sensors that provide information to the board.
 
 <details>
 <summary><b>4.1 Old Power and Sensor Architecture</b></summary>
@@ -796,7 +798,7 @@ As a last-minute modification, the batteries that power the Raspberry Pi Pico 2 
 To power the HUSKYLENS module, an LM7805 regulator has been included to step down the voltage from the batteries from 8.4 V to 5 V. Electrolytic capacitors have also been included as recommended by the manufacturer. 
 
 #### Wiring Scheme
-The wiring diagram used for assembling the robot is shown in the image below. It was created in TinkerCad based on previous experience using this program. Some components were not available in TinkerCad, so similar ones that met the necessary connection requirements were used, and their names were noted on the final diagram to avoid confusion:
+The wiring diagram was created in Cirkit Designer. In previous versions, it was created in TinkerCad, but the components we used weren’t available there, and since Cirkit Designer allows you to design custom components, we created it there instead. Here is the final result:
 
 <img src="schemes/wiring_scheme_andorra.png">
 
