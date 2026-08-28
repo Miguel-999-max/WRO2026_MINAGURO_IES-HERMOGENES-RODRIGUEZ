@@ -1283,6 +1283,27 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
 </table></div>
 
 https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
+
+| Feature | Value |
+| :---: | :---: |
+| Length | 27,5 cm |
+| Width | 9,5 cm |
+| Heigth | 23 cm |
+| Weight | 796 g |
+| Maximum stable speed | 0,211 m/s |
+| Microcontroller | Raspberry Pi Pico 2 |
+| Vision system | HUSKYLENS module |
+| Motor system | DC motor |
+| Steering system | Ackerman steering |
+| Transmission system | Gear transmission |
+| Motor | SPT5632-360 servo |
+| Steering motor | MS18 servo |
+| Batteries | Samsung ICR18650-26FU batteries |
+| Camera processing speed | 11-30 FPS |
+| Maximum current draw | 1,5 A |
+| Average lap time | 25 s |
+| Chassis type | Custom PCB chassis |
+
 </details>
 
 ### 8. 💻 Software
