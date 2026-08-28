@@ -1212,7 +1212,7 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
 #### 7.2 Current Robot (Raspberry)
 
 <details>
-<summary><b>Here are some pictures of our current robot to help with it´s reproducibility:</b></summary>
+<summary><b>Here are some pictures of our current robot to help with it´s reproducibility, and a table listing its main technical specifications:</b></summary>
 <br>
 
 
