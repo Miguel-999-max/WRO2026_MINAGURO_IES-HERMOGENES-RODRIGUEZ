@@ -1284,7 +1284,7 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
 
 https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
 
-<table width="100%">
+<table width="100%" align="center">
   <tr>
     <th align="center">Feature</th>
     <th align="center">Value</th>
