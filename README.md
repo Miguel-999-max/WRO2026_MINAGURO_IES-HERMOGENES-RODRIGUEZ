@@ -1284,25 +1284,80 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
 
 https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
 
-| Feature | Value |
-| :---: | :---: |
-| Length | 27,5 cm |
-| Width | 9,5 cm |
-| Heigth | 23 cm |
-| Weight | 796 g |
-| Maximum stable speed | 0,211 m/s |
-| Microcontroller | Raspberry Pi Pico 2 |
-| Vision system | HUSKYLENS module |
-| Motor system | DC motor |
-| Steering system | Ackerman steering |
-| Transmission system | Gear transmission |
-| Motor | SPT5632-360 servo |
-| Steering motor | MS18 servo |
-| Batteries | Samsung ICR18650-26FU batteries |
-| Camera processing speed | 11-30 FPS |
-| Maximum current draw | 1,5 A |
-| Average lap time | 25 s |
-| Chassis type | Custom PCB chassis |
+<table width="100%">
+  <tr>
+    <th align="center">Feature</th>
+    <th align="center">Value</th>
+  </tr>
+  <tr>
+    <td align="center">Length</td>
+    <td align="center">27,5 cm</td>
+  </tr>
+  <tr>
+    <td align="center">Width</td>
+    <td align="center">9,5 cm</td>
+  </tr>
+  <tr>
+    <td align="center">Height</td>
+    <td align="center">23 cm</td>
+  </tr>
+  <tr>
+    <td align="center">Weight</td>
+    <td align="center">796 g</td>
+  </tr>
+  <tr>
+    <td align="center">Maximum stable speed</td>
+    <td align="center">0,211 m/s</td>
+  </tr>
+  <tr>
+    <td align="center">Microcontroller</td>
+    <td align="center">Raspberry Pi Pico 2</td>
+  </tr>
+  <tr>
+    <td align="center">Vision system</td>
+    <td align="center">HUSKYLENS module</td>
+  </tr>
+  <tr>
+    <td align="center">Motor system</td>
+    <td align="center">DC motor</td>
+  </tr>
+  <tr>
+    <td align="center">Steering system</td>
+    <td align="center">Ackermann steering</td>
+  </tr>
+  <tr>
+    <td align="center">Transmission system</td>
+    <td align="center">Gear transmission</td>
+  </tr>
+  <tr>
+    <td align="center">Motor</td>
+    <td align="center">SPT5632-360 servo</td>
+  </tr>
+  <tr>
+    <td align="center">Steering motor</td>
+    <td align="center">MS18 servo</td>
+  </tr>
+  <tr>
+    <td align="center">Batteries</td>
+    <td align="center">Samsung ICR18650-26FU batteries</td>
+  </tr>
+  <tr>
+    <td align="center">Camera processing speed</td>
+    <td align="center">11–30 FPS</td>
+  </tr>
+  <tr>
+    <td align="center">Maximum current draw</td>
+    <td align="center">1,5 A</td>
+  </tr>
+  <tr>
+    <td align="center">Average lap time</td>
+    <td align="center">25 s</td>
+  </tr>
+  <tr>
+    <td align="center">Chassis type</td>
+    <td align="center">Custom PCB chassis</td>
+  </tr>
+</table>
 
 </details>
 
