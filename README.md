@@ -327,6 +327,7 @@ These are the 3D designs we have created, which include: a custom-made chassis f
 | Switch support | 1 | <img src="models/SOPORTE_INTERRUPTOR.jpg" width="150" height="120"> | Support the switch | [`📥Download`](models/SOPORTE_INTERRUPTOR.stl) |
 | Adapter wheels in 3D | 2 | <img src="models/Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | [`📥Download`](models/WHEEL_ADAPTER.stl) |
 | Adapter gear in 3D | 1 | <img src="models/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`📥Download`](models/GEAR_ADAPTER.stl) |
+| Magnetometer mast | 1 | <img src="models/Gear adapter.png" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/SOPORTE_10-DOF.stl) |
 
 #### 2.3 Old Components
 Here is a also a list of all components we used to use before our modifications; including an image, their specific function in the robot, and a purchase link: 
