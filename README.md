@@ -1024,29 +1024,7 @@ The L3GD20 gyroscope is mounted on a cylindrical rod at the top center of the ro
 
 
 ### 5. 🧠 Strategy
-
-Here you can find the strategy we have followed to complete both challenges; but, fisrt of all, here´s an explanation of what the challenges are about (according to WRO rules):
-
-#### Open challenge
-The WRO 2026 Future Engineers Open Challenge involves an autonomous vehicle completing three laps around a circuit in the shortest time possible, while navigating around interior walls that change position randomly before each lap, forcing the robot to sense its surroundings and navigate in real time without preprogrammed routes.
-
-
-#### Obstacle challenge
-The WRO 2026 Future Engineers Obstacle Challenge consists of the autonomous vehicle completing three laps of a circuit with a random direction of travel (clockwise or counterclockwise), avoiding red traffic poles on the right and green ones on the left that are randomly placed on the track, with the optional possibility of starting and finishing within a designated area (parking zone) that is physically set up on the track.
-
-<div align="center"><table>
-  <tr>
-    <td align="center" width="50%">
-      <img src="other/strategy/ObstacleChallenge.jpg"/>
-     obstacles example
-    </td>
-    <td align="center" width="50%">
-      <img src="other/strategy/aparcamiento.jfif"/>
-     parking-slot
-    </td>
-  </tr>
-</table></div>
-
+Here you can find the strategy we have followed to complete both challenges
 
 <details>
 <summary><b>5.1 Old strategy </b></summary>
