@@ -585,7 +585,7 @@ The mechanical differential was somewhat stiff when turning. To make it turn mor
 
 The rear wheels are larger than the front ones because they had to account for the height of the mechanical differential on their own; the front wheels, on the other hand, had to account for the height of the LEGO steering system.
 
-In addition, we have recalculated the maximum speed, the revolutions per second of the different axles, and the force in Newtons.
+In addition, we have recalculated the maximum speed, the revolutions per second of the different axles, and the force in Newtons. To obtain this data, we simply had to set the robot to run at maximum speed (the speed at which it completes its routes), and to calculate the torque, we attached a dynamometer to the differential so that it would pull on it.
 
 <table>
   <tr>
