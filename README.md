@@ -1149,12 +1149,20 @@ We decided to drive around the center since that was our initial strategy when w
     </td>
   </tr>
 </table></div>
+<br>
+
+> [!NOTE]
+> Not finished strategy/execution; we are still working on it.
 
 For this challenge, we used laser distance sensors (TF-mini-S and TOF400F), the TCS34725 RGB sensor, the HUSKYLENS machine vision camera, and the 10-DOF IMU sensor. Of the two options we had (exiting the parking area from the previous challenge or exiting a parking garage), we chose the parking garage for the following reasons: it was easier to distinguish between the two challenges (open challenge and obstacle challenge), it was easier to find the initial obstacles, and there were extra points to be earned for successfully completing the challenge. After these specifications, we move on to the strategy. We start by determining the direction of the challenge by measuring the lateral distance with the two ToF400F sensors. Once we know whether it’s clockwise or counterclockwise, we back up a bit (to give ourselves more room to exit the parking space) and turn so that the robot faces the first space where a pillar might be located. From here on, the strategy is always the same: keep looking for obstacles. Still, let’s highlight a few specific cases:
 
 * When the robot detects a blue line with its RGB sensor, it knows it is moving to a new section, and if it does not see any objects, it turns 90° in the corresponding direction based on the street number (1, 2, 3, 4). We do this to prevent the robot from getting disoriented by searching on the wrong side or crashing into the wall while scanning.
  
 * While performing the obstacle-avoidance maneuver (which consists of two phases), upon completing phase 1, it scans to check if it sees another block; if it doesn’t see one, it finishes the maneuver, and if it does see one, it goes directly toward it without finishing the maneuver. We did this because we noticed that a lot of time was wasted finishing the dodge when it could have been heading toward another pillar, and because it complicated the maneuver to dodge the next pillar (if one exists) in 40% of cases.
+  
+* When the robot gets too close to an obstacle before avoiding it, it goes backwards. This is something we do to reach the perfect distance to avoid it before starting the obstacle-avoidance maneuver and, this way, we prevent moving the obstacle from its original place and, by consequence, get disqualified.
+
+While we do all that, the RGB sensor is counting the blue lines on the floor to know when to stop. We are still working on how to park when this counter becomes 12 (3 laps).
 
 </details>
 
