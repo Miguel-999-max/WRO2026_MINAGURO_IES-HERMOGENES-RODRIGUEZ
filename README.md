@@ -771,13 +771,34 @@ The robot runs on four Samsung ICR18650-26FU batteries. Two of the batteries dir
 
 An energy calculation was performed, taking all components into account, to help select the batteries:
 
-* HUSKYLENS module: 230–420 mA.
-* Raspberry Pi Pico 2 board: 40 mA
-* TOF400F: 40 mA
-* TFmini-S: 140 mA
-* L3GD20 gyroscope: 6 mA
-* 180 microservo: 200 mA
-* 360° continuous rotation servo: 700 mA
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="center">🔋 battery 1 (the one on the wing)</th>
+      <th align="center">⚡ battery 2 (the one under the chassis)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <ul>
+          <li>Raspberry Pi Pico 2 board: 40 mA/h</li>
+          <li>TOF400F: 40 mA/h</li>
+          <li>TFmini-S: 140 mA/h</li>
+          <li>L3GD20 gyroscope: 6 mA/h</li>
+          <li>180 microservo: 200 mA/h</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>HUSKYLENS module: 230–420 mA/h.</li>
+          <li>360° continuous rotation servo: 700 mA/h</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 * Total: approximately 1,550 mA
 
 Based on this data, the approximate theoretical battery life would be:
