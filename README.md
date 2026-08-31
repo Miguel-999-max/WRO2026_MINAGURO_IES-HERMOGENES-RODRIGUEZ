@@ -8,7 +8,6 @@
 <br> Guided by our passion for technology, we have created a vehicle that maybe doesn´t work as we would like to, but reflects all of our hard work and time spent on it.
 
 ## 🤝 Sponsors
-
 We would like to thank our sponsors for making this project possible:
 
 <div align="center">
@@ -275,7 +274,25 @@ Before finishing, we decided to break down main.py into subprograms; since the p
 ### <span id="seccion-mecanica"></span>2. 🛠️ Mechanical Design
 This section is dedicated to the robot’s mechanical components: the list of parts used in its construction and the 3D-printed parts we designed and printed.
 
-#### 2.1 Components List  
+<details>
+<summary><b> 2.1 Old components and 3D designs</b></summary>
+<br>
+Here is a also a list of all components we used to use before our modifications; including an image, their specific function in the robot, and a purchase link: 
+
+| Component | Quantity | Image | Function | Purchase link |
+| :---: | :---: | :---: | :---: | :---: |
+| HC-SR04RC | 2 | <img src="other/components/HC-SR04RC.jpg" width="150" height="120"> | Measure distances | <a href="https://www.tiendatec.es/maker-zone/modulos/2785-sensor-ultrasonico-hc-sr04rc-con-chip-rcwl-9616-gpio-uart-i2c-y-1-wire.html"> 🛒 Shop</a> |
+| HC-SR04 | 2 | <img src="other/components/HC-SR04.jpg" width="150" height="120"> | Measure distances | <a href="https://es.aliexpress.com/item/1005010373195248.html?spm=a2g0o.productlist.main.1.4afa606fVeuEr0&algo_pvid=54f18ed3-18b2-4b6a-8dbc-cd5d3668bcef&algo_exp_id=54f18ed3-18b2-4b6a-8dbc-cd5d3668bcef-0&pdp_ext_f=%7B%22order%22%3A%2280%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%218.03%210.99%21%21%2162.67%217.74%21%40211b819117780681213312200e1d8a%2112000052180896573%21sea%21ES%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Aa4bac484%3Bm03_new_user%3A-29895%3BpisId%3A5000000203538426&curPageLogUid=QstesSY3YdXa&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005010373195248%7C_p_origin_prod%3A"> 🛒 Shop</a> |
+| Arduino R4 MINIMA | 1 | <img src="other/components/Arduino_R4 MINIMA.jpg" width="150" height="120"> | Robot controller | <a href="https://www.amazon.es/Arduino-UNO-Minima-ABX00080-Connector/dp/B0C78K4CD4"> 🛒 Shop</a> |
+| Quick-connect panel | 1 | <img src="other/components/quick-connect panel.png" width="150" height="120"> | It allows us to connect all the sensors and servos to the Arduino thanks to all the pins it has |  <a href="https://es.aliexpress.com/item/1005007370390696.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.5.3aeeiEwBiEwBEt&gps-id=pcDetailTopMoreOtherSeller&scm=1007.40050.354490.0&scm_id=1007.40050.354490.0&scm-url=1007.40050.354490.0&pvid=2b62d9e5-7337-4ba4-acd3-0fd85cbfbf2c&_t=gps-id%3ApcDetailTopMoreOtherSeller%2Cscm-url%3A1007.40050.354490.0%2Cpvid%3A2b62d9e5-7337-4ba4-acd3-0fd85cbfbf2c%2Ctpp_buckets%3A668%232846%238110%231995&pdp_ext_f=%7B%22order%22%3A%2231%22%2C%22eval%22%3A%221%22%2C%22sceneId%22%3A%2230050%22%2C%22fromPage%22%3A%22recommend%22%7D&pdp_npi=6%40dis%21EUR%212.59%212.23%21%21%212.95%212.54%21%400b8848bf17800920928475623e10c9%2112000056842030655%21rec%21ES%21135718878%21XZ%211%210%21n_tag%3A-29919%3Bd%3A2676a4e6%3Bm03_new_user%3A-29895&utparam-url=scene%3ApcDetailTopMoreOtherSeller%7Cquery_from%3A%7Cx_object_id%3A1005007370390696%7C_p_origin_prod%3A)"> 🛒 Shop</a> |
+| Battery support | 1 | <img src="other/components/support.jpg" width="150" height="120"> | Is the support of the second battery | We made it in class using a kind of cardboard and hot glue|
+| Chasis in 3D | 1 | <img src="models/Chasis.png" width="150" height="120"> | Skeleton of the robot | [`📥Download`](models/CHASSIS.stl) |
+
+</details>
+
+<details>
+<summary><b> 2.2 Current components List </b></summary>
+<br>
 Here is a list of all components we used, including an image, their specific function in the robot, and a purchase link: 
 
 | Component | Quantity | Preview | Main Function | Purchase link |
@@ -315,8 +332,12 @@ Here is a list of all components we used, including an image, their specific fun
 | Micro Servo MG90S | 1 | <img src="other/components/Micro Servo MG90S.jpg" width="150" height="120"> | Allow the camera to move and have a wider field of view | <a href="https://es.aliexpress.com/item/1005001829484812.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.3.3145BM7PBM7Pvs&gps-id=pcDetailTopMoreOtherSeller&scm=1007.40050.354490.0&scm_id=1007.40050.354490.0&scm-url=1007.40050.354490.0&pvid=aaef1a73-1862-4b0d-aa1e-1a9beffbe5b0&_t=gps-id%3ApcDetailTopMoreOtherSeller%2Cscm-url%3A1007.40050.354490.0%2Cpvid%3Aaaef1a73-1862-4b0d-aa1e-1a9beffbe5b0%2Ctpp_buckets%3A668%232846%238110%231995&pdp_ext_f=%7B%22order%22%3A%221076%22%2C%22eval%22%3A%221%22%2C%22sceneId%22%3A%2230050%22%2C%22fromPage%22%3A%22recommend%22%7D&pdp_npi=6%40dis%21EUR%212.06%212.06%21%21%212.34%212.34%21%402103909217800442825806414e0fc1%2112000017779552633%21rec%21ES%21135718878%21XZ%211%210%21n_tag%3A-29919%3Bd%3A2676a4e6%3Bm03_new_user%3A-29895&utparam-url=scene%3ApcDetailTopMoreOtherSeller%7Cquery_from%3A%7Cx_object_id%3A1005001829484812%7C_p_origin_prod%3A"> 🛒 Shop</a> |"> Camera servo link </a> |
 | Heatsink | 1 | <img src="other/components/HEATSINK_TO-220.JPG" width="150" height="120"> | Prevent the current regulator from overheating | <a href="https://www.amazon.es/WayinTop-Disipador-Aislamiento-Transistor-Casquillos/dp/B081GS15N6"> 🛒 Shop</a> |
 | USB-Kabel | 1 | <img src="other/components/cable.png" width="150" height="120"> | It makes it easy to connect the robot to the computer to upload programmes or view the terminal when we’re carrying out tests, in a simple and convenient way that prevents the Raspberry Pi’s connector from breaking. | <a href="https://es.aliexpress.com/item/1005007053499029.html?isdl=y&aff_fsk=_oEW69bp&src=BooncyESgeneral&aff_platform=aff_feeds&aff_short_key=_oEW69bp&pdp_npi=4%40dis%21EUR%211.48%211.48%21%21%21%21%21%40%2112000039239967802%21afff%21%21%21&dp=EAIaIQobChMIv9n7obHBlgMVsAIGAB2_ZA2KEAQYAyABEgI3KvD_BwE&cn=bravoes&gad_source=1&gad_campaignid=23203341003&gbraid=0AAAABB6NsO9tS3fn8EqhgJt8zBAa3Kv_D"> 🛒 Shop</a> |
+</details>
 
-#### 2.2 3D Designs
+<details>
+<summary><b> 2.3 Current 3D Designs </b></summary>
+<br>
+
 These are the 3D designs we have created, which include: a custom-made chassis for all components, a gear to connect the differential to the 360-degree servo, a rear wheel adapter to connect the differential shaft to the wheels and a mount for the HUSKYLENS module:
 
 | Component | Quantity | Image | Function | File link |
@@ -329,17 +350,7 @@ These are the 3D designs we have created, which include: a custom-made chassis f
 | Adapter gear in 3D | 1 | <img src="models/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`📥Download`](models/GEAR_ADAPTER.stl) |
 | Magnetometer mast | 1 | <img src="models/soporte_magnetometro.png" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/SOPORTE_10-DOF.stl) |
 
-#### 2.3 Old Components
-Here is a also a list of all components we used to use before our modifications; including an image, their specific function in the robot, and a purchase link: 
-
-| Component | Quantity | Image | Function | Purchase link |
-| :---: | :---: | :---: | :---: | :---: |
-| HC-SR04RC | 2 | <img src="other/components/HC-SR04RC.jpg" width="150" height="120"> | Measure distances | <a href="https://www.tiendatec.es/maker-zone/modulos/2785-sensor-ultrasonico-hc-sr04rc-con-chip-rcwl-9616-gpio-uart-i2c-y-1-wire.html"> 🛒 Shop</a> |
-| HC-SR04 | 2 | <img src="other/components/HC-SR04.jpg" width="150" height="120"> | Measure distances | <a href="https://es.aliexpress.com/item/1005010373195248.html?spm=a2g0o.productlist.main.1.4afa606fVeuEr0&algo_pvid=54f18ed3-18b2-4b6a-8dbc-cd5d3668bcef&algo_exp_id=54f18ed3-18b2-4b6a-8dbc-cd5d3668bcef-0&pdp_ext_f=%7B%22order%22%3A%2280%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%218.03%210.99%21%21%2162.67%217.74%21%40211b819117780681213312200e1d8a%2112000052180896573%21sea%21ES%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Aa4bac484%3Bm03_new_user%3A-29895%3BpisId%3A5000000203538426&curPageLogUid=QstesSY3YdXa&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005010373195248%7C_p_origin_prod%3A"> 🛒 Shop</a> |
-| Arduino R4 MINIMA | 1 | <img src="other/components/Arduino_R4 MINIMA.jpg" width="150" height="120"> | Robot controller | <a href="https://www.amazon.es/Arduino-UNO-Minima-ABX00080-Connector/dp/B0C78K4CD4"> 🛒 Shop</a> |
-| Quick-connect panel | 1 | <img src="other/components/quick-connect panel.png" width="150" height="120"> | It allows us to connect all the sensors and servos to the Arduino thanks to all the pins it has |  <a href="https://es.aliexpress.com/item/1005007370390696.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.5.3aeeiEwBiEwBEt&gps-id=pcDetailTopMoreOtherSeller&scm=1007.40050.354490.0&scm_id=1007.40050.354490.0&scm-url=1007.40050.354490.0&pvid=2b62d9e5-7337-4ba4-acd3-0fd85cbfbf2c&_t=gps-id%3ApcDetailTopMoreOtherSeller%2Cscm-url%3A1007.40050.354490.0%2Cpvid%3A2b62d9e5-7337-4ba4-acd3-0fd85cbfbf2c%2Ctpp_buckets%3A668%232846%238110%231995&pdp_ext_f=%7B%22order%22%3A%2231%22%2C%22eval%22%3A%221%22%2C%22sceneId%22%3A%2230050%22%2C%22fromPage%22%3A%22recommend%22%7D&pdp_npi=6%40dis%21EUR%212.59%212.23%21%21%212.95%212.54%21%400b8848bf17800920928475623e10c9%2112000056842030655%21rec%21ES%21135718878%21XZ%211%210%21n_tag%3A-29919%3Bd%3A2676a4e6%3Bm03_new_user%3A-29895&utparam-url=scene%3ApcDetailTopMoreOtherSeller%7Cquery_from%3A%7Cx_object_id%3A1005007370390696%7C_p_origin_prod%3A)"> 🛒 Shop</a> |
-| Battery support | 1 | <img src="other/components/support.jpg" width="150" height="120"> | Is the support of the second battery | We made it in class using a kind of cardboard and hot glue|
-| Chasis in 3D | 1 | <img src="models/Chasis.png" width="150" height="120"> | Skeleton of the robot | [`📥Download`](models/CHASSIS.stl) |
+</details>
 
 ### 3. 🪛 Mobility design
 This section includes an overview of the robot's components, speed and torque calculations, the steering, motor, and transmission systems, and the reasoning behind the sensor placement.
