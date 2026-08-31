@@ -482,14 +482,14 @@ Generally speaking, the robot has:
 * Gyroscope: L3GD20 gyroscope.
 * Color sensors: TCS34725 RGB sensor.
 * Power supply: four Samsung ICR18650-26FU batteries, arranged in pairs across two battery expansion modules.
-* Other components: a pushbutton to start the robot, a switch to turn on the batteries, a micro servo to rotate the HUSKYLENS and the TFmini-S sensor, red and green LEDs to provide hardware feedback on the program, and a heat sink.
+* Other components: a pushbutton to start the robot, a switch to turn on the batteries, a micro servo to rotate the HUSKYLENS and the TFmini-S sensor, red and green LEDs to provide hardware feedback on the program, and a heat sink connected to a current regulator for the HUSKYLENS module with two electrolytic capacitors.
 
 All of the components mentioned above are explained in greater detail below.
 
 #### Steering system 
 The steering system used consists of:  
 
-* A system made from LEGO bricks from our Technology class, because it’s easy to assemble and disassemble and can be put together fairly quickly in case modifications are needed, featuring two LEGO wheels that are smaller than the rear ones.  
+* A system made from LEGO bricks from our Technology class, because it’s easy to assemble and disassemble and can be put together fairly quickly in case modifications are needed, featuring two LEGO wheels that are smaller than the rear ones because they had to account for the height of the steering system.  
 * An 180-degree servo, since it’s easy to program and a larger turning angle wasn’t necessary given the system we built.  
 * A servo arm with a string, to connect the LEGO steering system to the servo.
 
@@ -565,7 +565,7 @@ The drivetrain consists of:
 * A gear system designed to transmit motion from the servomotor to the mechanical differential, consisting of a 40-tooth LEGO gear and a 13-tooth gear produced via 3D printing. The gear ratio is 12/30.
 * A mechanical differential. The differential was purchased from AliExpress, inspired by an old project we did in our technology classroom.
 * Two adapters made with a 3D printer that connect the differential shafts to the LEGO wheels.
-* Two LEGO wheels that are larger than those in the steering system.
+* Two LEGO wheels that are larger than those in the steering system because they had to account for the height of the mechanical differential on their own.
 
 <table>
   <tr>
@@ -582,8 +582,6 @@ The drivetrain consists of:
 </table>
 
 The mechanical differential was somewhat stiff when turning. To make it turn more smoothly, we lubricated it with oil and turned it using a drill.
-
-The rear wheels are larger than the front ones because they had to account for the height of the mechanical differential on their own; the front wheels, on the other hand, had to account for the height of the LEGO steering system.
 
 In addition, we have recalculated the maximum speed, the revolutions per second of the different axles, and the force in Newtons. To obtain this data, we simply had to set the robot to run at maximum speed (the speed at which it completes its routes), and to calculate the torque, we attached a dynamometer to the differential so that it would pull on it.
 
@@ -624,8 +622,6 @@ After confirming that this was the final base, we designed the chassis in 3D, pr
 
 <p align="center"><a src="models/CHASSIS.stl"><img src="models/Chasis.png" width="500"></a></p>
 
-An important consideration regarding the robot’s balance was to place the heaviest components (the Arduino board, the batteries, and the 360° servo) in the center of the chassis, ensuring a low and centralized center of mass. The batteries that directly power the 360° servo (explained in detail later) are housed in a separate structure, as this was a last-minute modification.
-
 The robot remained in this configuration for a while until we encountered several issues and broken circuit boards, which forced us to build a mount for a second battery as recommended in the instructions. Initially, it was made of foam board since it was a last-minute modification, but it was later 3D-designed to ensure a more durable and reliable material over time.
 
 <div align="center"><table>
@@ -643,6 +639,10 @@ The robot remained in this configuration for a while until we encountered severa
 </table></div>
 
 Finally, after the regional competition, the chassis had bent under the weight of the components, so we designed a new one with minor modifications—thicker so it could easily support them over time.
+
+An important consideration regarding the robot’s balance was to place the heaviest components—the Raspberry Pi Pico 2 board with its shield, the SPT5632-360 servo, and a pair of batteries with their expansion module—in the center of the chassis, ensuring a low and centralized center of mass.
+
+However, the addition of the other two batteries—a last-minute modification—forced us to build a special structure for them at the rear of the robot. Over time, it became apparent that when accelerating, the robot would sometimes skid due to an overload at the rear. To compensate for this extra weight, lead plates were added to the front of the robot.
 
 <div align="center"><table>
   <tr>
