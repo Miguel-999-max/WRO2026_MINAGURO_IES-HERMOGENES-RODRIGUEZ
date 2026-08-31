@@ -1324,6 +1324,14 @@ https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
     <td align="center">0,211 m/s</td>
   </tr>
   <tr>
+    <td align="center">Torque</td>
+    <td align="center">2,5-4 N</td>
+  </tr>
+  <tr>
+    <td align="center">Maximum stable revolutions</td>
+    <td align="center">1,495 revolutions/s</td>
+  </tr>
+  <tr>
     <td align="center">Microcontroller</td>
     <td align="center">Raspberry Pi Pico 2</td>
   </tr>
