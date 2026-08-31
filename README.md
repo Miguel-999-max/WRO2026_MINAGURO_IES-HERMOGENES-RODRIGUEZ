@@ -1131,6 +1131,20 @@ For this challenge, we used laser distance sensors (TF-mini-S and TOF400F) and t
 We decided to drive around the center since that was our initial strategy when we built the previous robot, and we decided to stick with it because it seemed like the best approach in terms of both time and complexity. As it drives around, it counts the blue lines on the floor using the TCS34725 RGB sensor, since it detects them better than the orange ones. Once it has counted 12 lines, it moves forward for a few seconds and stops, positioning itself right in the parking zone.
 
 #### Obstacle challenge
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="other/strategy/mision3.jpeg"/>
+     clock-wise mode
+    </td>
+    <td align="center" width="50%">
+      <img src="other/strategy/mision4.jpeg"/>
+     counter clock-wise mode
+    </td>
+  </tr>
+</table></div>
+
 For this challenge, we used laser distance sensors (TF-mini-S and TOF400F), the TCS34725 RGB sensor, the HUSKYLENS machine vision camera, and the 10-DOF IMU sensor. Of the two options we had (exiting the parking area from the previous challenge or exiting a parking garage), we chose the parking garage for the following reasons: it was easier to distinguish between the two challenges (open challenge and obstacle challenge), it was easier to find the initial obstacles, and there were extra points to be earned for successfully completing the challenge. After these specifications, we move on to the strategy. We start by determining the direction of the challenge by measuring the lateral distance with the two ToF400F sensors. Once we know whether it’s clockwise or counterclockwise, we back up a bit (to give ourselves more room to exit the parking space) and turn so that the robot faces the first space where a pillar might be located. From here on, the strategy is always the same: keep looking for obstacles. Still, let’s highlight a few specific cases:
 
 * When the robot detects a blue line with its RGB sensor, it knows it is moving to a new section, and if it does not see any objects, it turns 90° in the corresponding direction based on the street number (1, 2, 3, 4). We do this to prevent the robot from getting disoriented by searching on the wrong side or crashing into the wall while scanning.
