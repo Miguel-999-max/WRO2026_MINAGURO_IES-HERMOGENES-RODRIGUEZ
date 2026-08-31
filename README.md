@@ -788,16 +788,16 @@ An energy calculation was performed, taking all components into account, to help
       <td>
         <ul>
           <li>Raspberry Pi Pico 2 board: 40 mA/h</li>
-          <li>TOF400F: 40 mA/h</li>
-          <li>TFmini-S: 140 mA/h</li>
+          <li>TOF400F: 40 mA/h | 3,3 V</li>
+          <li>TFmini-S: 140 mA/h | 5 V</li>
           <li>L3GD20 gyroscope: 6 mA/h</li>
-          <li>180 microservo: 200 mA/h</li>
+          <li>180 microservo: 200 mA/h | 5 V</li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>HUSKYLENS module: 230–420 mA/h.</li>
-          <li>360° continuous rotation servo: 700 mA/h</li>
+          <li>HUSKYLENS module: 230–420 mA/h | 5 V.</li>
+          <li>360° continuous rotation servo: 700 mA/h | 8,4 V</li>
         </ul>
       </td>
     </tr>
