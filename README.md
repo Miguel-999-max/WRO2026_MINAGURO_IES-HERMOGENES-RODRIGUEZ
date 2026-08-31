@@ -653,7 +653,7 @@ However, the addition of the other two batteries—a last-minute modification—
       <img src="v-photos/Current_photos/v_front.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_izq.2.jpg" width="305"/>
+      <img src="v-photos/Current_photos/v_plomo.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
