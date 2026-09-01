@@ -775,7 +775,7 @@ One major issue it caused was that it sometimes interfered with other robot comp
 The robot runs on four Samsung ICR18650-26FU batteries. Two of the batteries directly power the two mini-servos (the one on the HUSKYLENS module and the steering servo), the TF-Mini S sensor, and the Raspberry Pi Pico 2 board, while the other two power the drive servo and the HUSKYLENS.
 
 An energy calculation was performed, taking all components into account, to help select the batteries:
- <table>
+<table style="border-collapse: collapse; width: 100%;">
   <thead>
     <tr>     
       <!-- Cabecera principal dividida en dos grandes columnas -->
@@ -817,40 +817,57 @@ An energy calculation was performed, taking all components into account, to help
       <td style="border: 1px solid #dfe2e5; padding: 6px;">LEDS</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">15 mA/h</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
     </tr>
     <tr>
-      <!--Fila 4 -->
+      <!-- Fila 4 -->
       <td style="border: 1px solid #dfe2e5; padding: 6px;">TFmini-S</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">140 mA/h</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
     </tr>
     <tr>
-      <!--Fila 5 -->
+      <!-- Fila 5 -->
       <td style="border: 1px solid #dfe2e5; padding: 6px;">180 microservo direction</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">200 mA/h</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
     </tr>
     <tr>
-      <!--Fila 6 -->
+      <!-- Fila 6 -->
       <td style="border: 1px solid #dfe2e5; padding: 6px;">L3GD20 gyroscope</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">6 mA/h</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
     </tr>
     <tr>
-      <!--Fila 7 -->
-       <td style="border: 1px solid #dfe2e5; padding: 6px;">Huskylens and TFmini micro-servos</td>
+      <!-- Fila 7 -->
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">Huskylens and TFmini micro-servos</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">200 mA/h</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td> 
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
     </tr>
     <tr>
-      <!--Fila 8 -->
-       <td style="border: 1px solid #dfe2e5; padding: 6px;">RGB sensor TCS34725</td>
+      <!-- Fila 8 -->
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">RGB sensor TCS34725</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">6 mA/h</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td> 
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
     </tr>
   </tbody>
 </table>
-
 * Total: approximately 1,550 mA
 
 Based on this data, the approximate theoretical battery life would be:
