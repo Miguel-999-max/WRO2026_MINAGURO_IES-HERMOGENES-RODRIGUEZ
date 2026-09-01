@@ -804,6 +804,82 @@ An energy calculation was performed, taking all components into account, to help
   </tbody>
 </table>
 
+<table>
+  <thead>
+    <tr>
+      <!-- Cabecera principal dividida en dos grandes columnas -->
+      <th colspan="3" align="center" style="background-color: #f6f8fa; border: 1px solid #dfe2e5; padding: 10px;">Battery one🔋(the one on the wing)</th>
+      <th colspan="3" align="center" style="background-color: #f6f8fa; border: 1px solid #dfe2e5; padding: 10px;">Battery two⚡(the one underneath the chassis)</th>
+    </tr>
+    <tr>
+      <!-- Subcolumnas para la Batería 1 -->
+      <th style="border: 1px solid #dfe2e5; padding: 8px;">Electronic device</th>
+      <th style="border: 1px solid #dfe2e5; padding: 8px;">milliampere-hours consumed (mA/h)</th>
+      <th style="border: 1px solid #dfe2e5; padding: 8px;">Volts (V)</th>
+      <!-- Subcolumnas para la Batería 2 -->
+      <th style="border: 1px solid #dfe2e5; padding: 8px;">Electronic device</th>
+      <th style="border: 1px solid #dfe2e5; padding: 8px;">milliampere-hours consumed (mA/h)</th>
+      <th style="border: 1px solid #dfe2e5; padding: 8px;">volts (V)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <!-- Fila 1 -->
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">Raspberry Pi Pico 2 board</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">40 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">360° continuous rotation servo</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">700 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">8,4 V</td>
+    </tr>
+    <tr>
+      <!-- Fila 2 -->
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">TOF400F (right and left)</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">40 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">HUSKYLENS module</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">230–420 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td>
+    </tr>
+    <tr>
+      <!-- Fila 3 -->
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">LEDS</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">15 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
+    </tr>
+    <tr>
+      <!--Fila 4 -->
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">TFmini-S</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">140 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td>
+    </tr>
+    <tr>
+      <!--Fila 5 -->
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">180 microservo direction</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">200 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td>
+    </tr>
+    <tr>
+      <!--Fila 6 -->
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">L3GD20 gyroscope</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">6 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">12V</td>
+    </tr>
+    <tr>
+      <!--Fila 7 -->
+       <td style="border: 1px solid #dfe2e5; padding: 6px;">Huskylens and TFmini micro-servos</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">200 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td> 
+    </tr>
+    <tr>
+      <!--Fila 8 -->
+       <td style="border: 1px solid #dfe2e5; padding: 6px;">RGB sensor TCS34725</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">6 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td> 
+    </tr>
+  </tbody>
+</table>
+
 * Total: approximately 1,550 mA
 
 Based on this data, the approximate theoretical battery life would be:
