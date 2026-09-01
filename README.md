@@ -775,38 +775,9 @@ One major issue it caused was that it sometimes interfered with other robot comp
 The robot runs on four Samsung ICR18650-26FU batteries. Two of the batteries directly power the two mini-servos (the one on the HUSKYLENS module and the steering servo), the TF-Mini S sensor, and the Raspberry Pi Pico 2 board, while the other two power the drive servo and the HUSKYLENS.
 
 An energy calculation was performed, taking all components into account, to help select the batteries:
-
-<table width="100%">
+ <table>
   <thead>
-    <tr>
-      <th align="center">🔋 battery 1 (the one on the wing)</th>
-      <th align="center">⚡ battery 2 (the one under the chassis)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <ul>
-          <li>Raspberry Pi Pico 2 board: 40 mA/h</li>
-          <li>TOF400F: 40 mA/h | 3,3 V</li>
-          <li>TFmini-S: 140 mA/h | 5 V</li>
-          <li>L3GD20 gyroscope: 6 mA/h</li>
-          <li>180 microservo: 200 mA/h | 5 V</li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li>HUSKYLENS module: 230–420 mA/h | 5 V.</li>
-          <li>360° continuous rotation servo: 700 mA/h | 8,4 V</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
+    <tr>     
       <!-- Cabecera principal dividida en dos grandes columnas -->
       <th colspan="3" align="center" style="background-color: #f6f8fa; border: 1px solid #dfe2e5; padding: 10px;">Battery one🔋(the one on the wing)</th>
       <th colspan="3" align="center" style="background-color: #f6f8fa; border: 1px solid #dfe2e5; padding: 10px;">Battery two⚡(the one underneath the chassis)</th>
@@ -863,7 +834,7 @@ An energy calculation was performed, taking all components into account, to help
       <!--Fila 6 -->
       <td style="border: 1px solid #dfe2e5; padding: 6px;">L3GD20 gyroscope</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">6 mA/h</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">12V</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
     </tr>
     <tr>
       <!--Fila 7 -->
