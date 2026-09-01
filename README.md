@@ -2007,6 +2007,15 @@ Here is a flowchart that will help you understand how our final program works.
 </details>
 
 <details>
+<summary><b>🎛️ Finite-State Machine Diagram</b></summary>
+<br>
+ 
+Here is a FSM that will show you the logic our program follows:
+
+<img src="src/Current_programs/Diagrama_estados2.png">
+</details>
+
+<details>
 <summary><b>🔙 Previous versions</b></summary>
 <br>
 
