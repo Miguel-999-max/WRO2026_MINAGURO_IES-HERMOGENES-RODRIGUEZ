@@ -7,7 +7,7 @@
 <div align="justify">Hello, welcome to the GitHub repository of the <strong>MINAGURO team</strong>, which is competing in the <strong>World Robot Olympiad 2026 Future Engineers</strong> category. Our team is made up of four Spanish students who develop this project on their school breaks with the aim of learning as much as possible.
 <br> Guided by our passion for technology, we have created two vehicles. One (the old one), which helped us to get to de national final of the WRO in Andorra; and, another one (the current one), that will perform in the national final. We created the second one motivated by our desire to do it as good as possible and also learn new things and concepts along the way.
 <br> Hope you like it!!
-</div>div><br> </br>
+</div><br> </br>
 
 > [!IMPORTANT]
 > Every time you see this sign (▶&#xFE0E;), click on the text next to it to expand the content!
