@@ -359,7 +359,7 @@ These are the 3D designs we have created, which include: a custom-made chassis f
 </details>
 
 ### 3. 🪛 Mobility design
-This section includes an overview of the robot's components, speed and torque calculations, the steering, motor, and transmission systems, and the reasoning behind the sensor placement.
+This section includes an overview of the robot's components, speed and torque calculations, and the steering, motor and transmission systems.
 
 <details>
 <summary><b>3.1 Old Mobility design</b></summary>
@@ -681,7 +681,7 @@ The chassis was always designed to provide a stable and reliable foundation on w
 
 ### 4. ⚡ Power and Sensor Architecture 
 
-This section includes the robot's power supply, the wiring diagram created in Cirkit Designer, and everything related to the sensors that provide information to the board.
+This section includes the robot's power supply, the wiring diagram created in Cirkit Designer, everything related to the sensors that provide information to the board, and the reasoning behind the sensor layout.
 
 <details>
 <summary><b>4.1 Old Power and Sensor Architecture</b></summary>
@@ -1102,13 +1102,13 @@ The gyroscope is mounted on a tube at the top of the robot so that it does not i
 
 #### Reasoning Behind the Sensor Layout
 
-The HUSKYLENS camera has been mounted on a 180 servo at the front of the robot so that it can easily detect obstacles. If it were fixed in place and unable to move, there would be blind spots that would prevent it from detecting traffic lights. The camera is used for position and color detection; this gives the software time to decide whether to approach, identify the color, and pass the obstacle on the correct side.
+The HUSKYLENS camera has been mounted on a 180 servo at the front of the robot so that it can easily detect obstacles, at a height of approximately 14 cm. At this height, it can identify obstacles without any problems and without detecting objects outside the playing field. If it were fixed in place and unable to move, there would be blind spots that would prevent it from detecting traffic lights. The camera is used for position and color detection; this gives the software time to decide whether to approach, identify the color, and navigate around the obstacle on the correct side.
 
-The TFmini-S sensor is also mounted on the micro servo to facilitate performance in the free challenge. Since the TOF400F sensor sometimes malfunctions, it is more reliable to take measurements with the TFmini-S on the left side. This way, because it can rotate, the sensor can measure during the initial scan and measure the distance to the interior wall in the free challenge. Additionally, this helps us avoid blind spots in certain situations.
+The TFmini-S sensor is also mounted on the micro servo at a height of approximately 8 cm to facilitate performance in the free challenge. At this height, considering that the field walls and traffic lights are 10 cm high, when the sensor emits light in a straight line, it bounces back at a perfect point to ensure the measurement is as accurate as possible. Since the TOF400F sensor sometimes malfunctions, it is more reliable to take measurements with the TFmini-S on the left side. That is why it is mounted on a micro servo, so it can rotate freely to cover the entire surface, thereby avoiding blind spots that could affect the robot’s performance.
 
-The TOF400F sensors are mounted on both sides of the robot to measure the distance to the inner wall during the free challenge. As you’ll see later in the section on sensors, the left sensor sometimes causes problems because it’s connected to the I2C port. For this reason, whenever possible, the TFmini-S sensor is used for measurements on the left side. The right sensor is also used to determine the direction of travel in the obstacle challenge.
+The TOF400F sensors are mounted on both sides of the robot at a height of approximately 5.5 cm to measure the distance to the interior partition in the open challenge and to the traffic lights. As mentioned earlier, the walls and traffic lights are 10 cm high. If the sensors take a measurement in a straight line, the light bounces off at a point that ensures the measurement is as accurate as possible. As noted in the section on sensors, the left sensor sometimes malfunctions because it is connected to the I2C port. For this reason, whenever possible, the TFmini-S sensor is used for measurements on the left side. The right sensor is also used to determine the direction of travel in the obstacle challenge.
 
-The TCS34725 RGB sensor is mounted on the lower front of the robot to count the blue lines in both challenges. Initially, it was mounted on the rear to determine the direction of travel in the free challenge, but the strategy changed, and this sensor is now used solely to detect and count lines. It is also surrounded by a layer of black EVA foam to prevent measurement errors caused by ambient light.
+The TCS34725 RGB sensor is mounted on the lower front, almost flush with the ground, to count the blue lines in both challenges. Initially, it was placed at the rear at the same height to determine the direction of travel in the free challenge, but the strategy changed, and this sensor is now used only to detect and count lines. It is also surrounded by a layer of black EVA foam to prevent measurement errors caused by ambient light.
 
 The L3GD20 gyroscope is mounted on a cylindrical rod at the top center of the robot. The robot navigates along the course established by this gyroscope in the obstacle challenge when it does not detect traffic lights. It is positioned here to avoid interference with other components, primarily the drive motor and the HUSKYLENS module.
 
