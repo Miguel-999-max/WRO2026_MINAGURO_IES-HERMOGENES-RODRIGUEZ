@@ -5,9 +5,9 @@
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/@minagurowro2026)
 
 <div align="justify">Hello, welcome to the GitHub repository of the <strong>MINAGURO team</strong>, which is competing in the <strong>World Robot Olympiad 2026 Future Engineers</strong> category. Our team is made up of four Spanish students who develop this project on their school breaks with the aim of learning as much as possible.
-<br> Guided by our passion for technology, we have created two vehicles. One (the old one), which helped us to get to de international final of the WRO in Andorra; and, another one (the current one), that will perform in the international final. We created the second one motivated by our desire to do it as good as possible and also learn new things and concepts along the way.
+<br> Guided by our passion for technology, we have created two vehicles. One (the old one), which helped us to get to de national final of the WRO in Andorra; and, another one (the current one), that will perform in the national final. We created the second one motivated by our desire to do it as good as possible and also learn new things and concepts along the way.
 <br> Hope you like it!!
-</div> <br> </br>
+<br> </br>
 
 > [!IMPORTANT]
 > Every time you see this sign (▶&#xFE0E;), click on the text next to it to expand the content!
@@ -718,6 +718,8 @@ To power the HUSKYLENS module, an LM7805 regulator has been included to step dow
 The wiring diagram used for assembling the robot is shown in the image below. It was created in TinkerCad based on previous experience using this program. Some components were not available in TinkerCad, so similar ones that met the necessary connection requirements were used, and their names were noted on the final diagram to avoid confusion:
 
 <img src="schemes/wiring diagram final version.jpg">
+
+#### Sensors
 
 The robot receives data from three main components: the Arduino R4 Minima board, the HC-SR04 sensors, and the HUSKYLENS module.  
 
@@ -2093,3 +2095,4 @@ Here is a FSM that will show you the logic our program follows:
 </details>
 <br>
 <a href="#arriba">⬆️Back to top</a>
+</div>
