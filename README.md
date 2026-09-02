@@ -870,6 +870,7 @@ An energy calculation was performed, taking all components into account, to help
     </tr>
   </tbody>
 </table>
+
 * Total: approximately 1,550 mA
 
 Based on this data, the approximate theoretical battery life would be:
