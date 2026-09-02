@@ -739,7 +739,7 @@ Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was caus
 </details>
 
 <details>
-<summary><b>3.2 Current Mobility design</b></summary>
+<summary><b>5.2 Current Mobility design</b></summary>
 <br>
 
 Generally speaking, the robot has:
@@ -1045,7 +1045,7 @@ An energy calculation was performed, taking all components into account, to help
       <th style="border: 1px solid #dfe2e5; padding: 8px;">Volts (V)</th>
       <!-- Subcolumnas para la Batería 2 -->
       <th style="border: 1px solid #dfe2e5; padding: 8px;">Electronic device</th>
-      <th style="border: 1px solid #dfe2e5; padding: 8px;">milliampere-hours consumed (mA/h)</th>
+      <th style="border: 1px solid #dfe2e5; padding: 8px;">milliampere consumed (mA)</th>
       <th style="border: 1px solid #dfe2e5; padding: 8px;">volts (V)</th>
     </tr>
   </thead>
@@ -1053,10 +1053,10 @@ An energy calculation was performed, taking all components into account, to help
     <tr>
       <!-- Fila 1 -->
       <td style="border: 1px solid #dfe2e5; padding: 6px;">Raspberry Pi Pico 2 board</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">40 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">40 mA</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">360° continuous rotation servo</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">700 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">700 mA</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">8,4 V</td>
     </tr>
     <tr>
@@ -1071,7 +1071,7 @@ An energy calculation was performed, taking all components into account, to help
     <tr>
       <!-- Fila 3 -->
       <td style="border: 1px solid #dfe2e5; padding: 6px;">LEDS</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">15 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">15 mA</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
       <td style="border: none;"></td>
       <td style="border: none;"></td>
@@ -1080,7 +1080,7 @@ An energy calculation was performed, taking all components into account, to help
     <tr>
       <!-- Fila 4 -->
       <td style="border: 1px solid #dfe2e5; padding: 6px;">TFmini-S</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">140 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">140 mA</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td>
       <td style="border: none;"></td>
       <td style="border: none;"></td>
@@ -1089,7 +1089,7 @@ An energy calculation was performed, taking all components into account, to help
     <tr>
       <!-- Fila 5 -->
       <td style="border: 1px solid #dfe2e5; padding: 6px;">180 microservo direction</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">200 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">200 mA</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td>
       <td style="border: none;"></td>
       <td style="border: none;"></td>
@@ -1098,7 +1098,7 @@ An energy calculation was performed, taking all components into account, to help
     <tr>
       <!-- Fila 6 -->
       <td style="border: 1px solid #dfe2e5; padding: 6px;">L3GD20 gyroscope</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">6 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">6 mA</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
       <td style="border: none;"></td>
       <td style="border: none;"></td>
@@ -1107,7 +1107,7 @@ An energy calculation was performed, taking all components into account, to help
     <tr>
       <!-- Fila 7 -->
       <td style="border: 1px solid #dfe2e5; padding: 6px;">Huskylens and TFmini micro-servos</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">200 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">200 mA</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td> 
       <td style="border: none;"></td>
       <td style="border: none;"></td>
@@ -1116,7 +1116,7 @@ An energy calculation was performed, taking all components into account, to help
     <tr>
       <!-- Fila 8 -->
       <td style="border: 1px solid #dfe2e5; padding: 6px;">RGB sensor TCS34725</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">6 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">6 mA</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td> 
       <td style="border: none;"></td>
       <td style="border: none;"></td>
