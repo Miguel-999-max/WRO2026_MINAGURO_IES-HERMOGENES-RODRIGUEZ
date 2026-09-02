@@ -976,7 +976,7 @@ This board is mounted on a KS3017 display to allow for convenient connection of 
 
 We have also drawn up a table showing which GPIO each sensor, LED, servo, etc. The table has been useful for remembering the voltage required for each electronic device and the port they need to be connected to so that everything works properly.
 
-<img src="other/Raspberry Pi Pico 2/Raspberry Pi Pico 2 Connections.png">
+<img src="other/Raspberry Pi Pico 2/Raspberry Pi Pico 2 Connections.jpg">
 
 The TFmini-S sensor was chosen from among other options from the same manufacturer (as explained in greater detail in the project log); ultimately, this sensor has a detection range that is more than sufficient for the challenge, low power consumption, excellent accuracy, and a reasonable price. The other options were either too expensive or not up to par. Furthermore, during the regional phase, we had used HC-SR04 ultrasonic sensors, which worked at the time, but for this national phase we needed more accurate and reliable sensors, so we looked for laser sensors.
 
