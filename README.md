@@ -1370,7 +1370,7 @@ The TOF400F sensors are mounted on both sides of the robot at a height of approx
 
 The TCS34725 RGB sensor is mounted on the lower front, almost flush with the ground, to count the blue lines in both challenges. Initially, it was placed at the rear at the same height to determine the direction of travel in the free challenge, but the strategy changed, and this sensor is now used only to detect and count lines. It is also surrounded by a layer of black EVA foam to prevent measurement errors caused by ambient light.
 
-The L3GD20 gyroscope is mounted on a cylindrical rod at the top center of the robot. The robot navigates along the course established by this gyroscope in the obstacle challenge when it does not detect traffic lights. It is positioned here to avoid interference with other components, primarily the drive motor and the HUSKYLENS module.
+The L3GD20 gyroscope is mounted on a cylindrical rod at the top center of the robot, at a height of approximately 23 cm. The robot navigates along the course established by this gyroscope in the obstacle challenge when it does not detect traffic lights. It is positioned here to avoid interference with other components, primarily the drive motor and the HUSKYLENS module.
 
 
 </details>
