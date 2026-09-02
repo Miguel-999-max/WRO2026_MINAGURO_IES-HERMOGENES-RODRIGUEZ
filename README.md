@@ -2102,7 +2102,7 @@ Here is a FSM that will show you the logic our program follows:
 </details>
 
 ### 9. 🦾 Build our robot
-Here you will find everything necessary to create our robot step by step
+Here you will find everything necessary to create our current robot step by step
 
 <details>
 <summary><b>9.1 Components</b></summary>
