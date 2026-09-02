@@ -2162,13 +2162,11 @@ Use these two photos to connect the components:
 
 <div align="center"><table>
   <tr>
-    <td align="center" width="40%">
-      <img src="schemes/pico-2-w-pinout.webp"/>
-     clock-wise mode
+    <td align="center" width="50%">
+      <img src="other/Raspberry Pi Pico 2/Raspberry Pi Pico 2 Connections.jpg"/>
     </td>
-    <td align="center" width="60%">
+    <td align="center" width="50%">
       <img src="schemes/wiring_scheme_andorra_names.png"/>
-     counter clock-wise mode
     </td>
   </tr>
 </table></div>
