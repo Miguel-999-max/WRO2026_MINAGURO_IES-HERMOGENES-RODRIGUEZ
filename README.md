@@ -12,9 +12,8 @@
 > [!IMPORTANT]
 > Every time you see this sign (▶&#xFE0E;), click on the text next to it to expand the content!
 
-<div align="justify">
 ## 🤝 Sponsors
-We would like to thank our sponsors for making this project possible:
+<div align="justify">We would like to thank our sponsors for making this project possible:
 
 <div align="center">
   <table border="0">
