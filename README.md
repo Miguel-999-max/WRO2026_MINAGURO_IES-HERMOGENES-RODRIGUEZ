@@ -2108,6 +2108,7 @@ Here you will find everything necessary to create our current robot step by step
 <summary><b>9.1 Components</b></summary>
 <br>
 Here are all the necessary components:
+ <br></br> 
 
 | Component | Quantity | Preview | Main Function | Purchase link |
 | :---: | :---: | :---: | :---: | :---: |
@@ -2159,6 +2160,7 @@ Here are all the necessary components:
 <summary><b>9.2 Pins connections</b></b></summary>
 <br>
 Use these two photos to connect the components:
+ <br></br> 
 
 <div align="center"><table>
   <tr>
@@ -2177,6 +2179,21 @@ Use these two photos to connect the components:
 <summary><b>9.3 Placing</b></summary>
 <br>
 Here you will find two files showing the exact position of each component:
+  <br></br> 
+
+<table align="center">
+  <tr style="vertical-align: middle;">
+    <td><img src="models/HR26.2.jpg" width="400"></td>
+    <td> <a href="models/HR26.2.zip">📥Download</a></td>
+  </tr>
+</table>
+
+<table align="center">
+  <tr style="vertical-align: middle;">
+    <td><img src="models/HR26.2.expl.jpg" width="400"></td>
+    <td> <a href="models/HR26.2.expl.zip">📥Download</a></td>
+  </tr>
+</table>
 </details>
 
 <details>
