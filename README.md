@@ -36,17 +36,271 @@ We would like to thank our sponsors for making this project possible:
 </div>
  
   ## 📁 TABLE OF CONTENTS
-* [1. 📝 Daily documentation](#1--daily-documentation)
-* [2. 🛠️ Mechanical Design](#seccion-mecanica)
-* [3. 🪛 Mobility design](#3--mobility-design)
-* [4. ⚡Power and Sensor Architecture](#4--power-and-sensor-architecture)
-* [5. 🧠 Strategy](#5--strategy)
-* [6. 👥 The Team ](#6--the-team)
-* [7. 🤖 Our Robot](#7--our-robot)
+* [1. 👥 The Team ](#1--the-team)
+* [2. 🤖 Our Robot](#2--our-robot)
+* [3. 📝 Daily documentation](#3--daily-documentation)
+* [4. 🛠️ Mechanical Design](#seccion-mecanica)
+* [5. 🪛 Mobility design](#5--mobility-design)
+* [6. ⚡Power and Sensor Architecture](#6--power-and-sensor-architecture)
+* [7. 🧠 Strategy](#7--strategy)
 * [8. 💻 Software](#8--software)
 * [9. 🦾 Build our robot](#9--build-our-robot)
 
-### 1. 📝 Daily documentation
+### 1. 👥 The Team
+The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
+
+<br> **Miguel**
+<br> **Age:** 17
+<br> **Description:** Hi, I'm Miguel from Ciudad Real, Spain, and this is my first time participating in WRO Competition. I have always been into mechanics and robot building, so I didn't hesistate to take up this challenge. I am such a curious and competitive person, and I had put all my efforts in helping the team.
+
+<br> **Natalia**
+<br> **Age:** 17
+<br> **Description:** Hi, I am Natalia, also from Ciudad Real, Spain, and it is my first time participating, too. I am really good at programming, which I actually enjoy doing. I am hardworking and creative, and this competition, despite being really demanding, has helped me to enter the engineering world.
+
+<br> **Rocío** 
+<br> **Age:** 16
+<br> **Description:** Hi! I'm Rocío from Spain and this is the first time in the WRO competition. Since I was a kid, I've loved solving puzzles and maths problems. I started to interest in robotics when I was at secondary school, when my teacher taught us how to program. I thougth that was really fun.
+
+<br> **Guillermo**
+<br> **Age:** 16
+<br> **Description:** Hi, I am Guillermo. I am from Ciudad Real, Spain, and I joined this project because I have always been really keen on I.T. and problem solving. Although this competition has been really challenging, the experience with all the team is worth it.
+
+### 2. 🤖 Our Robot
+
+#### 2.1 Old Robot (Arduino)
+
+<details>
+<summary><b>Here are some pictures of our old robot to help with it´s reproducibility:</b></summary>
+<br>
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.1.jpg" width="305"/>
+     robot´s front view
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.3.jpg" width="305"/>
+     robot´s back view
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.7.jpg" width="305"/>
+     View from underneath the robot
+    </td>
+  </tr>
+</table></div>
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.4.jpg" width="305"/>
+     Robot’s right side view
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.5.jpg" width="305"/>
+     View of the robot's layout
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.2.jpg" width="305"/>
+     Robot’s left side view
+    </td>
+  </tr>
+</table></div>
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <b>Other robot´s views</b><br>
+    </td>
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.6.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.8.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.9.jpg" width="305"/>
+    </td>
+  </tr>
+</table></div>
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.11.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.13.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.12.jpg" width="305"/>
+    </td>
+  </tr>
+</table></div>
+  </details>
+ 
+#### 2.2 Current Robot (Raspberry)
+
+<details>
+<summary><b>Here are some pictures of our current robot to help with it´s reproducibility, and a table listing its main technical specifications:</b></summary>
+<br>
+
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_front.jpg" width="305"/>
+     robot´s front view
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_tras.jpg" width="305"/>
+     robot´s back view
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_abajo.jpg" width="305"/>
+     View from underneath the robot
+    </td>
+  </tr>
+</table></div>
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_der.jpg" width="305"/>
+     Robot’s right side view
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_arriba.jpg" width="305"/>
+     View of the robot's layout
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_izq.jpg" width="305"/>
+     Robot’s left side view
+    </td>
+  </tr>
+</table></div>
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <b>Other robot´s views</b><br>
+    </td>
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_izq.2.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_bat_abajo.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_der.2.jpg" width="305"/>
+    </td>
+  </tr>
+</table></div>
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_der.3.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_magne.2.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_izq.3.jpg" width="305"/>
+    </td>
+  </tr>
+</table></div>
+
+https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
+
+<table width="100%" align="center">
+  <tr>
+    <th align="center">Feature</th>
+    <th align="center">Value</th>
+  </tr>
+  <tr>
+    <td align="center">Length</td>
+    <td align="center">27,5 cm</td>
+  </tr>
+  <tr>
+    <td align="center">Width</td>
+    <td align="center">9,5 cm</td>
+  </tr>
+  <tr>
+    <td align="center">Height</td>
+    <td align="center">23 cm</td>
+  </tr>
+  <tr>
+    <td align="center">Weight</td>
+    <td align="center">796 g</td>
+  </tr>
+  <tr>
+    <td align="center">Maximum stable speed</td>
+    <td align="center">0,211 m/s</td>
+  </tr>
+  <tr>
+    <td align="center">Torque</td>
+    <td align="center">2,5-4 N</td>
+  </tr>
+  <tr>
+    <td align="center">Maximum stable revolutions</td>
+    <td align="center">1,495 revolutions/s</td>
+  </tr>
+  <tr>
+    <td align="center">Microcontroller</td>
+    <td align="center">Raspberry Pi Pico 2</td>
+  </tr>
+  <tr>
+    <td align="center">Vision system</td>
+    <td align="center">HUSKYLENS module</td>
+  </tr>
+  <tr>
+    <td align="center">Motor system</td>
+    <td align="center">DC motor</td>
+  </tr>
+  <tr>
+    <td align="center">Steering system</td>
+    <td align="center">Ackermann steering</td>
+  </tr>
+  <tr>
+    <td align="center">Transmission system</td>
+    <td align="center">Gear transmission</td>
+  </tr>
+  <tr>
+    <td align="center">Motor</td>
+    <td align="center">SPT5632-360 servo</td>
+  </tr>
+  <tr>
+    <td align="center">Steering motor</td>
+    <td align="center">MS18 servo</td>
+  </tr>
+  <tr>
+    <td align="center">Batteries</td>
+    <td align="center">Samsung ICR18650-26FU batteries</td>
+  </tr>
+  <tr>
+    <td align="center">Camera processing speed</td>
+    <td align="center">11–30 FPS</td>
+  </tr>
+  <tr>
+    <td align="center">Maximum current draw</td>
+    <td align="center">1,5 A</td>
+  </tr>
+  <tr>
+    <td align="center">Average lap time</td>
+    <td align="center">25 s</td>
+  </tr>
+  <tr>
+    <td align="center">Chassis type</td>
+    <td align="center">Custom PCB chassis</td>
+  </tr>
+</table>
+
+</details>
+
+### 3. 📝 Daily documentation
 Here you can find the detailed progress of the MINAGURO team during the tournament:
 
 <details>
@@ -278,11 +532,11 @@ Before finishing, we decided to break down main.py into subprograms; since the p
 
 </details>
 
-### <span id="seccion-mecanica"></span>2. 🛠️ Mechanical Design
+### <span id="seccion-mecanica"></span>4. 🛠️ Mechanical Design
 This section is dedicated to the robot’s mechanical components: the list of parts used in its construction and the 3D-printed parts we designed and printed.
 
 <details>
-<summary><b> 2.1 Old components and 3D designs</b></summary>
+<summary><b> 4.1 Old components and 3D designs</b></summary>
 <br>
 Here is a also a list of all components we used to use before our modifications; including an image, their specific function in the robot, and a purchase link: 
 
@@ -298,7 +552,7 @@ Here is a also a list of all components we used to use before our modifications;
 </details>
 
 <details>
-<summary><b> 2.2 Current components List </b></summary>
+<summary><b> 4.2 Current components List </b></summary>
 <br>
 Here is a list of all components we used, including an image, their specific function in the robot, and a purchase link: 
 
@@ -342,7 +596,7 @@ Here is a list of all components we used, including an image, their specific fun
 </details>
 
 <details>
-<summary><b> 2.3 Current 3D Designs </b></summary>
+<summary><b> 4.3 Current 3D Designs </b></summary>
 <br>
 
 These are the 3D designs we have created, which include: a custom-made chassis for all components, a gear to connect the differential to the 360-degree servo, a rear wheel adapter to connect the differential shaft to the wheels and a mount for the HUSKYLENS module:
@@ -359,11 +613,11 @@ These are the 3D designs we have created, which include: a custom-made chassis f
 
 </details>
 
-### 3. 🪛 Mobility design
+### 5. 🪛 Mobility design
 This section includes an overview of the robot's components, speed and torque calculations, and the steering, motor and transmission systems.
 
 <details>
-<summary><b>3.1 Old Mobility design</b></summary>
+<summary><b>5.1 Old Mobility design</b></summary>
 <br>
  
 Generally speaking, the robot has:
@@ -680,12 +934,12 @@ The chassis was always designed to provide a stable and reliable foundation on w
 
 </details>
 
-### 4. ⚡ Power and Sensor Architecture 
+### 6. ⚡ Power and Sensor Architecture 
 
 This section includes the robot's power supply, the wiring diagram created in Cirkit Designer, everything related to the sensors that provide information to the board, and the reasoning behind the sensor layout.
 
 <details>
-<summary><b>4.1 Old Power and Sensor Architecture</b></summary>
+<summary><b>6.1 Old Power and Sensor Architecture</b></summary>
 <br>
 
 #### Power Supply 
@@ -771,7 +1025,7 @@ One major issue it caused was that it sometimes interfered with other robot comp
 </details>
 
 <details>
-<summary><b>4.2 Current Power and Sensor Architecture</b></summary>
+<summary><b>6.2 Current Power and Sensor Architecture</b></summary>
 <br>
 
 #### Power Supply 
@@ -1123,11 +1377,11 @@ The L3GD20 gyroscope is mounted on a cylindrical rod at the top center of the ro
 </details>
 
 
-### 5. 🧠 Strategy
+### 7. 🧠 Strategy
 Here you can find the strategy we have followed to complete both challenges
 
 <details>
-<summary><b>5.1 Old strategy </b></summary>
+<summary><b>7.1 Old strategy </b></summary>
 <br
  
 Before focusing on each of the two types of challenges individually, we distinguish between them as follows: since the obstacle challenge allows us to choose between starting from the parking area specified in the free challenge or from the magenta parking lot, we choose to start from the magenta parking lot so that the starting area is different for each challenge, making it easier to tell them apart. Therefore, we start by checking the front distance; and, depending on whether it is greater or less than 40 cm, we know whether we are in the open challenge or the obstacle challenge, respectively. Once we know this, we proceed to analyze each challenge separately. 
@@ -1183,7 +1437,7 @@ Similarly, we continue to work on resolving and developing these issues.
 </details>
 
 <details>
-<summary><b>5.2 Current strategy </b></summary>
+<summary><b>7.2 Current strategy </b></summary>
 <br>
 
 #### Open challenge
@@ -1236,261 +1490,6 @@ For this challenge, we used laser distance sensors (TF-mini-S and TOF400F), the 
 * When the robot gets too close to an obstacle before avoiding it, it goes backwards. This is something we do to reach the perfect distance to avoid it before starting the obstacle-avoidance maneuver and, this way, we prevent moving the obstacle from its original place and, by consequence, get disqualified.
 
 While we do all that, the RGB sensor is counting the blue lines on the floor to know when to stop. We are still working on how to park when this counter becomes 12 (3 laps).
-
-</details>
-
-### 6. 👥 The Team
-The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
-
-<br> **Miguel**
-<br> **Age:** 17
-<br> **Description:** Hi, I'm Miguel from Ciudad Real, Spain, and this is my first time participating in WRO Competition. I have always been into mechanics and robot building, so I didn't hesistate to take up this challenge. I am such a curious and competitive person, and I had put all my efforts in helping the team.
-
-<br> **Natalia**
-<br> **Age:** 17
-<br> **Description:** Hi, I am Natalia, also from Ciudad Real, Spain, and it is my first time participating, too. I am really good at programming, which I actually enjoy doing. I am hardworking and creative, and this competition, despite being really demanding, has helped me to enter the engineering world.
-
-<br> **Rocío** 
-<br> **Age:** 16
-<br> **Description:** Hi! I'm Rocío from Spain and this is the first time in the WRO competition. Since I was a kid, I've loved solving puzzles and maths problems. I started to interest in robotics when I was at secondary school, when my teacher taught us how to program. I thougth that was really fun.
-
-<br> **Guillermo**
-<br> **Age:** 16
-<br> **Description:** Hi, I am Guillermo. I am from Ciudad Real, Spain, and I joined this project because I have always been really keen on I.T. and problem solving. Although this competition has been really challenging, the experience with all the team is worth it.
-
-
-### 7. 🤖 Our Robot
-
-#### 7.1 Old Robot (Arduino)
-
-<details>
-<summary><b>Here are some pictures of our old robot to help with it´s reproducibility:</b></summary>
-<br>
-
-<div align="center"><table>
-  <tr>
-    <td align="center" width="33%">
-      <img src="v-photos/Old_photos/robot image v2.1.jpg" width="305"/>
-     robot´s front view
-    </td>
-    <td align="center" width="33%">
-      <img src="v-photos/Old_photos/robot image v2.3.jpg" width="305"/>
-     robot´s back view
-    </td>
-    <td align="center" width="33%">
-      <img src="v-photos/Old_photos/robot image v2.7.jpg" width="305"/>
-     View from underneath the robot
-    </td>
-  </tr>
-</table></div>
-
-<div align="center"><table>
-  <tr>
-    <td align="center" width="33%">
-      <img src="v-photos/Old_photos/robot image v2.4.jpg" width="305"/>
-     Robot’s right side view
-    </td>
-    <td align="center" width="33%">
-      <img src="v-photos/Old_photos/robot image v2.5.jpg" width="305"/>
-     View of the robot's layout
-    </td>
-    <td align="center" width="33%">
-      <img src="v-photos/Old_photos/robot image v2.2.jpg" width="305"/>
-     Robot’s left side view
-    </td>
-  </tr>
-</table></div>
-
-<div align="center"><table>
-  <tr>
-    <td align="center" width="50%">
-      <b>Other robot´s views</b><br>
-    </td>
-<div align="center"><table>
-  <tr>
-    <td align="center" width="33%">
-      <img src="v-photos/Old_photos/robot image v2.6.jpg" width="305"/>
-    </td>
-    <td align="center" width="33%">
-      <img src="v-photos/Old_photos/robot image v2.8.jpg" width="305"/>
-    </td>
-    <td align="center" width="33%">
-      <img src="v-photos/Old_photos/robot image v2.9.jpg" width="305"/>
-    </td>
-  </tr>
-</table></div>
-<div align="center"><table>
-  <tr>
-    <td align="center" width="33%">
-      <img src="v-photos/Old_photos/robot image v2.11.jpg" width="305"/>
-    </td>
-    <td align="center" width="33%">
-      <img src="v-photos/Old_photos/robot image v2.13.jpg" width="305"/>
-    </td>
-    <td align="center" width="33%">
-      <img src="v-photos/Old_photos/robot image v2.12.jpg" width="305"/>
-    </td>
-  </tr>
-</table></div>
-  </details>
- 
-#### 7.2 Current Robot (Raspberry)
-
-<details>
-<summary><b>Here are some pictures of our current robot to help with it´s reproducibility, and a table listing its main technical specifications:</b></summary>
-<br>
-
-
-<div align="center"><table>
-  <tr>
-    <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_front.jpg" width="305"/>
-     robot´s front view
-    </td>
-    <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_tras.jpg" width="305"/>
-     robot´s back view
-    </td>
-    <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_abajo.jpg" width="305"/>
-     View from underneath the robot
-    </td>
-  </tr>
-</table></div>
-
-<div align="center"><table>
-  <tr>
-    <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_der.jpg" width="305"/>
-     Robot’s right side view
-    </td>
-    <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_arriba.jpg" width="305"/>
-     View of the robot's layout
-    </td>
-    <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_izq.jpg" width="305"/>
-     Robot’s left side view
-    </td>
-  </tr>
-</table></div>
-
-<div align="center"><table>
-  <tr>
-    <td align="center" width="50%">
-      <b>Other robot´s views</b><br>
-    </td>
-<div align="center"><table>
-  <tr>
-    <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_izq.2.jpg" width="305"/>
-    </td>
-    <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_bat_abajo.jpg" width="305"/>
-    </td>
-    <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_der.2.jpg" width="305"/>
-    </td>
-  </tr>
-</table></div>
-<div align="center"><table>
-  <tr>
-    <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_der.3.jpg" width="305"/>
-    </td>
-    <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_magne.2.jpg" width="305"/>
-    </td>
-    <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_izq.3.jpg" width="305"/>
-    </td>
-  </tr>
-</table></div>
-
-https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
-
-<table width="100%" align="center">
-  <tr>
-    <th align="center">Feature</th>
-    <th align="center">Value</th>
-  </tr>
-  <tr>
-    <td align="center">Length</td>
-    <td align="center">27,5 cm</td>
-  </tr>
-  <tr>
-    <td align="center">Width</td>
-    <td align="center">9,5 cm</td>
-  </tr>
-  <tr>
-    <td align="center">Height</td>
-    <td align="center">23 cm</td>
-  </tr>
-  <tr>
-    <td align="center">Weight</td>
-    <td align="center">796 g</td>
-  </tr>
-  <tr>
-    <td align="center">Maximum stable speed</td>
-    <td align="center">0,211 m/s</td>
-  </tr>
-  <tr>
-    <td align="center">Torque</td>
-    <td align="center">2,5-4 N</td>
-  </tr>
-  <tr>
-    <td align="center">Maximum stable revolutions</td>
-    <td align="center">1,495 revolutions/s</td>
-  </tr>
-  <tr>
-    <td align="center">Microcontroller</td>
-    <td align="center">Raspberry Pi Pico 2</td>
-  </tr>
-  <tr>
-    <td align="center">Vision system</td>
-    <td align="center">HUSKYLENS module</td>
-  </tr>
-  <tr>
-    <td align="center">Motor system</td>
-    <td align="center">DC motor</td>
-  </tr>
-  <tr>
-    <td align="center">Steering system</td>
-    <td align="center">Ackermann steering</td>
-  </tr>
-  <tr>
-    <td align="center">Transmission system</td>
-    <td align="center">Gear transmission</td>
-  </tr>
-  <tr>
-    <td align="center">Motor</td>
-    <td align="center">SPT5632-360 servo</td>
-  </tr>
-  <tr>
-    <td align="center">Steering motor</td>
-    <td align="center">MS18 servo</td>
-  </tr>
-  <tr>
-    <td align="center">Batteries</td>
-    <td align="center">Samsung ICR18650-26FU batteries</td>
-  </tr>
-  <tr>
-    <td align="center">Camera processing speed</td>
-    <td align="center">11–30 FPS</td>
-  </tr>
-  <tr>
-    <td align="center">Maximum current draw</td>
-    <td align="center">1,5 A</td>
-  </tr>
-  <tr>
-    <td align="center">Average lap time</td>
-    <td align="center">25 s</td>
-  </tr>
-  <tr>
-    <td align="center">Chassis type</td>
-    <td align="center">Custom PCB chassis</td>
-  </tr>
-</table>
 
 </details>
 
