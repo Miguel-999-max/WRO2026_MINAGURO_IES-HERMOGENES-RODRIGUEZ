@@ -1451,6 +1451,8 @@ Similarly, we continue to work on resolving and developing these issues.
 <summary><b>7.2 Current strategy </b></summary>
 <br>
 
+After much testing, trial and error, and various strategies, we finally settled on the definitive one (you can see the process leading up to this documented in ‘Daily documentation’). Before discussing the specific strategy for each challenge, let’s explain how we distinguish one challenge from another. To do this, we used the most obvious difference between the two: the presence of obstacles in the Obstacle Challenge and their absence in the Open Challenge. As it is difficult to describe the strategy in writing, we have attached an image showing the diagram.
+
 #### Open challenge
 
 <div align="center"><table>
@@ -1466,12 +1468,11 @@ Similarly, we continue to work on resolving and developing these issues.
   </tr>
 </table></div>
 
-For this challenge, we used laser distance sensors (TF-mini-S and TOF400F) and the TCS34725 RGB sensor. We start by moving forward while measuring to the sides as follows: the right ToF400F to measure to the right and the TF-mini-S to measure to the left (since the left ToF400F is connected via I2C, the data read speed is slower; therefore, we decided to use the TF-mini-S instead). We do this until one of the two distances is much greater than the other (100 cm). At that point, we distinguish between two cases:
-* The distance on the right is greater than the distance on the left; we are in clockwise mode. It performs the approach maneuver toward the center wall for the specific duration required in this case (taking into account the data readout speed of the ToF400F, since this requires modifying the maneuver) and begins to circle.
-  
-* The distance on the left is greater than on the right; we do not find this in counterclockwise mode. It performs the maneuver to approach the center wall for the specific duration required in this case (taking into account the data read speed of the TF-mini-S, since this requires modifying the maneuver) and begins to circle.
+For this challenge, we used laser distance sensors (TF-mini-S and TOF400F) and the TCS34725 RGB sensor.
 
-We decided to drive around the center since that was our initial strategy when we built the previous robot, and we decided to stick with it because it seemed like the best approach in terms of both time and complexity. As it drives around, it counts the blue lines on the floor using the TCS34725 RGB sensor, since it detects them better than the orange ones. Once it has counted 12 lines, it moves forward for a few seconds and stops, positioning itself right in the parking zone.
+We approach this challenge via a single route (following the diagram above), and this is when we have already identified the direction of the challenge and verified that there are no obstacles; therefore, as there is no longer any difference between the two challenges, we will explain the general strategy. It performs the manoeuvre to approach the central wall for a specific duration in each case (taking into account the data readout speed of the ToF400F, which is slower on the left-hand ToF400F as it is connected via I2C, necessitating an adjustment to this manoeuvre) and begins to circle.
+
+We decided to circle round the centre as this was our initial strategy when we built the previous robot, and we decided to stick with it as it seemed the best option in terms of both time and complexity. Whilst circling, it counts the blue lines on the floor using the TCS34725 RGB sensor, as it detects these better than the orange ones. Once it has counted 12 lines, it moves forward for a few seconds and stops, positioning itself exactly in the parking area.
 
 #### Obstacle challenge
 
@@ -1489,18 +1490,19 @@ We decided to drive around the center since that was our initial strategy when w
 </table></div>
 <br>
 
-> [!NOTE]
-> Not finished strategy/execution; we are still working on it.
+For this challenge, we used laser distance sensors (TF-mini-S and TOF400F), the TCS34725 RGB sensor, the HUSKYLENS machine vision camera and the 10-DOF IMU sensor. Of the two options available to us (exiting the parking area from the previous challenge or exiting a car park), we chose to exit the same area as in the previous challenge because the HUSKYLENS cannot distinguish between magenta and red; in other words, it sees magenta as if it were red (something that sometimes also happens with orange). It is true that we spent most of the time working with the car park, but given that this often caused us problems and we could not think of a way to identify or distinguish the car park other than by colour (an unviable strategy), we decided to change it at the last minute. Having covered these specifications, we move on to the strategy. There are three ways to approach this challenge (as per the diagram above):
 
-For this challenge, we used laser distance sensors (TF-mini-S and TOF400F), the TCS34725 RGB sensor, the HUSKYLENS machine vision camera, and the 10-DOF IMU sensor. Of the two options we had (exiting the parking area from the previous challenge or exiting a parking garage), we chose the parking garage for the following reasons: it was easier to distinguish between the two challenges (open challenge and obstacle challenge), it was easier to find the initial obstacles, and there were extra points to be earned for successfully completing the challenge. After these specifications, we move on to the strategy. We start by determining the direction of the challenge by measuring the lateral distance with the two ToF400F sensors. Once we know whether it’s clockwise or counterclockwise, we back up a bit (to give ourselves more room to exit the parking space) and turn so that the robot faces the first space where a pillar might be located. From here on, the strategy is always the same: keep looking for obstacles. Still, let’s highlight a few specific cases:
+*  It spots a block on the first front scanner: in this case, it checks the direction; if the block is on the right-hand side of the screen, it’s CW, whilst if it’s on the left-hand side, it’s CCW. We make use of this distinction by exploiting the fact that blocks cannot be placed on the line next to the outer wall. As soon as it knows the direction, it heads towards it and starts looking for obstacles.
 
-* When the robot detects a blue line with its RGB sensor, it knows it is moving to a new section, and if it does not see any objects, it turns 90° in the corresponding direction based on the street number (1, 2, 3, 4). We do this to prevent the robot from getting disoriented by searching on the wrong side or crashing into the wall while scanning.
- 
-* While performing the obstacle-avoidance maneuver (which consists of two phases), upon completing phase 1, it scans to check if it sees another block; if it doesn’t see one, it finishes the maneuver, and if it does see one, it goes directly toward it without finishing the maneuver. We did this because we noticed that a lot of time was wasted finishing the dodge when it could have been heading toward another pillar, and because it complicated the maneuver to dodge the next pillar (if one exists) in 40% of cases.
-  
-* When the robot gets too close to an obstacle before avoiding it, it goes backwards. This is something we do to reach the perfect distance to avoid it before starting the obstacle-avoidance maneuver and, this way, we prevent moving the obstacle from its original place and, by consequence, get disqualified.
+*  It does not see an obstacle in the first front-facing scanner, but it does when it looks to the left and to the right: in this case, as it already knows the direction is towards it, it immediately starts scanning for obstacles.
 
-While we do all that, the RGB sensor is counting the blue lines on the floor to know when to stop. We are still working on how to park when this counter becomes 12 (3 laps).
+*  It does not detect a block with the first front scanner, nor when it looks to the left or right, but it does when it turns at the corner: in this other case, as it also knows the direction is towards it, it immediately starts searching for obstacles.
+
+From this point onwards, the strategy is always the same: to search for obstacles. Even so, let’s highlight a few cases:
+
+*  When the robot detects a blue line with the RGB sensor, it knows it is changing section and, if it does not see any objects, it turns 90° in the corresponding direction depending on the street number (1, 2, 3, 4). We do this to prevent the robot from becoming disoriented by searching on the wrong side or crashing into the wall whilst scanning.
+
+*  Whilst performing the obstacle-avoidance manoeuvre (which consists of two phases), upon completing phase 1, it scans to check if it can see another block; if it sees none, it completes the manoeuvre, and if it sees one, it heads straight for it without completing the manoeuvre. We did this because we realised that a lot of time was being wasted finishing the avoidance manoeuvre when the robot could be heading towards another pillar, as well as complicating the manoeuvre to avoid the next pillar (if one exists) in 40% of cases.
 
 </details>
 
