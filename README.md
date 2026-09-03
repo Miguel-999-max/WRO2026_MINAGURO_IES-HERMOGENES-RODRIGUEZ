@@ -2106,6 +2106,7 @@ Here is a FSM that will show you the logic our program follows:
 * [ANDORRA_V4](src/Current_programs/Program_versions2/ANDORRA_V4)
 * [ANDORRA_V5](src/Current_programs/Program_versions2/ANDORRA_V5)
 * [ANDORRA_V6](src/Current_programs/Program_versions2/ANDORRA_V6)
+* [ANDORRA_V7](src/Current_programs/Program_versions2/ANDORRA_V7)
   
 </details>
 
