@@ -1504,6 +1504,10 @@ From this point onwards, the strategy is always the same: to search for obstacle
 
 *  Whilst performing the obstacle-avoidance manoeuvre (which consists of two phases), upon completing phase 1, it scans to check if it can see another block; if it sees none, it completes the manoeuvre, and if it sees one, it heads straight for it without completing the manoeuvre. We did this because we realised that a lot of time was being wasted finishing the avoidance manoeuvre when the robot could be heading towards another pillar, as well as complicating the manoeuvre to avoid the next pillar (if one exists) in 40% of cases.
 
+*  When the robot gets too close to an obstacle before avoiding it, it goes backwards. This is something we do to reach the perfect distance to avoid it before starting the obstacle-avoidance maneuver and, this way, we prevent moving the obstacle from its original place and, by consequence, get disqualified.
+
+While we do all that, the RGB sensor is counting the blue lines on the floor to know when to stop (when this counter becomes 12 // 3 laps).
+
 </details>
 
 ### 8. 💻 Software
