@@ -1372,6 +1372,14 @@ The TCS34725 RGB sensor is mounted on the lower front, almost flush with the gro
 
 The L3GD20 gyroscope is mounted on a cylindrical rod at the top center of the robot, at a height of approximately 23 cm. The robot navigates along the course established by this gyroscope in the obstacle challenge when it does not detect traffic lights. It is positioned here to avoid interference with other components, primarily the drive motor and the HUSKYLENS module.
 
+#### Sensor Trade-offs
+
+| Sensor Issues | Detailed Explanation | Solution Implemented |
+| :---: | :---: | :---: |
+| Variable lighting | The lighting in our classroom may differ from that of the competition spotlights, which can cause confusion when detecting the color of the floor lines or pillars. | The color sensor is wrapped in a layer of EVA rubber to prevent interference from ambient light. | 
+| Camera blind spots | The HUSKYLENS camera has a limited field of view. At times, it fails to detect objects that are quite close to it. | The HUSKYLENS camera is mounted on a 180° micro servo to eliminate blind spots. |
+| Interference from the HUSKYLENS module | The HUSKYLENS module interferes with other components, such as the continuous rotation servo, because it is connected to the same port. | The HUSKYLENS module is positioned and connected to a port where it cannot interfere with any other component. |
+| Delay in measurements from the left TOF400F sensor | The left TOF400F sensor, being connected to the I2C port, takes measurements at irregular intervals. At times, it may provide erroneous data that causes the robot to malfunction. | The TFmini-S sensor is used whenever possible to ensure greater measurement accuracy. |
 
 </details>
 
