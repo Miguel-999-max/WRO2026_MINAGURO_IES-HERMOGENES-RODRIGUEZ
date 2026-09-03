@@ -2163,7 +2163,7 @@ Use these two photos to connect the components:
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="other/Raspberry Pi Pico 2/Raspberry Pi Pico 2 Connections.jpg"/>
+      <img src="schemes/Raspberry Pi Pico 2 Connections.jpg"/>
     </td>
     <td align="center" width="50%">
       <img src="schemes/wiring_scheme_andorra_names.png"/>
