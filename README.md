@@ -1081,7 +1081,7 @@ An energy calculation was performed, taking all components into account, to help
       <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">HUSKYLENS module</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">230–420 mA</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">8,4 V</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td>
     </tr>
     <tr>
       <!-- Fila 3 -->
