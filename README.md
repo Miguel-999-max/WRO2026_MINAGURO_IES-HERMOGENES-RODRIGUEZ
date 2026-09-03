@@ -1062,11 +1062,11 @@ An energy calculation was performed, taking all components into account, to help
     <tr>
       <!-- Fila 2 -->
       <td style="border: 1px solid #dfe2e5; padding: 6px;">TOF400F (right and left)</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">40 mA/h</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">40 mA</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">HUSKYLENS module</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">230–420 mA/h</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">230–420 mA</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">8,4 V</td>
     </tr>
     <tr>
       <!-- Fila 3 -->
@@ -1129,8 +1129,8 @@ An energy calculation was performed, taking all components into account, to help
 
 Based on this data, the approximate theoretical battery life would be:
 
-* Battery life for the traction servo and the HUSKYLENS camera (8.4 V and 2,600 mA): approximately 2,5 hours.
-* Battery life for the Raspberry Pi Pico 2 board, TFmini-S sensor, and mini servos (4.2 V and 5,200 mA): approximately 12 hours.
+* Battery life for the traction servo and the HUSKYLENS camera (8.4 V and 2,600 mAh): approximately 2,5 hours.
+* Battery life for the Raspberry Pi Pico 2 board, TFmini-S sensor, and mini servos (4.2 V and 5,200 mAh): approximately 12 hours.
 
 This means we need to be careful with the batteries for the 360° servo and the HUSKYLENS module, as they may fail due to a lack of power.
 
