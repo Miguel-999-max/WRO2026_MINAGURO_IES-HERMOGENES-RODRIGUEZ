@@ -1234,8 +1234,6 @@ We have also drawn up a table showing which GPIO each sensor, LED, servo, etc. T
 </br>
 The TFmini-S sensor was chosen from among other options from the same manufacturer (as explained in greater detail in the project log); ultimately, this sensor has a detection range that is more than sufficient for the challenge, low power consumption, excellent accuracy, and a reasonable price. The other options were either too expensive or not up to par. Furthermore, during the regional phase, we had used HC-SR04 ultrasonic sensors, which worked at the time, but for this national phase we needed more accurate and reliable sensors, so we looked for laser sensors.
 
-The sensor was also mounted on the HUSKYLENS servo because, initially, we weren’t going to use two TOF400F sensors—one, along with this one, would be sufficient. Therefore, it needed to be able to rotate to take measurements on both the left side and the front, given its reliability in doing so.
-
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
@@ -1261,8 +1259,6 @@ The sensor was also mounted on the HUSKYLENS servo because, initially, we weren�
 
 The TOF400F sensors were chosen to replace the TFmini-S sensor, since the budget for two TFmini-S sensors was too high. After researching several options—and having previously evaluated the use of these TOF400F sensors in other versions of the robot—we decided to go with them. The measurements are also reliable, and the range is sufficient for the challenge.
 
-However, there was a major problem when trying to incorporate the second TOF400F sensor, since the initial strategy was to use only one TOF400F sensor and one TFmini-S sensor. The problem was that, since the UART ports were already fully occupied, it had to be connected to an I2C port. Its performance on this port was significantly worse, so whenever possible, we used the TFmini-S sensor, which is much more reliable.
-
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
@@ -1285,9 +1281,7 @@ However, there was a major problem when trying to incorporate the second TOF400F
   </tr>
 </table></div>
 
-The HUSKYLENS module identifies traffic light colors to navigate around them on the correct side. This module was new to us, so we had to meticulously study its features and how to program it. The most appropriate mode for this challenge is color detection. However, 70% of the time it confused the pink of the parking lot with the red of the traffic lights, which caused serious programming issues. 
-
-One major issue it caused was that it sometimes interfered with other robot components. For example, while it was connected, the 360-degree servo wouldn’t rotate properly and would jam, but when it was disconnected, the servo rotated more smoothly.
+The HUSKYLENS module identifies traffic light colors to navigate around them on the correct side. This module was new to us, so we had to meticulously study its features and how to program it. The most appropriate mode for this challenge is color detection. 
 
 <div align="center"><table>
   <tr>
@@ -1311,8 +1305,6 @@ One major issue it caused was that it sometimes interfered with other robot comp
 
 The TCS34725 RGB sensor was chosen after encountering problems with the previous strategy, which involved the HUSKYLENS detecting lines on the playing field and counting them; when it reached a certain value, the robot would stop a few seconds later in the correct quadrant. However, combining line counting with traffic light detection led to problems that prevented proper performance in the obstacle challenge.
 
-The sensor is located on the lower front of the robot, although at one point it was mounted on the rear to detect a line at the start of the free challenge and thus determine the direction of the challenge. It is surrounded by a layer of black EVA foam to prevent interference from ambient light and ensure the sensor reads the light it reflects.
-
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
@@ -1334,8 +1326,6 @@ The sensor is located on the lower front of the robot, although at one point it 
 </table></div>
 
 The L3GD20 gyroscope was chosen to help the robot navigate around obstacles. When the camera detects an obstacle, the robot moves toward it and goes around it on the appropriate side; however, when the robot does not detect any obstacles, it follows the course set by the gyroscope until it encounters another obstacle. For this reason, every time the robot changes fields, the gyroscope must be calibrated using a test program that involves rotating the robot.
-
-The gyroscope is mounted on a tube at the top of the robot so that it does not interfere with any of the other components; among these, the HUSKYLENS module and the drive servo pose the greatest risk of interference. By positioning it this way, the risk of interference is significantly reduced.
 
 <div align="center"><table>
   <tr>
