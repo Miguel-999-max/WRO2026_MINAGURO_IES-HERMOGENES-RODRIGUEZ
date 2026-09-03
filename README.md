@@ -1112,7 +1112,7 @@ An energy calculation was performed, taking all components into account, to help
     </tr>
     <tr>
       <!-- Fila 6 -->
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">L3GD20 gyroscope</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">10DOF magnetometer</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">6 mA</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
       <td style="border: none;"></td>
@@ -1121,7 +1121,7 @@ An energy calculation was performed, taking all components into account, to help
     </tr>
     <tr>
       <!-- Fila 7 -->
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">Huskylens and TFmini micro-servos</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">Huskylens and TFmini micro-servo</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">200 mA</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td> 
       <td style="border: none;"></td>
