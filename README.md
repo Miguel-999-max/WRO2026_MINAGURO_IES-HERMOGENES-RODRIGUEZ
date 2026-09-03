@@ -1149,6 +1149,8 @@ Based on this data, the approximate theoretical battery life would be:
 
 This means we need to be careful with the batteries for the 360° servo and the HUSKYLENS module, as they may fail due to a lack of power.
 
+It’s clear that we have more than enough battery power to cover the robot’s components’ power consumption, but even so, we’ve opted to have a bit of a reserve so we don’t have to worry about recharging the batteries every so often. Normally, the batteries can last up to two or three weeks, depending on whether I use it or whether we carry out a lot of tests with the robot.
+
 Given this budget and the availability of batteries in our category, we chose the Samsung ICR18650-26FU model. The main features of this model are:
 
 <div align="center"><table>
