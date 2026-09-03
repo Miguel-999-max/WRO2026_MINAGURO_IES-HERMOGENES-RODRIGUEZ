@@ -854,8 +854,21 @@ The drivetrain consists of:
 
 The mechanical differential was somewhat stiff when turning. To make it turn more smoothly, we lubricated it with oil and turned it using a drill.
 
-In addition, we have recalculated the maximum speed, the revolutions per second of the different axles, and the force in Newtons. To obtain this data, we simply had to set the robot to run at maximum speed (the speed at which it completes its routes), and to calculate the torque, we attached a dynamometer to the differential so that it would pull on it.
-
+In addition, we have recalculated the maximum speed, the revolutions per second of the different axles, the force and torque. The traction servomotor we are using has been discontinued and we cannot find its torque or rotational speed specifications. We have derived the servo’s rotational speed from the robot’s linear speed, so we have worked the calculations ‘backwards’ to arrive at this figure. We did the same with the torque: we measured the robot’s force using a dynamometer; we ran the motor at full power, had it pull on a dynamometer, and pressed the wheels indirectly against the floor until they began to slip. The maximum pull we recorded was 4 N. As there are two drive wheels, this gives us a thrust of 2 N per wheel.
+<br>
+</br>
+Torque of each wheel:
+<br>
+</br>
+F= 2 N
+<br>
+</br>
+r= 21,5 mm = 0,0212 m
+<br>
+</br>
+T= 2 N · 0,0212 m = 0,0424 N·m
+<br>
+</br>
 <table>
   <tr>
     <td align="center" width="50%">
