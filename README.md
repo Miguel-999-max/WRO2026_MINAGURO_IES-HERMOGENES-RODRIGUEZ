@@ -2228,7 +2228,8 @@ Here you will find the essential software for calibrating servos and sensors, so
 <br>
 <br>
   
-*[01.Firmware of the Raspberry Pi Pico 2.txt]()➜ First of all, you’ll need to install a firmware image on the Raspberry Pi Pico 2 so that we can load programmes onto it and use it in VS Code. We’ll explain how to do this step by:
+*[01.Firmware of the Raspberry Pi Pico 2.uf2](/src/Current_programs/Raspberry Firmware/RPI_PICO2-20260406.uf2)➜ First of all, you’ll need to install a firmware image on the Raspberry Pi Pico 2 so that we can load programmes onto it and use it in VS Code. We’ll explain how to do this step by:
+
 <br>
 </br>
 *Press and hold the white BOOTSEL button on your Raspberry Pi Pico 2 board; without letting go, connect the board to your computer using a compatible USB cable. Release the button once the computer has recognised the card. It will appear as an external USB storage device.
