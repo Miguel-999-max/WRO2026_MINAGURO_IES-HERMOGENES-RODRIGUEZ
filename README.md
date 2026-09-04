@@ -2114,8 +2114,9 @@ These are all programs we used to calibrate sensors and conduct functional tests
 <summary><b>💻 Final program</b></summary>
 <br>
  
-This is our old final program, that will be shown up on the WRO final:
-<img src="src/Current_programs/Program_versions2/ANDORRA_V8">
+This is our (almost) current final program (we are still working on it), that will be shown up on the WRO final:
+
+[ANDORRA_V8](/src/Current_programs/Program_versions2/ANDORRA_V8)
 
 </details>
 
@@ -2135,7 +2136,8 @@ Here is a flowchart that will help you understand how our final program works.
  
 Here is a FSM that will show you the logic our program follows:
 
-<img src="src/Current_programs/Diagrama_estados2.png">
+<img src="src/Current_programs/andorrav8me.png">
+
 </details>
 
 <details>
