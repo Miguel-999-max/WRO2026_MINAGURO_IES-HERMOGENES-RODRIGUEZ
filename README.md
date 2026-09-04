@@ -2232,7 +2232,7 @@ Here you will find two files showing the exact position of each component:
 <details>
 <summary><b>9.4 Raspberry pi pico 2 and VSCode startup</b></summary>
 <br>
-<strong>01.Firmware of the Raspberry Pi Pico 2</strong>➜ First of all, you’ll need to install a firmware on the Raspberry Pi Pico 2 so that we can load programmes onto it and use it in VScode. You can find the firmware on the official website <a href="https://micropython.org/download/RPI_PICO2/">MicroPython for Raspberry Pi Pico 2</a>, download it here. We’ll explain how to do this step by:
+<strong>Firmware of the Raspberry Pi Pico 2</strong>➜ First of all, you’ll need to install a firmware on the Raspberry Pi Pico 2 so that we can load programmes onto it and use it in VScode. You can find the firmware on the official website <a href="https://micropython.org/download/RPI_PICO2/">MicroPython for Raspberry Pi Pico 2</a>, download it here. We’ll explain how to do this step by:
 <br>
 </br>
 *Press and hold the white BOOTSEL button on your Raspberry Pi Pico 2 board; without letting go, connect the board to your computer using a compatible USB cable. Release the button once the computer has recognised the card. It will appear as an external USB storage device.
