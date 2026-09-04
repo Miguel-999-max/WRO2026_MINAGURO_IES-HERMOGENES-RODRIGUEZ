@@ -2228,7 +2228,13 @@ Here you will find the essential software for calibrating servos and sensors, so
 <br>
 <br>
   
-*[01.Firmware of the Raspberry Pi Pico 2.txt]()➜ First of all, you’ll need to install a firmware image on the Raspberry Pi Pico 2 so that we can load programmes onto it and use it in VS Code.
+*[01.Firmware of the Raspberry Pi Pico 2.txt]()➜ First of all, you’ll need to install a firmware image on the Raspberry Pi Pico 2 so that we can load programmes onto it and use it in VS Code. We’ll explain how to do this step by:
+<br>
+</br>
+*Press and hold the white BOOTSEL button on your Raspberry Pi Pico 2 board; without letting go, connect the board to your computer using a compatible USB cable. Release the button once the computer has recognised the card. It will appear as an external USB storage device.
+<br>
+</br>
+*Drag and drop (or copy and paste) the .uf2 file you downloaded directly onto the Pico 2’s USB drive. The board will restart automatically and the device will disappear from your computer. This means that the firmware has now been installed.
 
 * [02.Calibrate the steering servo.txt](/src/Current_programs/Test_programs2/04.Control%20de%20servo%20con%20potenciómetro.txt) ➜ One of the first things you need to do to get your robot working is to calibrate the steering servo. First, upload this programme to the servo, and use a potentiometer to adjust the servo until it stops at 90 degrees. This programme can also be used to calibrate the servo attached to the HUSKYLENS.
 * [03.Calibrate the magnetometer 10DOF.py](/src/Current_programs/Test_programs2/12.calibrar_magnetometro.py) ➜To guide you through the circuit’s streets, you’ll first need to calibrate the magnetometer; to do this, we’ll load this programme onto the Raspberry Pi. Calibration involves placing the robot on the circuit. You must remove or move as far away as possible any metal objects in the vicinity, as these may interfere with the calibration. After that, you must rotate the robot around an imaginary axis and turn it as many times as necessary until the offset_x and offset_y values stabilise and remain constant. You will be able to monitor all of this on the terminal.
