@@ -2126,7 +2126,7 @@ This is our (almost) current final program (we are still working on it), that wi
  
 Here is a flowchart that will help you understand how our final program works.
 
-<img src="src/Current_programs/Flowchart2.png">
+<img src="src/Current_programs/diagrama de flujo andorra.png">
 
 </details>
 
