@@ -48,6 +48,20 @@
 ### 1. 👥 The Team
 The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
 
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="t-photos/tphoto1.jpeg"/>
+     team photo
+    </td>
+    <td align="center" width="50%">
+      <img src="t-photos/tphoto2.jpeg"/>
+     funny team photo
+    </td>
+  </tr>
+</table></div>
+
+
 <br> **Miguel**
 <br> **Age:** 17
 <br> **Description:** Hi, I'm Miguel from Ciudad Real, Spain, and this is my first time participating in WRO Competition. I have always been into mechanics and robot building, so I didn't hesistate to take up this challenge. I am such a curious and competitive person, and I had put all my efforts in helping the team.
@@ -1426,11 +1440,11 @@ We have not yet developed a specific strategy for parking in the parking zone du
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="other/strategy/IMG_6645.jpeg"/>
+      <img src="other/strategy/tapetefinal2.jpeg"/>
      clock-wise mode
     </td>
     <td align="center" width="50%">
-      <img src="other/strategy/IMG_6645_20260530_212532.jpeg"/>
+      <img src="other/strategy/tapetefinal1.jpeg"/>
      counter clock-wise mode
     </td>
   </tr>
