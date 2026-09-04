@@ -2242,9 +2242,18 @@ Here you will find the essential software for calibrating servos and sensors, so
 
 We’re almost there, all that’s left is for you to save the red and green colours in the HUSKYLENS, with red as colour ID1 and green as colour ID2. It’s very simple and will only take a couple of minutes.
 
-<br>
-</br>
-And that’s it, you can now load the final programme, along with its sub-programmes, onto it and get your robot up and running!!!
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="other/HUSKYLENS/Husky learning.jpg" width="450"/>
+    </td>
+    <td align="center" width="50">
+      <img src="other/HUSKYLENS/Husky learning2.jpg" width="450"/>
+    </td>
+  </tr>
+</table></div>
+
+And that’s it, you can now load the final programme, along with its sub-programmes, onto it and get your robot up and running!!!😀
 
 </details>
 
