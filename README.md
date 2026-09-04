@@ -1513,11 +1513,11 @@ We decided to circle round the centre as this was our initial strategy when we b
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="other/strategy/mision3.jpeg"/>
+      <img src="other/strategy/tapetefinal2.jpeg"/>
      clock-wise mode
     </td>
     <td align="center" width="50%">
-      <img src="other/strategy/mision4.jpeg"/>
+      <img src="other/strategy/tapetefinal1.jpeg"/>
      counter clock-wise mode
     </td>
   </tr>
@@ -2114,8 +2114,8 @@ These are all programs we used to calibrate sensors and conduct functional tests
 <summary><b>💻 Final program</b></summary>
 <br>
  
-This is our old final program, which allowed us to reach the national WRO final:
-
+This is our old final program, that will be shown up on the WRO final:
+<img src="src/Current_programs/Program_versions2/ANDORRA_V8">
 
 </details>
 
