@@ -2075,7 +2075,7 @@ These are all programs we used to calibrate sensors and conduct functional tests
 * [09.Leer escala de grises con TCRT500.txt](/src/Current_programs/Test_programs2/09.Leer%20escala%20de%20grises%20con%20TCRT500.txt) ➜ to verify the accuracy of the TCRT5000 sensor's grayscale reading by using it to distinguish colors (Conclusion: it is not reliable)
 * [10.Conexion inicial con Husky1.txt](/src/Current_programs/Test_programs2/10.Conexion%20inicial%20con%20Husky1.txt) ➜ to verify the connection between the Raspberry Pi and HUSKLENS using the I2C communication protocol
 * [11.Color Recognition con HUSKY.txt](/src/Current_programs/Test_programs2/11.Color%20Recognition%20con%20HUSKY.txt) ➜ to turn on two LEDs based on HuskyLens's visual object recognition
-   
+* [12.Calibrate the magnetometer 10DOF.py](/src/Current_programs/Test_programs2/12.calibrar_magnetometro.py) ➜ so that the robot knows which angle corresponds to each street
 </details>
 
 <details>
