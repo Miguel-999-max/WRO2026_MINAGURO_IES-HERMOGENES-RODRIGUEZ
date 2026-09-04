@@ -1492,11 +1492,11 @@ After much testing, trial and error, and various strategies, we finally settled 
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="other/strategy/mision1.jpeg"/>
+      <img src="other/strategy/IMG_cw.jpeg"/>
      clock-wise mode
     </td>
     <td align="center" width="50%">
-      <img src="other/strategy/mision2.jpeg"/>
+      <img src="other/strategy/IMG_ccw.jpeg"/>
      counter clock-wise mode
     </td>
   </tr>
@@ -1517,7 +1517,7 @@ We decided to circle round the centre as this was our initial strategy when we b
      clock-wise mode
     </td>
     <td align="center" width="50%">
-      <img src="other/strategy/tapetefinal1.jpeg"/>
+      <img src="other/strategy/IMG_8165.jpeg"/>
      counter clock-wise mode
     </td>
   </tr>
