@@ -1487,7 +1487,9 @@ Similarly, we continue to work on resolving and developing these issues.
 
 After much testing, trial and error, and various strategies, we finally settled on the definitive one (you can see the process leading up to this documented in ‘Daily documentation’). Before discussing the specific strategy for each challenge, let’s explain how we distinguish one challenge from another. To do this, we used the most obvious difference between the two: the presence of obstacles in the Obstacle Challenge and their absence in the Open Challenge. As it is difficult to describe the strategy in writing, we have attached an image showing the diagram.
 
-<img src="other/esquema2.jpeg"/>
+<p align="center">
+  <img src="other/esquema2.jpeg" width="535">
+</p>
 
 #### Open challenge
 
