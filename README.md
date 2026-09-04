@@ -2250,6 +2250,7 @@ Here you will find two files showing the exact position of each component:
 Here you will find the essential software for calibrating servos and sensors, so that you can get the robot ready and load the final programme onto it.
 <br>
 <br>
+  
 * [01.Calibrate the steering servo.txt](/src/Current_programs/Test_programs2/04.Control%20de%20servo%20con%20potenciómetro.txt) ➜ One of the first things you need to do to get your robot working is to calibrate the steering servo. First, upload this programme to the servo, and use a potentiometer to adjust the servo until it stops at 90 degrees. This programme can also be used to calibrate the servo attached to the HUSKYLENS.
   
 * [02.Calibrate the magnetometer 10DOF.py](/src/Current_programs/Test_programs2/12.calibrar_magnetometro.py) ➜To guide you through the circuit’s streets, you’ll first need to calibrate the magnetometer; to do this, we’ll load this programme onto the Raspberry Pi. Calibration involves placing the robot on the circuit. You must remove or move as far away as possible any metal objects in the vicinity, as these may interfere with the calibration. After that, you must rotate the robot around an imaginary axis and turn it as many times as necessary until the offset_x and offset_y values stabilise and remain constant. You will be able to monitor all of this on the terminal.
