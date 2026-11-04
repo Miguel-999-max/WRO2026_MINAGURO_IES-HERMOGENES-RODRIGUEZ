@@ -156,7 +156,7 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
 #### 2.2 Second Version (Raspberry)
 
 <details>
-<summary><b>Here are some pictures of our current robot to help with it´s reproducibility, and a table listing its main technical specifications:</b></summary>
+<summary><b>Here are some pictures of our robots second version to help with it´s reproducibility, and a table listing its main technical specifications:</b></summary>
 <br>
 
 
@@ -310,6 +310,13 @@ https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
     <td align="center">Custom PCB chassis</td>
   </tr>
 </table>
+</details>
+
+#### 2.3 Final Version (Raspberry)
+
+<details>
+<summary><b>Here are some pictures of our robots final version to help with it´s reproducibility, and a table listing its main technical specifications:</b></summary>
+<br>
 
 </details>
 
@@ -567,9 +574,9 @@ Before finishing, we decided to break down main.py into subprograms; since the p
 This section is dedicated to the robot’s mechanical components: the list of parts used in its construction and the 3D-printed parts we designed and printed.
 
 <details>
-<summary><b> 4.1 Old components and 3D designs</b></summary>
+<summary><b> 4.1 First version - Components and 3D designs</b></summary>
 <br>
-Here is a also a list of all components we used to use before our modifications; including an image, their specific function in the robot, and a purchase link: 
+Here is a also a list of all components we used; including an image, their specific function in the robot, and a purchase link: 
 
 | Component | Quantity | Image | Function | Purchase link |
 | :---: | :---: | :---: | :---: | :---: |
@@ -583,7 +590,7 @@ Here is a also a list of all components we used to use before our modifications;
 </details>
 
 <details>
-<summary><b> 4.2 Current components List </b></summary>
+<summary><b> 4.2 Second version - Components and 3D designs </b></summary>
 <br>
 Here is a list of all components we used, including an image, their specific function in the robot, and a purchase link: 
 
@@ -629,7 +636,7 @@ Here is a list of all components we used, including an image, their specific fun
 </details>
 
 <details>
-<summary><b> 4.3 Current 3D Designs </b></summary>
+<summary><b> 4.3 Final version - Components and 3D designs </b></summary>
 <br>
 
 These are the 3D designs we have created, which include: a custom-made chassis for all components, a gear to connect the differential to the 360-degree servo, a rear wheel adapter to connect the differential shaft to the wheels and a mount for the HUSKYLENS module:
@@ -650,7 +657,7 @@ These are the 3D designs we have created, which include: a custom-made chassis f
 This section includes an overview of the robot's components, speed and torque calculations, and the steering, motor and transmission systems.
 
 <details>
-<summary><b>5.1 Old Mobility design</b></summary>
+<summary><b>5.1 First version - Mobility design</b></summary>
 <br>
  
 Generally speaking, the robot has:
@@ -773,7 +780,7 @@ Finally, the servo we fitted to the HUSKYLENS to make the camera rotate was caus
 </details>
 
 <details>
-<summary><b>5.2 Current Mobility design</b></summary>
+<summary><b>5.2 Second version - Mobility design</b></summary>
 <br>
 
 Generally speaking, the robot has:
@@ -979,6 +986,12 @@ However, the addition of the other two batteries—a last-minute modification—
 The chassis was always designed to provide a stable and reliable foundation on which to mount the components, avoid unnecessary wiring, provide specific spaces for certain components, save space, and keep the robot compact throughout its journey through the challenges.
 
 </details>
+
+<details>
+<summary><b>5.3 Final version - Mobility design</b></summary>
+<br>
+</details>
+
 
 ### 6. ⚡ Power and Sensor Architecture 
 
