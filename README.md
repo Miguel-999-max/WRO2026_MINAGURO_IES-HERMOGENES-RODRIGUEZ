@@ -998,7 +998,7 @@ The chassis was always designed to provide a stable and reliable foundation on w
 This section includes the robot's power supply, the wiring diagram created in Cirkit Designer, everything related to the sensors that provide information to the board, and the reasoning behind the sensor layout.
 
 <details>
-<summary><b>6.1 Old Power and Sensor Architecture</b></summary>
+<summary><b>6.1 First version - Power and Sensor Architecture</b></summary>
 <br>
 
 #### Power Supply 
@@ -1084,7 +1084,7 @@ One major issue it caused was that it sometimes interfered with other robot comp
 </details>
 
 <details>
-<summary><b>6.2 Current Power and Sensor Architecture</b></summary>
+<summary><b>6.2 Second version - Power and Sensor Architecture</b></summary>
 <br>
 
 #### Power Supply 
@@ -1434,12 +1434,16 @@ The L3GD20 gyroscope is mounted on a cylindrical rod at the top center of the ro
 
 </details>
 
+<details>
+<summary><b>6.3 Final version - Power and Sensor Architecture</b></summary>
+<br>
+</details>
 
 ### 7. 🧠 Strategy
 Here you can find the strategy we have followed to complete both challenges
 
 <details>
-<summary><b>7.1 Old strategy </b></summary>
+<summary><b>7.1 First version - Strategy </b></summary>
 <br
  
 Before focusing on each of the two types of challenges individually, we distinguish between them as follows: since the obstacle challenge allows us to choose between starting from the parking area specified in the free challenge or from the magenta parking lot, we choose to start from the magenta parking lot so that the starting area is different for each challenge, making it easier to tell them apart. Therefore, we start by checking the front distance; and, depending on whether it is greater or less than 40 cm, we know whether we are in the open challenge or the obstacle challenge, respectively. Once we know this, we proceed to analyze each challenge separately. 
@@ -1495,7 +1499,7 @@ Similarly, we continue to work on resolving and developing these issues.
 </details>
 
 <details>
-<summary><b>7.2 Current strategy </b></summary>
+<summary><b>7.2 Second version - Strategy </b></summary>
 <br>
 
 After much testing, trial and error, and various strategies, we finally settled on the definitive one (you can see the process leading up to this documented in ‘Daily documentation’). Before discussing the specific strategy for each challenge, let’s explain how we distinguish one challenge from another. To do this, we used the most obvious difference between the two: the presence of obstacles in the Obstacle Challenge and their absence in the Open Challenge. As it is difficult to describe the strategy in writing, we have attached an image showing the diagram.
@@ -1561,10 +1565,15 @@ While we do all that, the RGB sensor is counting the blue lines on the floor to 
 
 </details>
 
+<details>
+<summary><b>7.3 Final version - Strategy </b></summary>
+<br>
+</details>
+
 ### 8. 💻 Software
 Here you can find almost all programs used in the development of our robot; including flowcharts, test programs and each version of the final program we have made.
 
-#### 8.1 Old programs (Arduino - C++)
+#### 8.1 First version - Programs (Arduino - C++)
 
 <details>
 <summary><b>📋 Test programs</b></summary>
@@ -2105,7 +2114,7 @@ Here are all versions we did to make our final program:
 
 </details>
 
-#### 8.2 Current programs (Raspberry - python)
+#### 8.2 Second version - Programs (Raspberry - python)
 
 <details>
 <summary><b>📋 Test programs</b></summary>
@@ -2171,11 +2180,15 @@ Here is a FSM that will show you the logic our program follows:
   
 </details>
 
+#### 8.3 Final version - Programs (Raspberry - python)
+
 ### 9. 🦾 Build our robot
+
+#### 9.1 Second version (HUSKYLENS 1)
 Here you will find everything necessary to create our current robot step by step
 
 <details>
-<summary><b>9.1 Components</b></summary>
+<summary><b>Components</b></summary>
 <br>
 Here are all the necessary components:
  <br></br> 
@@ -2227,7 +2240,7 @@ Here are all the necessary components:
 </details>
 
 <details>
-<summary><b>9.2 Pins connections</b></b></summary>
+<summary><b>Pins connections</b></b></summary>
 <br>
 Use these two photos to connect the components:
  <br></br> 
@@ -2246,7 +2259,7 @@ Use these two photos to connect the components:
 </details>
 
 <details>
-<summary><b>9.3 Placing</b></summary>
+<summary><b>Placing</b></summary>
 <br>
 Here you will find two files showing the exact position of each component:
   <br></br> 
@@ -2267,7 +2280,7 @@ Here you will find two files showing the exact position of each component:
 </details>
 
 <details>
-<summary><b>9.4 Raspberry pi pico 2 and VSCode startup</b></summary>
+<summary><b>Raspberry pi pico 2 and VSCode startup</b></summary>
 <br>
 <strong>Firmware of the Raspberry Pi Pico 2</strong>➜ First of all, you’ll need to install a firmware on the Raspberry Pi Pico 2 so that we can load programmes onto it and use it in VScode. You can find the firmware on the official website <a href="https://micropython.org/download/RPI_PICO2/">MicroPython for Raspberry Pi Pico 2</a>, download it here. We’ll explain how to do this step by:
 <br>
@@ -2282,7 +2295,7 @@ Here you will find two files showing the exact position of each component:
 </details>
 
 <details>
-<summary><b>9.5 Adjust the servos</b></summary>
+<summary><b>Adjust the servos</b></summary>
 <br>
 Here you will find the essential software for calibrating servos and sensors, so that you can get the robot ready and load the final programme onto it.
 <br>
@@ -2310,6 +2323,8 @@ We’re almost there, all that’s left is for you to save the red and green col
 And that’s it, you can now load the final programme, along with its sub-programmes, onto it and get your robot up and running!!!😀
 
 </details>
+
+#### 9.2 Final version (HUSKYLENS 2)
 
 <br>
 <a href="#arriba">⬆️Back to top</a>
