@@ -55,15 +55,16 @@
   </table>
 </div>
   ## 📁 TABLE OF CONTENTS
-* [1. 👥 The Team ](#1--the--team)
-* [2. 🤖 Our Robot](#2--our--robot)
-* [3. 📝 Daily documentation](#3--daily--documentation)
-* [4. 🛠️ Mechanical Design](#seccion--mecanica)
-* [5. 🪛 Mobility design](#5--mobility--design)
-* [6. ⚡Power and Sensor Architecture](#6--power--and--sensor--architecture)
+
+* [1. 👥 The Team ](#1--the-team)
+* [2. 🤖 Our Robot](#2---our-robot)
+* [3. 📝 Daily documentation](#3--daily-documentation)
+* [4. 🛠️ Mechanical Design](#4--seccion-mecanica)
+* [5. 🪛 Mobility design](#5--mobility-design)
+* [6. ⚡Power and Sensor Architecture](#6--power-and-sensor-architecture)
 * [7. 🧠 Strategy](#7--strategy)
 * [8. 💻 Software](#8--software)
-* [9. 🦾 Build our robot](#9--build--our--robot)
+* [9. 🦾 Build our robot](#9--build-our-robot)
 
 ### 1. 👥 The Team
 The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking members led by a teacher. This is our first year competing in the WRO Future Engineers category, and each member brings important skills to the team.
