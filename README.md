@@ -34,21 +34,19 @@
   </table>
 </div>
 
- <div align="justify">We would like to thank our sponsors for making this project possible:
-
 <div align="center">
   <table border="0">
     <tr>
       <td align="center" width="300">
-        <a href="https://www.uclm.es/">
-          <img src=other/Sponsors/UCLM.png width="300" /><br />
-          <b>Universidad de Castilla La Mancha</b>
+        <a href="https://www.tsdinternational.com/es/">
+          <img src=other/Sponsors/TSD logo.jpg width="300" /><br />
+          <b>TECHNOLOGY AND SECURITY DEVELOPMENTS</b>
         </a>
       </td>
       <td align="center" width="300">
-        <a href="https://ies-hermogenesrodriguez.centros.castillalamancha.es/">
-          <img src="other/Sponsors/ies_Hermogenes.png" width="100"  /><br />
-          <b>IES Hermógenes Rodríguez</b>
+        <a href="https://www.rotecsl.com/">
+          <img src=other/Sponsors/Rtoec logo.pdf width="300"  /><br />
+          <b>Rotec</b>
         </a>
       </td>
     </tr>
