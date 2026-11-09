@@ -61,11 +61,10 @@
           <img src=other/Sponsors/Herencia_emblem.jpg width="300" /><br />
           <b>Herencia Town Council</b>
         </a>
-      </td>
-      <td align="center" width="300">
-        <a href="https://www.symaga.com/">
-          <img src=other/Sponsors/Symaga_logo.jpg width="300"  /><br />
-          <b>Symaga</b>
+         <td align="center" width="300">
+        <a href="https://www.tecnove.com/">
+          <img src=other/Sponsors/Tecnove_logo.jpg width="300" /><br />
+          <b>Tecnove</b>
         </a>
       </td>
     </tr>
@@ -76,9 +75,9 @@
   <table border="0">
     <tr>
       <td align="center" width="300">
-        <a href="https://www.tecnove.com/">
-          <img src=other/Sponsors/Tecnove_logo.jpg width="300" /><br />
-          <b>Tecnove</b>
+        <a href="https://www.symaga.com/">
+          <img src=other/Sponsors/Symaga_logo.jpg width="300"  /><br />
+          <b>Symaga</b>
         </a>
       </td>
       <td align="center" width="300">
