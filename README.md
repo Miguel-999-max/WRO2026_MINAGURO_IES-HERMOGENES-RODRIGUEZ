@@ -100,7 +100,7 @@
       </td>
       <td align="center" width="300">
         <a href="http://castillaretail.com/">
-          <img src=other/Sponsors/Castilladecor_logo.jpg width="250"  /><br />
+          <img src=other/Sponsors/Castilladecor_logo.png width="300"  /><br />
           <b>Castilladecor</b>
         </a>
       </td>
