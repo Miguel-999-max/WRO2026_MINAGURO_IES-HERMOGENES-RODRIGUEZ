@@ -33,7 +33,27 @@
     </tr>
   </table>
 </div>
- 
+
+ <div align="justify">We would like to thank our sponsors for making this project possible:
+
+<div align="center">
+  <table border="0">
+    <tr>
+      <td align="center" width="300">
+        <a href="https://www.uclm.es/">
+          <img src=other/Sponsors/UCLM.png width="300" /><br />
+          <b>Universidad de Castilla La Mancha</b>
+        </a>
+      </td>
+      <td align="center" width="300">
+        <a href="https://ies-hermogenesrodriguez.centros.castillalamancha.es/">
+          <img src="other/Sponsors/ies_Hermogenes.png" width="100"  /><br />
+          <b>IES Hermógenes Rodríguez</b>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
   ## 📁 TABLE OF CONTENTS
 * [1. 👥 The Team ](#1--the-team)
 * [2. 🤖 Our Robot](#2--our-robot)
