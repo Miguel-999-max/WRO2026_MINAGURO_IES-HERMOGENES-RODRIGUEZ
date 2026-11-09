@@ -52,6 +52,45 @@
     </tr>
   </table>
 </div>
+
+<div align="center">
+  <table border="0">
+    <tr>
+      <td align="center" width="300">
+        <a href="https://herencia.es/">
+          <img src=other/Sponsors/TSD logo.jpg width="300" /><br />
+          <b>Herencia Town Council</b>
+        </a>
+      </td>
+      <td align="center" width="300">
+        <a href="https://www.symaga.com/">
+          <img src=other/Sponsors/Rtoec logo.pdf width="300"  /><br />
+          <b>Symaga</b>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div align="center">
+  <table border="0">
+    <tr>
+      <td align="center" width="300">
+        <a href="https://www.tecnove.com/">
+          <img src=other/Sponsors/TSD logo.jpg width="300" /><br />
+          <b>Tecnove</b>
+        </a>
+      </td>
+      <td align="center" width="300">
+        <a href="https://villartadesanjuan.es/">
+          <img src=other/Sponsors/Rtoec logo.pdf width="300"  /><br />
+          <b>Villarta de San Juan Town Council</b>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+ 
   ## 📁 TABLE OF CONTENTS
 
 * [1. 👥 The Team ](#1--the-team)
