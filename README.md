@@ -89,6 +89,24 @@
     </tr>
   </table>
 </div>
+
+<div align="center">
+  <table border="0">
+    <tr>
+      <td align="center" width="300">
+          <img src=other/Sponsors/AMPA_logo.jpg width="250"  /><br />
+          <b>Parents Association of Students</b>
+        </a>
+      </td>
+      <td align="center" width="300">
+        <a href="http://castillaretail.com/">
+          <img src=other/Sponsors/Castilladecor_logo.jpg width="250"  /><br />
+          <b>Castilladecor</b>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
  
   ## 📁 TABLE OF CONTENTS
 
