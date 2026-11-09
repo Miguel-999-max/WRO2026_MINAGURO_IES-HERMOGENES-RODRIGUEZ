@@ -39,8 +39,8 @@
     <tr>
       <td align="center" width="300">
         <a href="https://www.tsdinternational.com/es/">
-          <img src=other/Sponsors/TSD_logo.jpg width="300" /><br />
-          <b>TECHNOLOGY AND SECURITY DEVELOPMENTS</b>
+          <img src=other/Sponsors/TSD_logo.jpg width="250" /><br />
+          <b>Technology and Security Developments</b>
         </a>
       </td>
       <td align="center" width="300">
@@ -58,12 +58,12 @@
     <tr>
       <td align="center" width="300">
         <a href="https://herencia.es/">
-          <img src=other/Sponsors/Herencia_emblem.jpg width="300" /><br />
+          <img src=other/Sponsors/Herencia_emblem.jpg width="230" /><br />
           <b>Herencia Town Council</b>
         </a>
          <td align="center" width="300">
         <a href="https://www.tecnove.com/">
-          <img src=other/Sponsors/Tecnove_logo.jpg width="300" /><br />
+          <img src=other/Sponsors/Tecnove_logo.jpg width="500" /><br />
           <b>Tecnove</b>
         </a>
       </td>
@@ -76,13 +76,13 @@
     <tr>
       <td align="center" width="300">
         <a href="https://www.symaga.com/">
-          <img src=other/Sponsors/Symaga_logo.jpg width="300"  /><br />
+          <img src=other/Sponsors/Symaga_logo.jpg width="350"  /><br />
           <b>Symaga</b>
         </a>
       </td>
       <td align="center" width="300">
         <a href="https://villartadesanjuan.es/">
-          <img src=other/Sponsors/Villarta_emblem.wepb width="300"  /><br />
+          <img src=other/Sponsors/Villarta_emblem.jpg width="150"  /><br />
           <b>Villarta de San Juan Town Council</b>
         </a>
       </td>
