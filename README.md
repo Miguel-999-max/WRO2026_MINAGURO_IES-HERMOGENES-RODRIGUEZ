@@ -45,7 +45,7 @@
       </td>
       <td align="center" width="300">
         <a href="https://www.rotecsl.com/">
-          <img src=other/Sponsors/Rtoec_logo.jpg width="300"  /><br />
+          <img src=other/Sponsors/Rtoec_logo.pdf width="300"  /><br />
           <b>Rotec</b>
         </a>
       </td>
