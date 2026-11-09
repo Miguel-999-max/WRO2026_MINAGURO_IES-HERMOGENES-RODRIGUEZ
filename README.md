@@ -14,6 +14,8 @@
 
 ## 🤝 Sponsors
 <div align="justify">We would like to thank our sponsors for making this project possible:
+<br>
+</br>
 
 <div align="center">
   <table border="0">
