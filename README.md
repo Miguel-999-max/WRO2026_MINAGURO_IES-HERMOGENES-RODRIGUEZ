@@ -45,7 +45,7 @@
       </td>
       <td align="center" width="300">
         <a href="https://www.rotecsl.com/">
-          <img src=other/Sponsors/Rotec_logo.pdf width="300"  /><br />
+          <img src=other/Sponsors/Rotec_logo.png width="300"  /><br />
           <b>Rotec</b>
         </a>
       </td>
@@ -83,7 +83,7 @@
       </td>
       <td align="center" width="300">
         <a href="https://villartadesanjuan.es/">
-          <img src=other/Sponsors/Rtoec_logo.pdf width="300"  /><br />
+          <img src=other/Sponsors/Villarta_emblem.wepb width="300"  /><br />
           <b>Villarta de San Juan Town Council</b>
         </a>
       </td>
