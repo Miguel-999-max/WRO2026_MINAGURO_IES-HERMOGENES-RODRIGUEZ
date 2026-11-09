@@ -59,7 +59,7 @@
 * [1. 👥 The Team ](#1--the-team)
 * [2. 🤖 Our Robot](#2--our-robot)
 * [3. 📝 Daily documentation](#3--daily-documentation)
-* [4. 🛠️ Mechanical Design](#4--mechanical-design-)
+* [4. 🛠️ Mechanical Design](#4--Mechanical-Design)
 * [5. 🪛 Mobility design](#5--mobility-design)
 * [6. ⚡Power and Sensor Architecture](#6--power-and-sensor-architecture)
 * [7. 🧠 Strategy](#7--strategy)
