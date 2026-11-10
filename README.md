@@ -109,6 +109,81 @@
     </tr>
   </table>
 </div>
+
+<div align="center">
+  <table border="0">
+    <!-- Fila 1 -->
+    <tr>
+      <td align="center" width="300">
+        <a href="https://www.uclm.es/">
+          <img src="other/Sponsors/UCLM.png" width="300" /><br />
+          <b>Universidad de Castilla La Mancha</b>
+        </a>
+      </td>
+      <td align="center" width="300">
+        <a href="https://ies-hermogenesrodriguez.centros.castillalamancha.es/">
+          <img src="other/Sponsors/ies_Hermogenes.png" width="100" /><br />
+          <b>IES Hermógenes Rodríguez</b>
+        </a>
+      </td>
+      <td align="center" width="300">
+        <a href="https://www.tsdinternational.com/es/">
+          <img src="other/Sponsors/TSD_logo.jpg" width="250" /><br />
+          <b>Technology and Security Developments</b>
+        </a>
+      </td>
+    </tr>
+    <!-- Fila 2 -->
+    <tr>
+      <td align="center" width="300">
+        <a href="https://www.rotecsl.com/">
+          <img src="other/Sponsors/Rotec_logo.png" width="300" /><br />
+          <b>Rotec</b>
+        </a>
+      </td>
+      <td align="center" width="300">
+        <a href="https://herencia.es/">
+          <img src="other/Sponsors/Herencia_emblem.jpg" width="230" /><br />
+          <b>Herencia Town Council</b>
+        </a>
+      </td>
+      <td align="center" width="300">
+        <a href="https://www.tecnove.com/">
+          <img src="other/Sponsors/Tecnove_logo.jpg" width="300" /><br />
+          <b>Tecnove</b>
+        </a>
+      </td>
+    </tr>
+    <!-- Fila 3 -->
+    <tr>
+      <td align="center" width="300">
+        <a href="https://www.symaga.com/">
+          <img src="other/Sponsors/Symaga_logo.jpg" width="350" /><br />
+          <b>Symaga</b>
+        </a>
+      </td>
+      <td align="center" width="300">
+        <a href="https://villartadesanjuan.es/">
+          <img src="other/Sponsors/Villarta_emblem.jpg" width="150" /><br />
+          <b>Villarta de San Juan Town Council</b>
+        </a>
+      </td>
+      <td align="center" width="300">
+        <img src="other/Sponsors/AMPA_logo.jpg" width="250" /><br />
+        <b>Parents Association of Students</b>
+      </td>
+    </tr>
+    <!-- Fila 4 -->
+    <tr>
+      <td align="center" width="300" colspan="3">
+        <a href="http://castillaretail.com/">
+          <img src="other/Sponsors/Castilladecor_logo.png" width="300" /><br />
+          <b>Castilladecor</b>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
  
   ## 📁 TABLE OF CONTENTS
 
