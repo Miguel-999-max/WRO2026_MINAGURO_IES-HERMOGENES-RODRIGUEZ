@@ -1549,6 +1549,327 @@ The L3GD20 gyroscope is mounted on a cylindrical rod at the top center of the ro
 <details>
 <summary><b>6.3 Final version - Power and Sensor Architecture</b></summary>
 <br>
+
+#### Power Supply 
+The robot runs on four Samsung ICR18650-26FU batteries. Two of the batteries directly power the two mini-servos (the one on the HUSKYLENS module and the steering servo), the TF-Mini S sensor, and the Raspberry Pi Pico 2 board, while the other two power the drive servo and the HUSKYLENS.
+
+An energy calculation was performed, taking all components into account, to help select the batteries:
+<table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>     
+      <!-- Cabecera principal dividida en dos grandes columnas -->
+      <th colspan="3" align="center" style="background-color: #f6f8fa; border: 1px solid #dfe2e5; padding: 10px;">Battery one🔋(the one on the wing)</th>
+      <th colspan="3" align="center" style="background-color: #f6f8fa; border: 1px solid #dfe2e5; padding: 10px;">Battery two⚡(the one underneath the chassis)</th>
+    </tr>
+    <tr>
+      <!-- Subcolumnas para la Batería 1 -->
+      <th style="border: 1px solid #dfe2e5; padding: 8px;">Electronic device</th>
+      <th style="border: 1px solid #dfe2e5; padding: 8px;">milliampere-hours consumed (mA/h)</th>
+      <th style="border: 1px solid #dfe2e5; padding: 8px;">Volts (V)</th>
+      <!-- Subcolumnas para la Batería 2 -->
+      <th style="border: 1px solid #dfe2e5; padding: 8px;">Electronic device</th>
+      <th style="border: 1px solid #dfe2e5; padding: 8px;">milliampere consumed (mA)</th>
+      <th style="border: 1px solid #dfe2e5; padding: 8px;">volts (V)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <!-- Fila 1 -->
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">Raspberry Pi Pico 2 board</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">40 mA</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">360° continuous rotation servo</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">700 mA</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">8,4 V</td>
+    </tr>
+    <tr>
+      <!-- Fila 2 -->
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">TOF400F (right and left)</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">40 mA</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">HUSKYLENS module</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">230–420 mA</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td>
+    </tr>
+    <tr>
+      <!-- Fila 3 -->
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">LEDS</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">15 mA</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+    </tr>
+    <tr>
+      <!-- Fila 4 -->
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">TFmini-S</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">140 mA</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+    </tr>
+    <tr>
+      <!-- Fila 5 -->
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">180 microservo direction</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">200 mA</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+    </tr>
+    <tr>
+      <!-- Fila 6 -->
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">10DOF magnetometer</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">6 mA</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+    </tr>
+    <tr>
+      <!-- Fila 7 -->
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">Huskylens and TFmini micro-servo</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">200 mA</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td> 
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+    </tr>
+    <tr>
+      <!-- Fila 8 -->
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">RGB sensor TCS34725</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">6 mA</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td> 
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+      <td style="border: none;"></td>
+    </tr>
+  </tbody>
+</table>
+
+* Total: approximately 1,600 mA
+
+Based on this data, the approximate theoretical battery life would be:
+
+* Battery life for the traction servo and the HUSKYLENS camera (8.4 V and 2,600 mAh): approximately 2,5 hours.
+* Battery life for the Raspberry Pi Pico 2 board, TFmini-S sensor, and mini servos (4.2 V and 5,200 mAh): approximately 12 hours.
+
+This means we need to be careful with the batteries for the 360° servo and the HUSKYLENS module, as they may fail due to a lack of power.
+
+It’s clear that we have more than enough battery power to cover the robot’s components’ power consumption, but even so, we’ve opted to have a bit of a reserve so we don’t have to worry about recharging the batteries every so often. Normally, the batteries can last up to two or three weeks, depending on whether I use it or whether we carry out a lot of tests with the robot.
+
+Given this budget and the availability of batteries in our category, we chose the Samsung ICR18650-26FU model. The main features of this model are:
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="other/components/Samsung battery 2600mAh.webp"/>
+    </td>
+    <td align="left" width="50%">
+      <ul>
+        <li>Brand: Samsung</li>
+        <li>Model: ICR 18650-26FU</li>
+        <li>Capacity: Nominal capacity: 2600 mAh</li>
+        <li>Voltage: 3.7 V nominal</li>
+        <li>Charging: 4.2 V maximum, 1300 mA standard, 2600 mA maximum</li>
+        <li>Discharge: Cut-off at 2.75 V, standard 520 mA, maximum 5200 mA</li>
+        <li>Description: Pink cell casing, white insulating ring, 18650 format</li>
+      </ul>
+    </td>
+  </tr>
+</table></div>
+
+The batteries that power the HUSKYLENS and the drive servo are housed in a battery expansion module on the bottom of the chassis. This way, you simply remove them and insert new ones when the battery runs out. Previously, they were placed in a dedicated space inside the 3D-printed chassis. Initially, in the prototype with a foam board base, they were glued to the bottom of the base, as can be seen in the initial sketches of the component layout. Later, it was decided to create a custom 3D-printed compartment for them in that same location.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/prototype1.2.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+       <img src="v-photos/Old_photos/robot image v2.14.jpg" width="305"/>
+     </td>
+     <td align="center" width="33%">
+       <img src="v-photos/Current_photos/v_der.2.jpg" width="305"/>
+     </td>
+  </tr>
+</table></div>
+
+As a last-minute modification, the batteries that power the Raspberry Pi Pico 2 board, the two microservos, and the TFmini-S sensor have been mounted on a 3D-printed structure at the top rear of the robot, inside a battery expansion module; this way, if some batteries run out, there’s no need to waste time disassembling the entire circuit to replace them—you simply remove them from there and swap them out. Additionally, this structure also expands the parking space, giving us more room to maneuver during the obstacle course. Initially, this structure was made of foam board, but it was eventually modified to use a more durable material.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_der.3.jpg" width="350"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_arriba.jpg" width="350"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_tras.jpg" width="350"/>
+    </td>
+  </tr>
+</table></div>
+
+To power the HUSKYLENS module, an LM7805 regulator has been included to step down the voltage from the batteries from 8.4 V to 5 V. Electrolytic capacitors have also been included as recommended by the manufacturer. 
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_lm78.jpg" width="350"/>
+    </td>
+  </tr>
+</table></div>
+
+#### Wiring Scheme
+The wiring diagram was created in Cirkit Designer. In previous versions, it was created in TinkerCad, but the components we used weren’t available there, and since Cirkit Designer allows you to design custom components, we created it there instead. Here is the final result:
+
+<img src="schemes/wiring_scheme_andorra.png">
+
+#### Sensors 
+The robot receives data from six main components: the Raspberry Pi Pico 2 board, the TFmini-S distance sensor, the TOF400F distance sensors, the HUSKYLENS module, the TCS34725 RGB sensor, and the L3GD20 gyroscope.
+
+The Raspberry Pi Pico 2 board was chosen after the regional competition. Initially, we used an Arduino R4 Minima board, but it was clear that a more powerful microcontroller was needed to handle such a large amount of data. There were other options, but they presented serious programming challenges. By using this board, the entire program was written in Python, which presented difficulties compared to the code from the regional competition, which was in C++.
+
+This board is mounted on a KS3017 display to allow for convenient connection of the cables from the other components; otherwise, the cables for all components would have to be soldered.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="schemes/pico-2-w-pinout.webp" width="500" height="400"/>
+    </td>
+   <td align="left" width="50%">
+    <ul>
+        <li>Dimensions: 21 mm x 51 mm</li> 
+        <li>CPU: Dual-core Cortex-M33 or RISC-V Hazard3 processors at 150 MHz</li>            <li>Memory: 520 KB of on-chip SRAM</li> 
+        <li>Flash: 4 MB of on-chip QSPI flash memory</li> 
+        <li>Interface: 26 multipurpose GPIO pins (5V-tolerant), including 4 that can be used for ADC</li> 
+        <li>Peripherals: 2 × UART, 2 × SPI controllers, 2 × I2C controllers, 16 × PWM channels, 1 × USB 1.1 and PHY controller, with support for host and device modes, 12 × PIO state machines</li> 
+        <li>Power supply: 1.8–5.5 V DC</li>
+      </ul>
+    </td>
+  </tr>
+</table></div>
+
+We have also drawn up a table showing which GPIO each sensor, LED, servo, etc. The table has been useful for remembering the voltage required for each electronic device and the port they need to be connected to so that everything works properly.
+
+<img src="schemes/Raspberry Pi Pico 2 Connections.jpg">
+
+The TFmini-S sensor was chosen from among other options from the same manufacturer (explained in greater detail in the project log); ultimately, this sensor has a detection range more than sufficient for the challenge, low power consumption, excellent accuracy, and a reasonable price. The other options were either too powerful or too expensive, or they did not meet the requirements. In the end, three sensors were used—one on the microservo and two on the sides—due to concerns arising from the two TOF400F sensors used in previous phases.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="other/components/TFmini-S.png" width="500"/>
+    </td>
+    <td align="left" width="50%">
+     <ul>
+        <li>Measurement principle: Time of flight (ToF) using a single-channel LiDAR sensor.</li>
+        <li>Detection range: 0.1 meters to 12 meters</li>
+        <li>Blind spot: 10 cm</li>
+        <li>Sampling frequency: Adjustable between 1 Hz and 1,000 Hz (100 Hz by default)</li>
+        <li>Accuracy: ±6 cm (from 0.1 to 6 m) / ±1% (from 6 to 12 m).</li>
+        <li>Field of view (FoV): 2 degrees.</li>
+        <li>Light source: 850 nm infrared VCSEL emitter (Eye Safety Class 1).</li>
+        <li>Supply voltage: 5 V DC (±0.1 V)</li>
+        <li>Current consumption: Average ≤140 mA (peaks of 200 mA)</li>
+        <li>Dimensions and weight: 42 mm × 15 mm × 16 mm / 5 grams</li>
+        <li>Ambient light immunity: Up to 70 Klux</li>
+      </ul>
+    </td>
+  </tr>
+</table></div>
+
+The HUSKYLENS 2 module is the robot's main camera. Previously, an earlier model of the HUSKYLENS module was used, but its specifications made it difficult to detect obstacles. This camera is used to detect obstacles on the playing field in obstacle detection mode, guide the robot toward obstacles, and identify the correct color to avoid the obstacle on the correct side using color detection mode. 
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="other/components/HUSKYLENS.webp" width="500" height="400"/>
+    </td>
+   <td align="left" width="50%">
+    <ul>
+        <li>Core Processor Chip: Dual-core RISC-V processor</li>
+        <li>Integrated Image Sensor: Omnivision OV2640 2.0-megapixel camera</li>
+        <li>Built-in Display: 2.0-inch IPS LCD display with a resolution of 320x240 pixels.</li>
+        <li>Supply Voltage: 3.3V to 5.0V DC.</li>
+        <li>Current Consumption: ~320 mA at 3.3V / ~230 mA at 5.0V</li>
+        <li>Frame Rate: Up to 30 frames per second</li>
+        <li>Illumination: Features 2 built-in front LEDs</li>
+        <li>Physical Dimensions: 52 mm × 44.5 mm (2.05“ × 1.75”).</li>
+      </ul>
+    </td>
+  </tr>
+</table></div>
+
+The TCS34725 RGB sensor was chosen after encountering problems with the previous strategy, which involved the HUSKYLENS detecting lines on the playing field and counting them; when it reached a certain value, the robot would stop a few seconds later in the correct quadrant. However, combining line counting with traffic light detection led to problems that prevented proper performance in the obstacle challenge.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="other/components/RGB sensor.jpg" width="500" height="400"/>
+    </td>
+   <td align="left" width="50%">
+    <ul>
+       <li>Detection Channels (RGBC): 4 independent channels: Red, Green, Blue, and Clear</li>
+       <li>Resolution per Channel: 16-bit precision per channel</li>
+       <li>Integrated Physical Filter: Features an infrared (IR) blocking filter positioned directly over the photodiodes</li>
+       <li>Dynamic Range: Extreme, with a ratio of 3,800,000:1</li>
+       <li>Recommended Measurement Distance: between 3 mm and 10 mm</li>
+       <li>Supply Voltage: Supports 3.3V and 5V DC</li>
+       <li>Current Consumption: ~2.5 uA in deep sleep mode / up to 20 mA when operating with LEDs on</li>
+       <li>Illumination: 1 or more high-brightness white LEDs</li>
+      </ul>
+    </td>
+  </tr>
+</table></div>
+
+The L3GD20 gyroscope was chosen to help the robot navigate around obstacles. When the camera detects an obstacle, the robot moves toward it and goes around it on the appropriate side; however, when the robot does not detect any obstacles, it follows the course set by the gyroscope until it encounters another obstacle. For this reason, every time the robot changes fields, the gyroscope must be calibrated using a test program that involves rotating the robot.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="other/components/10DOF IMU sensor.jpg" width="500" height="400"/>
+    </td>
+   <td align="left" width="50%">
+    <ul>
+        <li>Type: 3-axis MEMS gyroscope</li>
+        <li>Axes: X, Y, and Z</li>
+        <li>Measurement range: ±250, ±500, and ±2000 °/s</li>
+        <li>Interface: I²C / SPI</li>
+        <li>Supply voltage: 2.4–3.6 V</li>
+        <li>Current consumption: approx. 6.1 mA during operation</li>
+        <li>Resolution: 16 bits</li>
+        <li>Output frequency: up to 760 Hz</li>
+        <li>Sensing: angular velocity on all three axes</li>
+        <li>Operating temperature: −40 to +85 °C</li>
+        <li>Applications: orientation, motion, and rotation sensing, as well as stabilization.</li>
+      </ul>
+    </td>
+  </tr>
+</table></div>
+
+#### Reasoning Behind the Sensor Layout
+
+The HUSKYLENS camera has been mounted on a 180 servo at the front of the robot so that it can easily detect obstacles, at a height of approximately 14 cm. At this height, it can identify obstacles without any problems and without detecting objects outside the playing field. If it were fixed in place and unable to move, there would be blind spots that would prevent it from detecting traffic lights. The camera is used for position and color detection; this gives the software time to decide whether to approach, identify the color, and navigate around the obstacle on the correct side.
+
+The front TFmini-S sensor is also mounted on the micro servo to facilitate performance in the free challenge. The other two TFmini-S sensors are positioned on either side of the robot to take lateral measurements—especially at the start of the obstacle phases—to determine the direction of the challenge. This way, since the sensor can rotate, it can take measurements during the initial scan and measure the distance from the inner wall during the free challenge. Additionally, this helps us avoid blind spots in certain situations.
+
+The TCS34725 RGB sensor is mounted on the lower front, almost flush with the ground, to count the blue lines in both challenges. Initially, it was placed at the rear at the same height to determine the direction of travel in the free challenge, but the strategy changed, and this sensor is now used only to detect and count lines. It is also surrounded by a layer of black EVA foam to prevent measurement errors caused by ambient light.
+
+The L3GD20 gyroscope is mounted on a cylindrical rod at the top center of the robot, at a height of approximately 23 cm. The robot navigates along the course established by this gyroscope in the obstacle challenge when it does not detect traffic lights. It is positioned here to avoid interference with other components, primarily the drive motor and the HUSKYLENS module.
+
+#### Sensor Trade-offs
+
+| Sensor Issues | Detailed Explanation | Solution Implemented |
+| :---: | :---: | :---: |
+| Variable lighting | The lighting in our classroom may differ from that of the competition spotlights, which can cause confusion when detecting the color of the floor lines or pillars. | The color sensor is wrapped in a layer of EVA rubber to prevent interference from ambient light. | 
+| Camera blind spots | The HUSKYLENS camera has a limited field of view. At times, it fails to detect objects that are quite close to it. | The HUSKYLENS camera is mounted on a 180° micro servo to eliminate blind spots. |
+| Interference from the HUSKYLENS module | The HUSKYLENS module interferes with other components, such as the continuous rotation servo, because it is connected to the same port. | The HUSKYLENS module is positioned and connected to a port where it cannot interfere with any other component. |
+| Delay in measurements from the left TOF400F sensor | The left TOF400F sensor, being connected to the I2C port, takes measurements at irregular intervals. At times, it may provide erroneous data that causes the robot to malfunction. | The TFmini-S sensor is used whenever possible to ensure greater measurement accuracy. |
+
+</details>
 </details>
 
 ### 7. 🧠 Strategy
