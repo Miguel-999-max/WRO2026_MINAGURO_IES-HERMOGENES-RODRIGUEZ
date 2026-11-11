@@ -1572,7 +1572,7 @@ The L3GD20 gyroscope is mounted on a cylindrical rod at the top center of the ro
 <br>
 
 #### Power Supply 
-The robot runs on four Samsung ICR18650-26FU batteries. Two of the batteries directly power the two mini-servos (the one on the HUSKYLENS module and the steering servo), the TF-Mini S sensor, and the Raspberry Pi Pico 2 board, while the other two power the drive servo and the HUSKYLENS.
+The robot runs on four Samsung ICR18650-26FU batteries. Two of them directly power the two mini-servos (the one on the HUSKYLENS module and the steering servo), the Raspberry Pi Pico 2 board, and the relay, while the other two power the drive servo, the HUSKYLENS 2 module, the three TFmini-S sensors, and the front LED. 
 
 An energy calculation was performed, taking all components into account, to help select the batteries:
 <table style="border-collapse: collapse; width: 100%;">
@@ -1676,9 +1676,7 @@ Based on this data, the approximate theoretical battery life would be:
 * Battery life for the traction servo and the HUSKYLENS camera (8.4 V and 2,600 mAh): approximately 2,5 hours.
 * Battery life for the Raspberry Pi Pico 2 board, TFmini-S sensor, and mini servos (4.2 V and 5,200 mAh): approximately 12 hours.
 
-This means we need to be careful with the batteries for the 360° servo and the HUSKYLENS module, as they may fail due to a lack of power.
-
-It’s clear that we have more than enough battery power to cover the robot’s components’ power consumption, but even so, we’ve opted to have a bit of a reserve so we don’t have to worry about recharging the batteries every so often. Normally, the batteries can last up to two or three weeks, depending on whether I use it or whether we carry out a lot of tests with the robot.
+Theoretically, that’s their battery life, so we’d need to be careful with the batteries. However, after weeks of testing, it has been confirmed that they last about 2 or 3 weeks, even with numerous tests per day (approximately 20), although the number varies depending on how many tests are performed. For this reason, the robot comes with several spare battery packs in case the robot’s batteries run out. 
 
 Given this budget and the availability of batteries in our category, we chose the Samsung ICR18650-26FU model. The main features of this model are:
 
@@ -1717,7 +1715,7 @@ The batteries that power the HUSKYLENS and the drive servo are housed in a batte
   </tr>
 </table></div>
 
-As a last-minute modification, the batteries that power the Raspberry Pi Pico 2 board, the two microservos, and the TFmini-S sensor have been mounted on a 3D-printed structure at the top rear of the robot, inside a battery expansion module; this way, if some batteries run out, there’s no need to waste time disassembling the entire circuit to replace them—you simply remove them from there and swap them out. Additionally, this structure also expands the parking space, giving us more room to maneuver during the obstacle course. Initially, this structure was made of foam board, but it was eventually modified to use a more durable material.
+The batteries that power the Raspberry Pi Pico 2 board, the two microservos, and the relay have been mounted on a 3D-printed structure located at the top rear of the robot, inside a battery expansion module; this way, if some batteries run out, there’s no need to waste time disassembling the entire circuit to replace them—you simply remove them from there and swap them out. In addition, this structure also increases the parking space, giving us more room to maneuver during the obstacle course. Initially, this structure was made of foam board, but it was eventually modified to use a more durable material. 
 
 <div align="center"><table>
   <tr>
@@ -1733,7 +1731,7 @@ As a last-minute modification, the batteries that power the Raspberry Pi Pico 2 
   </tr>
 </table></div>
 
-To power the HUSKYLENS module, an LM7805 regulator has been included to step down the voltage from the batteries from 8.4 V to 5 V. Electrolytic capacitors have also been included as recommended by the manufacturer. 
+Two buck converters have been added to convert DC to DC while reducing the voltage: one of them is used to directly power the HUSKYLENS 2 (stepping down from 30V to 5V), and the other is used to power the three TFmini-S sensors and the front LED (stepping down from 30V to 5V). Each of the converters has a capacitor in its circuit. 
 
 <div align="center"><table>
   <tr>
@@ -1749,7 +1747,7 @@ The wiring diagram was created in Cirkit Designer. In previous versions, it was 
 <img src="schemes/wiring_scheme_andorra.png">
 
 #### Sensors 
-The robot receives data from six main components: the Raspberry Pi Pico 2 board, the TFmini-S distance sensor, the TOF400F distance sensors, the HUSKYLENS module, the TCS34725 RGB sensor, and the L3GD20 gyroscope.
+The robot receives data from five main components: the Raspberry Pi Pico 2 board, the TFmini-S distance sensor, the HUSKYLENS module, the TCS34725 RGB sensor, and the L3GD20 gyroscope. 
 
 The Raspberry Pi Pico 2 board was chosen after the regional competition. Initially, we used an Arduino R4 Minima board, but it was clear that a more powerful microcontroller was needed to handle such a large amount of data. There were other options, but they presented serious programming challenges. By using this board, the entire program was written in Python, which presented difficulties compared to the code from the regional competition, which was in C++.
 
@@ -1887,8 +1885,8 @@ The L3GD20 gyroscope is mounted on a cylindrical rod at the top center of the ro
 | :---: | :---: | :---: |
 | Variable lighting | The lighting in our classroom may differ from that of the competition spotlights, which can cause confusion when detecting the color of the floor lines or pillars. | The color sensor is wrapped in a layer of EVA rubber to prevent interference from ambient light. | 
 | Camera blind spots | The HUSKYLENS camera has a limited field of view. At times, it fails to detect objects that are quite close to it. | The HUSKYLENS camera is mounted on a 180° micro servo to eliminate blind spots. |
-| Interference from the HUSKYLENS module | The HUSKYLENS module interferes with other components, such as the continuous rotation servo, because it is connected to the same port. | The HUSKYLENS module is positioned and connected to a port where it cannot interfere with any other component. |
-| Delay in measurements from the left TOF400F sensor | The left TOF400F sensor, being connected to the I2C port, takes measurements at irregular intervals. At times, it may provide erroneous data that causes the robot to malfunction. | The TFmini-S sensor is used whenever possible to ensure greater measurement accuracy. |
+| Misidentifications in color detection | There are certain areas of the field where, due to lighting conditions, the camera detects obstacles where there are actually orange lines. This has occurred 40% of the time, which means it may fail depending on the lighting. | A front-facing LED has been installed that turns on during the obstacle detection process. This ensures completely reliable lighting, so the camera does not confuse the red of the obstacles with the orange of the lines. |
+| Combining sensor readings  | Sometimes it was necessary to obtain information from multiple sensors in the same situation—specifically, at corners. In these situations, the robot had to navigate using the compass heading, detect objects when present, and read the lines to change direction and count them. The data stream sometimes overlapped, and the robot failed to perform one of these tasks. | The robot follows a priority order when reading data to ensure that no task is overlooked, and the program has been modified to request more readings from all sensors, in order to cover all areas and eliminate any possibility of missing a line or an obstacle. |
 
 </details>
 </details>
