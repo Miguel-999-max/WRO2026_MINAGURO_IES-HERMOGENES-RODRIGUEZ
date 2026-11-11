@@ -771,14 +771,18 @@ These are the 3D designs we have created, which include: a custom-made chassis f
 
 | Component | Quantity | Image | Function | File link |
 | :---: | :---: | :---: | :---: | :---: |
-| Chasis in 3D | 1 | <img src="models/Final_Version_models/FINAL_CHASSIS.jpg" width="150" height="120"> | Skeleton of the robot | [`📥Download`](models/Final_Version_models/CHASSIS04.stl) |
+| Chasis in 3D | 1 | <img src="models/Final_Version_models/Final_chassis.png" width="150" height="120"> | Skeleton of the robot | [`📥Download`](models/Final_Version_models/CHASSIS04.stl) |
 | Battery support 1 | 2 | <img src="models/Old_Versions_models/soportebateria1.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/Old_Versions_models/soportebateria1.stl) |
 | Battery support 2 | 1 | <img src="models/Old_Versions_models/soportebateria2.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/Final_Version_models/soportebateria2.stl) |
-| Adapter wheels in 3D | 2 | <img src="models/Final_Version_models/Wheel_adapter.png" width="150" height="120"> | Connect the wheels to the differential | [`📥Download`](models/Final_Version_models/wheel_adapter.stl) |
+| Adapter wheels in 3D | 2 | <img src="models/Old_Versions_models/Wheel_adapter.png" width="150" height="120"> | Connect the wheels to the differential | [`📥Download`](models/Old_Versions_models/wheel_adapter.stl) |
 | Adapter gear in 3D | 1 | <img src="models/Old_Versions_models/Gear_adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`📥Download`](models/Old_Versions_models/GEAR_ADAPTER_.stl) |
-| Magnetometer mast 1 | 1 | <img src="models/Final_Version_models/compass_mount1" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/Final_Version_models/compass_mount1.stl) |
-| Magnetometer mast 2 | 1 | <img src="models/Final_Version_models/compass_mount2" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/Final_Version_models/compass_mount2.stl) |
-
+| Magnetometer support 1 | 1 | <img src="models/Final_Version_models/magnetometer_support1.png" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/Final_Version_models/compass_mount1.stl) |
+| Magnetometer support 2 | 1 | <img src="models/Final_Version_models/magnetometer_support2.png" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/Final_Version_models/compass_mount2.stl) |
+| 44 teeth crown | 1 | <img src="models/Final_Version_models/Crown_44.png" width="150" height="120"> | Part of the transmission system | [`📥Download`](models/Final_Version_models/Crown_44_servo.stl) |
+| Cap crown | 1 | <img src="models/Final_Version_models/crown_cap.png" width="150" height="120"> | Part of the transmission system | [`📥Download`](models/Final_Version_models/crown_cap.stl) |
+| Husky 2 support | 1 | <img src="models/Final_Version_models/modificated_husky_adapter.png" width="150" height="120"> | Part of the transmission system | [`📥Download`](models/Final_Version_models/support_husky2-corta.stl) |
+| TFmini support | 1 | <img src="models/Final_Version_models/TFmini_support.png" width="150" height="120"> | Part of the transmission system | [`📥Download`](models/Final_Version_models/SUPPORT_TFminiS.stl) |
+| Chassis TFmini support | 1 | <img src="models/Final_Version_models/Chassis_support_TFmini.png" width="150" height="120"> | Part of the transmission system | [`📥Download`](models/Final_Version_models/SUPPORT_TFminiS_chassis.stl) |
 
 </details>
 
