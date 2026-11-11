@@ -5,7 +5,7 @@
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/@minagurowro2026)
 
 <div align="justify">Hello, welcome to the GitHub repository of the <strong>MINAGURO team</strong>, which is competing in the <strong>World Robot Olympiad 2026 Future Engineers</strong> category. Our team is made up of four Spanish students who develop this project on their school breaks with the aim of learning as much as possible.
-<br> Guided by our passion for technology, we have created two vehicles. One (the old one), which helped us to get to de national final of the WRO in Andorra; and, another one (the current one), that will perform in the national final. We created the second one motivated by our desire to do it as good as possible and also learn new things and concepts along the way.
+<br> Guided by our passion for technology, we have created three vehicles. The first one, used in the regional and provincial phases, which helped us to get to the WRO national final in Andorra; the second one, that performed in the national final and helped us classify for the WRO international final in Puerto Rico; and a third one (current one), that will be shown up on the international final. We created those robots motivated by our desire to do it as good as possible and also learn new things and concepts along the way.
 <br> Hope you like it!!
 </div><br> </br>
 
@@ -2789,13 +2789,13 @@ Here are all the necessary components:
 | Micro Servo MG90S | 1 | <img src="other/components/Micro Servo MG90S.jpg" width="150" height="120"> | Allow the camera to move and have a wider field of view | <a href="https://www.hta3d.com/es/microservo-mg90s-180-de-posicionamiento-engranajes-metalicos"> 🛒 Shop</a> |"> Camera servo link </a> |
 | Heatsink | 1 | <img src="other/components/HEATSINK_TO-220.JPG" width="150" height="120"> | Prevent the current regulator from overheating | <a href="https://www.amazon.es/WayinTop-Disipador-Aislamiento-Transistor-Casquillos/dp/B081GS15N6"> 🛒 Shop</a> |
 | USB-Kabel | 1 | <img src="other/components/cable.png" width="150" height="120"> | It makes it easy to connect the robot to the computer to upload programmes or view the terminal when we’re carrying out tests, in a simple and convenient way that prevents the Raspberry Pi’s connector from breaking. | <a href="https://es.aliexpress.com/item/1005007053499029.html?isdl=y&aff_fsk=_oEW69bp&src=BooncyESgeneral&aff_platform=aff_feeds&aff_short_key=_oEW69bp&pdp_npi=4%40dis%21EUR%211.48%211.48%21%21%21%21%21%40%2112000039239967802%21afff%21%21%21&dp=EAIaIQobChMIv9n7obHBlgMVsAIGAB2_ZA2KEAQYAyABEgI3KvD_BwE&cn=bravoes&gad_source=1&gad_campaignid=23203341003&gbraid=0AAAABB6NsO9tS3fn8EqhgJt8zBAa3Kv_D"> 🛒 Shop</a> |
-| Chasis in 3D | 1 | <img src="models/CHASIS_modificado_2.jpg" width="150" height="120"> | Skeleton of the robot | [`📥Download`](models/CHASIS_modificado_2.stl) |
-| Battery support 1 | 2 | <img src="models/soportebateria1.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/soportebateria1.stl) |
-| Battery support 2 | 1 | <img src="models/soportebateria2.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/soportebateria2.stl) |
-| Switch support | 1 | <img src="models/SOPORTE_INTERRUPTOR.jpg" width="150" height="120"> | Support the switch | [`📥Download`](models/SOPORTE_INTERRUPTOR.stl) |
-| Adapter wheels in 3D | 2 | <img src="models/Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | [`📥Download`](models/wheel%20adapter.stl) |
-| Adapter gear in 3D | 1 | <img src="models/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`📥Download`](models/GEAR_ADAPTER.stl) |
-| Magnetometer mast | 1 | <img src="models/soporte_magnetometro.png" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/SOPORTE_10-DOF.stl) |
+| Chasis in 3D | 1 | <img src="models/CHASIS_modificado_2.jpg" width="150" height="120"> | Skeleton of the robot | [`📥Download`](models/Old_Versions_models/CHASIS_modificado_2.stl) |
+| Battery support 1 | 2 | <img src="models/soportebateria1.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/Old_Versions_models/soportebateria1.stl) |
+| Battery support 2 | 1 | <img src="models/soportebateria2.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/Old_Versions_models/soportebateria2.stl) |
+| Switch support | 1 | <img src="models/SOPORTE_INTERRUPTOR.jpg" width="150" height="120"> | Support the switch | [`📥Download`](models/Old_Versions_models/SOPORTE_INTERRUPTOR.stl) |
+| Adapter wheels in 3D | 2 | <img src="models/Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | [`📥Download`](models/Old_Versions_models/wheel%20adapter.stl) |
+| Adapter gear in 3D | 1 | <img src="models/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`📥Download`](models/Old_Versions_models/GEAR_ADAPTER.stl) |
+| Magnetometer mast | 1 | <img src="models/soporte_magnetometro.png" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/Old_Versions_models/SOPORTE_10-DOF.stl) |
 </details>
 
 <details>
@@ -2825,15 +2825,15 @@ Here you will find two files showing the exact position of each component:
 
 <table align="center">
   <tr style="vertical-align: middle;">
-    <td><img src="models/HR26.2.jpg" width="400"></td>
-    <td> <a href="models/HR26.2.zip">📥Download</a></td>
+    <td><img src="models/Old_Versions_models/HR26.2.jpg" width="400"></td>
+    <td> <a href="models/Old_Versions_models/HR26.2.zip">📥Download</a></td>
   </tr>
 </table>
 
 <table align="center">
   <tr style="vertical-align: middle;">
-    <td><img src="models/HR26.2.expl.jpg" width="400"></td>
-    <td> <a href="models/HR26.2.expl.zip">📥Download</a></td>
+    <td><img src="models/Old_Versions_models/HR26.2.expl.jpg" width="400"></td>
+    <td> <a href="models/Old_Versions_models/HR26.2.expl.zip">📥Download</a></td>
   </tr>
 </table>
 </details>
@@ -2860,11 +2860,11 @@ Here you will find the essential software for calibrating servos and sensors, so
 <br>
 <br>
   
-* [01.Calibrate the steering servo.txt](/src/Current_programs/Test_programs2/04.Control%20de%20servo%20con%20potenciómetro.txt) ➜ One of the first things you need to do to get your robot working is to calibrate the steering servo. First, upload this programme to the servo, and use a potentiometer to adjust the servo until it stops at 90 degrees. This programme can also be used to calibrate the servo attached to the HUSKYLENS.
+* [01.Calibrate the steering servo.txt](/src/Old_programs/Test_programs1/04.Control%20de%20servo%20con%20potenciómetro.txt) ➜ One of the first things you need to do to get your robot working is to calibrate the steering servo. First, upload this programme to the servo, and use a potentiometer to adjust the servo until it stops at 90 degrees. This programme can also be used to calibrate the servo attached to the HUSKYLENS.
   
-* [02.Calibrate the magnetometer 10DOF.py](/src/Current_programs/Test_programs2/12.calibrar_magnetometro.py) ➜To guide you through the circuit’s streets, you’ll first need to calibrate the magnetometer; to do this, we’ll load this programme onto the Raspberry Pi. Calibration involves placing the robot on the circuit. You must remove or move as far away as possible any metal objects in the vicinity, as these may interfere with the calibration. After that, you must rotate the robot around an imaginary axis and turn it as many times as necessary until the offset_x and offset_y values stabilise and remain constant. You will be able to monitor all of this on the terminal.
+* [02.Calibrate the magnetometer 10DOF.py](/src/Old_programs/Test_programs1/12.calibrar_magnetometro.py) ➜To guide you through the circuit’s streets, you’ll first need to calibrate the magnetometer; to do this, we’ll load this programme onto the Raspberry Pi. Calibration involves placing the robot on the circuit. You must remove or move as far away as possible any metal objects in the vicinity, as these may interfere with the calibration. After that, you must rotate the robot around an imaginary axis and turn it as many times as necessary until the offset_x and offset_y values stabilise and remain constant. You will be able to monitor all of this on the terminal.
 
-* [03.Calibrate the magnetometer 10DOF.py](/src/Current_programs/Test_programs2/13.lsm303_mag)➜This is the magnetometer library. Once the magnetometer has been calibrated, make a note of the offset_x and offset_y values, as you will then need to enter these values next to where it says OFFSET_X_DEFAULT and OFFSET_y_DEFAULT. There may already be some values in the library we’ve uploaded; change them and enter the ones you’ve calculated, as those were our offset values, yours will be different.
+* [03.Calibrate the magnetometer 10DOF.py](/src/Old_programs/Test_programs1/13.lsm303_mag)➜This is the magnetometer library. Once the magnetometer has been calibrated, make a note of the offset_x and offset_y values, as you will then need to enter these values next to where it says OFFSET_X_DEFAULT and OFFSET_y_DEFAULT. There may already be some values in the library we’ve uploaded; change them and enter the ones you’ve calculated, as those were our offset values, yours will be different.
 
 We’re almost there, all that’s left is for you to save the red and green colours in the HUSKYLENS, with red as colour ID1 and green as colour ID2. It’s very simple and will only take a couple of minutes.
 
