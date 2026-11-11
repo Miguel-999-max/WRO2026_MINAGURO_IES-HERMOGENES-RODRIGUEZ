@@ -714,7 +714,7 @@ These are the 3D designs we have created, which include: a custom-made chassis f
 | Battery support 2 | 1 | <img src="models/Old_Versions_models/soportebateria2.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/Old_Versions_models/soportebateria2.stl) |
 | Switch support | 1 | <img src="models/Old_Versions_models/SOPORTE_INTERRUPTOR.jpg" width="150" height="120"> | Support the switch | [`📥Download`](models/Old_Versions_models/SOPORTE_INTERRUPTOR.stl) |
 | Adapter wheels in 3D | 2 | <img src="models/Old_Versions_models/Wheel_adapter.png" width="150" height="120"> | Connect the wheels to the differential | [`📥Download`](models/Old_Versions_models/wheel_adapter.stl) |
-| Adapter gear in 3D | 1 | <img src="models/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`📥Download`](models/Old_Versions_models/GEAR_ADAPTER_.stl) |
+| Adapter gear in 3D | 1 | <img src="models/Old_Versions_models/Gear_adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`📥Download`](models/Old_Versions_models/GEAR_ADAPTER_.stl) |
 | Magnetometer mast | 1 | <img src="models/Old_Versions_models/soporte_magnetometro.png" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/Old_Versions_models/SOPORTE_10-DOF.stl) |
 
 </details>
@@ -766,6 +766,19 @@ Here is a list of all components we used, including an image, their specific fun
 | Heatsink | 1 | <img src="other/components/HEATSINK_TO-220.JPG" width="150" height="120"> | Prevent the current regulator from overheating | <a href="https://www.amazon.es/WayinTop-Disipador-Aislamiento-Transistor-Casquillos/dp/B081GS15N6"> 🛒 Shop</a> |
 | USB-Kabel | 1 | <img src="other/components/cable.png" width="150" height="120"> | It makes it easy to connect the robot to the computer to upload programmes or view the terminal when we’re carrying out tests, in a simple and convenient way that prevents the Raspberry Pi’s connector from breaking. | <a href="https://es.aliexpress.com/item/1005007053499029.html?isdl=y&aff_fsk=_oEW69bp&src=BooncyESgeneral&aff_platform=aff_feeds&aff_short_key=_oEW69bp&pdp_npi=4%40dis%21EUR%211.48%211.48%21%21%21%21%21%40%2112000039239967802%21afff%21%21%21&dp=EAIaIQobChMIv9n7obHBlgMVsAIGAB2_ZA2KEAQYAyABEgI3KvD_BwE&cn=bravoes&gad_source=1&gad_campaignid=23203341003&gbraid=0AAAABB6NsO9tS3fn8EqhgJt8zBAa3Kv_D"> 🛒 Shop</a> |
 | Counterweight | 2 | <img src="other/components/metal.jpg" width="150" height="120"> | We use it to adjust and balance the robot’s weight, as the rear is quite heavy due to the spoiler housing the batteries, which is why we place it at the front. In this case, there are two of them, and each one weighs 40 grams | <a href="https://selectauto.es/consumibles-para-ruedas/6175-contrapesos-para-llantas-de-aleacion-40gx50-uds-marca-seltech-5949128213693.html"> 🛒 Shop</a> |
+
+These are the 3D designs we have created, which include: a custom-made chassis for all components, a gear to connect the differential to the 360-degree servo, a rear wheel adapter to connect the differential shaft to the wheels and a mount for the HUSKYLENS module:
+
+| Component | Quantity | Image | Function | File link |
+| :---: | :---: | :---: | :---: | :---: |
+| Chasis in 3D | 1 | <img src="models/Final_Version_models/FINAL_CHASSIS.jpg" width="150" height="120"> | Skeleton of the robot | [`📥Download`](models/Final_Version_models/CHASSIS04.stl) |
+| Battery support 1 | 2 | <img src="models/Old_Versions_models/soportebateria1.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/Old_Versions_models/soportebateria1.stl) |
+| Battery support 2 | 1 | <img src="models/Old_Versions_models/soportebateria2.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/Final_Version_models/soportebateria2.stl) |
+| Adapter wheels in 3D | 2 | <img src="models/Final_Version_models/Wheel_adapter.png" width="150" height="120"> | Connect the wheels to the differential | [`📥Download`](models/Final_Version_models/wheel_adapter.stl) |
+| Adapter gear in 3D | 1 | <img src="models/Old_Versions_models/Gear_adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`📥Download`](models/Old_Versions_models/GEAR_ADAPTER_.stl) |
+| Magnetometer mast 1 | 1 | <img src="models/Final_Version_models/compass_mount1" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/Final_Version_models/compass_mount1.stl) |
+| Magnetometer mast 2 | 1 | <img src="models/Final_Version_models/compass_mount2" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/Final_Version_models/compass_mount2.stl) |
+
 
 </details>
 
