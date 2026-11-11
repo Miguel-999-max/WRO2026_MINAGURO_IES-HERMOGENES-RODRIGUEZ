@@ -7,7 +7,7 @@
 <div align="justify">Hello, welcome to the GitHub repository of the <strong>MINAGURO team</strong>, which is competing in the <strong>World Robot Olympiad 2026 Future Engineers</strong> category. Our team is made up of four Spanish students who develop this project on their school breaks with the aim of learning as much as possible.
 <br> Guided by our passion for technology, we have created three vehicles. The first one, used in the regional and provincial phases, which helped us to get to the WRO national final in Andorra; the second one, that performed in the national final and helped us classify for the WRO international final in Puerto Rico; and a third one (current one), that will be shown up on the international final. We created those robots motivated by our desire to do it as good as possible and also learn new things and concepts along the way.
 <br> Hope you like it!!
-</div><br> </br>
+<br> </br>
 
 > [!IMPORTANT]
 > Every time you see this sign (▶&#xFE0E;), click on the text next to it to expand the content!
@@ -2812,7 +2812,7 @@ And that’s it, you can now load the final programme, along with its sub-progra
 </details>
 
 #### 9.2 Final version (HUSKYLENS 2)
-</p>
+</div>
 <br>
 <a href="#arriba">⬆️Back to top</a>
 </div>
