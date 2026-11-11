@@ -1,0 +1,44 @@
+#Medir distancia con TFmini-s usando UART1 en Raspberry Pi Pico 2
+#Se debe alimentar a 5V, pero Tx y Rx funcionan a 3,3V
+from machine import Pin, UART
+import time
+
+# Inicializamos el puerto UART1 a 115200 baudios
+# TX en GPIO 4, RX en GPIO 5
+uart1 = UART(1, baudrate=115200, tx=Pin(4), rx=Pin(5))
+
+print("--- Calibración del LiDAR Benewake TFmini-S Activa ---")
+print("Escaneando el entorno...")
+
+while True:
+    if uart1.any():
+        datos = uart1.read()
+        
+        if datos is not None:
+            i = 0
+            # Buscamos el paquete de 9 bytes estándar de Benewake
+            while i <= len(datos) - 9:
+                # Comprobamos la doble cabecera obligatoria (0x59, 0x59 -> 89, 89)
+                if datos[i] == 89 and datos[i+1] == 89:
+                    
+                    # La distancia viene en los bytes 2 (bajo) y 3 (alto)
+                    dist_baja = datos[i+2]
+                    dist_alta = datos[i+3]
+                    distancia_cm = dist_baja + (dist_alta << 8)
+                    
+                    # La fuerza de la señal viene en los bytes 4 (bajo) y 5 (alto)
+                    fuerza_baja = datos[i+4]
+                    fuerza_alta = datos[i+5]
+                    fuerza_senal = fuerza_baja + (fuerza_alta << 8)
+                    
+                    # Validación de datos según el manual del sensor
+                    if fuerza_senal < 100:
+                        print(f"Lectura poco fiable (Señal débil: {fuerza_senal})")
+                    else:
+                        print(f"LiDAR TFmini-S -> Distancia: {distancia_cm} cm | Fuerza: {fuerza_senal}")
+                    
+                    i += 9  # Saltamos al siguiente paquete completo
+                else:
+                    i += 1  # Avanzamos un byte si no es la cabecera
+                    
+    time.sleep_ms(20)  # Frecuencia de muestreo óptima para ráfagas continuas

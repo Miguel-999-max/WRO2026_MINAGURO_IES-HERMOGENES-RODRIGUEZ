@@ -1,0 +1,24 @@
+#Botón + led
+from machine import Pin
+import time
+
+# Configura el GPIO 15 como entrada digital (Input)
+pulsador = Pin(15, Pin.IN)
+
+# Reutilizamos el LED externo del GPIO 16 para dar feedback visual
+led_externo = Pin(16, Pin.OUT)
+
+print("Esperando pulsación del botón...")
+
+while True:
+    # Leemos el estado actual del pin (devolverá 1 si está pulsado, 0 si no)
+    estado = pulsador.value()
+    
+    if estado == 1:
+        print("¡Botón Pulsado! Activando LED...")
+        led_externo.value(1) # Enciende el LED
+    else:
+        led_externo.value(0) # Apaga el LED
+        
+    # Una pequeña pausa de 50 milisegundos para estabilizar la lectura
+    time.sleep_ms(50)

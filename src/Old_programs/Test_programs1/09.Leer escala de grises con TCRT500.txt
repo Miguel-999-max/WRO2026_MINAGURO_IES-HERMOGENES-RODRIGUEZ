@@ -1,0 +1,31 @@
+# Leer escala de grises con TCRT5000 salida analógica en Raspberry Pi Pico
+# En blanco,  la lectura=60 
+# En naranja, la lectura=60
+# En azul,    la lectura=60
+# Conclusión: La salida analógica del TCRT5000 no es confiable para diferenciar colores, ya que la lectura es muy similar en todos los casos. Se recomienda usar la salida digital para detección de línea.
+from machine import Pin, ADC
+import time
+
+# Inicializamos el GPIO 26 como entrada analógica (ADC canal 0)
+tcrt_analogico = ADC(Pin(26))
+
+# Función matemática para escalar los valores a un rango más legible
+def mapear(valor, desde_min, desde_max, hacia_min, hacia_max):
+    return int((valor - desde_min) * (hacia_max - hacia_min) / (desde_max - desde_min) + hacia_min)
+
+print("--- Calibración Analógica TCRT5000 con Inmunización ---")
+print("Mueve el robot sobre el fondo blanco, la línea naranja y la azul...")
+
+while True:
+    # Leemos el valor nativo de la Pico 2 (Rango: 0 a 65535)
+    lectura_cruda = tcrt_analogico.read_u16()
+    
+    # Escalamos el valor a un rango de 0 a 1000 para que sea más intuitivo analizarlo
+    intensidad = mapear(lectura_cruda, 0, 65535, 0, 1000)
+    
+    # Imprimimos ambos valores en la terminal de VS Code
+    # La opción 'end="\r"' mantiene la lectura actualizándose en la misma línea
+    print(f"Lectura Cruda (16-bit): {lectura_cruda:<5} | Intensidad Escalada: {intensidad:<4}", end="\r")
+    
+    # Pausa de 50 milisegundos para una lectura cómoda en pantalla
+    time.sleep_ms(200)

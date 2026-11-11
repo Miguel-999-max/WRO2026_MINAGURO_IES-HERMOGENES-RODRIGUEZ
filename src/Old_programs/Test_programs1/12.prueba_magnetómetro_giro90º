@@ -1,0 +1,135 @@
+"""
+PRUEBA - Navegacion por rumbo ABSOLUTO con magnetometro (4 calles de un
+circuito cuadrado), girando en cada linea azul.
+
+Al pulsar el boton, mide el rumbo de la calle de partida y calcula a partir
+de ahi (una sola vez, valores absolutos y fijos) el rumbo de las otras 3
+calles, girando siempre a la izquierda en cada esquina. A partir de ahi:
+avanza siguiendo el rumbo objetivo de la calle actual, y en cuanto detecta
+una linea azul, simplemente pasa a la siguiente calle de la lista y sigue
+su rumbo - el giro lo hace el propio control proporcional (el error de
+rumbo es grande justo al cambiar de calle, asi que el volante se va solo
+a tope, y se endereza en cuanto se acerca al nuevo rumbo). No hay ninguna
+fase de giro separada ni deteccion de "90 grados completados": al ser
+rumbos absolutos, no hay error que se pueda acumular de una esquina a otra.
+
+Es una prueba aislada para validar el concepto antes de integrarlo en las
+misiones de verdad.
+"""
+from machine import Pin, PWM, I2C
+from lsm303_mag import LSM303Mag
+from tcs34725 import TCS34725
+import time
+
+# ==========================================
+# PINES (mismos que en el robot real)
+# ==========================================
+pinBoton = Pin(2, Pin.IN, Pin.PULL_DOWN)
+ledV = Pin(10, Pin.OUT)
+ledR = Pin(22, Pin.OUT)
+
+servoDireccion = PWM(Pin(20))
+servoTraccion = PWM(Pin(13))
+servoDireccion.freq(50)
+servoTraccion.freq(50)
+
+i2c0 = I2C(0, sda=Pin(4), scl=Pin(5))
+mag = LSM303Mag(i2c0)
+sensor_color = TCS34725(i2c0)
+
+# ==========================================
+# CONSTANTES
+# ==========================================
+Recto = 4950
+Dcha = 3900
+Izda = 6190
+Para = 4900
+Avanza_tope = 3200
+
+GANANCIA_RUMBO = 15       # AJUSTAR EN PISTA: sensibilidad de correccion de rumbo
+GIRO_POR_ESQUINA_DEG = -90  # negativo = izquierda (Mision 4). Positivo = derecha (Mision 3)
+
+
+def clasificar_color(r, g, b):
+    """Misma logica ya validada en pista para el resto del robot."""
+    total = r + g + b
+    if total == 0:
+        return 'BLANCO'
+    pr = r / total
+    pb = b / total
+    if pb > pr and total < 400:
+        return 'AZUL'
+    if pr > pb and total < 400:
+        return 'NARANJA'
+    return 'BLANCO'
+
+
+def diferencia_angular(a, b):
+    """Diferencia angular con signo en el rango [-180, 180]: cuanto hay que
+    sumarle a b para llegar a a, girando por el camino mas corto."""
+    return (a - b + 180) % 360 - 180
+
+
+# ==========================================
+# ESPERA DE BOTON
+# ==========================================
+print("--- Prueba navegacion por rumbo absoluto (4 calles) ---")
+servoTraccion.duty_u16(Para)
+servoDireccion.duty_u16(Recto)
+
+while pinBoton.value() == 0:
+    ledR.value(1)
+    ledV.value(0)
+    time.sleep_ms(100)
+    ledR.value(0)
+    ledV.value(1)
+    time.sleep_ms(100)
+
+ledV.value(0)
+ledR.value(0)
+print("--- ARRANQUE ---")
+
+# ==========================================
+# CALIBRACION INICIAL: rumbo absoluto de las 4 calles, UNA SOLA VEZ
+# ==========================================
+rumbo_calle = [0, 0, 0, 0]
+rumbo_calle[0] = mag.heading()
+for i in range(1, 4):
+    rumbo_calle[i] = (rumbo_calle[0] + GIRO_POR_ESQUINA_DEG * i) % 360
+
+print("Rumbos absolutos de las 4 calles:", [f"{r:.1f}" for r in rumbo_calle])
+
+calle_actual = 0
+rumbo_objetivo = rumbo_calle[calle_actual]
+sobre_linea = False
+
+# ==========================================
+# BUCLE: sigue el rumbo de la calle actual, cambia de calle en cada linea azul
+# ==========================================
+while True:
+    servoTraccion.duty_u16(Avanza_tope)
+
+    rumbo_actual = mag.heading()
+    error = diferencia_angular(rumbo_objetivo, rumbo_actual)
+    pulso_dir = Recto - (error * GANANCIA_RUMBO)
+    pulso_dir = int(max(Dcha, min(pulso_dir, Izda)))
+    servoDireccion.duty_u16(pulso_dir)
+
+    r, g, b, claro = sensor_color.read_rgbc()
+    color = clasificar_color(r, g, b)
+
+    # Deteccion por flanco: solo cuenta la primera vez que se pisa azul, y
+    # no se rearma hasta volver a ver blanco (deja atras la linea).
+    if not sobre_linea:
+        if color == 'AZUL':
+            sobre_linea = True
+            calle_actual = (calle_actual + 1) % 4
+            rumbo_objetivo = rumbo_calle[calle_actual]
+            ledR.value(1)
+            print(f"Esquina detectada -> calle {calle_actual}, rumbo objetivo {rumbo_objetivo:.1f}")
+    else:
+        if color == 'BLANCO':
+            sobre_linea = False
+            ledR.value(0)
+
+    time.sleep_ms(20)
