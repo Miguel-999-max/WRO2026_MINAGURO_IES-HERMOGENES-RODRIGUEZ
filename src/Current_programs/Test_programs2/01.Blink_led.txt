@@ -1,0 +1,18 @@
+
+# Programa Blink para pi pico utilizando MicroPython
+from machine import Pin
+import time
+
+# Configura el GPIO 16 como salida digital
+led_externo = Pin(16, Pin.OUT)
+
+print("¡Programa Blink Iniciado con éxito!")
+
+while True:
+    led_externo.value(1) # Enciende el LED (3.3V)
+    print("LED Encendido")
+    time.sleep(1)
+    
+    led_externo.value(0) # Apaga el LED (0V)
+    print("LED Apagado")
+    time.sleep(1)

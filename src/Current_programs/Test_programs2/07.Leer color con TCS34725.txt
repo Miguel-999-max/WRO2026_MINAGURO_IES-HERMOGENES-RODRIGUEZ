@@ -1,0 +1,30 @@
+# Leer valores de color desde el sensor TCS34725 usando I2C en una Raspberry Pi Pico
+# la librería tcs34725.py está editada porque el código de adafruit está obsoleto y no funciona en micropython 1.20.0
+# En blanco,  Luz ambiente=400
+# En naranja, Luz ambiente=180
+# En azul,    Luz ambiente=70
+
+import time
+from machine import I2C, Pin
+from tcs34725 import TCS34725
+
+# Inicializar protocolo I2C en la Pico 2
+# Recordar: SDA en GP16 (pin 4) y SCL en GP17 (pin 5)
+i2c = I2C(0, sda=Pin(4), scl=Pin(5))
+
+print("Inicializando sensor de color...")
+try:
+    sensor = TCS34725(i2c)
+    print("¡Sensor TCS34725 listo y conectado!")
+except Exception as e:
+    print("Error:", e)
+    sensor = None
+
+while sensor is not None:
+    # Obtener valores directos del sensor
+    rojo, verde, azul, claro = sensor.read_rgbc()
+    
+    # Mostrar resultados en la consola
+    print(f"R: {rojo} | G: {verde} | B: {azul} | Luz ambiente: {claro}")
+    
+    time.sleep(1)
