@@ -95,7 +95,7 @@ We would like to thank our sponsors for making this project possible:
       </td>
       <td align="center" valign="middle">
         <a href="https://abengoza.es/">
-          <img src="other/Sponsors/abengoza_logo.png" width="220" /><br />
+          <img src="other/Sponsors/abengoza_logo.png" width="235" /><br />
           <b>Transportes Abengoza</b>
         </a>
       </td>
