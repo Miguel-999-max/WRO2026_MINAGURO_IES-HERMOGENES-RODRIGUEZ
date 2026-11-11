@@ -55,7 +55,7 @@ We would like to thank our sponsors for making this project possible:
       </td>
       <td align="center" valign="middle">
         <a href="http://castillaretail.com/">
-          <img src="other/Sponsors/Castilladecor_logo.png" width="170" /><br />
+          <img src="other/Sponsors/Castilladecor_logo.png" width="185" /><br />
           <b>Castilladecor</b>
         </a>
       </td>
