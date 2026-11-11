@@ -1,0 +1,105 @@
+"""MAIN.PY - Punto de entrada. Inicializa hardware, espera el boton, decide
+la zona (Reto Libre / Obstaculos) y el sentido (CW/CCW), y llama a la mision
+correspondiente."""
+import time
+import hardware
+from funciones_comunes import leer_tfmini, leer_tof_derecho_mm
+from mision1_cw import ejecutar_mision_1_cw
+from mision2_ccw import ejecutar_mision_2_ccw
+from mision3_cw import ejecutar_mision_3_cw
+from mision4_ccw import ejecutar_mision_4_ccw
+
+# ==========================================
+# FASE DE INICIO (ESPERA DE BOTON)
+# ==========================================
+print("--- Robot Unificado Inicializado ---")
+hardware.servoTraccion.duty_u16(hardware.Para)
+hardware.servoDireccion.duty_u16(hardware.Recto)
+hardware.SERVOcam.duty_u16(hardware.Cam_Centro)
+
+# Espera de boton parpadeando led
+while hardware.pinBoton.value() == 0:
+    hardware.ledR.value(1)
+    hardware.ledV.value(0)
+    time.sleep_ms(100)
+    hardware.ledR.value(0)
+    hardware.ledV.value(1)
+    time.sleep_ms(100)
+
+hardware.ledV.value(0)
+hardware.ledR.value(0)
+print("--- ¡ARRANQUE INTERNO! ---")
+
+# ==========================================
+# SCAN 1 Y DECISION INICIAL
+# ==========================================
+distFR = 110
+while True:
+    lectura = leer_tfmini()
+    if lectura is not None:
+        distFR = lectura
+        break
+    time.sleep_ms(100)
+
+if distFR > 40:
+    # --- ZONA ABIERTA (DESAFIO RETO LIBRE) ---
+    hardware.ledV.value(1)
+    time.sleep_ms(2000)
+    hardware.ledV.value(0)
+
+    hardware.servoDireccion.duty_u16(hardware.Recto)
+    hardware.servoTraccion.duty_u16(hardware.Retrocede_tope)
+
+    linea_detectada = False
+    luz_ambiente_final = 700
+
+    while not linea_detectada and hardware.sensor_color is not None:
+        r, g, b, claro = hardware.sensor_color.read_rgbc()
+        if claro < hardware.UMBRAL_BLANCO_A_COLOR:
+            time.sleep_ms(25)
+            hardware.servoTraccion.duty_u16(hardware.Para)
+            time.sleep_ms(10)
+            r, g, b, claro = hardware.sensor_color.read_rgbc()
+            luz_ambiente_final = claro
+            linea_detectada = True
+        time.sleep_ms(5)
+
+    if luz_ambiente_final < hardware.PUNTO_CORTE_COLORES:
+        hardware.ledV.value(1)
+        time.sleep_ms(2000)
+        hardware.ledV.value(0)
+        ejecutar_mision_1_cw()
+    else:
+        hardware.ledR.value(1)
+        time.sleep_ms(2000)
+        hardware.ledR.value(0)
+        ejecutar_mision_2_ccw()
+else:
+    # --- ZONA DE OBSTACULOS (APARCAMIENTO) ---
+    hardware.ledR.value(1)
+    time.sleep_ms(2000)
+    hardware.ledR.value(0)
+
+    # Lectura directa del TOF400F derecho (fijo, UART1/Modbus) - sin mover ningun servo
+    dist_derecha = 100  # valor por defecto conservador si no hay lectura
+    for _ in range(10):
+        lectura_mm = leer_tof_derecho_mm()
+        if lectura_mm is not None:
+            dist_derecha = lectura_mm / 10
+            break
+        time.sleep_ms(20)
+
+    if dist_derecha > 30:
+        for _ in range(3):
+            hardware.ledV.value(1)
+            time.sleep_ms(150)
+            hardware.ledV.value(0)
+            time.sleep_ms(150)
+        ejecutar_mision_3_cw()
+    else:
+        for _ in range(3):
+            hardware.ledR.value(1)
+            time.sleep_ms(150)
+            hardware.ledR.value(0)
+            time.sleep_ms(150)
+        ejecutar_mision_4_ccw()

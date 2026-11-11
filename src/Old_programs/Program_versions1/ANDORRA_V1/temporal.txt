@@ -1,0 +1,65 @@
+    """MISION 1: Giro a derechas siguiendo pared con control de lineas por flanco."""
+    global contadorLineas, sobre_linea
+    print("--- EJECUTANDO MISION 1 CW (GIRO A DERECHAS) ---")
+    
+    # Clavamos el radar a la derecha para ver la pared en la carrera
+    SERVOcam.duty_u16(RADAR_FIJO_DERECHA)
+    
+    # --- MOVIMIENTOS INICIALES POR TIEMPO ---
+    print("Movimiento Inicial 1: Avanzando a la derecha...")
+    servoDireccion.duty_u16(Dcha)
+    servoTraccion.duty_u16(Avanza_tope)
+    time.sleep_ms(800) 
+
+    print("Movimiento Inicial 2: Avanzando a la izquierda...")
+    servoDireccion.duty_u16(Izda)
+    servoTraccion.duty_u16(Avanza_tope)
+    time.sleep_ms(800) 
+
+    print("Salida completada. Entrando en bucle de carrera...")
+    distancia_actual = DISTANCIA_OBJETIVO
+
+    while True:
+        # 1. Traccion a tope hacia adelante
+        servoTraccion.duty_u16(Avanza_tope)
+        
+        # 2. Medir la pared derecha con el LiDAR
+        nueva_distancia = leer_tfmini()
+        if nueva_distancia is not None:
+            distancia_actual = nueva_distancia
+
+        # 3. Control Proporcional (P)
+        error = distancia_actual - DISTANCIA_OBJETIVO
+        pulso_dir = Recto - (error * GANANCIA_KP)
+        
+        # 4. Seguridad de direccion
+        pulso_dir = max(Dcha, min(pulso_dir, Izda))
+        servoDireccion.duty_u16(pulso_dir)
+        
+        # 5. Conteo de lineas por flanco con su libreria
+        r, g, b, claro = sensor_color.read_rgbc()
+        
+        if not sobre_linea:
+            if claro < UMBRAL_BLANCO_A_COLOR: # Entramos a la linea (Flanco bajada)
+                contadorLineas += 1
+                sobre_linea = True
+                ledR.value(1) # testigo visual
+                print(f"¡LINEA DETECTADA! -> Total lineas: {contadorLineas}/36")
+        else:
+            if claro >= UMBRAL_BLANCO_A_COLOR: # Salimos al blanco (Flanco subida)
+                sobre_linea = False
+                ledR.value(0)
+
+        # 6. Fin de carrera (3 vueltas)
+        if contadorLineas >= TOTAL_LINEAS_META:
+            print("¡36 lineas completadas! Esperando un segundo para clavar la meta...")
+            time.sleep_ms(1000) # delay ajustable final
+            
+            # Parada total definitiva
+            servoTraccion.duty_u16(Para)
+            servoDireccion.duty_u16(Recto)
+            print("--- CARRERA COMPLETADA CON EXITO ---")
+            while True:
+                ledR.value(1)
+                ledV.value(1)
+                time.sleep_ms(500)

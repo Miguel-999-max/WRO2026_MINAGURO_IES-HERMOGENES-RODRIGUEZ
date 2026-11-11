@@ -1,0 +1,29 @@
+"""
+TEST STANDALONE - TOF400F #2 (VL53L1X) por I2C1
+Requiere subir tambien vl53l1x.py a la Pico.
+
+Conexion:
+  SDA1 -> GPIO14
+  SCL1 -> GPIO15
+"""
+
+from machine import Pin, I2C
+from vl53l1x import VL53L1X
+import time
+
+i2c1 = I2C(1, sda=Pin(14), scl=Pin(15), freq=100000, timeout=100000)
+
+print("Dispositivos I2C1 encontrados:", [hex(a) for a in i2c1.scan()])
+
+try:
+    tof2 = VL53L1X(i2c1, address=0x29)
+    print("TOF400F #2 listo.")
+except Exception as e:
+    print("Error al iniciar TOF400F #2:", e)
+    tof2 = None
+
+while tof2 is not None:
+    d = tof2.read_distance_mm()
+    if d is not None:
+        print("Distancia: %d mm (%.1f cm)" % (d, d / 10))
+    time.sleep_ms(50)
