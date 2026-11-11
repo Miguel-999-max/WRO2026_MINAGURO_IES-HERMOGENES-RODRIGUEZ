@@ -50,13 +50,13 @@
     </td>
     <td align="center">
       <a href="https://herencia.es/">
-        <img src="other/Sponsors/Herencia_emblem.jpg" width="120" /><br />
+        <img src="other/Sponsors/Herencia_emblem.jpg" width="110" /><br />
         <b>Herencia Town Council</b>
       </a>
     </td>
     <td align="center">
       <a href="http://castillaretail.com/">
-        <img src="other/Sponsors/Castilladecor_logo.png" width="140" /><br />
+        <img src="other/Sponsors/Castilladecor_logo.png" width="170" /><br />
         <b>Castilladecor</b>
       </a>
     </td>
@@ -66,13 +66,13 @@
   <tr>
     <td align="center">
       <a href="https://www.symaga.com/">
-        <img src="other/Sponsors/Symaga_logo.jpg" width="140" /><br />
+        <img src="other/Sponsors/Symaga_logo.jpg" width="165" /><br />
         <b>Symaga</b>
       </a>
     </td>
     <td align="center">
       <a href="https://villartadesanjuan.es/">
-        <img src="other/Sponsors/Villarta_emblem.jpg" width="100" /><br />
+        <img src="other/Sponsors/Villarta_emblem.jpg" width="85" /><br />
         <b>Villarta de San Juan Town Council</b>
       </a>
     </td>
