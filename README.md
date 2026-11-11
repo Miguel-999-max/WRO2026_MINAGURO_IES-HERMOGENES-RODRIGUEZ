@@ -34,7 +34,7 @@
     </td>
     <td align="center" width="33%">
       <a href="https://www.tubyder.es/">
-        <img src="other/Sponsors/Tubyder_logo.jpg" width="140" /><br />
+        <img src="other/Sponsors/Tubyder_logo.jpg" width="155" /><br />
         <b>Tubyder</b>
       </a>
     </td>
@@ -50,7 +50,7 @@
     </td>
     <td align="center">
       <a href="https://herencia.es/">
-        <img src="other/Sponsors/Herencia_emblem.jpg" width="110" /><br />
+        <img src="other/Sponsors/Herencia_emblem.jpg" width="115" /><br />
         <b>Herencia Town Council</b>
       </a>
     </td>
@@ -72,7 +72,7 @@
     </td>
     <td align="center">
       <a href="https://villartadesanjuan.es/">
-        <img src="other/Sponsors/Villarta_emblem.jpg" width="85" /><br />
+        <img src="other/Sponsors/Villarta_emblem.jpg" width="80" /><br />
         <b>Villarta de San Juan Town Council</b>
       </a>
     </td>
