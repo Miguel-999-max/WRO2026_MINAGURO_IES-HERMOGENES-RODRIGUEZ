@@ -13,95 +13,96 @@
 > Every time you see this sign (▶&#xFE0E;), click on the text next to it to expand the content!
 
 ## 🤝 Sponsors
-<div align="justify">We would like to thank our sponsors for making this project possible:
+We would like to thank our sponsors for making this project possible:
 <br>
 </br>
-<div align="center">
-<table border="0" cellspacing="10" cellpadding="10">
-  <!-- Fila 1 -->
-  <tr>
-    <td align="center" width="33%">
-      <a href="https://www.uclm.es/">
-        <img src="other/Sponsors/UCLM.png" width="200" /><br />
-        <b>Universidad de Castilla La Mancha</b>
-      </a>
-    </td>
-    <td align="center" width="33%">
-      <a href="https://ies-hermogenesrodriguez.centros.castillalamancha.es/">
-        <img src="other/Sponsors/ies_Hermogenes.png" width="100" /><br />
-        <b>IES Hermógenes Rodríguez</b>
-      </a>
-    </td>
-    <td align="center" width="33%">
-      <a href="https://www.tubyder.es/">
-        <img src="other/Sponsors/Tubyder_logo.jpg" width="155" /><br />
-        <b>Tubyder</b>
-      </a>
-    </td>
-  </tr>
-
-  <!-- Fila 2 -->
-  <tr>
-    <td align="center">
-      <a href="https://www.rotecsl.com/">
-        <img src="other/Sponsors/Rotec_logo.png" width="140" /><br />
-        <b>Rotec</b>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://herencia.es/">
-        <img src="other/Sponsors/Herencia_emblem.jpg" width="115" /><br />
-        <b>Herencia Town Council</b>
-      </a>
-    </td>
-    <td align="center">
-      <a href="http://castillaretail.com/">
-        <img src="other/Sponsors/Castilladecor_logo.png" width="170" /><br />
-        <b>Castilladecor</b>
-      </a>
-    </td>
-  </tr>
-
-  <!-- Fila 3 -->
-  <tr>
-    <td align="center">
-      <a href="https://www.symaga.com/">
-        <img src="other/Sponsors/Symaga_logo.jpg" width="165" /><br />
-        <b>Symaga</b>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://villartadesanjuan.es/">
-        <img src="other/Sponsors/Villarta_emblem.jpg" width="80" /><br />
-        <b>Villarta de San Juan Town Council</b>
-      </a>
-    </td>
-    <td align="center">
-      <img src="other/Sponsors/AMPA_logo.jpg" width="120" /><br />
-      <b>Parents Association of Students</b>
-    </td>
-  </tr>
+  <div align="center">
+  <table border="0" cellspacing="10" cellpadding="10">
+    <!-- Fila 1 -->
+    <tr>
+      <td align="center" width="33%" valign="middle">
+        <a href="https://www.uclm.es/">
+          <img src="other/Sponsors/UCLM.png" width="200" /><br />
+          <b>Universidad de Castilla La Mancha</b>
+        </a>
+      </td>
+      <td align="center" width="33%" valign="middle">
+        <a href="https://ies-hermogenesrodriguez.centros.castillalamancha.es/">
+          <img src="other/Sponsors/ies_Hermogenes.png" width="100" /><br />
+          <b>IES Hermógenes Rodríguez</b>
+        </a>
+      </td>
+      <td align="center" width="33%" valign="middle">
+        <a href="https://www.tubyder.es/">
+          <img src="other/Sponsors/Tubyder_logo.jpg" width="155" /><br />
+          <b>Tubyder</b>
+        </a>
+      </td>
+    </tr>
+    <!-- Fila 2 -->
+    <tr>
+      <td align="center" valign="middle">
+        <a href="https://www.rotecsl.com/">
+          <img src="other/Sponsors/Rotec_logo.png" width="140" /><br />
+          <b>Rotec</b>
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://herencia.es/">
+          <img src="other/Sponsors/Herencia_emblem.jpg" width="115" /><br />
+          <b>Herencia Town Council</b>
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="http://castillaretail.com/">
+          <img src="other/Sponsors/Castilladecor_logo.png" width="170" /><br />
+          <b>Castilladecor</b>
+        </a>
+      </td>
+    </tr>
+    <!-- Fila 3 -->
+    <tr>
+      <td align="center" valign="middle">
+        <a href="https://www.symaga.com/">
+          <img src="other/Sponsors/Symaga_logo.jpg" width="165" /><br />
+          <b>Symaga</b>
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://villartadesanjuan.es/">
+          <img src="other/Sponsors/Villarta_emblem.jpg" width="80" /><br />
+          <b>Villarta de San Juan Town Council</b>
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <img src="other/Sponsors/AMPA_logo.jpg" width="120" /><br />
+        <b>Parents Association of Students</b>
+      </td>
+    </tr>
+    <!-- Fila 4 -->
+    <tr>
+      <td align="center" valign="middle">
+        <a href="https://www.tecnove.com/">
+          <img src="other/Sponsors/Tecnove_logo.jpg" width="210" /><br />
+          <b>Tecnove</b>
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://www.tsdinternational.com/es/">
+          <img src="other/Sponsors/TSD_logo.jpg" width="170" /><br />
+          <b>Technology and Security Developments</b>
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://abengoza.es/">
+          <img src="other/Sponsors/Abengoza_logo.jpg" width="140" /><br />
+          <b>Transportes Abengoza</b>
+        </a>
+      </td>
+    </tr>
   </table>
-  
-  <!-- Fila 4 -->
- <table>
-  <tr>
-    <td align="center" width="50%">
-      <a href="https://www.tecnove.com/">
-        <img src="other/Sponsors/Tecnove_logo.jpg" width="180" /><br />
-        <b>Tecnove</b>
-      </a>
-    </td>
-    <td align="center" width="50%">
-      <a href="https://www.tsdinternational.com/es/">
-        <img src="other/Sponsors/TSD_logo.jpg" width="140" /><br />
-        <b>Technology and Security Developments</b>
-      </a>
-    </td>
-  </tr>
-</table>
-
 </div>
+
  
   ## 📁 TABLE OF CONTENTS
 
