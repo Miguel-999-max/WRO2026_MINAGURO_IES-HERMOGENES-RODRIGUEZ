@@ -779,10 +779,10 @@ These are the 3D designs we have created, which include: a custom-made chassis f
 | Magnetometer support 1 | 1 | <img src="models/Final_Version_models/magnetometer_support1.png" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/Final_Version_models/compass_mount1.stl) |
 | Magnetometer support 2 | 1 | <img src="models/Final_Version_models/magnetometer_support2.png" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/Final_Version_models/compass_mount2.stl) |
 | 44 teeth crown | 1 | <img src="models/Final_Version_models/Crown_44.png" width="150" height="120"> | Part of the transmission system | [`📥Download`](models/Final_Version_models/Crown_44_servo.stl) |
-| Cap crown | 1 | <img src="models/Final_Version_models/crown_cap.png" width="150" height="120"> | Part of the transmission system | [`📥Download`](models/Final_Version_models/crown_cap.stl) |
-| Husky 2 support | 1 | <img src="models/Final_Version_models/modificated_husky_adapter.png" width="150" height="120"> | Part of the transmission system | [`📥Download`](models/Final_Version_models/support_husky2-corta.stl) |
-| TFmini support | 1 | <img src="models/Final_Version_models/TFmini_support.png" width="150" height="120"> | Part of the transmission system | [`📥Download`](models/Final_Version_models/SUPPORT_TFminiS.stl) |
-| Chassis TFmini support | 1 | <img src="models/Final_Version_models/Chassis_support_TFmini.png" width="150" height="120"> | Part of the transmission system | [`📥Download`](models/Final_Version_models/SUPPORT_TFminiS_chassis.stl) |
+| Cap crown | 1 | <img src="models/Final_Version_models/crown_cap.png" width="150" height="120"> | Cover the crown | [`📥Download`](models/Final_Version_models/crown_cap.stl) |
+| Husky 2 support | 1 | <img src="models/Final_Version_models/modificated_husky_adapter.png" width="150" height="120"> | Holding the Husky 2 | [`📥Download`](models/Final_Version_models/support_husky2-corta.stl) |
+| Front TFmini support | 1 | <img src="models/Final_Version_models/TFmini_support.png" width="150" height="120"> | Support of the front TFmini | [`📥Download`](models/Final_Version_models/SUPPORT_TFminiS.stl) |
+| Chassis TFmini support | 1 | <img src="models/Final_Version_models/Chassis_support_TFmini.png" width="150" height="120"> | Support of the lateral TFminis | [`📥Download`](models/Final_Version_models/SUPPORT_TFminiS_chassis.stl) |
 
 </details>
 
