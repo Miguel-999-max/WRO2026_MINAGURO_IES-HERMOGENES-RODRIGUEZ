@@ -705,12 +705,12 @@ These are the 3D designs we have created, which include: a custom-made chassis f
 
 | Component | Quantity | Image | Function | File link |
 | :---: | :---: | :---: | :---: | :---: |
-| Chasis in 3D | 1 | <img src="models/CHASIS_modificado_2.jpg" width="150" height="120"> | Skeleton of the robot | [`📥Download`](models/CHASIS_modificado_2.stl) |
-| Battery support 1 | 2 | <img src="models/soportebateria1.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/soportebateria1.stl) |
-| Battery support 2 | 1 | <img src="models/soportebateria2.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/soportebateria2.stl) |
-| Switch support | 1 | <img src="models/SOPORTE_INTERRUPTOR.jpg" width="150" height="120"> | Support the switch | [`📥Download`](models/SOPORTE_INTERRUPTOR.stl) |
+| Chasis in 3D | 1 | <img src="models/Old_Versions_models/CHASIS_modificado_2.jpg" width="150" height="120"> | Skeleton of the robot | [`📥Download`](models/Old_Versions_models/CHASIS_modificado_2.stl) |
+| Battery support 1 | 2 | <img src="models/soportebateria1.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/Old_Versions_models/soportebateria1.stl) |
+| Battery support 2 | 1 | <img src="models/soportebateria2.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/Old_Versions_models/soportebateria2.stl) |
+| Switch support | 1 | <img src="models/SOPORTE_INTERRUPTOR.jpg" width="150" height="120"> | Support the switch | [`📥Download`](models/Old_Versions_models/SOPORTE_INTERRUPTOR.stl) |
 | Adapter wheels in 3D | 2 | <img src="models/Wheel adapter.png" width="150" height="120"> | Connect the wheels to the differential | [`📥Download`](models/wheel%20adapter.stl) |
-| Adapter gear in 3D | 1 | <img src="models/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`📥Download`](models/GEAR_ADAPTER.stl) |
+| Adapter gear in 3D | 1 | <img src="models/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`📥Download`](models/Old_Versions_models/GEAR_ADAPTER.stl) |
 | Magnetometer mast | 1 | <img src="models/soporte_magnetometro.png" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/SOPORTE_10-DOF.stl) |
 
 </details>
