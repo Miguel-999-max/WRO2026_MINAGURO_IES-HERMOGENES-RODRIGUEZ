@@ -1805,18 +1805,20 @@ The HUSKYLENS 2 module is the robot's main camera. Previously, an earlier model 
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="other/components/HUSKYLENS.webp" width="500" height="400"/>
+      <img src="other/components/huskylens2.jpg" width="500" height="400"/>
     </td>
    <td align="left" width="50%">
     <ul>
-        <li>Core Processor Chip: Dual-core RISC-V processor</li>
-        <li>Integrated Image Sensor: Omnivision OV2640 2.0-megapixel camera</li>
-        <li>Built-in Display: 2.0-inch IPS LCD display with a resolution of 320x240 pixels.</li>
-        <li>Supply Voltage: 3.3V to 5.0V DC.</li>
-        <li>Current Consumption: ~320 mA at 3.3V / ~230 mA at 5.0V</li>
-        <li>Frame Rate: Up to 30 frames per second</li>
-        <li>Illumination: Features 2 built-in front LEDs</li>
-        <li>Physical Dimensions: 52 mm × 44.5 mm (2.05“ × 1.75”).</li>
+      <li>Processor: 1.6 GHz dual-core Kendryte K230 chip.</li>
+      <li>AI Performance: 6 TOPS for offline processing.</li>
+      <li>Memory: 1 GB of LPDDR4 RAM and 8 GB of internal storage (expandable via microSD).</li>
+      <li>Camera: 2 MP sensor at 60 fps with interchangeable modules and lenses.</li>
+      <li>Display: 2.4-inch IPS touchscreen (640 × 480 pixels).</li>        
+      <li>Audio and lighting: Microphone, 1 W speaker, and built-in front LED light.</li>
+      <li>AI models: Over 20 built-in algorithms (faces, gestures, OCR, license plates, pose detection, line tracking, and custom YOLO).</li>
+      <li>Advanced features: Support for language models (LLMs) via the MCP protocol.</li>
+      <li>Connectivity: USB-C ports, Gravity connector (I2C/UART), and Wi-Fi 6.</li>
+      <li>Compatibility: Works with Arduino, ESP32, Raspberry Pi, micro:bit, and UNIHIKER.</li>
       </ul>
     </td>
   </tr>
