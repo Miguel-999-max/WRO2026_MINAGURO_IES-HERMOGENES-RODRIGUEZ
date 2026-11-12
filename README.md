@@ -631,6 +631,13 @@ Before finishing, we decided to break down main.py into subprograms; since the p
 
 * **31/08/26:** Let’s pick up where we left off the other day. We’ve now identified why the robot was previously knocking the block over: it’s because we’ve programmed it to start dodging when the object is 15 cm away, but what actually happens is that it starts dodging when it’s 5 cm away, which is why it ends up knocking it over. This is because, immediately after taking the reading, the camera has to be repositioned, the LED switched on and other tasks carried out within the same loop; consequently, until it has completed all of these, it does not detect that it has reached the block or start to swerve. As a solution, we’ve programmed it to check whether it has reached the block immediately after sending the reading, and only then carry out everything else. And now it only reverses in extreme cases where it is 7 cm or less away.
 
+</details>
+
+
+<details>
+<summary><b>💻 September 2026</b></summary>
+<br>
+
 * **01/09/26:** We managed to get our robot to complete three full laps of the circuit in the obstacle challenge, starting from the parking area, but we were unable to return and park in the parking area, and we had to remove the parking area before completing the first lap as we spotted a problem. Due to the quality of the Husky Lens, it recognises the parking area as a red block. We have therefore decided to change our strategy. We will now start the obstacle challenge without the parking area.
 
 * **02/09/26:** Hemos empezado a lanzar ideas para ver cómo resolvemos la decisión inicial, la que hace que sepa si está en reto libre o con obstáculos y si está girando a sentido horario o antihorario. Hemos llegado a la conclusión de que el robot debería ir marcha atrás y, tras ello, que la Husky Lens mire hacia la izquierda y hacia la derecha para ver si hay bloques. Si los encuentra, para saber hacia qué sentido está, miraríamos si la coordenada X del objeto es mayor de 160, giraría en sentido horario, y si por lo contrario es menor de 160, giraría en sentido antihorario. Si aun así no los ve, tiene que ir hacia delante hasta sobrepasar la esquina y hacer la primera curva. Si no ve ningún bloque significa que está en el reto libre y, si por lo contrario ve alguno, está en el reto con obstáculos.
@@ -2642,18 +2649,26 @@ Here is a FSM that will show you the logic our program follows:
  
 These are all programs we used to calibrate sensors and conduct functional tests:
 
-* [01.Blink_led.txt](/src/Old_programs/Test_programs1/01.Blink_led.txt) ➜ to make an external LED connected to a Raspberry Pi Pico board blink using the MicroPython programming language
-* [02.Botón+led.txt](/src/Old_programs/Test_programs1/02.Botón%20+%20led.txt) ➜ to turn on an external LED only when you hold down a pushbutton
-* [03.Contador con TCRT5000.txt](/src/Old_programs/Test_programs1/03.Contador%20con%20TCRT5000.txt) ➜ to count the lines on the floor using a TCRT5000 infrared optical sensor
-* [04.Control de servo con potenciómetro.txt](/src/Old_programs/Test_programs1/04.Control%20de%20servo%20con%20potenciómetro.txt) ➜ to calibrate the steering servo
-* [05.Medir distancia con TOF 400F.txt](/src/Old_programs/Test_programs1/05.Medir%20distancia%20con%20TOF%20400F.txt) ➜ to test the TOF400F laser sensor
-* [06.Medir distancia con TFmini-s usand.txt](/src/Old_programs/Test_programs1/06.Medir%20distancia%20con%20TFmini-s%20usand.txt) ➜ to test the TFmini-S laser sensor
-* [07.Leer color con TCS34725.txt](/src/Old_programs/Test_programs1/07.Leer%20color%20con%20TCS34725.txt) ➜ to read color values from the TCS34725 sensor using I2C
-* [08.Contador con TCS34725.txt](/src/Old_programs/Test_programs1/08.Contador%20con%20TCS34725.txt) ➜ to count the lines on the floor using the TCS34725 digital color sensor
-* [09.Leer escala de grises con TCRT500.txt](/src/Old_programs/Test_programs1/09.Leer%20escala%20de%20grises%20con%20TCRT500.txt) ➜ to verify the accuracy of the TCRT5000 sensor's grayscale reading by using it to distinguish colors (Conclusion: it is not reliable)
-* [10.Conexion inicial con Husky1.txt](/src/Old_programs/Test_programs1/10.Conexion%20inicial%20con%20Husky1.txt) ➜ to verify the connection between the Raspberry Pi and HUSKLENS using the I2C communication protocol
-* [11.Color Recognition con HUSKY.txt](/src/Old_programs/Test_programs1/11.Color%20Recognition%20con%20HUSKY.txt) ➜ to turn on two LEDs based on HuskyLens's visual object recognition
-* [12.Calibrate the magnetometer 10DOF.py](/src/Old_programs/Test_programs1/12.calibrar_magnetometro.py) ➜ so that the robot knows which angle corresponds to each street
+* [01.Blink_led.txt](/src/Current_programs/Test_programs2/01.Blink_led.txt) ➜ to make an external LED connected to a Raspberry Pi Pico board blink using the MicroPython programming language
+* [02.Botón+led.txt](/src/Current_programs/Test_programs2/02.Botón%20+%20led.txt) ➜ to turn on an external LED only when you hold down a pushbutton
+* [03.Contador con TCRT5000.txt](/src/Current_programs/Test_programs2/03.Contador%20con%20TCRT5000.txt) ➜ to count the lines on the floor using a TCRT5000 infrared optical sensor
+* [04.Control de servo con potenciómetro.txt](/src/Current_programs/Test_programs2/04.Control%20de%20servo%20con%20potenciómetro.txt) ➜ to calibrate the steering servo
+* [05.Medir distancia con TOF 400F.txt](/src/Current_programs/Test_programs2/05.Medir%20distancia%20con%20TOF%20400F.txt) ➜ to test the TOF400F laser sensor
+* [06.Medir distancia con TFmini-s usand.txt](/src/Current_programs/Test_programs2/06.Medir%20distancia%20con%20TFmini-s%20usand.txt) ➜ to test the TFmini-S laser sensor
+* [07.Leer color con TCS34725.txt](/src/Current_programs/Test_programs2/07.Leer%20color%20con%20TCS34725.txt) ➜ to read color values from the TCS34725 sensor using I2C
+* [08.Contador con TCS34725.txt](/src/Current_programs/Test_programs2/08.Contador%20con%20TCS34725.txt) ➜ to count the lines on the floor using the TCS34725 digital color sensor
+* [09.Leer escala de grises con TCRT500.txt](/src/Current_programs/Test_programs2/09.Leer%20escala%20de%20grises%20con%20TCRT500.txt) ➜ to verify the accuracy of the TCRT5000 sensor's grayscale reading by using it to distinguish colors (Conclusion: it is not reliable)
+* [10.Conexion inicial con Husky1.txt](/src/Current_programs/Test_programs2/10.Conexion%20inicial%20con%20Husky1.txt) ➜ to verify the connection between the Raspberry Pi and HUSKLENS using the I2C communication protocol
+* [11.Color Recognition con HUSKY.txt](/src/Current_programs/Test_programs2/11.Color%20Recognition%20con%20HUSKY.txt) ➜ to turn on two LEDs based on HuskyLens's visual object recognition
+* [12.Calibrate the magnetometer 10DOF.py](/src/Current_programs/Test_programs2/12.calibrar_magnetometro.py) ➜ so that the robot knows which angle corresponds to each street
+* [13.Config TFmini-S 12C.py](/src/Current_programs/Test_programs2/Config%20TFmini-S%20I2C.py) ➜
+* [14.Config tfmini uart demanda.py](/src/Current_programs/Test_programs2/Config%20tfmini%20uart%20demanda.py) ➜
+* [15.calibrar_magnetometro.py](/src/Current_programs/Test_programs2/calibrar_magnetometro.py) ➜
+* [16.huskylens.py](/src/Current_programs/Test_programs2/huskylens.py) ➜
+* [17.lsm303_mag.py](/src/Current_programs/Test_programs2/lsm303_mag.py) ➜
+* [18.main.py](/src/Current_programs/Test_programs2/main.py) ➜
+* [19.tcs34725.py](/src/Current_programs/Test_programs2/tcs34725.py) ➜
+* [20.test_magnetometro.py](/src/Current_programs/Test_programs2/test_magnetometro.py) ➜
 
 <details>
 <summary><b>💻 Final program</b></summary>
