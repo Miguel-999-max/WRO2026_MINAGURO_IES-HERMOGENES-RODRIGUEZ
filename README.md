@@ -1130,6 +1130,213 @@ The chassis was always designed to provide a stable and reliable foundation on w
 <details>
 <summary><b>5.3 Final version - Mobility design</b></summary>
 <br>
+Generally speaking, the robot has:
+
+* Microcontroller: Raspberry Pi Pico 2 board on a KS3017 shield.
+* Motor system: SPT5632-360 servo.
+* Drivetrain: mechanical differential, gear system, differential-to-wheel adapters, and four LEGO wheels, two of which are larger than the others.
+* Steering system: LEGO brick system, 180-degree micro servo, and a servo arm with a string to connect the micro servo to the steering system.
+* Camera: HUSKYLENS module.
+* Distance sensors: three TFmini-S sensors.
+* Gyroscope: L3GD20 gyroscope.
+* Color sensors: TCS34725 RGB sensor.
+* Power supply: four Samsung ICR18650-26FU batteries, arranged in pairs across two battery expansion modules.
+* Other components: a pushbutton to start the robot, a relay to connect both battery systems, a microservo to rotate the HUSKYLENS and the TFmini-S front sensor, red and green LEDs to provide the program with information about the hardware's status, and two 30 V to 5 V step-down converters with their respective capacitors to reduce the voltage of the current. 
+
+All of the components mentioned above are explained in greater detail below.
+
+#### Steering system 
+The steering system used consists of:  
+
+* A system made from LEGO bricks from our Technology class, because it’s easy to assemble and disassemble and can be put together fairly quickly in case modifications are needed, featuring two LEGO wheels that are smaller than the rear ones because they had to account for the height of the steering system.  
+* An 180-degree servo, since it’s easy to program and a larger turning angle wasn’t necessary given the system we built.  
+* A servo arm with a string, to connect the LEGO steering system to the servo.
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_direc_s.luz.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_direc.izq.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_direc.der.jpg" width="305"/>
+    </td>
+  </tr>
+</table>
+
+If this steering turned too far in one direction, it would jam and could break. To prevent this, we adjusted the values using the steering servo calibration program so that this wouldn’t happen.  
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <b>Micro servo 180</b><br>
+      <img src="other/steering/SERVO180_caract.jpg" width="500" height="400"/>
+    </td>
+    <td align="left" width="50%">
+      <ul>
+        <li>A:32mm</li>
+        <li>B:23mm</li>
+        <li>C:28,5mm</li>
+        <li>D:12mm</li>
+        <li>E:32mm</li>
+        <li>F:19mm</li>
+        <li>Speed:0,1sec</li>
+        <li>Torque:2,5kg-cm</li>
+        <li>Weight:14,7g</li>
+        <li>Voltage:4,8-6V</li>
+      </ul>
+    </td>
+  </tr>
+</table></div>
+
+#### Drive system
+We used an SPT5632-360 servo motor because we already had experience programming it, and it has enough power to achieve the torque and speed required for both challenges.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="other/components/SPT5632-360.jpg" width="100%"/>
+    </td>
+    <td align="left" width="50%">
+     <ul> 
+      <li>Type: 360° continuous rotation digital servo</li>
+      <li>Voltage: 4.8–8.4 V</li>
+      <li>Speed: 56–88 rpm</li>
+      <li>Rated current: 1.5 A</li>
+      <li>Maximum current: 2.5 A</li>
+      <li>Gears: Metal</li>
+      <li>Motor: Coreless</li>
+      <li>Weight: ≈58 g</li>
+      <li>Dimensions: 40.5 × 20 × 37.5 mm</li>
+     </ul>
+    </td>
+  </tr>
+</table></div>
+
+The first 360-degree continuous-rotation servo we installed caused problems with smooth motion when the robot moved, which led us to believe the issues were software-related; however, when it was replaced with another one we had in class, the problems did not recur.
+
+#### Drivetrain
+
+The drivetrain consists of:
+
+* A gear system designed to transmit motion from the servomotor to the mechanical differential, consisting of a 40-tooth LEGO gear and a 13-tooth gear produced via 3D printing. The gear ratio is 12/30.
+* A mechanical differential. The differential was purchased from AliExpress, inspired by an old project we did in our technology classroom.
+* Two adapters made with a 3D printer that connect the differential shafts to the LEGO wheels.
+* Two LEGO wheels that are larger than those in the steering system because they had to account for the height of the mechanical differential on their own.
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_bat_abajo.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_abajo.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_der.jpg" width="305"/>
+    </td>
+  </tr>
+</table>
+
+The mechanical differential was somewhat stiff when turning. To make it turn more smoothly, we lubricated it with oil and turned it using a drill.
+
+In addition, we have recalculated the maximum speed, the revolutions per second of the different axles, the force and torque. The traction servomotor we are using has been discontinued and we cannot find its torque or rotational speed specifications. We have derived the servo’s rotational speed from the robot’s linear speed, so we have worked the calculations ‘backwards’ to arrive at this figure. We did the same with the torque: we measured the robot’s force using a dynamometer; we ran the motor at full power, had it pull on a dynamometer, and pressed the wheels indirectly against the floor until they began to slip. The maximum pull we recorded was 4 N. As there are two drive wheels, this gives us a thrust of 2 N per wheel.
+<br>
+</br>
+Torque of each wheel:
+<br>
+</br>
+F= 2 N
+<br>
+</br>
+r= 21,5 mm = 0,0212 m
+<br>
+</br>
+T= 2 N · 0,0212 m = 0,0424 N·m
+<br>
+</br>
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="other/Calculations2.jpg" width="450"/>
+    </td>
+    <td align="center" width="50%">
+      <img src="other/Calculations.jpg" width="450"/>
+    </td> 
+  </tr>
+</table>
+
+#### Chassis design
+
+The chassis has evolved based on the need to add or remove components, and depending on what was most practical for meeting the challenges. 
+
+Initially, we used a sheet of foam board that was in the classroom, onto which we gradually added all the components. To attach the components, we used hot glue (because it has good adhesive properties, allows us to make modifications easily, and doesn’t damage the components). In fact, the first prototype was tested with a foam board base. 
+
+The front is cut into a pointed shape to prevent it from coming into contact with any of the interior partition walls or those of the parking garage during the obstacle phase. 
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/prototype1.1.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/prototype1.2.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/prototype1.3.jpg" width="305"/>
+    </td>
+  </tr>
+</table></div>
+
+After confirming that this was the final base, we designed the chassis in 3D, printed it, and transferred the components from one base to the other. Although we thought this change might cause problems once everything was already assembled, there were none. 
+
+<p align="center"><a src="models/CHASSIS.stl"><img src="models/Chasis.png" width="500"></a></p>
+
+The robot remained in this configuration for a while until we encountered several issues and broken circuit boards, which forced us to build a mount for a second battery as recommended in the instructions. Initially, it was made of foam board since it was a last-minute modification, but it was later 3D-designed to ensure a more durable and reliable material over time.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.9.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.3.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Old_photos/robot image v2.11.jpg" width="305"/>
+    </td>
+  </tr>
+</table></div>
+
+After the regional competition, the chassis had bent under the weight of the components, so we designed a new one with minor modifications—thicker so it could easily support them over time.
+
+An important consideration regarding the robot’s balance was to place the heaviest components—the Raspberry Pi Pico 2 board with its shield, the SPT5632-360 servo, and a pair of batteries with their expansion module—in the center of the chassis, ensuring a low and centralized center of mass.
+
+However, the addition of the other two batteries—a last-minute modification—forced us to build a special structure for them at the rear of the robot. Over time, it became apparent that when accelerating, the robot would sometimes skid due to an overload at the rear. To compensate for this extra weight, lead plates were added to the front of the robot.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_der.2.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_front.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_plomo.jpg" width="305"/>
+    </td>
+  </tr>
+</table></div>
+
+Finally, for the finals in Puerto Rico, due to modifications to the distance sensors, a new chassis has been redesigned with spaces specifically allocated for these modifications. 
+
+The components have been fastened with screws instead of hot glue, to make it easier to assemble and disassemble them and to facilitate transporting the robot without the risk of breaking any components. 
+
+The chassis was always designed to provide a stable and reliable foundation on which to mount the components, avoid unnecessary wiring, provide specific spaces for certain components, save space, and keep the robot compact throughout its journey through the challenges.
+
+</details>
 </details>
 
 
