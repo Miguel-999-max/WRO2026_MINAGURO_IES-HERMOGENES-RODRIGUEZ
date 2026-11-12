@@ -1958,7 +1958,7 @@ Two buck converters have been added to convert DC to DC while reducing the volta
 #### Wiring Scheme
 The wiring diagram was created in Cirkit Designer. In previous versions, it was created in TinkerCad, but the components we used weren’t available there, and since Cirkit Designer allows you to design custom components, we created it there instead. Here is the final result:
 
-<img src="schemes/wiring_scheme_andorra.png">
+<img src="schemes/wiring_scheme_puertorico.png">
 
 #### Sensors 
 The robot receives data from five main components: the Raspberry Pi Pico 2 board, the TFmini-S distance sensor, the HUSKYLENS module, the TCS34725 RGB sensor, and the L3GD20 gyroscope. 
@@ -1970,7 +1970,7 @@ This board is mounted on a KS3017 display to allow for convenient connection of 
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="schemes/pico-2-w-pinout.webp" width="500" height="400"/>
+      <img src="schemes/raspberrypipico2.jpg" width="500" height="400"/>
     </td>
    <td align="left" width="50%">
     <ul>
@@ -1987,7 +1987,7 @@ This board is mounted on a KS3017 display to allow for convenient connection of 
 
 We have also drawn up a table showing which GPIO each sensor, LED, servo, etc. The table has been useful for remembering the voltage required for each electronic device and the port they need to be connected to so that everything works properly.
 
-<img src="schemes/Raspberry Pi Pico 2 Connections.jpg">
+<img src="schemes/raspberry_connections_puertorico.png">
 
 The TFmini-S sensor was chosen from among other options from the same manufacturer (explained in greater detail in the project log); ultimately, this sensor has a detection range more than sufficient for the challenge, low power consumption, excellent accuracy, and a reasonable price. The other options were either too powerful or too expensive, or they did not meet the requirements. In the end, three sensors were used—one on the microservo and two on the sides—due to concerns arising from the two TOF400F sensors used in previous phases.
 
