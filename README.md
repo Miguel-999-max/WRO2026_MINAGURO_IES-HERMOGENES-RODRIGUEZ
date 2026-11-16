@@ -1292,8 +1292,6 @@ The front is cut into a pointed shape to prevent it from coming into contact wit
 
 After confirming that this was the final base, we designed the chassis in 3D, printed it, and transferred the components from one base to the other. Although we thought this change might cause problems once everything was already assembled, there were none. 
 
-<p align="center"><a src="models/CHASSIS.stl"><img src="models/Chasis.png" width="500"></a></p>
-
 The robot remained in this configuration for a while until we encountered several issues and broken circuit boards, which forced us to build a mount for a second battery as recommended in the instructions. Initially, it was made of foam board since it was a last-minute modification, but it was later 3D-designed to ensure a more durable and reliable material over time.
 
 <div align="center"><table>
