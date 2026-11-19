@@ -1948,13 +1948,13 @@ The batteries that power the Raspberry Pi Pico 2 board, the two microservos, and
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="other/batteries/batteries_structure1.jpg" width="350"/>
+      <img src="other/batteries/batteries_structure_pr1.jpg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/batteries/batteries_structure2.jpg" width="350"/>
+      <img src="other/batteries/batteries_structure_pr2.jpg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/batteries/batteries_structure3.jpg" width="350"/>
+      <img src="other/batteries/batteries_structure_pr3.jpg" width="350"/>
     </td>
   </tr>
 </table></div>
