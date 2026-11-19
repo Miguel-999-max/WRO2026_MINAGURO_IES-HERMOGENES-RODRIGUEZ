@@ -1358,9 +1358,9 @@ The components have been fastened with screws instead of hot glue, to make it ea
     <td>Last version</td>
   </tr>
   <tr>
-    <td>src="models/Old_Versions_models/Chasis.png"</td>
-    <td>src="models/Old_Versions_models/chasis2.png"</td>
-    <td>src="models/Final_Version_models/chasis3.png"</td>
+    <td><img src="models/Old_Versions_models/Chasis.png"></td>
+    <td><img src="models/Old_Versions_models/chasis2.png"></td>
+    <td><img src="models/Final_Version_models/chasis3.png"></td>
   </tr>
 </table>
 
