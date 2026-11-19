@@ -1243,13 +1243,13 @@ The drivetrain consists of:
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="other/drivetrain/drivetrain1.png" width="305"/>
+      <img src="other/drivetrain/drivetrain1.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/drivetrain/drivetrain2.png" width="305"/>
+      <img src="other/drivetrain/drivetrain2.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/drivetrain/drivetrain3.png" width="305"/>
+      <img src="other/drivetrain/drivetrain3.jpg" width="305"/>
     </td>
   </tr>
 </table>
