@@ -1348,24 +1348,23 @@ Finally, for the finals in Puerto Rico, due to modifications to the distance sen
 
 The components have been fastened with screws instead of hot glue, to make it easier to assemble and disassemble them and to facilitate transporting the robot without the risk of breaking any components. 
 
-<table>
+<table align="center" width="100%">
   <tr>
-    <td colspan="3" style="text-align: center">
+    <td colspan="3" align="center">
       <strong>Chassis evolution</strong>
-  </tr>
-  <tr>
-    <td style="text-align: center;"><strong>First version</strong></td>
-    <td style="text-align: center;"><strong>Second version</strong></td>
-    <td style="text-align: center;"><strong>Last version</strong></td>
-  </tr>
-  <tr>
-    <td><img src="models/Old_Versions_models/Chasis.png"></td>
-    <td><img src="models/Old_Versions_models/chasis2.png"></td>
-    <td><img src="models/Final_Version_models/chasis3.png"></td>
     </td>
   </tr>
+  <tr>
+    <td align="center"><strong>First version</strong></td>
+    <td align="center"><strong>Second version</strong></td>
+    <td align="center"><strong>Last version</strong></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="models/Old_Versions_models/Chasis.png"></td>
+    <td align="center"><img src="models/Old_Versions_models/chasis2.png"></td>
+    <td align="center"><img src="models/Final_Version_models/chasis3.png"></td>
+  </tr>
 </table>
-
 
 The chassis was always designed to provide a stable and reliable foundation on which to mount the components, avoid unnecessary wiring, provide specific spaces for certain components, save space, and keep the robot compact throughout its journey through the challenges.
 
