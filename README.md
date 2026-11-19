@@ -16,7 +16,7 @@
 We would like to thank our sponsors for making this project possible:
 <br>
 </br>
-  <div align="center">
+<div align="center">
   <table border="0" cellspacing="10" cellpadding="10">
     <!-- Fila 1 -->
     <tr>
@@ -97,6 +97,22 @@ We would like to thank our sponsors for making this project possible:
         <a href="https://abengoza.es/">
           <img src="other/Sponsors/abengoza_logo.png" width="235" /><br />
           <b>Transportes Abengoza</b>
+        </a>
+      </td>
+    </tr>
+    <!-- Fila 5 -->
+    <tr>
+      <td align="center" width="33%" valign="middle">
+        <a href="URL_PATROCINADOR_1">
+          <img src="other/Sponsors/LOGO_PATROCINADOR_1.png" width="160" /><br />
+          <b>Nombre Patrocinador 1</b>
+        </a>
+      </td>
+      <td align="center" width="33%" valign="middle"></td>
+      <td align="center" width="33%" valign="middle">
+        <a href="URL_PATROCINADOR_2">
+          <img src="other/Sponsors/LOGO_PATROCINADOR_2.png" width="160" /><br />
+          <b>Nombre Patrocinador 2</b>
         </a>
       </td>
     </tr>
