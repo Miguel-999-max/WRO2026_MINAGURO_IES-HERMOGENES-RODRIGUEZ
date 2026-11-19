@@ -1938,7 +1938,7 @@ The batteries that power the HUSKYLENS and the drive servo are housed in a batte
        <img src="v-photos/Old_photos/robot image v2.14.jpg" width="305"/>
      </td>
      <td align="center" width="33%">
-       <img src="v-photos/Current_photos/v_der.2.jpg" width="305"/>
+       <img src="other/batteries/batteries4.jpg" width="305"/>
      </td>
   </tr>
 </table></div>
@@ -1948,13 +1948,13 @@ The batteries that power the Raspberry Pi Pico 2 board, the two microservos, and
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_der.3.jpg" width="350"/>
+      <img src="other/batteries/batteries_structure1.jpg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_arriba.jpg" width="350"/>
+      <img src="other/batteries/batteries_structure2.jpg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_tras.jpg" width="350"/>
+      <img src="other/batteries/batteries_structure3.jpg" width="350"/>
     </td>
   </tr>
 </table></div>
@@ -1964,7 +1964,13 @@ Two buck converters have been added to convert DC to DC while reducing the volta
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_lm78.jpg" width="350"/>
+      <img src="other/batteries/convertidor.jpg" width="350"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="other/batteries/mosfet.jpg" width="350"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="other/batteries/cables.jpg" width="350"/>
     </td>
   </tr>
 </table></div>
