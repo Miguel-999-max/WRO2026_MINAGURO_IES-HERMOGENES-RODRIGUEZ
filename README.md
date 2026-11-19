@@ -1348,25 +1348,6 @@ Finally, for the finals in Puerto Rico, due to modifications to the distance sen
 
 The components have been fastened with screws instead of hot glue, to make it easier to assemble and disassemble them and to facilitate transporting the robot without the risk of breaking any components. 
 
-<table align="center" width="100%">
-  <tr>
-    <td colspan="3" align="center">
-      <strong>Chassis evolution</strong>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="33%"><strong>First version</strong></td>
-    <td align="center" width="33%"><strong>Second version</strong></td>
-    <td align="center" width="33%"><strong>Last version</strong></td>
-  </tr>
-  <tr>
-    <td align="center" width="33%"><img src="models/Old_Versions_models/Chasis.png" width="300" height="250"></td>
-    <td align="center" width="33%"><img src="models/Old_Versions_models/chasis2.png" width="300" height="250"></td>
-    <td align="center" width="33%"><img src="models/Final_Version_models/chasis3.png" width="300" height="250"></td>
-  </tr>
-</table>
-
-
 <table width="100%" style="width: 100%; table-layout: fixed; border-collapse: collapse;">
   <tr>
     <td colspan="3" align="center">
