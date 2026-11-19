@@ -1350,12 +1350,14 @@ The components have been fastened with screws instead of hot glue, to make it ea
 
 <table>
   <tr>
-    <td colspan="3">Chassis evolution</td>
+    <td colspan="3" style="text-align: center;">
+      <strong>Chassis evolution</strong>
+    </td>
   </tr>
   <tr>
-    <td>First version</td>
-    <td>Second version</td>
-    <td>Last version</td>
+    <td style="text-align: center;"><strong>First version</strong></td>
+    <td style="text-align: center;"><strong>Second version</strong></td>
+    <td style="text-align: center;"><strong>Last version</strong></td>
   </tr>
   <tr>
     <td><img src="models/Old_Versions_models/Chasis.png"></td>
@@ -1363,6 +1365,7 @@ The components have been fastened with screws instead of hot glue, to make it ea
     <td><img src="models/Final_Version_models/chasis3.png"></td>
   </tr>
 </table>
+
 
 The chassis was always designed to provide a stable and reliable foundation on which to mount the components, avoid unnecessary wiring, provide specific spaces for certain components, save space, and keep the robot compact throughout its journey through the challenges.
 
