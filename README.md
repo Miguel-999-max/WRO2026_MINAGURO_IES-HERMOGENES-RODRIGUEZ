@@ -1350,9 +1350,8 @@ The components have been fastened with screws instead of hot glue, to make it ea
 
 <table>
   <tr>
-    <td colspan="3" style="text-align: center;">
+    <td colspan="3" style="text-align: center">
       <strong>Chassis evolution</strong>
-    </td>
   </tr>
   <tr>
     <td style="text-align: center;"><strong>First version</strong></td>
@@ -1363,6 +1362,7 @@ The components have been fastened with screws instead of hot glue, to make it ea
     <td><img src="models/Old_Versions_models/Chasis.png"></td>
     <td><img src="models/Old_Versions_models/chasis2.png"></td>
     <td><img src="models/Final_Version_models/chasis3.png"></td>
+    </td>
   </tr>
 </table>
 
