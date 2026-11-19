@@ -1355,14 +1355,14 @@ The components have been fastened with screws instead of hot glue, to make it ea
     </td>
   </tr>
   <tr>
-    <td align="center"><strong>First version</strong></td>
-    <td align="center"><strong>Second version</strong></td>
-    <td align="center"><strong>Last version</strong></td>
+    <td align="center" width="33%"><strong>First version</strong></td>
+    <td align="center" width="33%"><strong>Second version</strong></td>
+    <td align="center" width="33%"><strong>Last version</strong></td>
   </tr>
   <tr>
-    <td align="center"><img src="models/Old_Versions_models/Chasis.png"></td>
-    <td align="center"><img src="models/Old_Versions_models/chasis2.png"></td>
-    <td align="center"><img src="models/Final_Version_models/chasis3.png"></td>
+    <td align="center" width="33%"><img src="models/Old_Versions_models/Chasis.png"></td>
+    <td align="center" width="33%"><img src="models/Old_Versions_models/chasis2.png"></td>
+    <td align="center" width="33%"><img src="models/Final_Version_models/chasis3.png"></td>
   </tr>
 </table>
 
