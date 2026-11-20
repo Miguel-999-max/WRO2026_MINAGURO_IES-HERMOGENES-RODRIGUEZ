@@ -161,11 +161,11 @@ The Minaguro team from Herencia, Spain, is made up of dedicated and hardworking 
 <br> **Description:** Hi, I am Natalia, also from Ciudad Real, Spain, and it is my first time participating, too. I am really good at programming, which I actually enjoy doing. I am hardworking and creative, and this competition, despite being really demanding, has helped me to enter the engineering world.
 
 <br> **Rocío** 
-<br> **Age:** 16
+<br> **Age:** 17
 <br> **Description:** Hi! I'm Rocío from Spain and this is the first time in the WRO competition. Since I was a kid, I've loved solving puzzles and maths problems. I started to interest in robotics when I was at secondary school, when my teacher taught us how to program. I thougth that was really fun.
 
 <br> **Guillermo**
-<br> **Age:** 16
+<br> **Age:** 17
 <br> **Description:** Hi, I am Guillermo. I am from Ciudad Real, Spain, and I joined this project because I have always been really keen on I.T. and problem solving. Although this competition has been really challenging, the experience with all the team is worth it.
 
 ### 2. 🤖 Our Robot
