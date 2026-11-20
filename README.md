@@ -103,14 +103,14 @@ We would like to thank our sponsors for making this project possible:
     <!-- Fila 5 -->
     <tr>
       <td align="center" width="33%" valign="middle">
-        <a href="URL_PATROCINADOR_1">
+        <a href="https://ferrinher.com/">
           <img src="other/Sponsors/ferrinher_logo.png" width="250" /><br />
           <b>Ferrinher</b>
         </a>
       </td>
       <td align="center" width="33%" valign="middle"></td>
       <td align="center" width="33%" valign="middle">
-        <a href="URL_PATROCINADOR_2">
+        <a href="https://www.t-fiberglass.com/">
           <img src="other/Sponsors/tecnove_fiberglass_logo.jpg" width="180" /><br />
           <b>Fiberglass</b>
         </a>
