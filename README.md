@@ -405,6 +405,156 @@ https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
 <summary><b>Here are some pictures of our robots final version to help with it´s reproducibility, and a table listing its main technical specifications:</b></summary>
 <br>
 
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_front.jpg" width="305"/>
+     robot´s front view
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_tras.jpg" width="305"/>
+     robot´s back view
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_abajo.jpg" width="305"/>
+     View from underneath the robot
+    </td>
+  </tr>
+</table></div>
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_der.jpg" width="305"/>
+     Robot’s right side view
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_arriba.jpg" width="305"/>
+     View of the robot's layout
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_izq.jpg" width="305"/>
+     Robot’s left side view
+    </td>
+  </tr>
+</table></div>
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <b>Other robot´s views</b><br>
+    </td>
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_izq.2.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_bat_abajo.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_der.2.jpg" width="305"/>
+    </td>
+  </tr>
+</table></div>
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_der.3.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_magne.2.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Current_photos/v_izq.3.jpg" width="305"/>
+    </td>
+  </tr>
+</table></div>
+
+https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
+
+<table width="100%" align="center">
+  <tr>
+    <th align="center">Feature</th>
+    <th align="center">Value</th>
+  </tr>
+  <tr>
+    <td align="center">Length</td>
+    <td align="center">27,5 cm</td>
+  </tr>
+  <tr>
+    <td align="center">Width</td>
+    <td align="center">9,5 cm</td>
+  </tr>
+  <tr>
+    <td align="center">Height</td>
+    <td align="center">23 cm</td>
+  </tr>
+  <tr>
+    <td align="center">Weight</td>
+    <td align="center">796 g</td>
+  </tr>
+  <tr>
+    <td align="center">Maximum stable speed</td>
+    <td align="center">0,211 m/s</td>
+  </tr>
+  <tr>
+    <td align="center">Torque</td>
+    <td align="center">2,5-4 N</td>
+  </tr>
+  <tr>
+    <td align="center">Maximum stable revolutions</td>
+    <td align="center">1,495 revolutions/s</td>
+  </tr>
+  <tr>
+    <td align="center">Microcontroller</td>
+    <td align="center">Raspberry Pi Pico 2</td>
+  </tr>
+  <tr>
+    <td align="center">Vision system</td>
+    <td align="center">HUSKYLENS module</td>
+  </tr>
+  <tr>
+    <td align="center">Motor system</td>
+    <td align="center">DC motor</td>
+  </tr>
+  <tr>
+    <td align="center">Steering system</td>
+    <td align="center">Ackermann steering</td>
+  </tr>
+  <tr>
+    <td align="center">Transmission system</td>
+    <td align="center">Gear transmission</td>
+  </tr>
+  <tr>
+    <td align="center">Motor</td>
+    <td align="center">SPT5632-360 servo</td>
+  </tr>
+  <tr>
+    <td align="center">Steering motor</td>
+    <td align="center">MS18 servo</td>
+  </tr>
+  <tr>
+    <td align="center">Batteries</td>
+    <td align="center">Samsung ICR18650-26FU batteries</td>
+  </tr>
+  <tr>
+    <td align="center">Camera processing speed</td>
+    <td align="center">11–30 FPS</td>
+  </tr>
+  <tr>
+    <td align="center">Maximum current draw</td>
+    <td align="center">1,5 A</td>
+  </tr>
+  <tr>
+    <td align="center">Average lap time</td>
+    <td align="center">25 s</td>
+  </tr>
+  <tr>
+    <td align="center">Chassis type</td>
+    <td align="center">Custom PCB chassis</td>
+  </tr>
+</table>
 </details>
 
 ### 3. 📝 Daily documentation
