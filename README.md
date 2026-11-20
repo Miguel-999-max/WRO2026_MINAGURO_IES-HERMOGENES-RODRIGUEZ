@@ -3397,10 +3397,10 @@ We’re almost there, all that’s left is for you to save the red and green col
 <div align="center"><table>
   <tr>
     <td align="center" width="50%">
-      <img src="other/HUSKYLENS/bloquerojo.jpg" width="450"/>
+      <img src="other/HUSKYLENS/redblock.jpg" width="450"/>
     </td>
     <td align="center" width="50">
-      <img src="other/HUSKYLENS/bloqueverde.jpg" width="450"/>
+      <img src="other/HUSKYLENS/greenblock.jpg" width="450"/>
     </td>
   </tr>
 </table></div>
