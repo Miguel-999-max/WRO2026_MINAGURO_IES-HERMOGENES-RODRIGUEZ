@@ -495,7 +495,7 @@ https://github.com/user-attachments/assets/7cd939ae-cfda-467b-b92f-a70b37eea3c3
   </tr>
   <tr>
     <td align="center">Weight</td>
-    <td align="center">796 g</td>
+    <td align="center">836 g</td>
   </tr>
   <tr>
     <td align="center">Maximum stable speed</td>
