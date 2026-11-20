@@ -3165,13 +3165,13 @@ Here are all the necessary components:
 | Micro Servo MG90S | 1 | <img src="other/components/Micro Servo MG90S.jpg" width="150" height="120"> | Allow the camera to move and have a wider field of view | <a href="https://www.hta3d.com/es/microservo-mg90s-180-de-posicionamiento-engranajes-metalicos"> 🛒 Shop</a> |"> Camera servo link </a> |
 | Heatsink | 1 | <img src="other/components/HEATSINK_TO-220.JPG" width="150" height="120"> | Prevent the current regulator from overheating | <a href="https://www.amazon.es/WayinTop-Disipador-Aislamiento-Transistor-Casquillos/dp/B081GS15N6"> 🛒 Shop</a> |
 | USB-Kabel | 1 | <img src="other/components/cable.png" width="150" height="120"> | It makes it easy to connect the robot to the computer to upload programmes or view the terminal when we’re carrying out tests, in a simple and convenient way that prevents the Raspberry Pi’s connector from breaking. | <a href="https://es.aliexpress.com/item/1005007053499029.html?isdl=y&aff_fsk=_oEW69bp&src=BooncyESgeneral&aff_platform=aff_feeds&aff_short_key=_oEW69bp&pdp_npi=4%40dis%21EUR%211.48%211.48%21%21%21%21%21%40%2112000039239967802%21afff%21%21%21&dp=EAIaIQobChMIv9n7obHBlgMVsAIGAB2_ZA2KEAQYAyABEgI3KvD_BwE&cn=bravoes&gad_source=1&gad_campaignid=23203341003&gbraid=0AAAABB6NsO9tS3fn8EqhgJt8zBAa3Kv_D"> 🛒 Shop</a> |
-| Chasis in 3D | 1 | <img src="models/CHASIS_modificado_2.jpg" width="150" height="120"> | Skeleton of the robot | [`📥Download`](models/Old_Versions_models/CHASIS_modificado_2.stl) |
-| Battery support 1 | 2 | <img src="models/soportebateria1.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/Old_Versions_models/soportebateria1.stl) |
-| Battery support 2 | 1 | <img src="models/soportebateria2.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/Old_Versions_models/soportebateria2.stl) |
-| Switch support | 1 | <img src="models/SOPORTE_INTERRUPTOR.jpg" width="150" height="120"> | Support the switch | [`📥Download`](models/Old_Versions_models/SOPORTE_INTERRUPTOR.stl) |
-| Adapter wheels in 3D | 2 | <img src="models/Wheel adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | [`📥Download`](models/Old_Versions_models/wheel%20adapter.stl) |
-| Adapter gear in 3D | 1 | <img src="models/Gear adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`📥Download`](models/Old_Versions_models/GEAR_ADAPTER.stl) |
-| Magnetometer mast | 1 | <img src="models/soporte_magnetometro.png" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/Old_Versions_models/SOPORTE_10-DOF.stl) |
+| Chasis in 3D | 1 | <img src="models/Old_Versions_models/CHASIS_modificado_2.jpg" width="150" height="120"> | Skeleton of the robot | [`📥Download`](models/Old_Versions_models/CHASIS_modificado_2.stl) |
+| Battery support 1 | 2 | <img src="models/Old_Versions_models/soportebateria1.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/Old_Versions_models/soportebateria1.stl) |
+| Battery support 2 | 1 | <img src="models/Old_Versions_models/soportebateria2.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/Old_Versions_models/soportebateria2.stl) |
+| Switch support | 1 | <img src="models/Old_Versions_models/SOPORTE_INTERRUPTOR.jpg" width="150" height="120"> | Support the switch | [`📥Download`](models/Old_Versions_models/SOPORTE_INTERRUPTOR.stl) |
+| Adapter wheels in 3D | 2 | <img src="models/Old_Versions_models/Wheel_adapter.png" width="150" height="120"> | Supply energy to huskylens directly of the batteries | [`📥Download`](models/Old_Versions_models/wheel%20adapter.stl) |
+| Adapter gear in 3D | 1 | <img src="models/Old_Versions_models/Gear_adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`📥Download`](models/Old_Versions_models/GEAR_ADAPTER.stl) |
+| Magnetometer mast | 1 | <img src="models/Old_Versions_models/soporte_magnetometro.png" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/Old_Versions_models/SOPORTE_10-DOF.stl) |
 </details>
 
 <details>
