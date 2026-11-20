@@ -2027,7 +2027,7 @@ An energy calculation was performed, taking all components into account, to help
     <tr>
       <!-- Fila 4 -->
       <td style="border: 1px solid #dfe2e5; padding: 6px;">The three TFmini-S</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">420 mA</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">420 mA (they consume 140 each)</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td>
       <td style="border: none;"></td>
       <td style="border: none;"></td>
