@@ -1460,11 +1460,11 @@ The robot remained in this configuration for a while until we encountered severa
   </tr>
 </table></div>
 
-After the regional competition, the chassis had bent under the weight of the components, so we designed a new one with minor modifications—thicker so it could easily support them over time.
+After the regional competition, the chassis had bent under the weight of the components, so we designed a new one with minor modifications: thicker so it could easily support them over time.
 
-An important consideration regarding the robot’s balance was to place the heaviest components—the Raspberry Pi Pico 2 board with its shield, the SPT5632-360 servo, and a pair of batteries with their expansion module—in the center of the chassis, ensuring a low and centralized center of mass.
+An important consideration regarding the robot’s balance was to place the heaviest components (the Raspberry Pi Pico 2 board with its shield, the SPT5632-360 servo, and a pair of batteries with their expansion module) in the center of the chassis, ensuring a low and centralized center of mass.
 
-However, the addition of the other two batteries—a last-minute modification—forced us to build a special structure for them at the rear of the robot. Over time, it became apparent that when accelerating, the robot would sometimes skid due to an overload at the rear. To compensate for this extra weight, lead plates were added to the front of the robot.
+However, the addition of the other two batteries, a last-minute modification, forced us to build a special structure for them at the rear of the robot. Over time, it became apparent that when accelerating, the robot would sometimes skid due to an overload at the rear. To compensate for this extra weight, lead plates were added to the front of the robot.
 
 <div align="center"><table>
   <tr>
