@@ -3072,6 +3072,8 @@ These are all programs we used to calibrate sensors and conduct functional tests
 * [19.tcs34725.py](/src/Current_programs/Test_programs2/tcs34725.py) ➜
 * [20.test_magnetometro.py](/src/Current_programs/Test_programs2/test_magnetometro.py) ➜
 
+</details>
+
 <details>
 <summary><b>💻 Final program</b></summary>
 <br>
