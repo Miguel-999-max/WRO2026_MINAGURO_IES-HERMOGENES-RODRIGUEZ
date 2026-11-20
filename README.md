@@ -10,6 +10,7 @@
 <br> </br>
 
 > [!IMPORTANT]
+> 
 > Every time you see this sign (▶&#xFE0E;), click on the text next to it to expand the content!
 
 ## 🤝 Sponsors
