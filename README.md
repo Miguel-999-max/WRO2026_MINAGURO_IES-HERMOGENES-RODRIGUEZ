@@ -496,15 +496,15 @@ https://github.com/user-attachments/assets/7cd939ae-cfda-467b-b92f-a70b37eea3c3
   </tr>
   <tr>
     <td align="center">Maximum stable speed</td>
-    <td align="center">0,211 m/s</td>
+    <td align="center">0,251 m/s</td>
   </tr>
   <tr>
-    <td align="center">Torque</td>
-    <td align="center">2,5-4 N</td>
+    <td align="center">Torque (at each driven wheel)</td>
+    <td align="center">1,62 N</td>
   </tr>
   <tr>
     <td align="center">Maximum stable revolutions</td>
-    <td align="center">1,495 revolutions/s</td>
+    <td align="center">1,774 revolutions/s</td>
   </tr>
   <tr>
     <td align="center">Microcontroller</td>
@@ -512,7 +512,7 @@ https://github.com/user-attachments/assets/7cd939ae-cfda-467b-b92f-a70b37eea3c3
   </tr>
   <tr>
     <td align="center">Vision system</td>
-    <td align="center">HUSKYLENS module</td>
+    <td align="center">HUSKYLENS 2 module</td>
   </tr>
   <tr>
     <td align="center">Motor system</td>
@@ -539,8 +539,8 @@ https://github.com/user-attachments/assets/7cd939ae-cfda-467b-b92f-a70b37eea3c3
     <td align="center">Samsung ICR18650-26FU batteries</td>
   </tr>
   <tr>
-    <td align="center">Camera processing speed</td>
-    <td align="center">11–30 FPS</td>
+    <td align="center">Camera info</td>
+    <td align="center"> 2 MP camera module capable of operating at up to 60 FPS</td>
   </tr>
   <tr>
     <td align="center">Maximum current draw</td>
