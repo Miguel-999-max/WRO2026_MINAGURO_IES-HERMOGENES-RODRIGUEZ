@@ -1,0 +1,741 @@
+"""
+FUNCIONES_COMUNES.PY - Funciones auxiliares de bajo nivel usadas por varias
+misiones: lectura de sensores de distancia, clasificacion de color, deteccion
+de zona, utilidades de rumbo (magnetometro) y navegacion por rumbo absoluto,
+y las utilidades compartidas de la Huskylens.
+
+Este modulo se trocea en tres por tamano:
+  funciones_comunes.py  (este archivo) - sensores y utilidades de bajo nivel
+  funciones_comunes1.py - busqueda y aproximacion a pilares
+  funciones_comunes2.py - maniobra de esquive (esquivar_pilar)
+
+Todas usan "import hardware" y acceden a pines/constantes con hardware.X
+"""
+import time
+import hardware
+
+
+def clasificar_color(r, g, b):
+    """Clasificamos una lectura del sensor de color combinando proporcion (que
+    color domina, con un MARGEN minimo) con el nivel total de luz (para
+    distinguir una linea de color real del blanco). Devolvemos 'AZUL',
+    'NARANJA' o 'BLANCO'.
+
+    Calibrado en la pista de Puerto Rico (sensor pegado al suelo con falda de
+    goma-eva, integracion de 24 ms, ganancia 1x):
+      Blanco:  total 764  r%=0.37  b%=0.26  (r%-b% = +0.12)
+      Naranja: total 324  r%=0.60  b%=0.15  (r%-b% = +0.45)
+      Azul:    total 110  r%=0.20  b%=0.46  (r%-b% = -0.27)
+    El margen de 0.19 queda a medio camino entre el blanco (0.12) y el color
+    mas flojo (0.26). El filtro de luz de 550 deja fuera el blanco (764),
+    incluso con alguna mancha en el tapete, y admite las lecturas mezcladas
+    de cuando el sensor cruza una linea a velocidad y la ve solo en parte."""
+    total = r + g + b
+    if total == 0:
+        return 'BLANCO'
+
+    pr = r / total
+    pb = b / total
+    MARGEN = 0.19  # AJUSTAR EN PISTA: entre el 0.12 del blanco y el 0.26 del color mas flojo
+
+    if pb > pr + MARGEN and total < 550:
+        return 'AZUL'
+    if pr > pb + MARGEN and total < 550:
+        return 'NARANJA'
+    return 'BLANCO'
+
+
+def leer_tfmini(max_cm=350):
+    """Leemos el TFmini-S frontal (UART0, continuo a 100 Hz): sin esperar,
+    la ultima trama recibida. Devolvemos la distancia en cm, o None si no
+    tenemos una lectura fiable. Por defecto descartamos lo que pase de 350 cm;
+    para detectar el hueco de la esquina pasamos un max_cm mayor."""
+    return hardware.tfmini_frontal.leer(max_cm)
+
+
+def leer_lateral_izquierdo_cm(max_cm=350):
+    """Pedimos una medida al TFmini-S lateral izquierdo (UART1). cm o None.
+    Por defecto descartamos lo que pase de 350 cm (el campo mide 300x300);
+    para detectar el hueco de la esquina pasamos un max_cm mayor."""
+    return hardware.tfmini_izquierdo.leer(max_cm)
+
+
+def leer_lateral_derecho_cm(max_cm=350):
+    """Pedimos una medida al TFmini-S lateral derecho (UART por PIO en
+    GPIO6/7, a demanda). cm o None. Igual que el izquierdo: max_cm sube el
+    techo de lectura valida."""
+    return hardware.tfmini_derecho.leer(max_cm)
+
+
+def diferencia_angular(a, b):
+    """Diferencia angular con signo en el rango [-180, 180]: cuanto hay que
+    sumarle a b para llegar a a, girando por el camino mas corto."""
+    return (a - b + 180) % 360 - 180
+
+
+def medir_rumbos_calles(giro_por_esquina_deg, rumbo_base=None):
+    """Calcula, a partir de un rumbo de referencia, UNA SOLA VEZ, el rumbo
+    absoluto de las 4 calles del circuito cuadrado. Esto NO es una
+    calibracion del magnetometro (los offsets de hierro duro ya estan
+    resueltos en lsm303_mag.py) - es solo la referencia de partida de esta
+    carrera concreta.
+    giro_por_esquina_deg: positivo para Mision 3 (CW, giros a la derecha),
+    negativo para Mision 4 (CCW, giros a la izquierda).
+    rumbo_base: si se pasa, se usa como rumbo de la calle 0 en vez de leer
+    el magnetometro en este instante - para medir el rumbo justo al pulsar
+    el boton (antes de cualquier movimiento) y calcular las 4 calles mas
+    tarde, una vez se sabe si toca Mision 3 o Mision 4."""
+    if rumbo_base is None:
+        rumbo_base = hardware.mag.heading()
+    hardware.rumbo_calle[0] = rumbo_base
+    for i in range(1, 4):
+        hardware.rumbo_calle[i] = (hardware.rumbo_calle[0] + giro_por_esquina_deg * i) % 360
+    hardware.calle_actual = 0
+    print(f"MEDIR_RUMBOS_CALLES: {[f'{r:.1f}' for r in hardware.rumbo_calle]}")
+
+
+# Cooldown del cambio de calle (como el del conteo, pero solo lo usa
+# _comprobar_lineas): instante y sentido del ultimo cambio de calle.
+_ultima_esquina_ms = None
+_ultimo_signo_esquina = 0
+
+
+def _comprobar_lineas():
+    """Leemos el sensor de color UNA VEZ y actualizamos a la vez el conteo de
+    lineas (vueltas, color en hardware.color_conteo) y el cambio de calle
+    (linea de esquina de esta mision, en hardware.color_esquina). La
+    llamamos desde CUALQUIER bucle en el que el robot se mueva
+    (navegar_calle_por_rumbo, aproximarse_a_pilar, esquivar_pilar y su
+    retroceso corto), para no perder ninguno de los dos eventos.
+
+    Contamos CON SIGNO: marcha adelante (hardware.marcha_atras False) las
+    lineas suman y marcha atras restan. Contamos al ENTRAR en la linea, con
+    el signo de la marcha (asi el cambio de rumbo en la esquina es
+    inmediato), y al SALIR comprobamos el sentido: si salimos en sentido
+    contrario al de entrada, no la hemos cruzado (por ejemplo, entramos
+    hacia delante, paramos encima y retrocedemos) y deshacemos la cuenta:
+      entra adelante (+1), sale adelante -> +1 (la hemos cruzado)
+      entra adelante (+1), sale atras    ->  0 (no la hemos cruzado)
+      entra atras    (-1), sale atras    -> -1 (la hemos cruzado de vuelta)
+      entra atras    (-1), sale adelante ->  0 (no la hemos cruzado)
+    En las Misiones 3 y 4 las dos cosas usan la MISMA linea: la primera de
+    cada esquina (naranja en CW, azul en CCW), la mas alejada de los pilares
+    de la calle siguiente. Las dos llevan el mismo cooldown
+    (COOLDOWN_LINEA_MS): tras contar, ignoramos nuevas entradas en el MISMO
+    sentido durante ese tiempo, por si al esquivar un pilar cerca de la
+    esquina el sensor vuelve a pisar la linea. En sentido contrario no lo
+    aplicamos, para no estorbar al conteo marcha atras.
+"""
+    if hardware.sensor_color is None:
+        return
+
+    r, g, b, claro = hardware.sensor_color.read_rgbc()
+    color = clasificar_color(r, g, b)
+
+    signo = -1 if hardware.marcha_atras else 1
+
+    global _ultima_esquina_ms, _ultimo_signo_esquina
+
+    # --- Linea de esquina: cambio de calle ---
+    if not hardware.sobre_linea_esquina:
+        if color == hardware.color_esquina:
+            hardware.sobre_linea_esquina = True
+            ahora = time.ticks_ms()
+            repetida = (_ultima_esquina_ms is not None
+                        and signo == _ultimo_signo_esquina
+                        and time.ticks_diff(ahora, _ultima_esquina_ms) < hardware.COOLDOWN_LINEA_MS)
+            if repetida:
+                hardware.signo_entrada_esquina = 0  # no contada: al salir no hay nada que deshacer
+                print(f"ESQUINA ignorada (cooldown)")
+            else:
+                hardware.signo_entrada_esquina = signo
+                _ultimo_signo_esquina = signo
+                _ultima_esquina_ms = ahora
+                hardware.calle_actual = (hardware.calle_actual + signo) % 4
+                print(f"ESQUINA {'adelante' if signo > 0 else 'ATRAS'} (r={r} g={g} b={b}) -> calle {hardware.calle_actual}, "
+                      f"rumbo {hardware.rumbo_calle[hardware.calle_actual]:.1f}")
+    else:
+        if color == 'BLANCO':
+            hardware.sobre_linea_esquina = False
+            if hardware.signo_entrada_esquina != 0 and signo != hardware.signo_entrada_esquina:
+                # Salimos por el mismo lado por el que entramos: deshacemos el cambio
+                # de calle y anulamos el cooldown, para contar bien la proxima entrada
+                hardware.calle_actual = (hardware.calle_actual - hardware.signo_entrada_esquina) % 4
+                _ultima_esquina_ms = None
+                print(f"ESQUINA deshecha (salimos en sentido contrario) -> calle {hardware.calle_actual}, "
+                      f"rumbo {hardware.rumbo_calle[hardware.calle_actual]:.1f}")
+            hardware.signo_entrada_esquina = 0
+
+    # --- Linea de conteo: vueltas ---
+    color_conteo = getattr(hardware, 'color_conteo', 'AZUL')
+    if not hardware.sobre_linea:
+        if color == color_conteo:
+            hardware.sobre_linea = True
+            hardware.ledR.value(1)
+            ahora = time.ticks_ms()
+            repetida = (hardware.ultimo_conteo_linea_ms is not None
+                        and signo == hardware.ultimo_signo_conteo
+                        and time.ticks_diff(ahora, hardware.ultimo_conteo_linea_ms) < hardware.COOLDOWN_LINEA_MS)
+            if repetida:
+                hardware.signo_entrada_conteo = 0  # no contada: al salir no hay nada que deshacer
+                print(f"LINEA {color_conteo} ignorada (cooldown)")
+            else:
+                hardware.contadorLineas += signo
+                hardware.signo_entrada_conteo = signo
+                hardware.ultimo_signo_conteo = signo
+                hardware.ultimo_conteo_linea_ms = ahora
+                print(f"¡LINEA {color_conteo} {'adelante' if signo > 0 else 'ATRAS'}! -> Total lineas: "
+                      f"{hardware.contadorLineas}/{hardware.TOTAL_LINEAS_META}")
+    else:
+        if color == 'BLANCO':
+            hardware.sobre_linea = False
+            hardware.ledR.value(0)
+            if hardware.signo_entrada_conteo != 0 and signo != hardware.signo_entrada_conteo:
+                # Salimos por el mismo lado por el que entramos: deshacemos la cuenta
+                # y anulamos el cooldown, para contar bien la proxima entrada
+                hardware.contadorLineas -= hardware.signo_entrada_conteo
+                hardware.ultimo_conteo_linea_ms = None
+                print(f"LINEA {color_conteo} deshecha (salimos en sentido contrario) -> Total lineas: "
+                      f"{hardware.contadorLineas}/{hardware.TOTAL_LINEAS_META}")
+            hardware.signo_entrada_conteo = 0
+
+
+def esperar_vigilando_lineas(ms):
+    """Esperamos ms milisegundos sin dejar de leer el sensor de color: lo
+    usamos en las esperas en las que el robot puede seguir moviendose (por
+    ejemplo mientras la camara llega a su sitio), para no cruzar una linea a
+    ciegas."""
+    t0 = time.ticks_ms()
+    while time.ticks_diff(time.ticks_ms(), t0) < ms:
+        _comprobar_lineas()
+        time.sleep_ms(5)
+
+
+def _contar_esquina_a_mano():
+    """Contamos a mano la linea de esquina que nos hemos saltado: cambiamos
+    de calle y sumamos una linea, igual que si la hubieramos cruzado hacia
+    delante. Ponemos en marcha los dos cooldowns como si la acabaramos de
+    contar: si al seguir volvemos a pasar por encima de ella, la ignoramos."""
+    global _ultima_esquina_ms, _ultimo_signo_esquina
+    ahora = time.ticks_ms()
+    hardware.calle_actual = (hardware.calle_actual + 1) % 4
+    _ultima_esquina_ms = ahora
+    _ultimo_signo_esquina = 1
+    hardware.contadorLineas += 1
+    hardware.ultimo_conteo_linea_ms = ahora
+    hardware.ultimo_signo_conteo = 1
+    print(f"ESQUINA A MANO -> calle {hardware.calle_actual}, rumbo {hardware.rumbo_calle[hardware.calle_actual]:.1f}, "
+          f"Total lineas: {hardware.contadorLineas}/{hardware.TOTAL_LINEAS_META}")
+
+
+def _recuperar_esquina_perdida(lado_pared, distancia_pared_frente):
+    """Nos hemos saltado la linea de esquina: vamos de frente hacia la pared
+    del fondo (el TFmini frontal, con la camara casi al centro, la ve a menos
+    de 50 cm). Lo arreglamos asi:
+      a. Marcha atras unos 30 cm (con el TFmini frontal mirando la pared), y
+      b. a la vez corregimos el rumbo con la brujula para quedar alineados
+         con la calle en la que estamos (marcha atras la direccion va al
+         reves que hacia delante).
+      c. Confirmamos con los dos TFmini laterales: si de verdad estamos en la
+         esquina, el lateral del lado hacia el que gira el circuito (derecho
+         en Mision 3, izquierdo en Mision 4) ve la calle siguiente abierta,
+         a mas de DISTANCIA_HUECO_CM. Si no, era una falsa alarma y no
+         contamos nada.
+      d. Giramos la camara hacia ese lado para ver si hay pilares en la calle
+         siguiente.
+      e. Contamos la linea y cambiamos de calle (y de rumbo).
+    Durante el retroceso no leemos el sensor de color: si pasaramos marcha
+    atras por la linea saltada, la contariamos al reves.
+    Devolvemos (angulo, color_id) si en el paso d vemos un pilar, o
+    (None, None) para seguir navegando por la calle nueva."""
+    lado_giro = 'derecha' if lado_pared == 'izquierda' else 'izquierda'
+    print(f"ESQUINA PERDIDA?: pared de frente a {distancia_pared_frente} cm -> retrocedemos y comprobamos")
+
+    # --- a + b. Marcha atras 30 cm alineandonos con la calle ---
+    hardware.SERVOcam.duty_u16(pulso_barrido(0))
+    hardware.servoTraccion.duty_u16(hardware.Para)
+    time.sleep_ms(100)
+    hardware.servoTraccion.duty_u16(hardware.Retrocede_lento)
+    distancia = distancia_pared_frente
+    t0 = time.ticks_ms()
+    while time.ticks_diff(time.ticks_ms(), t0) < 1500:  # AJUSTAR EN PISTA: tope de seguridad del retroceso
+        error = diferencia_angular(hardware.rumbo_calle[hardware.calle_actual], hardware.mag.heading())
+        # Marcha atras: para aumentar el rumbo giramos las ruedas a la izquierda (al reves que avanzando)
+        pulso_dir = hardware.Recto + (error * hardware.GANANCIA_RUMBO)
+        hardware.servoDireccion.duty_u16(int(max(hardware.Dcha, min(pulso_dir, hardware.Izda))))
+        lectura = leer_tfmini()
+        if lectura is not None:
+            distancia = lectura
+            if distancia >= distancia_pared_frente + 30:  # AJUSTAR EN PISTA: cm que retrocedemos
+                break
+        time.sleep_ms(10)
+    hardware.servoTraccion.duty_u16(hardware.Para)
+    hardware.servoDireccion.duty_u16(hardware.Recto)
+    error = diferencia_angular(hardware.rumbo_calle[hardware.calle_actual], hardware.mag.heading())
+    print(f"ESQUINA PERDIDA?: retroceso hecho, pared a {distancia} cm, error de rumbo {error:.1f}")
+
+    # --- c. Confirmacion con los laterales ---
+    if lado_giro == 'derecha':
+        lateral_giro = leer_lateral_derecho_cm(1200)
+        lateral_otro = leer_lateral_izquierdo_cm(1200)
+    else:
+        lateral_giro = leer_lateral_izquierdo_cm(1200)
+        lateral_otro = leer_lateral_derecho_cm(1200)
+    print(f"ESQUINA PERDIDA?: lateral {lado_giro} {lateral_giro} cm, el otro {lateral_otro} cm")
+    if lateral_giro is None or lateral_giro <= hardware.DISTANCIA_HUECO_CM:
+        print("ESQUINA PERDIDA?: NO confirmada (no vemos la calle siguiente abierta), seguimos sin contar")
+        return None, None
+
+    # --- d. Miramos hacia la calle siguiente ---
+    angulo_mirar = 60 if lado_giro == 'derecha' else -60  # AJUSTAR EN PISTA
+    hardware.SERVOcam.duty_u16(pulso_barrido(angulo_mirar))
+    time.sleep_ms(350)  # el servo llega y la imagen se pone al dia (robot parado)
+    bloques = _bloques_cercanos(_obtener_bloques())
+
+    # --- e. Contamos la linea y cambiamos de calle ---
+    _contar_esquina_a_mano()
+    if len(bloques) > 0:
+        candidato = _mejor_bloque(bloques)
+        print(f"ESQUINA PERDIDA: pilar en la calle siguiente, angulo={angulo_mirar} id={candidato.id}")
+        return angulo_mirar, candidato.id
+    hardware.SERVOcam.duty_u16(pulso_barrido(0))
+    return None, None
+
+
+def navegar_calle_por_rumbo(lado_pared='izquierda', tiempo_max_ms=None, primero_derecha=False):
+    """Modo crucero: mientras no haya ningun pilar a la vista, corrige el
+    rumbo del chasis (magnetometro, control proporcional continuo) hacia el
+    rumbo absoluto de la calle actual, con la camara haciendo un barrido
+    oscilante ancho (sin dejar de avanzar) para detectar pilares.
+
+    El barrido arranca en el CENTRO y va primero hacia el lado hacia el que
+    gira el robot (es por donde antes aparecen los pilares): en Mision 3 (CW,
+    lado_pared='izquierda') hacia +60 grados (derecha); en Mision 4 (CCW,
+    lado_pared='derecha') hacia -60 grados (izquierda). Al llegar al extremo,
+    la camara vuelve de golpe al centro y barre hacia el extremo contrario, y
+    otra vez al centro: centro -> extremo -> centro -> otro extremo -> centro.
+    Asi miramos primero lo que tenemos delante, y si acabamos de barrer un
+    lado sin ver nada pasamos cuanto antes al otro. Tras cada salto al centro
+    (y al empezar) esperamos 200 ms sin consultar la Huskylens: el servo aun
+    esta en camino y la imagen tarda en reflejar el movimiento, asi que el
+    angulo que anotariamos no seria el real.
+
+    BARRIDO ASIMETRICO: hacia el lado del giro (derecha en M3, izquierda en
+    M4) llegamos a ANGULO_MAX_BARRIDO_CRUCERO (60 grados); hacia fuera solo
+    a 30 grados. Mirando muy hacia fuera, justo antes de cruzar la linea de
+    esquina, la Huskylens tomaba a veces por rojo el extremo exterior de la
+    linea naranja.
+
+    Para que el barrido sea rapido, cada vuelta del bucle hace lo minimo: el
+    lateral lo leemos solo una de cada 4 vueltas (cada lectura a demanda
+    cuesta 11-12 ms y para la deriva basta con una cada 100-150 ms), la
+    pausa es de 5 ms y no imprimimos nada salvo los eventos (pilar detectado,
+    acercamiento a la pared).
+
+    Velocidad en tres niveles segun el error de rumbo: alineado -> crucero;
+    error moderado -> lento; error GRANDE (tipico justo tras cortar una
+    esquina) -> tambien lento (antes mas reducido, ya no hace falta desde
+    que se lastro el robot y dejo de sobrevirar).
+
+    Correccion de DERIVA hacia la pared lateral (lado_pared: 'izquierda' en
+    Mision 3, 'derecha' en Mision 4): usa el TFmini lateral fijo de ese lado,
+    leido una de cada 4 vueltas del bucle - no el TFmini frontal, que al estar
+    ocupado buscando pilares solo revisitaba cada extremo tras un barrido
+    completo, dejando demasiada distancia recorrida entre medidas. Si la
+    lectura decrece respecto a la anterior y baja de DISTANCIA_MINIMA_PARED_CM,
+    se acumula un pequeño sesgo (con tope) que se suma al rumbo objetivo.
+
+    Prioridad absoluta: en cuanto aparece un pilar, se devuelve su
+    (angulo, color_id) de inmediato para que se vaya a por el. Solo cuentan
+    los pilares cercanos (ver _bloques_cercanos): los lejanos y los objetos
+    de fuera del campo los ignoramos hasta que, al acercarnos, bajan en la
+    imagen.
+    Devuelve (None, None) si contadorLineas llega a la meta antes de
+    encontrar ningun pilar (fin de mision).
+
+    primero_derecha: si es True, el primer barrido va hacia la derecha (+60)
+    sea cual sea la mision. Lo usa la Mision 4 tras esquivar un pilar verde
+    justo al desaparcar: el robot queda mirando hacia el muro interior y la
+    calle siguiente aparece a su derecha.
+
+    ESQUINA SALTADA: cada vez que la camara pasa por el centro leemos el
+    TFmini frontal (mientras este a +-10 grados del centro). Si con el rumbo
+    alineado con la calle vemos la pared del fondo a menos de 50 cm (y ningun
+    pilar), es que no hemos girado en la
+    esquina: nos hemos saltado la linea. Lo arreglamos con
+    _recuperar_esquina_perdida() (no en el tramo final).
+
+    tiempo_max_ms: lo usamos en el tramo final, despues de la ultima linea.
+    Con el, no salimos por la meta (ya la hemos alcanzado) sino cuando han
+    pasado tiempo_max_ms sin encontrar ningun pilar: entonces devolvemos
+    (None, None)."""
+    # Punto de partida del barrido: el centro, y primero hacia el lado hacia
+    # el que gira el robot
+    angulo_oscilacion = 0
+    sentido = 1 if (lado_pared == 'izquierda' or primero_derecha) else -1
+    # El servo viene de donde estuviera: esperamos 200 ms antes de fiarnos de la imagen
+    t_mirar_desde = time.ticks_add(time.ticks_ms(), 200)
+    vueltas = 0  # para leer el lateral solo una de cada 4 vueltas
+
+    calle_previa = hardware.calle_actual
+    sesgo_pared = 0.0
+    ultima_dist_pared = None
+    t_inicio_ms = time.ticks_ms()
+    t_registro = time.ticks_ms()  # registro del rumbo cada 200 ms (no en cada vuelta, para no frenar el barrido)
+    t_registro_linea = time.ticks_ms()  # registro de los extremos de linea ignorados, como mucho cada 300 ms
+    t_cambio_final = time.ticks_ms()  # fase final: ultimo cambio de la camara entre +8 y -8 grados
+    lateral_final = {'izquierda': None, 'derecha': None}  # fase final: ultima distancia a cada pared lateral
+    sesgo_final = 0.0                 # fase final: correccion de rumbo para separarnos de una pared lateral
+    fondo_final = {}                  # fase final: ultima distancia medida a +8 y a -8 grados
+
+    while True:
+        _comprobar_lineas()
+        if hardware.calle_actual != calle_previa:
+            calle_previa = hardware.calle_actual
+            sesgo_pared = 0.0
+            ultima_dist_pared = None
+
+        # La meta se comprueba ANTES de la deteccion de pilar, no despues:
+        # un pilar lejano puede llevar varias vueltas de bucle a la vista, y
+        # la deteccion de pilar tenia prioridad absoluta - la comprobacion
+        # de meta, si estaba al final, nunca llegaba a ejecutarse mientras
+        # hubiera algo que seguir viendo.
+        if tiempo_max_ms is None:
+            if hardware.contadorLineas >= hardware.TOTAL_LINEAS_META:
+                return None, None
+        elif time.ticks_diff(time.ticks_ms(), t_inicio_ms) >= tiempo_max_ms:
+            return None, None
+
+        rumbo_objetivo = (hardware.rumbo_calle[hardware.calle_actual] + sesgo_pared + sesgo_final) % 360
+        rumbo_actual = hardware.mag.heading()
+        error = diferencia_angular(rumbo_objetivo, rumbo_actual)
+        if time.ticks_diff(time.ticks_ms(), t_registro) >= 200:
+            t_registro = time.ticks_ms()
+            print(f"NAVEGAR_CALLE: calle={hardware.calle_actual} rumbo_obj={rumbo_objetivo:.1f} "
+                  f"rumbo_act={rumbo_actual:.1f} error={error:.1f} sesgo_pared={sesgo_pared:.1f}")
+
+        if abs(error) > hardware.DEADBAND_RUMBO_DEG:
+            pulso_dir = hardware.Recto - (error * hardware.GANANCIA_RUMBO)
+            pulso_dir = int(max(hardware.Dcha, min(pulso_dir, hardware.Izda)))
+            hardware.servoDireccion.duty_u16(pulso_dir)
+        else:
+            hardware.servoDireccion.duty_u16(hardware.Recto)
+
+        # Fase final de la Mision 3 (tras la ultima linea), ya en la calle 0 y
+        # sin pilar que esquivar: camara fija al centro desde el primer momento (asi el TFmini mide siempre la pared
+        # del fondo y la Huskylens sigue viendo un pilar que tengamos delante)
+        # y despacio, para pararnos a hardware.distancia_parada_final sin pasarnos.
+        # (Mientras quede por esquivar el pilar del asiento a, la camara sigue
+        # barriendo para no perderlo de vista.)
+        fase_final_salida = getattr(hardware, 'fase_final', False) and hardware.calle_actual == 0
+        camara_fija_final = fase_final_salida and getattr(hardware, 'final_color_pendiente', None) is None
+        if camara_fija_final:
+            # La camara no mira justo al frente sino alternando a +8 y -8
+            # grados cada 150 ms: un pilar en linea con nosotros (por ejemplo
+            # uno de la calle siguiente, delante de la pared del fondo) solo
+            # tapa unos 3 grados, asi que al menos una de las dos medidas da en
+            # la pared. La Huskylens sigue viendo de frente (su imagen abarca
+            # unos +-24 grados).
+            if angulo_oscilacion not in (8, -8):
+                angulo_oscilacion = 8
+                t_cambio_final = time.ticks_ms()
+                t_mirar_desde = time.ticks_add(time.ticks_ms(), 200)
+            elif time.ticks_diff(time.ticks_ms(), t_cambio_final) >= 150:
+                angulo_oscilacion = -angulo_oscilacion
+                t_cambio_final = time.ticks_ms()
+
+        if abs(error) <= hardware.UMBRAL_ALINEACION_RUMBO and not fase_final_salida:
+            hardware.servoTraccion.duty_u16(hardware.Avanza_crucero)
+        else:
+            hardware.servoTraccion.duty_u16(hardware.Avanza_lento)
+
+        # Camara: barrido oscilante ancho (+-60, 120 grados totales)
+        # buscando pilares sin dejar de avanzar
+        hardware.SERVOcam.duty_u16(pulso_barrido(angulo_oscilacion))
+        esperando_servo = time.ticks_diff(time.ticks_ms(), t_mirar_desde) < 0
+        if esperando_servo:
+            bloques = []  # ni consultamos la Huskylens: la imagen aun no es la buena
+        else:
+            bloques = _bloques_cercanos(hardware.husky.get_blocks())
+            # Extremo de la linea de esquina visto como rojo: sale MUY abajo en la
+            # imagen (base > 280, a menos de unos 32 cm) y en el BORDE (a mas de
+            # 200 px del centro, x < 120 o x > 520). Un pilar real tan cerca y
+            # delante del robot sale centrado, y ese si lo aceptamos. Medido con
+            # test_base_pilar.py (pilar a 32 cm -> base 281).
+            descartados = [b for b in bloques
+                           if b.y_center + b.height // 2 > 280 and abs(b.x_center - 320) > 200]
+            # Ademas, los que asoman por el BORDE de la imagen (a mas de 290 px
+            # del centro): su caja sale cortada y su direccion no es fiable, y
+            # nos llevaban a por pilares lejanos de un lado mientras el bueno
+            # estaba al otro (M4, tras esquivar 0Rc). Si es un pilar de verdad,
+            # el barrido lo vera centrado un poco despues.
+            descartados += [b for b in bloques if abs(b.x_center - 320) > 290 and b not in descartados]
+            if descartados:
+                bloques = [b for b in bloques if b not in descartados]
+                if time.ticks_diff(time.ticks_ms(), t_registro_linea) >= 300:
+                    t_registro_linea = time.ticks_ms()
+                    d = descartados[0]
+                    print(f"NAVEGAR_CALLE: ignoramos bloque en el borde de la imagen (extremo de linea o pilar asomando) angulo={angulo_oscilacion} "
+                          f"id={d.id} x={d.x_center} base={d.y_center + d.height // 2}")
+        if bloques and getattr(hardware, 'fase_final', False):
+            # Fase final de la Mision 3: solo nos interesa el pilar del asiento a
+            # de la calle 0 (si lo hay y aun no lo hemos esquivado); el resto, no
+            pendiente = getattr(hardware, 'final_color_pendiente', None)
+            # (pendiente 0 = no sabemos que hay en el asiento a: vale el primero que veamos)
+            bloques = [b for b in bloques if pendiente is not None and (pendiente == 0 or b.id == pendiente)]
+        if len(bloques) > 0:
+            candidato = _mejor_bloque(bloques)
+            print(f"NAVEGAR_CALLE: pilar detectado en angulo={angulo_oscilacion} id={candidato.id} "
+                  f"x={candidato.x_center} base={candidato.y_center + candidato.height // 2}")
+            return angulo_oscilacion, candidato.id
+
+        # Fase final: alineados y con la camara alternando a +8 y -8 grados, la
+        # pared del fondo a hardware.distancia_parada_final o menos (M3 160 cm,
+        # M4 110 cm) -> nos paramos aqui (zona de salida)
+        if camara_fija_final and abs(error) <= 8 and not esperando_servo \
+                and time.ticks_diff(time.ticks_ms(), t_cambio_final) >= 80:  # el servo ya ha llegado
+            lectura = leer_tfmini()
+            if lectura is not None:
+                fondo_final[angulo_oscilacion] = lectura
+            if 8 in fondo_final and -8 in fondo_final:
+                # La mayor de las dos (la otra puede ser un pilar), proyectada al frente
+                frente = max(fondo_final[8], fondo_final[-8]) * 0.990  # cos(8 grados)
+                if frente <= getattr(hardware, 'distancia_parada_final', 160):  # cada mision fija la suya
+                    hardware.servoTraccion.duty_u16(hardware.Para)
+                    hardware.servoDireccion.duty_u16(hardware.Recto)
+                    hardware.parados_en_salida = True
+                    print(f"NAVEGAR_CALLE: FASE FINAL -> pared del fondo a {frente:.0f} cm "
+                          f"(+8: {fondo_final[8]}, -8: {fondo_final[-8]}), rumbo error {error:.1f}: PARAMOS")
+                    return None, None
+
+        # Esquina saltada: con la camara casi al centro (+-10 grados) y el rumbo
+        # alineado, la pared del fondo a menos de 50 cm (sin pilares a la vista).
+        # Leer el frontal no cuesta nada (emite en continuo).
+        # (No en la fase final: en la calle 0 no queda ninguna esquina antes de
+        # parar, y pegados a un muro la camara a +-8 grados lo tomaba por la
+        # pared del fondo y retrocediamos una y otra vez.)
+        if tiempo_max_ms is None and abs(angulo_oscilacion) <= 10 and not esperando_servo \
+                and abs(error) <= hardware.UMBRAL_ALINEACION_RUMBO \
+                and not getattr(hardware, 'fase_final', False):
+            frente = leer_tfmini()
+            if frente is not None and frente < 50:  # AJUSTAR EN PISTA
+                angulo_p, id_p = _recuperar_esquina_perdida(lado_pared, frente)
+                if angulo_p is not None:
+                    return angulo_p, id_p
+                # Seguimos navegando (por la calle nueva si la hemos contado)
+                calle_previa = hardware.calle_actual
+                sesgo_pared = 0.0
+                ultima_dist_pared = None
+                t_mirar_desde = time.ticks_add(time.ticks_ms(), 200)
+                continue
+
+        vueltas += 1
+        distancia_pared = None
+        if vueltas % 4 == 0:
+            if lado_pared == 'izquierda':
+                distancia_pared = leer_lateral_izquierdo_cm()
+            else:
+                distancia_pared = leer_lateral_derecho_cm()
+
+        # Fase final de la calle 0: vigilamos las DOS paredes laterales (la
+        # brujula solo corrige el rumbo, no lo cerca que vamos de un muro; tras
+        # esquivar un pilar podiamos acabar pegados al muro interior). La de
+        # nuestro lado ya la leemos arriba; la otra, en las vueltas intermedias.
+        if fase_final_salida:
+            if distancia_pared is not None:
+                lateral_final[lado_pared] = distancia_pared
+            elif vueltas % 4 == 2:
+                if lado_pared == 'izquierda':
+                    lateral_final['derecha'] = leer_lateral_derecho_cm()
+                else:
+                    lateral_final['izquierda'] = leer_lateral_izquierdo_cm()
+            izq = lateral_final['izquierda']
+            der = lateral_final['derecha']
+            nuevo_sesgo = 0.0
+            if izq is not None and izq < 15 and (der is None or der > izq):  # AJUSTAR EN PISTA: cm
+                nuevo_sesgo = 10.0   # muy cerca de la pared izquierda: rumbo un poco a la derecha
+            elif der is not None and der < 15:
+                nuevo_sesgo = -10.0  # muy cerca de la pared derecha: rumbo un poco a la izquierda
+            if nuevo_sesgo != sesgo_final:
+                sesgo_final = nuevo_sesgo
+                print(f"NAVEGAR_CALLE: FASE FINAL laterales izq={izq} der={der} cm -> correccion de rumbo {sesgo_final:+.0f}")
+
+        if distancia_pared is not None:
+            if ultima_dist_pared is not None and distancia_pared < ultima_dist_pared \
+                    and distancia_pared < hardware.DISTANCIA_MINIMA_PARED_CM:
+                incremento = hardware.SESGO_PARED_INCREMENTO_DEG if lado_pared == 'izquierda' else -hardware.SESGO_PARED_INCREMENTO_DEG
+                sesgo_pared = max(-hardware.SESGO_PARED_MAX_DEG, min(sesgo_pared + incremento, hardware.SESGO_PARED_MAX_DEG))
+                print(f"NAVEGAR_CALLE: acercandose a pared {lado_pared.upper()} "
+                      f"({distancia_pared:.1f}cm < {ultima_dist_pared:.1f}cm) -> sesgo={sesgo_pared:.1f}")
+            ultima_dist_pared = distancia_pared
+
+        if not esperando_servo and not camara_fija_final:
+            angulo_oscilacion += sentido * hardware.PASO_BARRIDO
+            # Hacia el lado del giro (derecha en M3, izquierda en M4) hasta 60 grados; hacia fuera, solo 30
+            hacia_giro = (angulo_oscilacion > 0) == (lado_pared == 'izquierda')
+            limite = hardware.ANGULO_MAX_BARRIDO_CRUCERO if hacia_giro else 30
+            if abs(angulo_oscilacion) >= limite:
+                # Extremo alcanzado: volvemos de golpe al centro y barremos el otro lado
+                angulo_oscilacion = 0
+                sentido *= -1
+                t_mirar_desde = time.ticks_add(time.ticks_ms(), 200)  # AJUSTAR EN PISTA: espera tras el salto al centro
+
+        time.sleep_ms(5)
+
+
+def parar_en_salida_libre(lado_isla, distancia_inicial):
+    """Fase final del RETO LIBRE (Misiones 1 y 2), tras la ultima linea: en
+    lugar de seguir un tiempo fijo, nos paramos a 160 cm de la pared del
+    fondo (la isla central puede cambiar de tamano y, con ella, la distancia
+    de la ultima esquina a la zona de parada).
+    El TFmini frontal, que hasta ahora miraba a la isla (girado 90 grados),
+    pasa a mirar AL FRENTE para medir la pared del fondo, y seguimos la isla
+    con el TFmini LATERAL de ese lado (derecho en M1, izquierdo en M2), que
+    tambien esta a 90 grados: misma distancia objetivo y misma ganancia.
+    Solo nos paramos cuando:
+      - ya vamos siguiendo la isla (lateral entre 5 y 30 cm): asi no paramos
+        en mitad del giro de la ultima esquina, y
+      - el frontal marca 160 cm o menos sin un salto brusco respecto a la
+        medida anterior (si al oscilar el haz diera en la isla, la distancia
+        caeria de golpe: esa medida no la usamos).
+    ANTES de todo eso terminamos de girar la ultima esquina igual que en el
+    resto de la ronda (frontal girado hacia la isla), hasta que la brujula
+    nos dice que ya estamos alineados con la calle de salida (a menos de 15
+    grados de hardware.rumbo_salida_libre, el rumbo al pulsar el boton). Si
+    no hay brujula, esperamos 1,5 s. Si no, a mitad de la esquina el frontal,
+    ya al frente, media la pared exterior y nos parabamos alli.
+    lado_isla: 'derecha' (M1) o 'izquierda' (M2)."""
+    signo = -1 if lado_isla == 'derecha' else 1       # mismo signo del control que en la mision
+    leer_lateral = leer_lateral_derecho_cm if lado_isla == 'derecha' else leer_lateral_izquierdo_cm
+    distancia_isla = distancia_inicial
+
+    # 1) Terminamos la esquina como siempre: seguimos la isla con el frontal
+    #    girado, hasta estar alineados con la calle de salida
+    rumbo_salida = getattr(hardware, 'rumbo_salida_libre', None)
+    t0 = time.ticks_ms()
+    while time.ticks_diff(time.ticks_ms(), t0) < 4000:  # seguridad
+        if rumbo_salida is not None and hardware.mag is not None:
+            if abs(diferencia_angular(rumbo_salida, hardware.mag.heading())) <= 15:  # AJUSTAR EN PISTA
+                break
+        elif time.ticks_diff(time.ticks_ms(), t0) >= 1500:
+            break
+        nueva = leer_tfmini()  # el frontal aun mira a la isla
+        if nueva is not None:
+            distancia_isla = nueva
+        error = distancia_isla - hardware.DISTANCIA_OBJETIVO
+        pulso_dir = hardware.Recto + signo * (error * hardware.GANANCIA_KP)
+        hardware.servoDireccion.duty_u16(int(max(hardware.Dcha, min(pulso_dir, hardware.Izda))))
+        hardware.servoTraccion.duty_u16(hardware.Avanza_tope)
+        time.sleep_ms(20)
+    rumbo_txt = 'sin brujula' if hardware.mag is None else '{:.1f}'.format(hardware.mag.heading())
+    print(f"FASE FINAL LIBRE: esquina terminada (rumbo {rumbo_txt}, calle de salida {rumbo_salida}) "
+          f"en {time.ticks_diff(time.ticks_ms(), t0)} ms")
+
+    # 2) Frontal al frente y seguimos la isla con el lateral
+    hardware.SERVOcam.duty_u16(hardware.Cam_Centro)  # el frontal mira al frente
+    t_camara = time.ticks_ms()  # hasta que el servo llega al centro, el frontal no vale
+    frente_anterior = None
+    t0 = time.ticks_ms()
+    t_registro = t0
+    print(f"FASE FINAL LIBRE: seguimos la isla con el lateral {lado_isla} y paramos a 160 cm del fondo")
+    while time.ticks_diff(time.ticks_ms(), t0) < 8000:  # seguridad
+        lateral = leer_lateral()
+        if lateral is not None and lateral > 0:
+            distancia_isla = lateral
+        error = distancia_isla - hardware.DISTANCIA_OBJETIVO
+        pulso_dir = hardware.Recto + signo * (error * hardware.GANANCIA_KP)
+        hardware.servoDireccion.duty_u16(int(max(hardware.Dcha, min(pulso_dir, hardware.Izda))))
+
+        # Mientras el servo gira de 90 grados al centro (unos 400 ms), el
+        # frontal apunta en diagonal y puede medir la isla: no lo usamos
+        if time.ticks_diff(time.ticks_ms(), t_camara) < 400:  # AJUSTAR EN PISTA
+            frente = None
+        else:
+            frente = leer_tfmini()
+        siguiendo_isla = lateral is not None and 5 <= lateral <= 30  # AJUSTAR EN PISTA
+        if frente is not None and frente <= 220:
+            hardware.servoTraccion.duty_u16(hardware.Avanza_lento)  # cerca de la parada: despacio
+        else:
+            hardware.servoTraccion.duty_u16(hardware.Avanza_tope)
+        if time.ticks_diff(time.ticks_ms(), t_registro) >= 200:
+            t_registro = time.ticks_ms()
+            print(f"FASE FINAL LIBRE: lateral={lateral} frente={frente}")
+        if frente is not None and siguiendo_isla and frente <= 160 \
+                and frente_anterior is not None and frente_anterior - frente <= 15:  # AJUSTAR EN PISTA
+            break
+        if frente is not None:
+            frente_anterior = frente
+        time.sleep_ms(10)
+    hardware.servoTraccion.duty_u16(hardware.Para)
+    hardware.servoDireccion.duty_u16(hardware.Recto)
+    time.sleep_ms(500)
+    lecturas = [d for d in (leer_tfmini() for _ in range(5)) if d is not None]
+    final = sum(lecturas) / len(lecturas) if lecturas else None
+    print(f"FASE FINAL LIBRE: PARADOS a {final} cm de la pared del fondo")
+
+
+def pulso_barrido(angulo_deg):
+    """Convierte un angulo (positivo=derecha, negativo=izquierda) en pulso de SERVOcam."""
+    return int(hardware.Cam_Centro - angulo_deg * hardware.GRADOS_A_PULSO)
+
+
+def _mejor_bloque(bloques):
+    """De una lista de bloques de la Huskylens, devuelve el mas cercano segun
+    la coordenada Y (el eje vertical tiene el 0 arriba): el objeto mas lejano
+    se proyecta mas arriba en la pantalla (Y menor), el mas cercano mas abajo
+    (Y mayor) - geometria de perspectiva basica. Mas fiable que el area, que
+    depende de la silueta exacta detectada y resulto ser ruidosa."""
+    return max(bloques, key=lambda b: b.y_center)
+
+
+def _bloques_cercanos(bloques):
+    """Nos quedamos solo con los bloques cuya BASE (borde inferior de la
+    caja, y_center + height/2, donde el pilar toca el suelo) esta por debajo
+    de una linea de la imagen (Y mayor, con el 0 arriba). Asi ignoramos los
+    pilares lejanos (su base sale mas arriba en la imagen) y los objetos de
+    color de fuera del campo que la camara ve por encima del muro (su base
+    siempre queda por encima del muro). Como la camara solo gira en
+    horizontal, la misma linea vale para todo el barrido.
+    Solo la usamos para DETECTAR (navegar_calle_por_rumbo, pilar_visible_ahora,
+    buscar_pilar, dirigirse_a_zona_despejada), no en aproximarse_a_pilar: una
+    vez elegido, el pilar solo puede bajar en la imagen al acercarnos.
+    El umbral lo medimos en pista con test_base_pilar.py."""
+    return [b for b in bloques if b.y_center + b.height // 2 >= 100]  # AJUSTAR EN PISTA: base minima en px
+
+
+def _bloque_seguido(bloques, x_previo, id_seguido=None):
+    """Elegimos el bloque que seguimos en una aproximacion o una recolocacion,
+    SIN CAMBIAR NUNCA DE PILAR:
+      - Si sabemos el color que seguimos (id_seguido), solo miramos los
+        bloques de ese color.
+      - Si ya seguiamos uno (x_previo), nos quedamos con el mas cercano en X a
+        donde estaba. Si ese salta mas de 160 px, no es el nuestro (el que
+        seguiamos ha desaparecido y lo que vemos es otro pilar del mismo
+        color): devolvemos None, como si no lo vieramos.
+      - Si aun no seguiamos ninguno, el mas cercano segun la Y.
+    Devolvemos el bloque, o None si en esta imagen no esta el nuestro. El
+    llamador cuenta los None como lecturas fallidas: tras varias seguidas da
+    el pilar por perdido y volvemos a escanear (que ya elige el mas cercano)."""
+    if id_seguido is not None:
+        bloques = [b for b in bloques if b.id == id_seguido]
+    if len(bloques) == 0:
+        return None
+    if x_previo is None:
+        return _mejor_bloque(bloques)
+    candidato = min(bloques, key=lambda b: abs(b.x_center - x_previo))
+    if abs(candidato.x_center - x_previo) > 160:
+        return None
+    return candidato
+
+
+def _obtener_bloques():
+    """Consulta la Huskylens con un reintento: el I2C puede fallar de forma
+    puntual (ya lo hemos visto con otros sensores) incluso con el bloque
+    delante, y sin este margen una sola lectura vacia por mala suerte hace
+    creer que no hay nada cuando si lo hay."""
+    bloques = hardware.husky.get_blocks()
+    if len(bloques) > 0:
+        return bloques
+    _comprobar_lineas()  # no dejamos de vigilar las lineas mientras esperamos el reintento
+    time.sleep_ms(15)
+    return hardware.husky.get_blocks()
