@@ -2125,13 +2125,13 @@ The batteries that power the Raspberry Pi Pico 2 board, the two microservos, and
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="other/batteries/batteries_structure_pr1.jpg" width="350"/>
+      <img src="v-photos/Final_version_photos/batteries1.jpg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/batteries/batteries_structure_pr2.jpg" width="350"/>
+      <img src="v-photos/Final_version_photos/batteries2.jpg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/batteries/batteries_structure_pr3.jpg" width="350"/>
+      <img src="v-photos/Final_version_photos/batterie_conexions.jpg" width="350"/>
     </td>
   </tr>
 </table></div>
@@ -2141,10 +2141,10 @@ Two buck converters have been added to convert DC to DC while reducing the volta
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="other/batteries/convertidor.jpg" width="350"/>
+      <img src="v-photos/Final_version_photos/buck1.jpg" width="350"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/batteries/mosfet.jpg" width="350"/>
+      <img src="v-photos/Final_version_photos/buck2.jpg" width="350"/>
     </td>
     <td align="center" width="33%">
       <img src="other/batteries/cables.jpg" width="350"/>
