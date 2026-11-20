@@ -1469,18 +1469,32 @@ However, the addition of the other two batteries—a last-minute modification—
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_der.2.jpg" width="305"/>
+      <img src="v-photos/Second_version_photos/v_der.2.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_front.jpg" width="305"/>
+      <img src="v-photos/Second_version_photos/v_front.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_plomo.jpg" width="305"/>
+      <img src="v-photos/Second_version_photos/v_plomo.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
 
-Finally, for the finals in Puerto Rico, due to modifications to the distance sensors, a new chassis has been redesigned with spaces specifically allocated for these modifications. 
+Finally, for the finals in Puerto Rico, due to modifications to the distance sensors, a new chassis has been redesigned with spaces specifically allocated for these modifications. Also, as we’d already designed and printed another chassis, we’ve made this one thicker, as it had warped slightly again.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Final_version_photos/change_left.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Final_version_photos/other_right.jpg" width="305"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Final_version_photos/front.jpg" width="305"/>
+    </td>
+  </tr>
+</table></div>
 
 The components have been fastened with screws instead of hot glue, to make it easier to assemble and disassemble them and to facilitate transporting the robot without the risk of breaking any components. 
 
