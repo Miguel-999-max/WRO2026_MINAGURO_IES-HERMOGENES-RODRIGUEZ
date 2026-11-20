@@ -472,7 +472,6 @@ https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
 </table></div>
 
 https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
-https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
 
 <table width="100%" align="center">
   <tr>
