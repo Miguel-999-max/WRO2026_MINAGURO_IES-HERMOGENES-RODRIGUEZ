@@ -2011,8 +2011,8 @@ An energy calculation was performed, taking all components into account, to help
       <td style="border: 1px solid #dfe2e5; padding: 6px;">Front LED</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">350 mA</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">HUSKYLENS module</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">230–420 mA</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">HUSKYLENS 2 module</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">250–600 mA</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td>
     </tr>
     <tr>
@@ -2026,7 +2026,7 @@ An energy calculation was performed, taking all components into account, to help
     </tr>
     <tr>
       <!-- Fila 4 -->
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">Three TFmini-S</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">The three TFmini-S</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">420 mA</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td>
       <td style="border: none;"></td>
