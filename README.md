@@ -2008,8 +2008,8 @@ An energy calculation was performed, taking all components into account, to help
     </tr>
     <tr>
       <!-- Fila 2 -->
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">TOF400F (right and left)</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">40 mA</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">Front LED</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">350 mA</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">3,3 V</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">HUSKYLENS module</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">230–420 mA</td>
@@ -2026,8 +2026,8 @@ An energy calculation was performed, taking all components into account, to help
     </tr>
     <tr>
       <!-- Fila 4 -->
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">TFmini-S</td>
-      <td style="border: 1px solid #dfe2e5; padding: 6px;">140 mA</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">Three TFmini-S</td>
+      <td style="border: 1px solid #dfe2e5; padding: 6px;">420 mA</td>
       <td style="border: 1px solid #dfe2e5; padding: 6px;">5 V</td>
       <td style="border: none;"></td>
       <td style="border: none;"></td>
