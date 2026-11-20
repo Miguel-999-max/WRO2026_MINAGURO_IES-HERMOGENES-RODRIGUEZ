@@ -1322,10 +1322,10 @@ The steering system used consists of:
       <img src="v-photos/Current_photos/v_direc_s.luz.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_direc.izq.jpg" width="305"/>
+      <img src="v-photos/Final_version_photos/steering1.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_direc.der.jpg" width="305"/>
+      <img src="v-photos/Final_version_photos/steering3.jpg" width="305"/>
     </td>
   </tr>
 </table>
@@ -1393,13 +1393,13 @@ The drivetrain consists of:
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="other/drivetrain/drivetrain1.jpg" width="305"/>
+      <img src="v-photos/Final_version_photos/underneath.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/drivetrain/drivetrain2.jpg" width="305"/>
+      <img src="v-photos/Final_version_photos/differential.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="other/drivetrain/drivetrain3.jpg" width="305"/>
+      <img src="v-photos/Final_version_photos/underneath2.jpg" width="305"/>
     </td>
   </tr>
 </table>
