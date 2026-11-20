@@ -3319,7 +3319,8 @@ Here are all the necessary components:
 <summary><b>Pins connections</b></b></summary>
 <br>
 Use these two photos to connect the components:
-
+<br>
+</br>
 <div align="center"><table>
   <tr>
     <td align="center" width="40%">
