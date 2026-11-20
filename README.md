@@ -2431,6 +2431,9 @@ While we do all that, the RGB sensor is counting the blue lines on the floor to 
 <details>
 <summary><b>7.3 Final version - Strategy </b></summary>
 <br>
+
+
+  
 </details>
 
 ### 8. 💻 Software
@@ -3080,6 +3083,8 @@ These are all programs we used to calibrate sensors and conduct functional tests
  
 This is our (almost) final program (we are still working on it), that will be shown up on the WRO international final:
 
+* [PUERTORICO_V6](src/Current_programs/Program_versions2/PUERTORICO_V6)
+
 </details>
 
 <details>
@@ -3106,6 +3111,7 @@ Here is a FSM that will show you the logic our program follows:
 * [PUERTORICO_V2](src/Current_programs/Program_versions2/PUERTORICO_V2)
 * [PUERTORICO_V3](src/Current_programs/Program_versions2/PUERTORICO_V3)
 * [PUERTORICO_V4](src/Current_programs/Program_versions2/PUERTORICO_V4)
+* [PUERTORICO_V5](src/Current_programs/Program_versions2/PUERTORICO_V5)
   
 </details>
 
@@ -3174,10 +3180,10 @@ Use these two photos to connect the components:
 
 <div align="center"><table>
   <tr>
-    <td align="center" width="50%">
+    <td align="center" width="40%">
       <img src="schemes/Raspberry Pi Pico 2 Connections.jpg"/>
     </td>
-    <td align="center" width="50%">
+    <td align="center" width="60%">
       <img src="schemes/wiring_scheme_andorra_names.png"/>
     </td>
   </tr>
@@ -3222,7 +3228,7 @@ Here you will find two files showing the exact position of each component:
 </details>
 
 <details>
-<summary><b>Adjust the servos</b></summary>
+<summary><b>Adjust the components</b></summary>
 <br>
 Here you will find the essential software for calibrating servos and sensors, so that you can get the robot ready and load the final programme onto it.
 <br>
@@ -3252,6 +3258,147 @@ And that’s it, you can now load the final programme, along with its sub-progra
 </details>
 
 #### 9.2 Final version (HUSKYLENS 2)
+
+<details>
+<summary><b>Components</b></summary>
+
+Here are all the necessary components:
+
+| Component | Quantity | Preview | Main Function | Purchase link |
+| :---: | :---: | :---: | :---: | :---: |
+| SPT5632-360 | 1 | <img src="other/components/SPT5632-360.jpg" width="150" height="120"> | Robot mobility | <a href="https://de.banggood.com/SPT-Servo-SPT5632-360-Coreless-Digital-Servo-Metal-Gear-Lager-Torque-Linear-Change-For-RC-Robot-p-1418818.html?akmClientCountry=ES&cur_warehouse=CN"> 🛒 Shop</a> |
+| MS18 | 1 | <img src="other/components/MS18.jpg" width="150" height="120"> | Robot direction system | <a href="https://es.aliexpress.com/item/1005012158832496.html?spm=a2g0o.productlist.main.4.1edfnKTwnKTwnB&algo_pvid=5417366f-c791-4e53-a569-c27a98fc2162&algo_exp_id=5417366f-c791-4e53-a569-c27a98fc2162-3&pdp_ext_f=%7B%22order%22%3A%228%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%216.85%212.65%21%21%2153.52%2120.74%21%40210384b217781457573274739eee2a%2112000057659670774%21sea%21ES%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Aa4bac484%3Bm03_new_user%3A-29895%3BpisId%3A5000000205922472&curPageLogUid=1s0ozgZzGPqi&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005012158832496%7C_p_origin_prod%3A"> 🛒 Shop</a> |
+| TFmini-S | 3 | <img src="other/components/TFmini-S.png" width="150" height="120"> | Measure distances | <a href="https://es.aliexpress.com/item/1005008667948116.html?spm=a2g0o.productlist.main.1.3ee815f5aNKVGm&algo_pvid=7b97e392-40fa-4427-b546-e354d448a483&algo_exp_id=7b97e392-40fa-4427-b546-e354d448a483-0&pdp_ext_f=%7B%22order%22%3A%2233%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%2139.58%2137.01%21%21%2144.77%2141.86%21%400b88a95617870674693428294e0f0b%2112000046162159304%21sea%21ES%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3A7c99e0a1%3Bm03_new_user%3A-29895%3BpisId%3A5000000215237127&curPageLogUid=x2SCJyut26BJ&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005008667948116%7C_p_origin_prod%3A"> 🛒 Shop</a> |
+| LED 5mm | 2 | <img src="other/components/diodo-led.jpg" width="150" height="120"> | Checkpoints | <a href="https://es.aliexpress.com/item/1005009812533874.html?src=google&snpsid=1&src=google&albch=shopping&acnt=439-079-4345&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&gclsrc=aw.ds&albagn=888888&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=es1005009812533874&ds_e_product_merchant_id=5551326180&ds_e_product_country=ES&ds_e_product_language=es&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=21840696692&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gad_campaignid=21844625911&gbraid=0AAAAACbpfvZrvUv7q62FHi_LcG387rL1_&gclid=CjwKCAjwhZDUBhBGEiwAbi5bjl9fKnxrPtUDux_-7zIYdKWsd6oaarbJUwohfb5DqGjQO7GFLHIvGRoCQ-wQAvD_BwE"> 🛒 Shop</a> |
+| LED 1W 6000K | 1 | <img src="other/components/LED5v.jpg" width="150" height="120"> | Improve color identification of obstacles | <a href="https://es.aliexpress.com/item/1005006115665228.html?spm=a2g0o.order_list.order_list_main.65.71fe1802b6YwYO&gatewayAdapt=glo2esp"> 🛒 Shop</a> |
+| HUSKYLENS 2 | 1 | <img src="other/components/HUSKYLENS2.jpg" width="150" height="120"> | Object detection | <a href="https://tienda.bricogeek.com/sensores-imagen/2082-huskylens-2-camara-ai.html?srsltid=AYCX9vK1qwqPWoOVCUld_1vK8aj5f4ur4c8cKslQDLtGxSC1q08pyg2t"> 🛒 Shop</a> |
+| Raspberry pi pico 2 rp2350 | 1 | <img src="other/components/SC21034-40.jpg" width="150" height="120"> | Robot controller | <a href="https://www.raspberrypi.com/products/raspberry-pi-pico-2/"> 🛒 Shop</a> |
+| KS3017 Keyestudio Raspberry Pico IO Shield | 1 | <img src="other/components/Shield.jpg" width="150" height="120"> | Conexions | <a href="https://es.aliexpress.com/item/1005003882137188.html?src=google&src=google&albch=shopping&acnt=439-079-4345&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&gclsrc=aw.ds&albagn=888888&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=es1005003882137188&ds_e_product_merchant_id=109196579&ds_e_product_country=ES&ds_e_product_language=es&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=21840696692&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gad_campaignid=21844625911&gbraid=0AAAAACbpfvZrvUv7q62FHi_LcG387rL1_&gclid=CjwKCAjwhZDUBhBGEiwAbi5bjnHOuPztxLTIc_GugQviullqg1BSXDs9zjbAtSPCnMCuCgQurC9uAhoCwiIQAvD_BwE"> 🛒 Shop</a> |
+| 10 DOF IMU sensor (L3GD20 - gyroscope) | 1 | <img src="other/components/10DOF IMU sensor.jpg" width="150" height="120"> | Robot orientation | <a href="https://es.aliexpress.com/item/1005012492343486.html?pdp_npi=6%40dis%21EUR%216.87%216.39%21%21%2152.16%2148.52%21%402140da8b17866651436913401e0f59%2112000058549190449%21affd%21%21%21%211%210%21&dp=CjwKCAjwhZDUBhBGEiwAbi5bjpB5hRoc_Ad499S1rmuXgVQBdxh2cge1RWDi3WSjlPeaPdyvS_DJ_BoCq7sQAvD_BwE%7C0AAAAA_4-KEULbbQGD6FTmokvJ6HG6lL7m%7CCj4KCAjw4orUBhANEi4AroCGSwd44nWkEvukWXtTEEo0DP7dUrR6LF3R31k9k_HPmlAXdn5fS9rcJ9E1GgKsAw%7Cv1&cn=es_a&gad_source=1&aff_fcid=1368017dacb34b61b91334bc1acb7aa2-1787070286494-07841-_onKPRpM&aff_fsk=_onKPRpM&aff_platform=api-new-product-query&sk=_onKPRpM&aff_trace_key=1368017dacb34b61b91334bc1acb7aa2-1787070286494-07841-_onKPRpM&terminal_id=f61e0cd6284c4482af79c2354c1fbe5a&afSmartRedirect=y"> 🛒 Shop</a> |
+| TCS34725 RGB sensor | 1 | <img src="other/components/RGB sensor.jpg" width="150" height="120"> | Lines detection | <a href="https://es.aliexpress.com/item/1005007392355136.html?spm=a2g0o.productlist.main.9.438b53b0vumUmP&algo_pvid=9f62c521-d633-4081-831d-138e257ba32f&algo_exp_id=9f62c521-d633-4081-831d-138e257ba32f-8&pdp_ext_f=%7B%22order%22%3A%2219%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%213.59%213.59%21%21%2127.38%2127.38%21%4021038c6f17870711634791514e0f41%2112000040560020511%21sea%21ES%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3A7c99e0a1%3Bm03_new_user%3A-29895&curPageLogUid=pstdMRsXjMhq&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005007392355136%7C_p_origin_prod%3A"> 🛒 Shop</a> |
+| Rocker Switch | 1 | <img src="other/components/Rocker Switch.avif" width="150" height="120"> | Power on and off robot switch | <a href="https://es.aliexpress.com/item/1005008525408190.html?spm=a2g0o.productlist.main.17.431d74493KVuzo&algo_pvid=e9f9c09c-5089-4439-be0e-f05956214450&algo_exp_id=e9f9c09c-5089-4439-be0e-f05956214450-14&pdp_ext_f=%7B%22order%22%3A%22653%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%211.85%210.99%21%21%2114.40%217.69%21%402103890117771122923863735ec053%2112000045558767272%21sea%21ES%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3A25dad6b%3Bm03_new_user%3A-29895%3BpisId%3A5000000204276354&curPageLogUid=KGO1IXkqj9GF&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005008525408190%7C_p_origin_prod%3A"> 🛒 Shop</a> |
+| Pull down button | 1 | <img src="other/components/Pull down button.jpg" width="150" height="120"> | Starter robot program button | <a href="https://es.aliexpress.com/i/1005002576288170.html"> 🛒 Shop</a> |
+| Samsung battery 2600mAh | 4 | <img src="other/components/Samsung battery 2600mAh.webp" width="150" height="120"> | Batteries | <a href="https://bateriasonline.com/es/baterias-litio-recargable/bateria-litio-samsung-icr-18650-26j-2600mah-samsung-baterias-litio-recargable.html?srsltid=AfmBOop1R_bLE43Q_vkAh_JRYLJcKs3b_JRSsD6eFUK0Ot32YkWfNtN-"> 🛒 Shop</a> |
+| Lego wheels 30,4x14 | 2 | <img src="other/components/Lego wheels 30.4 x 14.webp" width="150" height="120"> | Directional wheels | <a href="https://www.toypro.com/es/product/33208/rueda-18-mm-d-x-14-mm-con-agujero-para-pasador-pernos-falsos-y-radios-poco-profundos-con-llanta-negra-30-4-x-14-banda-de-rodadura-desplazada-55981-30391/gris-azulado-claro?srsltid=AfmBOooMGv7-eRncxEPbJrWFwlcMzZU4-aFSelHhvuYBHHatj6sHPQM1"> 🛒 Shop</a> |
+| Lego wheels 13x24 | 2 | <img src="other/components/Lego wheels 13 x 24.jpg" width="150" height="120"> | Drive wheels | <a href="https://www.steinpalast.eu/en/1-x-lego-brick-light-gray-wheel-30mm-d.-x-13mm-13-x-24-model-team-with-black-tire-13-x-24-model-team-2695-4141535-2696-269626-2695c01"> 🛒 Shop</a> |
+| Servo arm | 1 | <img src="other/components/Servo arm MS18.avif" width="150" height="120"> | Servo direction arm | <a href="https://es.aliexpress.com/item/1005012158832496.html?spm=a2g0o.productlist.main.4.1edfnKTwnKTwnB&algo_pvid=5417366f-c791-4e53-a569-c27a98fc2162&algo_exp_id=5417366f-c791-4e53-a569-c27a98fc2162-3&pdp_ext_f=%7B%22order%22%3A%228%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%216.85%212.65%21%21%2153.52%2120.74%21%40210384b217781457573274739eee2a%2112000057659670774%21sea%21ES%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Aa4bac484%3Bm03_new_user%3A-29895%3BpisId%3A5000000205922472&curPageLogUid=1s0ozgZzGPqi&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005012158832496%7C_p_origin_prod%3A"> 🛒 Shop</a> |
+| Gear teeth Lego 4285634 | 1 | <img src="other/components/Gear teeth Lego 4285634.jpg" width="150" height="120"> | Gear teeth transmission | <a href="https://www.electricbricks.com/lego-piezas-lego-technic,-engranaje-gris-claro-azulado-engranaje-dientes-p-425.html"> 🛒 Shop</a>|
+| Lego structure piece 4495931 | 3 | <img src="other/components/Lego structure piece 4495931.webp" width="150" height="120"> | Maintain direction structure | <a href="https://www.toypro.com/es/product/3937/liftarm-1-x-7-grueso/gris-azulado-oscuro?srsltid=AfmBOorBuWPTbd0rp7J5CSv3HlYMqGJvfZ5qkVGlDqX8xSTJyZnriyeG"> 🛒 Shop</a>  |
+| Lego structure piece 4210686 | 3 | <img src="other/components/Lego structure piece 4210686.avif" width="150" height="120"> | Connect directional wheels and connect them with the structure | <a href="https://es.aliexpress.com/item/1005011819503855.html?src=google&src=google&albch=shopping&acnt=439-079-4345&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&gclsrc=aw.ds&albagn=888888&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=es1005011819503855&ds_e_product_merchant_id=107567352&ds_e_product_country=ES&ds_e_product_language=es&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=20542360520&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gad_campaignid=17340214516&gbraid=0AAAAACbpfvYuNwQ1V3xDib2TlBxpflVYs&gclid=EAIaIQobChMIqZGIl6aflAMVnI5oCR199jqyEAQYAiABEgLzT_D_BwE"> 🛒 Shop</a> |
+| Lego piece 4514554 (3 modules) | 3 | <img src="other/components/Lego piece 4514554.webp" width="150" height="120"> | Connect the directional | <a href="https://www.toypro.com/es/product/1776/technic-pin-largo-sin-estrias-de-friccion-longitudinales/tan?srsltid=AfmBOoqqbuAxeT4ULrI73zVTMFH8t7_HuYIcuJz_XVb1vpj3KXK-qs8D"> 🛒 Shop</a> |
+| Lego piece 4514553 (3 modules) | 4 | <img src="other/components/Lego piece 4514553.webp" width="150" height="120"> | Connect the directional structure and connect it with chassis | <a href="https://www.toypro.com/es/product/2247/technic-pin-largo-con-estrias-de-friccion-longitudinales/azul?srsltid=AfmBOoqgtvS341U5QKuqMzuibB6NDnAIcyx8KQwD8Fsvz7nsYZRyQv2s"> 🛒 Shop</a> |
+| Lego piece 4211807 (2 modules) | 2 | <img src="other/components/Lego piece 4211807.webp" width="150" height="120"> | Connect the directional structure | <a href="https://www.toypro.com/es/product/756/technic-pin-sin-estrias-de-friccion-longitudinales/gris-azulado-claro?srsltid=AfmBOoqCiqgFyXZBCIu2rkTYcivDDJrr15Kn4coFCvSYRXdTXMta3fcI"> 🛒 Shop</a> |
+| Lego piece 4495931 (2 modules) | 1 | <img src="other/components/Lego piece 4495931.webp" width="150" height="120"> | Connect directional structure | <a href="https://www.toypro.com/es/product/1152/technic-pasador-de-eje-sin-estrias-de-friccion-longitudinalmente/tan?srsltid=AfmBOooZH7rHaNTKpPFgEphyQGzF2_0XQoAJPNM4Ki51-C_wdsH27EJX"> 🛒 Shop</a> |
+| Lego piece 4560175 | 1 | <img src="other/components/Lego piece 4560175.webp" width="150" height="120"> | Connect directional structure | <a href="https://www.toypro.com/es/product/2210/technic-pasador-largo-con-estrias-de-friccion-longitudinales-y-orificio-central-para-el-pasador/gris-azulado-claro?srsltid=AfmBOorSUHxEOJ2i5-85EPdvQcjwU1bGyXjPJdgFHhxL5Bt5vq-A_alA"> 🛒 Shop</a> |
+| Lego piece 4107767 | 2 | <img src="other/components/Lego piece 4107767.webp" width="150" height="120"> | Connect directional wheels with directional structure | <a href="https://www.toypro.com/es/product/577/eje-y-conector-de-pin-n-6-90/negro?srsltid=AfmBOorXiZJun_k-E2hKjYEJTn1MJVnT7njdhTR7xKyNWakuH3zyl84c"> 🛒 Shop</a> |
+| Lego piece 4107085 | 2 | <img src="other/components/Lego piece.webp" width="150" height="120"> | Connect directional structure | <a href="https://www.toypro.com/es/product/152/eje-y-conector-de-pin-n-1/negro?srsltid=AfmBOor2gTwMQ0SjiqnX9UFra149tetnTWeLNWH5GG9X5Cj_pXMF2bMb"> 🛒 Shop</a> |
+| BUCK Converter DC30V to 5V | 2 | <img src="other/components/Captura de pantalla 2026-11-09 103938.png" width="150" height="120"> | Regulate voltage, replaces the LM7805. There are two bucks: one for the Husky and another for the TFmini and the front LED | <a href="https://es.aliexpress.com/item/1005010105535775.html?spm=a2g0o.order_list.order_list_main.75.71fe1802b6YwYO&gatewayAdapt=glo2esp"> 🛒 Shop</a> |
+| MOSFET AO3400A | 1 | <img src="other/components/mosfet.png" width="150" height="120"> | adjusts the brightness of the front LED | <a href="https://es.dhgate.com/product/10pcs-ao3400-sot23-ao3400a-sot-23-ao3401/980465137.html?skuId=1255185276934410264&f=bm%7CCPSAXV%7Ccmp_20260701_a8f3c91d%7Cadset_b52e7f18%7Cad_c94d260a%7C"> 🛒 Shop</a> |
+| Relay | 1 | <img src="other/components/rele-5v-10a-spdt-srd-05vdc-sl-c.jpg" width="150" height="120"> | It ‘connects’ the two batteries, allowing us to switch them both on at the same time with a single button | <a href="https://es.aliexpress.com/item/1005006804948648.html?src=google&src=google&albch=shopping&acnt=439-079-4345&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&gclsrc=aw.ds&albagn=888888&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=es1005006804948648&ds_e_product_merchant_id=5851568604&ds_e_product_country=ES&ds_e_product_language=es&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=21116729971&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gad_campaignid=21106574823&gbraid=0AAAAACbpfvajYISsk82CLtbrby1spPi0W&gclid=EAIaIQobChMIt6HR8pD9lwMVPzkGAB0kqy0qEAQYASABEgLjn_D_BwE"> 🛒 Shop</a> |
+| Electrolytic condenser 0,1 microfarad | 1 | <img src="other/components/Electrolytic condenser 0,1 microfarad.webp" width="150" height="120"> | (maker recommendation) | <a href="https://www.ebay.com/itm/202550513396"> 🛒 Shop</a> |
+| MOSFET condenser | 1 | <img src="other/components/Electrolytic condenser 0,33 microfarad.webp" width="150" height="120"> | (maker recommendation) | <a href="https://www.tme.eu/en/details/uvy2dr33med/tht-electrolytic-capacitors/nichicon/"> 🛒 Shop </a> |
+| MOSFET condenser | 1 | <img src="other/components/Circuit board.webp" width="150" height="120"> | Connect huskylens with the LM7805CT and then with batteries | <a href="https://www.pccomponentes.com/goobay-regleta-para-conexion-de-cables-electricos-de-10a-10mm-blanco?campaigntype=eshopping&campaignchannel=shopping&gad_source=1&gad_campaignid=12885548290&gclid=EAIaIQobChMI__yQzemhlAMVr3JBAh075B8YEAQYBSABEgLyYvD_BwE"> 🛒 Shop</a> |
+| Differential QBX01 1:12 | 1 | <img src="other/components/Differential.avif" width="150" height="120"> | It allows the drive wheels to rotate at different speeds on curves, preventing slippage | <a href="https://es.aliexpress.com/item/1005005425198232.html?spm=a2g0o.productlist.main.1.5afe3DuB3DuBQD&algo_pvid=89b2de5b-abad-4232-8ccb-d5e73895d3df&algo_exp_id=89b2de5b-abad-4232-8ccb-d5e73895d3df0&pdp_ext_f=%7B%22order%22%3A%22329%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%219.53%215.53%21%21%2174.34%2143.14%21%402103892f17779733213802821e83c8%2112000033106328679%21sea%21ES%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3A4f6c22e4%3Bm03_new_user%3A-29895%3BpisId%3A5000000205205646&curPageLogUid=a9DwnAg9v3GZ&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005005425198232%7C_p_origin_prod%3A"> 🛒 Shop</a> |
+| Power Expansion Board Module | 2 | <img src="other/components/power bank batteries.png" width="150" height="120">  | It's a type of power bank where we've used the same Samsung batteries | <a href="https://es.aliexpress.com/item/1005001829484812.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.3.3145BM7PBM7Pvs&gps-id=pcDetailTopMoreOtherSeller&scm=1007.40050.354490.0&scm_id=1007.40050.354490.0&scm-url=1007.40050.354490.0&pvid=aaef1a73-1862-4b0d-aa1e-1a9beffbe5b0&_t=gps-id%3ApcDetailTopMoreOtherSeller%2Cscm-url%3A1007.40050.354490.0%2Cpvid%3Aaaef1a73-1862-4b0d-aa1e-1a9beffbe5b0%2Ctpp_buckets%3A668%232846%238110%231995&pdp_ext_f=%7B%22order%22%3A%221076%22%2C%22eval%22%3A%221%22%2C%22sceneId%22%3A%2230050%22%2C%22fromPage%22%3A%22recommend%22%7D&pdp_npi=6%40dis%21EUR%212.06%212.06%21%21%212.34%212.34%21%402103909217800442825806414e0fc1%2112000017779552633%21rec%21ES%21135718878%21XZ%211%210%21n_tag%3A-29919%3Bd%3A2676a4e6%3Bm03_new_user%3A-29895&utparam-url=scene%3ApcDetailTopMoreOtherSeller%7Cquery_from%3A%7Cx_object_id%3A1005001829484812%7C_p_origin_prod%3A"> 🛒 Shop</a> |
+| Micro Servo MG90S | 1 | <img src="other/components/Micro Servo MG90S.jpg" width="150" height="120"> | Allow the camera to move and have a wider field of view | <a href="https://www.hta3d.com/es/microservo-mg90s-180-de-posicionamiento-engranajes-metalicos"> 🛒 Shop</a> |"> Camera servo link </a> |
+| USB-Kabel | 1 | <img src="other/components/cable.png" width="150" height="120"> | It makes it easy to connect the robot to the computer to upload programmes or view the terminal when we’re carrying out tests, in a simple and convenient way that prevents the Raspberry Pi’s connector from breaking. | <a href="https://es.aliexpress.com/item/1005007053499029.html?isdl=y&aff_fsk=_oEW69bp&src=BooncyESgeneral&aff_platform=aff_feeds&aff_short_key=_oEW69bp&pdp_npi=4%40dis%21EUR%211.48%211.48%21%21%21%21%21%40%2112000039239967802%21afff%21%21%21&dp=EAIaIQobChMIv9n7obHBlgMVsAIGAB2_ZA2KEAQYAyABEgI3KvD_BwE&cn=bravoes&gad_source=1&gad_campaignid=23203341003&gbraid=0AAAABB6NsO9tS3fn8EqhgJt8zBAa3Kv_D"> 🛒 Shop</a> |
+| Counterweight | 2 | <img src="other/components/metal.jpg" width="150" height="120"> | We use it to adjust and balance the robot’s weight, as the rear is quite heavy due to the spoiler housing the batteries, which is why we place it at the front. In this case, there are two of them, and each one weighs 40 grams | <a href="https://selectauto.es/consumibles-para-ruedas/6175-contrapesos-para-llantas-de-aleacion-40gx50-uds-marca-seltech-5949128213693.html"> 🛒 Shop</a> |
+| Chasis in 3D | 1 | <img src="models/Final_Version_models/Final_chassis.png" width="150" height="120"> | Skeleton of the robot | [`📥Download`](models/Final_Version_models/CHASSIS04.stl) |
+| Battery support 1 | 2 | <img src="models/Old_Versions_models/soportebateria1.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/Old_Versions_models/soportebateria1.stl) |
+| Battery support 2 | 1 | <img src="models/Old_Versions_models/soportebateria2.jpg" width="150" height="120"> | Support batteries | [`📥Download`](models/Final_Version_models/soportebateria2.stl) |
+| Adapter wheels in 3D | 2 | <img src="models/Old_Versions_models/Wheel_adapter.png" width="150" height="120"> | Connect the wheels to the differential | [`📥Download`](models/Old_Versions_models/wheel_adapter.stl) |
+| Adapter gear in 3D | 1 | <img src="models/Old_Versions_models/Gear_adapter.png" width="150" height="120"> | Gearing with 360º servo gear | [`📥Download`](models/Old_Versions_models/GEAR_ADAPTER_.stl) |
+| Magnetometer support 1 | 1 | <img src="models/Final_Version_models/magnetometer_support1.png" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/Final_Version_models/compass_mount1.stl) |
+| Magnetometer support 2 | 1 | <img src="models/Final_Version_models/magnetometer_support2.png" width="150" height="120"> | Support the magnetometer | [`📥Download`](models/Final_Version_models/compass_mount2.stl) |
+| 44 teeth crown | 1 | <img src="models/Final_Version_models/Crown_44.png" width="150" height="120"> | Part of the transmission system | [`📥Download`](models/Final_Version_models/Crown_44_servo.stl) |
+| Cap crown | 1 | <img src="models/Final_Version_models/crown_cap.png" width="150" height="120"> | Cover the crown | [`📥Download`](models/Final_Version_models/crown_cap.stl) |
+| Modify Husky 2 support| 1 | <img src="models/Final_Version_models/modificated_husky_adapter.png" width="150" height="120"> | Holding the Husky 2 | [`📥Download`](models/Final_Version_models/support_husky2-corta.stl) |
+| Front TFmini support | 1 | <img src="models/Final_Version_models/TFmini_support.png" width="150" height="120"> | Support of the front TFmini | [`📥Download`](models/Final_Version_models/SUPPORT_TFminiS.stl) |
+| Chassis TFmini support | 1 | <img src="models/Final_Version_models/Chassis_support_TFmini.png" width="150" height="120"> | Support of the lateral TFminis | [`📥Download`](models/Final_Version_models/SUPPORT_TFminiS_chassis.stl) |
+
+</details>
+
+<details>
+<summary><b>Pins connections</b></b></summary>
+<br>
+Use these two photos to connect the components:
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="40%">
+      <img src="schemes/raspberry_connections_PR.png"/>
+    </td>
+    <td align="center" width="60%">
+      <img src="schemes/wiring_scheme_puertorico.png"/>
+    </td>
+  </tr>
+</table></div>
+<br>
+
+</details>
+
+<details>
+<summary><b>Placing</b></summary>
+<br>
+Here you will find two files showing the exact position of each component:
+  <br></br> 
+
+<table align="center">
+  <tr style="vertical-align: middle;">
+    <td><img src="models/Old_Versions_models/HR26.2.jpg" width="400"></td>
+    <td> <a href="models/Old_Versions_models/HR26.2.zip">📥Download</a></td>
+  </tr>
+</table>
+
+<table align="center">
+  <tr style="vertical-align: middle;">
+    <td><img src="models/Old_Versions_models/HR26.2.expl.jpg" width="400"></td>
+    <td> <a href="models/Old_Versions_models/HR26.2.expl.zip">📥Download</a></td>
+  </tr>
+</table>
+</details>
+
+<details>
+<summary><b>Raspberry pi pico 2 and VSCode startup</b></summary>
+<br>
+<strong>Firmware of the Raspberry Pi Pico 2</strong>➜ First of all, you’ll need to install a firmware on the Raspberry Pi Pico 2 so that we can load programmes onto it and use it in VScode. You can find the firmware on the official website <a href="https://micropython.org/download/RPI_PICO2/">MicroPython for Raspberry Pi Pico 2</a>, download it here. We’ll explain how to do this step by:
+<br>
+</br>
+*Press and hold the white BOOTSEL button on your Raspberry Pi Pico 2 board; without letting go, connect the board to your computer using a compatible USB cable. Release the button once the computer has recognised the card. It will appear as an external USB storage device.
+<br>
+</br>
+*Drag and drop (or copy and paste) the .uf2 file you downloaded directly onto the Pico 2’s USB drive. The board will restart automatically and the device will disappear from your computer. This means that the firmware has now been installed.
+<br>
+</br>
+*Here you can install <a href="https://code.visualstudio.com/download?_exp_download=fb315fc982">VScode</a>
+</details>
+
+<details>
+<summary><b>Adjust the components</b></summary>
+<br>
+Here you will find the essential software for calibrating servos and sensors, so that you can get the robot ready and load the final programme onto it.
+<br>
+<br>
+  
+* [01.Calibrate the steering servo.txt](/src/Old_programs/Test_programs1/04.Control%20de%20servo%20con%20potenciómetro.txt) ➜ One of the first things you need to do to get your robot working is to calibrate the steering servo. First, upload this programme to the servo, and use a potentiometer to adjust the servo until it stops at 90 degrees. This programme can also be used to calibrate the servo attached to the HUSKYLENS.
+  
+We’re almost there, all that’s left is for you to save the red and green colours in the HUSKYLENS, with red as colour ID1 and green as colour ID2. It’s very simple and will only take a couple of minutes.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="other/HUSKYLENS/Husky learning.jpg" width="450"/>
+    </td>
+    <td align="center" width="50">
+      <img src="other/HUSKYLENS/Husky learning2.jpg" width="450"/>
+    </td>
+  </tr>
+</table></div>
+
+And that’s it, you can now load the final programme, along with its sub-programmes, onto it and get your robot up and running!!!😀
+
+</details>
+
 </div>
 <br>
 <a href="#arriba">⬆️Back to top</a>
