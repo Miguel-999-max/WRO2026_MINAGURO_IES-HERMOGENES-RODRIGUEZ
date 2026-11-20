@@ -408,15 +408,15 @@ https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_front.jpg" width="305"/>
+      <img src="v-photos/Final_version_photos/front.jpg" width="305"/>
      robot´s front view
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_tras.jpg" width="305"/>
+      <img src="v-photos/Final_version_photos/back.jpg" width="305"/>
      robot´s back view
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_abajo.jpg" width="305"/>
+      <img src="v-photos/Final_version_photos/underneath.jpg" width="305"/>
      View from underneath the robot
     </td>
   </tr>
@@ -425,15 +425,15 @@ https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_der.jpg" width="305"/>
+      <img src="v-photos/Final_version_photos/right.jpg" width="305"/>
      Robot’s right side view
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_arriba.jpg" width="305"/>
+      <img src="v-photos/Final_version_photos/fly_view.jpg" width="305"/>
      View of the robot's layout
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_izq.jpg" width="305"/>
+      <img src="v-photos/Final_version_photos/left.jpg" width="305"/>
      Robot’s left side view
     </td>
   </tr>
@@ -447,30 +447,31 @@ https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_izq.2.jpg" width="305"/>
+      <img src="v-photos/Final_version_photos/other_right.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_bat_abajo.jpg" width="305"/>
+      <img src="v-photos/Final_version_photos/camerawhite.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_der.2.jpg" width="305"/>
+      <img src="v-photos/Final_version_photos/other_left.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_der.3.jpg" width="305"/>
+      <img src="v-photos/Final_version_photos/change_left.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_magne.2.jpg" width="305"/>
+      <img src="v-photos/Final_version_photos/rele.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_izq.3.jpg" width="305"/>
+      <img src="v-photos/Final_version_photos/change_right.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
 
+https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
 https://github.com/user-attachments/assets/58a79564-a333-4f58-b753-fa61092973e2
 
 <table width="100%" align="center">
