@@ -9,10 +9,12 @@
 <br> Hope you like it!!
 <br> </br>
 
-> [!IMPORTANT]
-> 
-> Every time you see this sign (▶&#xFE0E;), click on the text next to it to expand the content!
+<stron>
+>[!IMPORTANT]
 
+> Every time you see this sign (▶&#xFE0E;), click on the text next to it to expand the content!
+</stron>
+  
 ## 🤝 Sponsors
 We would like to thank our sponsors for making this project possible:
 <br>
