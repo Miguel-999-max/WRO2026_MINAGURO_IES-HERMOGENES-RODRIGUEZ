@@ -1217,10 +1217,10 @@ T= 2 N · 0,0212 m = 0,0424 N·m
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="other/Calculations2.jpg" width="450"/>
+      <img src="other/Calculations/Calculations2.jpg" width="450"/>
     </td>
     <td align="center" width="50%">
-      <img src="other/Calculations.jpg" width="450"/>
+      <img src="other/Calculations/Calculations.jpg" width="450"/>
     </td> 
   </tr>
 </table>
@@ -1406,16 +1406,16 @@ The drivetrain consists of:
 
 The mechanical differential was somewhat stiff when turning. To make it turn more smoothly, we lubricated it with oil and turned it using a drill.
 
-In addition, we have recalculated the maximum speed, the revolutions per second of the different axles, the force and torque. The traction servomotor we are using has been discontinued and we cannot find its torque or rotational speed specifications. We have derived the servo’s rotational speed from the robot’s linear speed, so we have worked the calculations ‘backwards’ to arrive at this figure. We did the same with the torque: we measured the robot’s force using a dynamometer; we ran the motor at full power, had it pull on a dynamometer, and pressed the wheels indirectly against the floor until they began to slip. The maximum pull we recorded was 4 N. As there are two drive wheels, this gives us a thrust of 2 N per wheel.
+In addition,Taking into account the calculations we carried out for the previous version, we have recalculated the robot’s maximum speed, torque and revolutions per second:
 <br>
 </br>
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="other/Calculations2.jpg" width="450"/>
+      <img src="other/Calculations/final_calculations.jpeg" width="450"/>
     </td>
     <td align="center" width="50%">
-      <img src="other/Calculations.jpg" width="450"/>
+      <img src="other/Calculations/final_calculations2.jpeg" width="450"/>
     </td> 
   </tr>
 </table>
