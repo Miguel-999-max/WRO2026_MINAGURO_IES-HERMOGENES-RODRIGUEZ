@@ -3063,17 +3063,14 @@ These are all programs we used to calibrate sensors and conduct functional tests
 * [07.Leer color con TCS34725.txt](/src/Current_programs/Test_programs2/07.Leer%20color%20con%20TCS34725.txt) ➜ to read color values from the TCS34725 sensor using I2C
 * [08.Contador con TCS34725.txt](/src/Current_programs/Test_programs2/08.Contador%20con%20TCS34725.txt) ➜ to count the lines on the floor using the TCS34725 digital color sensor
 * [09.Leer escala de grises con TCRT500.txt](/src/Current_programs/Test_programs2/09.Leer%20escala%20de%20grises%20con%20TCRT500.txt) ➜ to verify the accuracy of the TCRT5000 sensor's grayscale reading by using it to distinguish colors (Conclusion: it is not reliable)
-* [10.Conexion inicial con Husky1.txt](/src/Current_programs/Test_programs2/10.Conexion%20inicial%20con%20Husky1.txt) ➜ to verify the connection between the Raspberry Pi and HUSKLENS using the I2C communication protocol
-* [11.Color Recognition con HUSKY.txt](/src/Current_programs/Test_programs2/11.Color%20Recognition%20con%20HUSKY.txt) ➜ to turn on two LEDs based on HuskyLens's visual object recognition
-* [12.Calibrate the magnetometer 10DOF.py](/src/Current_programs/Test_programs2/12.calibrar_magnetometro.py) ➜ so that the robot knows which angle corresponds to each street
-* [13.Config TFmini-S 12C.py](/src/Current_programs/Test_programs2/Config%20TFmini-S%20I2C.py) ➜
-* [14.Config tfmini uart demanda.py](/src/Current_programs/Test_programs2/Config%20tfmini%20uart%20demanda.py) ➜
-* [15.calibrar_magnetometro.py](/src/Current_programs/Test_programs2/calibrar_magnetometro.py) ➜
-* [16.huskylens.py](/src/Current_programs/Test_programs2/huskylens.py) ➜
-* [17.lsm303_mag.py](/src/Current_programs/Test_programs2/lsm303_mag.py) ➜
-* [18.main.py](/src/Current_programs/Test_programs2/main.py) ➜
-* [19.tcs34725.py](/src/Current_programs/Test_programs2/tcs34725.py) ➜
-* [20.test_magnetometro.py](/src/Current_programs/Test_programs2/test_magnetometro.py) ➜
+* [10.Color Recognition con HUSKY.txt](/src/Current_programs/Test_programs2/11.Color%20Recognition%20con%20HUSKY.txt) ➜ to turn on two LEDs based on HuskyLens's visual object recognition
+* [11.Config TFmini-S 12C.py](/src/Current_programs/Test_programs2/Config%20TFmini-S%20I2C.py) ➜ To configure the TFmini-S distance sensor to communicate using the I2C protocol instead of UART and save this configuration.
+* [12.Config tfmini uart demanda.py](/src/Current_programs/Test_programs2/Config%20tfmini%20uart%20demanda.py) ➜ To configure the TFmini-S distance sensor in UART mode to take measurements only when requested instead of continuously sending data. It also saves the configuration and verifies that it works.
+* [13.calibrar_magnetometro.py](/src/Current_programs/Test_programs2/calibrar_magnetometro.py) ➜ To calibrate the LSM303DLHC magnetometer by rotating the entire robot 360 degrees and recording the minimum and maximum magnetic values on the X and Y axes to calculate calibration offsets.
+* [14.huskylens.py](/src/Current_programs/Test_programs2/huskylens.py) ➜ To establish communication between the Raspberry Pi Pico and the HUSKYLENS using the I2C communication protocol, request object detection data and retrieve the object's X and Y coordinates and ID.
+* [15.lsm303_mag.py](/src/Current_programs/Test_programs2/lsm303_mag.py) ➜ To initialize the magnetometer, read raw magnetic field values on the X, Y and Z axes, apply hard-iron calibration offsets and calculate the robot's heading in degrees (0–360°).
+* [16.tcs34725.py](/src/Current_programs/Test_programs2/tcs34725.py) ➜ To initialize the TCS34725 color sensor, verify its connection through I2C, configure its operating settings and read RGB and clear light intensity values.
+* [17.test_magnetometro.py](/src/Current_programs/Test_programs2/test_magnetometro.py) ➜ To test the reliability of the LSM303DLHC magnetometer by comparing its readings and heading while the robot's traction motor is stopped and running, in order to detect possible magnetic interference.
 
 </details>
 
@@ -3381,7 +3378,14 @@ Here you will find the essential software for calibrating servos and sensors, so
 <br>
   
 * [01.Calibrate the steering servo.txt](/src/Old_programs/Test_programs1/04.Control%20de%20servo%20con%20potenciómetro.txt) ➜ One of the first things you need to do to get your robot working is to calibrate the steering servo. First, upload this programme to the servo, and use a potentiometer to adjust the servo until it stops at 90 degrees. This programme can also be used to calibrate the servo attached to the HUSKYLENS.
-  
+
+* [11.Config TFmini-S 12C.py](/src/Current_programs/Test_programs2/Config%20TFmini-S%20I2C.py) ➜ Before connecting the TFmini-S distance sensor to the robot using I2C communication, you need to change its communication protocol from the factory UART setting to I2C mode. To do this, first connect the sensor to the Raspberry Pi Pico using UART0: the white wire (RXD) to GPIO0 (TX0), the green wire (TXD) to GPIO1 (RX0), the red wire to 5V and the black wire to GND. Upload and run this programme. It first requests the sensor's firmware version to check that the connection is working correctly. Then, it sends the command to change the communication mode to I2C and saves the new configuration in the sensor's memory. Once the programme has finished, disconnect the sensor's power supply for approximately two seconds and reconnect it using the I2C wiring. The sensor will then be configured to communicate through I2C, with its default address (0x10).
+
+* [12.Config tfmini uart demanda.py](/src/Current_programs/Test_programs2/Config%20tfmini%20uart%20demanda.py) ➜ This programme configures the TFmini-S distance sensor to take measurements only when requested, instead of continuously sending distance readings. To do this, connect the sensor to the Raspberry Pi Pico using UART communication. The programme allows you to select the UART port by changing the UART_ID variable: UART0 uses GPIO0 and GPIO1, while UART1 uses GPIO8 and GPIO9. Upload and run the programme with one sensor connected at a time. First, it requests the sensor's firmware version to verify that communication is working correctly. It then sets the frame rate to 0, stopping continuous data transmission, and saves this configuration to the sensor's flash memory so that it is preserved after switching the sensor off and on again. Finally, it performs two checks: it verifies that the sensor stops sending data continuously and takes five measurements by sending individual requests. The distance readings and signal strength are displayed in the terminal. Repeat the process for each sensor, selecting the corresponding UART port when necessary. Once configured, the sensor will only send a distance measurement when the robot requests one.
+
+* [13.calibrar_magnetometro.py](/src/Current_programs/Test_programs2/calibrar_magnetometro.py) ➜ Before using the robot's compass to navigate the circuit, you need to calibrate the LSM303DLHC magnetometer. To do this, upload this programme to the Raspberry Pi Pico, making sure that the lsm303_mag.py library is also uploaded. Place the robot on the circuit, keeping it away from metal objects that could interfere with the magnetic readings. Then, slowly rotate the entire robot through 360 degrees, completing a couple of full turns. The programme continuously records the minimum and maximum magnetic readings on the X and Y axes and calculates the corresponding OFFSET_X and OFFSET_Y values. You can monitor these values in the terminal. Keep rotating the robot until the offsets stabilise and remain practically unchanged between turns. Once the calibration is complete, write down the final OFFSET_X and OFFSET_Y values, as you will need to enter them in the lsm303_mag.py library, replacing the default calibration values with your own.
+
+
 We’re almost there, all that’s left is for you to save the red and green colours in the HUSKYLENS, with red as colour ID1 and green as colour ID2. It’s very simple and will only take a couple of minutes.
 
 <div align="center"><table>
