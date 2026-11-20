@@ -1186,13 +1186,13 @@ The drivetrain consists of:
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_bat_abajo.jpg" width="305"/>
+      <img src="v-photos/Second_version_photos/v_bat_abajo.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_abajo.jpg" width="305"/>
+      <img src="v-photos/Second_version_photos/v_abajo.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_der.jpg" width="305"/>
+      <img src="v-photos/Second_version_photos/v_der.jpg" width="305"/>
     </td>
   </tr>
 </table>
@@ -1276,13 +1276,13 @@ However, the addition of the other two batteries—a last-minute modification—
 <div align="center"><table>
   <tr>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_der.2.jpg" width="305"/>
+      <img src="v-photos/Second_version_photos/v_der.2.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_front.jpg" width="305"/>
+      <img src="v-photos/Second_version_photos/v_front.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_plomo.jpg" width="305"/>
+      <img src="v-photos/Second_version_photos/v_plomo.jpg" width="305"/>
     </td>
   </tr>
 </table></div>
@@ -1319,7 +1319,7 @@ The steering system used consists of:
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="v-photos/Current_photos/v_direc_s.luz.jpg" width="305"/>
+      <img src="v-photos/Second_version_photos/v_direc_s.luz.jpg" width="305"/>
     </td>
     <td align="center" width="33%">
       <img src="v-photos/Final_version_photos/steering1.jpg" width="305"/>
