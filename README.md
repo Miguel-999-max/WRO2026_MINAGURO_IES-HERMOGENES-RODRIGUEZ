@@ -104,15 +104,15 @@ We would like to thank our sponsors for making this project possible:
     <tr>
       <td align="center" width="33%" valign="middle">
         <a href="URL_PATROCINADOR_1">
-          <img src="other/Sponsors/LOGO_PATROCINADOR_1.png" width="160" /><br />
-          <b>Nombre Patrocinador 1</b>
+          <img src="other/Sponsors/ferrinher_logo.png" width="250" /><br />
+          <b>Ferrinher</b>
         </a>
       </td>
       <td align="center" width="33%" valign="middle"></td>
       <td align="center" width="33%" valign="middle">
         <a href="URL_PATROCINADOR_2">
-          <img src="other/Sponsors/LOGO_PATROCINADOR_2.png" width="160" /><br />
-          <b>Nombre Patrocinador 2</b>
+          <img src="other/Sponsors/tecnove_fiberglass_logo.jpg" width="180" /><br />
+          <b>Fiberglass</b>
         </a>
       </td>
     </tr>
