@@ -2142,12 +2142,15 @@ An energy calculation was performed, taking all components into account, to help
   </tbody>
 </table>
 
-* Total: approximately 1,600 mA
+
+* Battery one: approximately 1237 mAh
+* Battery two: approximately 1300 mAh
+* Total: approximately 2,537 mAh (the power consumption of both batteries)
 
 Based on this data, the approximate theoretical battery life would be:
 
-* Battery life for the traction servo and the HUSKYLENS camera (8.4 V and 2,600 mAh): approximately 2,5 hours.
-* Battery life for the Raspberry Pi Pico 2 board, TFmini-S sensor, and mini servos (4.2 V and 5,200 mAh): approximately 12 hours.
+* Battery life for the traction servo and the HUSKYLENS camera (8.4 V and 2,600 mAh): approximately 2 hours.
+* Battery life for the Raspberry Pi Pico 2 board, TFmini-S sensors, and mini servos (4.2 V and 5,200 mAh): approximately 4,20 hours.
 
 Theoretically, that’s their battery life, so we’d need to be careful with the batteries. However, after weeks of testing, it has been confirmed that they last about 2 or 3 weeks, even with numerous tests per day (approximately 20), although the number varies depending on how many tests are performed. For this reason, the robot comes with several spare battery packs in case the robot’s batteries run out. 
 
