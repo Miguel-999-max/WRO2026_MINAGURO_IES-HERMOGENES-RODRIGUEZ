@@ -1,0 +1,16 @@
+flowchart TD
+    S([Mission 1 or 2 selected]) --> A["Camera/front TFmini turned<br/>toward the central island<br/>(right in M1, left in M2)"]
+    A --> B["Initial timed maneuvers<br/>(2 movements)"]
+    B --> C["Wall following: proportional control<br/>at 15 cm from the island using TFmini"]
+    C --> D{"Color sensor:<br/>corner line?"}
+    D -- Yes --> E["contadorLineas + 1"]
+    D -- No --> F
+    E --> F{"12 lines<br/>(3 laps)?"}
+    F -- No --> C
+    F -- Yes --> G0["Finish the last corner<br/>following the island with turned front sensor"]
+    G0 --> G1{"Compass within 15°<br/>of exit heading?<br/>(no compass: 1.5 s; max 4 s)"}
+    G1 -- No --> G0
+    G1 -- Yes --> G["Final phase: front TFmini facing forward<br/>(ignored 400 ms while servo turns);<br/>follow island with side TFmini<br/>(right in M1, left in M2);<br/>slowly if front ≤ 220 cm"]
+    G --> G2{"Following island (5-30 cm)<br/>and front ≤ 160 cm<br/>without sudden jump?<br/>(max 8 s)"}
+    G2 -- No --> G
+    G2 -- Yes --> H([Stop 160 cm from the back wall<br/>and final measurement])
