@@ -551,7 +551,7 @@ https://github.com/user-attachments/assets/7cd939ae-cfda-467b-b92f-a70b37eea3c3
   </tr>
   <tr>
     <td align="center">Average lap time</td>
-    <td align="center">25 s</td>
+    <td align="center">19 s</td>
   </tr>
   <tr>
     <td align="center">Chassis type</td>
