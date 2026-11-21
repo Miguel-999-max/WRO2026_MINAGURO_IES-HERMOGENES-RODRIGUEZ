@@ -2375,8 +2375,8 @@ The 1W 6000K LED is a high-power LED chip; specifically, it has a power output o
    <td align="left" width="50%">
     <ul>
         <li>Type: LED chip with a dome lens and side tabs. Generic high-power emitter-type / COB LED (with lens)</li>
-        <li>rated power: 1W</li>
-        <li>Heat Temperature: 6000 K (pure white) / SPI</li>
+        <li>Rated power: 1W</li>
+        <li>Heat Temperature: 6000 K (pure white)</li>
         <li>Current consumption: approx. 300 mA during operation</li>
         <li>Voltage: 5V</li>
         <li>Operating temperature: 30 °C – 50 °C</li>
