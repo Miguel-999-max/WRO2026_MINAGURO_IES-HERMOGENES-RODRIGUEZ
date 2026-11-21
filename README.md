@@ -2216,12 +2216,24 @@ Two buck converters have been added to convert DC to DC while reducing the volta
     </td>
     <td align="center" width="33%">
       <img src="v-photos/Final_version_photos/buck2.jpg" width="350"/>
+    </td>  
+  </tr>
+</table></div>
+
+We have also fitted a relay so that we can switch on both batteries at the same time, whilst only switching on the top one.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Final_version_photos/rele.jpg" width="350"/>
     </td>
+     </td>
     <td align="center" width="33%">
       <img src="other/batteries/cables.jpg" width="350"/>
     </td>
   </tr>
 </table></div>
+
 
 #### Wiring Scheme
 The wiring diagram was created in Cirkit Designer. In previous versions, it was created in TinkerCad, but the components we used weren’t available there, and since Cirkit Designer allows you to design custom components, we created it there instead. Here is the final result:
@@ -2348,6 +2360,27 @@ The L3GD20 gyroscope was chosen to help the robot navigate around obstacles. Whe
         <li>Sensing: angular velocity on all three axes</li>
         <li>Operating temperature: −40 to +85 °C</li>
         <li>Applications: orientation, motion, and rotation sensing, as well as stabilization.</li>
+      </ul>
+    </td>
+  </tr>
+</table></div>
+
+The 1W 6000K LED is a high-power LED chip; specifically, it has a power output of 1W and we use it to illuminate the blocks so that the HUSKYLENS 2 can recognise them easily, thereby aiming to resolve any future lighting issues. When it has finished dodging a block and begins searching for other blocks, it switches the LED on; once it has identified a block, it switches it off, as if it gets too close whilst the LED is on, the HUSKYLENS loses track of the block, as happened to us previously when testing this LED. To control the LED, we use a MOSFET, which helps us regulate its brightness. And to prevent it from overheating or the LED from blowing, we have fitted resistors of 6.8 ohms, 100 kΩ and 100 ohms.
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="other/components/LED5v.jpg" width="500" height="400"/>
+    </td>
+   <td align="left" width="50%">
+    <ul>
+        <li>Type: LED chip with a dome lens and side tabs. Generic high-power emitter-type / COB LED (with lens)</li>
+        <li>rated power: 1W</li>
+        <li>Heat Temperature: 6000 K (pure white) / SPI</li>
+        <li>Current consumption: approx. 300 mA during operation</li>
+        <li>Voltage: 5V</li>
+        <li>Operating temperature: 30 °C – 50 °C</li>
+        <li>Applications: to make it easier to identify the blocks.</li>
       </ul>
     </td>
   </tr>
