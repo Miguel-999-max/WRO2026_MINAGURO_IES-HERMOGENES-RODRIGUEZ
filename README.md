@@ -2567,7 +2567,18 @@ We decided to circle round the centre as this was our initial strategy when we b
 
 #### Obstacle challenge
 
-
+<div align="center"><table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="other/strategy/Mision3PR.jpeg"/>
+     clock-wise mode
+    </td>
+    <td align="center" width="50%">
+      <img src="other/strategy/Mision4PR.jpeg"/>
+     counter clock-wise mode
+    </td>
+  </tr>
+</table></div>
 
 For this challenge, we used laser distance sensors (TF-mini-S), the TCS34725 RGB sensor, the HUSKYLENS 2 machine vision camera and the 10-DOF IMU sensor. Of the two options available to us (exiting the parking area from the previous challenge or exiting a car park), we chose to exit from the car park because the HUSKYLENS 2 can now distinguish between magenta and red. Having covered these specifications, we move on to the strategy. There are three ways to approach this challenge (as per the diagram above):
 
