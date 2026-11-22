@@ -19,6 +19,7 @@
 We would like to thank our sponsors for making this project possible:
 <br>
 </br>
+
 <div align="center">
   <table border="0" cellspacing="10" cellpadding="10">
     <!-- Fila 1 -->
@@ -111,7 +112,6 @@ We would like to thank our sponsors for making this project possible:
           <b>Ferrinher</b>
         </a>
       </td>
-      <td align="center" width="33%" valign="middle"></td>
       <td align="center" width="33%" valign="middle">
         <a href="https://www.t-fiberglass.com/">
           <img src="other/Sponsors/tecnove_fiberglass_logo.jpg" width="180" /><br />
@@ -121,7 +121,6 @@ We would like to thank our sponsors for making this project possible:
     </tr>
   </table>
 </div>
-
  
   ## 📁 TABLE OF CONTENTS
 
