@@ -535,7 +535,7 @@ https://github.com/user-attachments/assets/7cd939ae-cfda-467b-b92f-a70b37eea3c3
   </tr>
   <tr>
     <td align="center">Steering motor</td>
-    <td align="center">MS18 servo</td>
+    <td align="center">MG90S servo</td>
   </tr>
   <tr>
     <td align="center">Batteries</td>
