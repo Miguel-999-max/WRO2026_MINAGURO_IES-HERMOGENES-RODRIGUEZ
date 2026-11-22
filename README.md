@@ -9,10 +9,13 @@ Hello, welcome to the GitHub repository of the <strong>MINAGURO team</strong>, w
 <br> Guided by our passion for technology, we have created three vehicles. The first one, used in the regional and provincial phases, which helped us to get to the WRO national final in Andorra; the second one, that performed in the national final and helped us classify for the WRO international final in Puerto Rico; and a third one (current one), that will be shown up on the international final. We created those robots motivated by our desire to do it as good as possible and also learn new things and concepts along the way.
 <br> Hope you like it!!
 <br> </br>
+</div>
 
 > [!IMPORTANT]
 > 
-> Every time you see this sign (▶), click on the text next to it to expand the content!
+> Every time you see this sign (▶&#xFE0E;), click on the text next to it to expand the content!
+
+<div align="justify">
   
 ## 🤝 Sponsors
 We would like to thank our sponsors for making this project possible:
