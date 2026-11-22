@@ -883,7 +883,7 @@ Before finishing, we decided to break down main.py into subprograms; since the p
 </details>
 </details>
 
-### <span id="seccion-mecanica"></span>4. 🛠️ Mechanical Design
+### <span id="#4--mechanical-design"></span>4. 🛠️ Mechanical Design
 
 This section is dedicated to the robot’s mechanical components: the list of parts used in its construction and the 3D-printed parts we designed and printed.
 
