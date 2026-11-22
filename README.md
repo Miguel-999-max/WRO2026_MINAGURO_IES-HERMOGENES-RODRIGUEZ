@@ -2553,7 +2553,8 @@ While we do all that, the RGB sensor is counting the blue lines on the floor to 
 
 Even the strategy is almost the same as in the last version, we´re gonna give it a review. The only noticeable difference between these two is the parking slot, which we use in the Obstacles Challenge.
 
-After much testing, trial and error, and various strategies, we finally settled on the definitive one (you can see the process leading up to this documented in ‘Daily documentation’). Before discussing the specific strategy for each challenge, let’s explain how we distinguish one challenge from another. To do this, we used the presence of the car parking in the Obstacle Challenge and their absence in the Open Challenge. As it is difficult to describe the strategy in writing, we have attached an image showing the diagram.
+After much testing, trial and error, and various strategies, we finally settled on the definitive one (you can see the process leading up to this documented in ‘Daily documentation’). Before discussing the specific strategy for each challenge, let’s explain how we distinguish one challenge from another. To do this, we used the presence of the car parking in the Obstacle Challenge and its absence in the Open Challenge. As it is difficult to describe the strategy in writing, we have attached an image showing the diagram.
+
 
 <p align="center">
   <img src="schemes/strategyschemePR.jpeg" width="535">
@@ -2597,13 +2598,13 @@ We decided to circle round the centre as this was our initial strategy when we b
 
 For this challenge, we used laser distance sensors (TF-mini-S), the TCS34725 RGB sensor, the HUSKYLENS 2 machine vision camera and the 10-DOF IMU sensor. Of the two options available to us (exiting the parking area from the previous challenge or exiting a car park), we chose to exit from the car park because the HUSKYLENS 2 can now distinguish between magenta and red. Having covered these specifications, we move on to the strategy. There are three ways to approach this challenge (as per the diagram above):
 
-*  First of all, we leave the car park, positioning the robot just right to see if there is a central block.
+*  First of all, we leave the car park and identify if its CW or CCW by the distence to the central wall.
 
-*  It spots a block on the first front scanner: in this case, it checks the direction; if the block is on the right-hand side of the screen, it’s CW, whilst if it’s on the left-hand side, it’s CCW. We make use of this distinction by exploiting the fact that blocks cannot be placed on the line next to the outer wall. As soon as it knows the direction, it heads towards it and starts looking for obstacles.
+*  It spots a block on the first front scanner, it heads towards it and starts looking for more obstacles.
 
-*  It does not see an obstacle in the first front-facing scanner, but it does when it looks to the left and to the right: in this case, as it already knows the direction is towards it, it immediately starts scanning for obstacles.
+*  It does not see an obstacle in the first front-facing scanner, but it does when it looks to the left and to the right, it immediately heads towards it and then starts scanning for more obstacles.
 
-*  It does not detect a block with the first front scanner, nor when it looks to the left or right, but it does when it turns at the corner: in this other case, as it also knows the direction is towards it, it immediately starts searching for obstacles.
+*  It does not detect a block with the first front scanner, nor when it looks to the left or right, but it does when it turns at the corner: in this other case, it immediately starts searching for more obstacles.
 
 From this point onwards, the strategy is always the same: to search for obstacles. Even so, let’s highlight a few cases:
 
@@ -2613,9 +2614,14 @@ From this point onwards, the strategy is always the same: to search for obstacle
 
 *  When the robot gets too close to an obstacle before avoiding it, it goes backwards. This is something we do to reach the perfect distance to avoid it before starting the obstacle-avoidance maneuver and, this way, we prevent moving the obstacle from its original place and, by consequence, get disqualified.
 
+*  Finally, we park.
+
 While we do all that, the RGB sensor is counting the blue lines on the floor to know when to stop (when this counter becomes 12 // 3 laps).
 
-  
+We also use the led to light the field in some moments when seeing a block, we´re still working on it to see if it works well or not.
+
+Furthermore, about the extra chellenge, we´re planning to make it possible, so you can go check our github in a few days to see how its going!
+
 </details>
 
 ### 8. 💻 Software
