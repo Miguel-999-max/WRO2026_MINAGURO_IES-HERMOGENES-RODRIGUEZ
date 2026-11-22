@@ -11,7 +11,7 @@ Hello, welcome to the GitHub repository of the <strong>MINAGURO team</strong>, w
 <br> </br>
 
 <strong>
->[!IMPORTANT]
+> [!IMPORTANT]
   
 > Every time you see this sign (▶&#xFE0E;), click on the text next to it to expand the content!
 </strong>
