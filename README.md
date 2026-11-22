@@ -4,14 +4,15 @@
 
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/@minagurowro2026)
 
-<div align="justify">Hello, welcome to the GitHub repository of the <strong>MINAGURO team</strong>, which is competing in the <strong>World Robot Olympiad 2026 Future Engineers</strong> category. Our team is made up of four Spanish students who develop this project on their school breaks with the aim of learning as much as possible.
+<div align="justify">
+Hello, welcome to the GitHub repository of the <strong>MINAGURO team</strong>, which is competing in the <strong>World Robot Olympiad 2026 Future Engineers</strong> category. Our team is made up of four Spanish students who develop this project on their school breaks with the aim of learning as much as possible.
 <br> Guided by our passion for technology, we have created three vehicles. The first one, used in the regional and provincial phases, which helped us to get to the WRO national final in Andorra; the second one, that performed in the national final and helped us classify for the WRO international final in Puerto Rico; and a third one (current one), that will be shown up on the international final. We created those robots motivated by our desire to do it as good as possible and also learn new things and concepts along the way.
 <br> Hope you like it!!
 <br> </br>
 
 <stron>
 >[!IMPORTANT]
-
+  
 > Every time you see this sign (▶&#xFE0E;), click on the text next to it to expand the content!
 </stron>
   
@@ -2552,10 +2553,10 @@ While we do all that, the RGB sensor is counting the blue lines on the floor to 
 
 Even the strategy is almost the same as in the last version, we´re gonna give it a review. The only noticeable difference between these two is the parking slot, which we use in the Obstacles Challenge.
 
-After much testing, trial and error, and various strategies, we finally settled on the definitive one (you can see the process leading up to this documented in ‘Daily documentation’). Before discussing the specific strategy for each challenge, let’s explain how we distinguish one challenge from another. To do this, we used the most obvious difference between the two: the presence of obstacles in the Obstacle Challenge and their absence in the Open Challenge. As it is difficult to describe the strategy in writing, we have attached an image showing the diagram.
+After much testing, trial and error, and various strategies, we finally settled on the definitive one (you can see the process leading up to this documented in ‘Daily documentation’). Before discussing the specific strategy for each challenge, let’s explain how we distinguish one challenge from another. To do this, we used the presence of the car parking in the Obstacle Challenge and their absence in the Open Challenge. As it is difficult to describe the strategy in writing, we have attached an image showing the diagram.
 
 <p align="center">
-  <img src="schemes/esquema_2.jpeg" width="535">
+  <img src="schemes/strategyschemePR.jpeg" width="535">
 </p>
 
 #### Open challenge
