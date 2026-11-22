@@ -3302,21 +3302,34 @@ Here is a FSM that will show you the logic our program follows:
 
 ```mermaid
 flowchart TD
-    S(["Mission 1 or 2 chosen"]) --> A["Front camera/TFmini turned<br/>toward the central island<br/>(right in M1, left in M2)"]
-    A --> B["Initial timed maneuvers<br/>(2 movements)"]
-    B --> C["Wall following: proportional control<br/>at 15 cm from the island with the TFmini"]
+    S(["Mission 1 or 2 chosen"]) --> A["Turn front camera/TFmini to island<br/>Right in M1, left in M2"]
+    A --> B["Initial timed maneuvers<br/>2 movements"]
+    B --> C["Wall following: proportional control<br/>15 cm from island with TFmini"]
+
     C --> D{"Color sensor:<br/>corner line?"}
-    D -- Yes --> E["contadorLineas + 1"]
-    D -- No --> F
-    E --> F{"12 lines<br/>(3 laps)?"}
-    F -- No --> C
-    F -- Yes --> G0["Finish the last corner<br/>following the island with the turned front sensor"]
-    G0 --> G1{"Compass within 15 deg<br/>of the starting heading?<br/>(no compass: 1.5 s; <= 4 s)"}
-    G1 -- No --> G0
-    G1 -- Yes --> G["Final phase: front TFmini facing forward<br/>(ignored for 400 ms while the servo turns);<br/>follow the island with the side TFmini<br/>(right in M1, left in M2);<br/>slowly if front <= 220 cm"]
-    G --> G2{"Island followed (5-30 cm)<br/>and front <= 160 cm<br/>with no sudden jump?<br/>(max 8 s)"}
-    G2 -- No --> G
-    G2 -- Yes --> H(["Stopped 160 cm from the back wall<br/>and final measurement"])
+    D -->|Yes| E["contadorLineas + 1"]
+    D -->|No| F{"12 lines<br/>3 laps?"}
+    E --> F
+
+    F -->|No| C
+    F -->|Yes| G0["Finish last corner<br/>follow island with turned front sensor"]
+
+    G0 --> G1{"Compass within 15 deg<br/>of starting heading?"}
+    G1 -->|No, timeout 1.5 s or <= 4 s| G0
+    G1 -->|Yes| G["Final phase: front TFmini forward<br/>400 ms servo ignore"]
+
+    G --> G2["Follow island with side TFmini<br/>Right in M1, left in M2<br/>Slow if front <= 220 cm"]
+    G2 -->|Island 5-30 cm, front <= 160 cm,<br/>no jump, max 8 s| H(["Stopped 160 cm from back wall<br/>and final measurement"])
+    G2 -.->|Condition not met| G2
+
+    classDef state fill:#fff7ed,stroke:#ea580c,color:#111827,stroke-width:2px;
+    classDef decision fill:#fef2f2,stroke:#dc2626,color:#111827,stroke-width:2px;
+    classDef terminal fill:#dcfce7,stroke:#16a34a,color:#111827,stroke-width:2px;
+
+    class A,B,C,E,G0,G,G2 state;
+    class D,F,G1 decision;
+    class S,H terminal;
+```
 
 </details>
 
