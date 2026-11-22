@@ -3300,37 +3300,6 @@ Here is a FSM that will show you the logic our program follows:
 ![general_vision](src/Current_programs/Final_version_flowcharts/general_vision.png)
 [⬇ Check and Download .mmd](src/Current_programs/Final_version_flowcharts/general_vision.mmd)
 
-```mermaid
-flowchart TD
-    S(["Mission 1 or 2 chosen"]) --> A["Turn front camera/TFmini to island<br/>Right in M1, left in M2"]
-    A --> B["Initial timed maneuvers<br/>2 movements"]
-    B --> C["Wall following: proportional control<br/>15 cm from island with TFmini"]
-
-    C --> D{"Color sensor:<br/>corner line?"}
-    D -->|Yes| E["contadorLineas + 1"]
-    D -->|No| F{"12 lines<br/>3 laps?"}
-    E --> F
-
-    F -->|No| C
-    F -->|Yes| G0["Finish last corner<br/>follow island with turned front sensor"]
-
-    G0 --> G1{"Compass within 15 deg<br/>of starting heading?"}
-    G1 -->|No, timeout 1.5 s or <= 4 s| G0
-    G1 -->|Yes| G["Final phase: front TFmini forward<br/>400 ms servo ignore"]
-
-    G --> G2["Follow island with side TFmini<br/>Right in M1, left in M2<br/>Slow if front <= 220 cm"]
-    G2 -->|Island 5-30 cm, front <= 160 cm,<br/>no jump, max 8 s| H(["Stopped 160 cm from back wall<br/>and final measurement"])
-    G2 -.->|Condition not met| G2
-
-    classDef state fill:#fff7ed,stroke:#ea580c,color:#111827,stroke-width:2px;
-    classDef decision fill:#fef2f2,stroke:#dc2626,color:#111827,stroke-width:2px;
-    classDef terminal fill:#dcfce7,stroke:#16a34a,color:#111827,stroke-width:2px;
-
-    class A,B,C,E,G0,G,G2 state;
-    class D,F,G1 decision;
-    class S,H terminal;
-```
-
 </details>
 
 <details>
