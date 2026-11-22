@@ -129,7 +129,7 @@ We would like to thank our sponsors for making this project possible:
 * [1. 👥 The Team ](#1--the-team)
 * [2. 🤖 Our Robot](#2--our-robot)
 * [3. 📝 Daily documentation](#3--daily-documentation)
-* [4. 🛠️ Mechanical Design](#4--mechanical-design)
+* [4. 🛠️ Mechanical Design](#seccion-mecanica)
 * [5. 🪛 Mobility design](#5--mobility-design)
 * [6. ⚡Power and Sensor Architecture](#6--power-and-sensor-architecture)
 * [7. 🧠 Strategy](#7--strategy)
@@ -883,7 +883,7 @@ Before finishing, we decided to break down main.py into subprograms; since the p
 </details>
 </details>
 
-### <span id="mechanical-design"></span>4. 🛠️ Mechanical Design
+### <span id="seccion-mecanica"></span>4. 🛠️ Mechanical Design
 
 This section is dedicated to the robot’s mechanical components: the list of parts used in its construction and the 3D-printed parts we designed and printed.
 
