@@ -10,11 +10,11 @@ Hello, welcome to the GitHub repository of the <strong>MINAGURO team</strong>, w
 <br> Hope you like it!!
 <br> </br>
 
-<stron>
+<strong>
 >[!IMPORTANT]
   
 > Every time you see this sign (▶&#xFE0E;), click on the text next to it to expand the content!
-</stron>
+</strong>
   
 ## 🤝 Sponsors
 We would like to thank our sponsors for making this project possible:
