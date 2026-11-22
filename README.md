@@ -2384,6 +2384,21 @@ The 1W 6000K LED is a high-power LED chip; specifically, it has a power output o
   </tr>
 </table></div>
 
+We considered various places to position it, but we have to bear in mind that it cannot be too close to the camera itself, as this could have too great an effect, nor can we place it on top of the HUSKYLENS module itself, as the circuitry would get in the way when setting up and adjusting the camera; we therefore decided that the best place is in a bottom corner of the HUSKYLENS. 
+
+<div align="center"><table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="v-photos/Final_version_photos/led1.jpg" width="350"/>
+    </td>
+     </td>
+    <td align="center" width="33%">
+      <img src="v-photos/Final_version_photos/led2.jpg" width="350"/>
+    </td>
+  </tr>
+</table></div>
+
+
 #### Reasoning Behind the Sensor Layout
 
 The HUSKYLENS camera has been mounted on a 180 servo at the front of the robot so that it can easily detect obstacles, at a height of approximately 14 cm. At this height, it can identify obstacles without any problems and without detecting objects outside the playing field. If it were fixed in place and unable to move, there would be blind spots that would prevent it from detecting traffic lights. The camera is used for position and color detection; this gives the software time to decide whether to approach, identify the color, and navigate around the obstacle on the correct side.
