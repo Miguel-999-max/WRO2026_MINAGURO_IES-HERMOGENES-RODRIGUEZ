@@ -804,7 +804,7 @@ Before finishing, we decided to break down main.py into subprograms; since the p
 
 
 <details>
-<summary><b>💻 September 2026</b></summary>
+<summary><b>⌨️ September 2026</b></summary>
 <br>
 
 * **01/09/26:** We managed to get our robot to complete three full laps of the circuit in the obstacle challenge, starting from the parking area, but we were unable to return and park in the parking area, and we had to remove the parking area before completing the first lap as we spotted a problem. Due to the quality of the Husky Lens, it recognises the parking area as a red block. We have therefore decided to change our strategy. We will now start the obstacle challenge without the parking area.
@@ -822,7 +822,7 @@ Before finishing, we decided to break down main.py into subprograms; since the p
 </details>
 
 <details>
-<summary><b>💻 October 2026</b></summary>
+<summary><b>🔌 October 2026</b></summary>
 <br>
 
 * **01/10/26:**  Since we changed the number of teeth on the drive gears, we had to adjust the servo centers.
@@ -858,7 +858,7 @@ Before finishing, we decided to break down main.py into subprograms; since the p
 </details>
 
 <details>
-<summary><b>💻 November 2026</b></summary>
+<summary><b>🌐 November 2026</b></summary>
 <br>
 
 * **05/11/26:** After giving it a lot of thought, we’ve decided to park within the parking area bounded by two walls. First, we’ll approach the parking area that would give us the fewest points if we parked there, and then we’ll try to get it to park within the parking area bounded by two walls. After crossing line 12 clockwise, the camera sweeps to the right, and it would only have to avoid one block if it’s in the closest position—that is, if it’s at the beginning of the street.
