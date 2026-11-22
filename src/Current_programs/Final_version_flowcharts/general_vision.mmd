@@ -1,0 +1,27 @@
+flowchart TD
+    A([Power on: relay + supplies]) --> B["hardware.py<br/>Initializes servos, TFmini x3, Husky 2,<br/>color sensor, magnetometer, light"]
+    B --> C["main.py<br/>Waits for the start button<br/>(LEDs blinking)"]
+    C --> D["Reference heading<br/>(compass on press)"]
+    D --> E{"Front TFmini<br/>&lt; 30 cm?"}
+
+    E -- "Yes: we are in the<br/>parking spot" --> F["Measure side sensors<br/>right and left"]
+    F --> G{"Right &gt;<br/>left?"}
+    G -- Yes --> H["MISSION 3 (CW)<br/>ORANGE line<br/>headings of the 4 lanes"]
+    G -- No --> I["MISSION 4 (CCW)<br/>BLUE line<br/>headings of the 4 lanes"]
+    H --> H1["desaparca_mision_3()<br/>backward by distance +<br/>forward-right by time"]
+    I --> I1["desaparca_mision_4()<br/>backward by distance +<br/>forward-left by time +<br/>backward-right by time"]
+    H1 --> J[["Obstacle Challenge<br/>3 laps = 12 lines<br/>(see diagram 2)"]]
+    I1 --> J
+
+    E -- "No: Open Challenge" --> K["Go straight with the front<br/>TFmini turned to the right<br/>and the left side TFmini"]
+    K --> L{"Gap &gt; 100 cm<br/>on either side?"}
+    L -- "To the right" --> M["MISSION 1 (CW)"]
+    L -- "To the left" --> N["MISSION 2 (CCW)"]
+    M --> R["Start lane heading<br/>= heading at button press"]
+    N --> R
+    R --> O[["Open Challenge<br/>3 laps = 12 lines<br/>(see diagram 3)"]]
+
+    J --> Z([Stopped in the start zone<br/>160 cm in M3 / 110 cm in M4])
+    O --> Z2([Stopped 160 cm from the back wall])
+
+    X["Any error (exception)"] -.-> Y(["parada_de_emergencia()<br/>motors stopped, error.log,<br/>red LED blinking"])
