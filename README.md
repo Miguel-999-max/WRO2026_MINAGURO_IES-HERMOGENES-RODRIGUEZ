@@ -3458,14 +3458,14 @@ Here you will find two files showing the exact position of each component:
 
 <table align="center">
   <tr style="vertical-align: middle;">
-    <td><img src="models/Final_Version_models/HR26.4.jpg" width="400"></td>
+    <td><img src="models/Final_Version_models/HR26.4.png" width="400"></td>
     <td> <a href="models/Final_Version_models/HR26.4.zip">📥Download</a></td>
   </tr>
 </table>
 
 <table align="center">
   <tr style="vertical-align: middle;">
-    <td><img src="models/Final_Version_models/HR26.4.expl.jpg" width="400"></td>
+    <td><img src="models/Final_Version_models/HR26.4.expl.png" width="400"></td>
     <td> <a href="models/Final_Version_models/HR26.4.expl.zip">📥Download</a></td>
   </tr>
 </table>
