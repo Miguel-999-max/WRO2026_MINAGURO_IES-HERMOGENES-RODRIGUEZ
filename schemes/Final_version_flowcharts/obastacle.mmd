@@ -1,0 +1,28 @@
+flowchart TD
+    S([Just unparked]) --> A["escanear_calle_0()<br/>3 camera looks (light off):<br/>pillars in seats a, b, c"]
+    A --> A2{"M4 and pillar<br/>at 0c?"}
+    A2 -- Yes --> P0["Go straight to pillar 0c<br/>(scan direction)<br/>RED: dodge without phase 2<br/>GREEN: phase 2 at the heading of lane 0"]
+    P0 --> B
+    A2 -- No --> B
+
+    B["_buscar_objetivo()"] --> B1{"PILAR_VISIBLE_AHORA<br/>pillar centered ahead?"}
+    B1 -- Yes --> P
+    B1 -- No --> N["navegar_calle_por_rumbo()<br/>• lane heading with the compass<br/>• asymmetric camera sweep<br/>• bias if close to the wall<br/>• lost-corner recovery<br/>• filters: base, edge, line end"]
+    N -- "pillar detected" --> P
+    N -- "final phase: back wall<br/>at 160 cm (M3) / 110 cm (M4)" --> FIN
+
+    P["aproximarse_a_pilar()<br/>• absolute pillar heading (compass + camera)<br/>• turn phase / fixed camera facing forward<br/>• side watch at 15 cm<br/>• light off"] --> P1{"Result?"}
+    P1 -- "arrived at 15 cm<br/>(or lost at ≤ 20 cm)" --> E
+    P1 -- "lost" --> F1
+    P1 -- "last line counted" --> F1
+
+    E["esquivar_pilar()<br/>(repositioning by reversing if needed)<br/>Phase 1: turn 38° toward its side<br/>(RED right, GREEN left)<br/>Straight stretch<br/>Phase 2: return to heading (depending on case)"] --> F1
+
+    F1{"fase_final_si_toca()<br/>12 lines (3 laps)?"}
+    F1 -- "No" --> B
+    F1 -- "Yes: FINAL PHASE<br/>(only dodge the pillars of<br/>0a in M3; 0a and 0b in M4, with phase 2<br/>at the heading of lane 0; slowly,<br/>front at +8°/−8° and both walls monitored)" --> B
+    F1 -- "Already stopped" --> FIN([Stopped in the start zone<br/>and final measurement])
+
+    L["_comprobar_lineas()<br/>(called in ALL loops):<br/>color sensor → lane change<br/>and lap count"] -.-> N
+    L -.-> P
+    L -.-> E
