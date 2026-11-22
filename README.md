@@ -3196,13 +3196,13 @@ Here is a flowchart that will help you understand how our final program works.
 
 * Here is the flowchart for when the robot already knows it is in the obstacle challenge. We distinguish between Mission 3 (clockwise) and Mission 4 (anti-clockwise)
 
-![general_vision](src/Current_programs/Final_version_flowcharts/obastacle.png)
-[⬇ Download .mmd](src/Current_programs/Final_version_flowcharts/obastacle.mmd)
+![general_vision](src/Current_programs/Final_version_flowcharts/obstacle.png)
+[⬇ Check and Download .mmd](src/Current_programs/Final_version_flowcharts/obastacle.mmd)
 
 * And here is the flowchart for when the robot already knows it is in the free challenge. We distinguish between Mission 1 (clockwise) and Mission 2 (anti-clockwise)
 
 ![general_vision](src/Current_programs/Final_version_flowcharts/free_challenge.png)
-[⬇ Download .mmd](src/Current_programs/Final_version_flowcharts/free_challenge.mmd)
+[⬇ Check and Download .mmd](src/Current_programs/Final_version_flowcharts/free_challenge.mmd)
 
 </details>
 
@@ -3213,7 +3213,7 @@ Here is a flowchart that will help you understand how our final program works.
 Here is a FSM that will show you the logic our program follows:
 
 ![general_vision](src/Current_programs/Final_version_flowcharts/general_vision.png)
-[⬇ Download .mmd](src/Current_programs/Final_version_flowcharts/general_vision.mmd)
+[⬇ Check and Download .mmd](src/Current_programs/Final_version_flowcharts/general_vision.mmd)
 
 </details>
 
